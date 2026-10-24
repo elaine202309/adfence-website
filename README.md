@@ -96,17 +96,17 @@ below should reach a live site without being dealt with.
 
 - [x] `support@mxcode.com` — set on all four pages and every `mailto:` CTA
       (24 October 2026). Make sure the mailbox actually exists before launch.
-- [x] Canonical URLs, `og:url`, `og:image`, the JSON-LD `url`, `sitemap.xml`
-      and `robots.txt` all point at
-      `https://elaine202309.github.io/adfence-website/` (set 24 October 2026,
-      the publish URL). If a custom domain is bound later, replace that string
-      everywhere — `grep -rl 'elaine202309.github.io/adfence-website' .` — and
-      add a `CNAME` file.
-      Note: `adfence.com` is registered (since 2005) and `.io` / `.net` are
-      taken; `adfence.app`, `adfence.co`, `adfence.dev` and
-      `getadfence.com` were unregistered as of 21 October 2026. `adfence.app`
-      is the natural fit for an app site — .app is HTTPS-only, which GitHub
-      Pages handles.
+- [x] Canonical URLs, `og:url`, `og:image`, the JSON-LD `url`, `sitemap.xml`,
+      `robots.txt` and the App Store Connect URLs in `app-store-listing.md` all
+      point at **`https://adfence.mxcode.com/`** (set 24 October 2026, with the
+      `CNAME` file that GitHub Pages wrote). If the domain ever changes, replace
+      that string everywhere — `grep -rl 'adfence.mxcode.com' .` — and update
+      `CNAME`.
+      The earlier candidates are moot now: `adfence.com` is registered (since
+      2005) and `.io` / `.net` are taken, while `adfence.app`, `adfence.co`,
+      `adfence.dev` and `getadfence.com` were unregistered as of 21 October
+      2026. `adfence.mxcode.com` ties the site to the existing `mxcode.com`
+      domain that already carries `support@mxcode.com`, at no extra cost.
 - [ ] `images/og-card.png` — referenced in `index.html` but **does not exist yet**.
       Create a 1200×630 social card.
 - [ ] GA4 — snippet is commented out at the top of `index.html`. Set your
@@ -173,7 +173,7 @@ is both a legal problem and an App Store rejection risk.
 
 ## Deploying to GitHub Pages
 
-Live at <https://elaine202309.github.io/adfence-website/> — repo
+Live at <https://adfence.mxcode.com/> — repo
 <https://github.com/elaine202309/adfence-website>, Pages deploying from `main`,
 root folder. Every push to `main` republishes the site in about a minute.
 
@@ -185,9 +185,11 @@ git push
 ```
 
 The repo is public, so the site is too — anything committed here is visible.
-If you bind a custom domain, add a `CNAME` file containing the bare domain, set
-it under Settings → Pages, tick *Enforce HTTPS*, and replace the
-`elaine202309.github.io/adfence-website` URLs listed under *Before launch*.
+
+The custom domain lives in the `CNAME` file at the repo root
+(`adfence.mxcode.com`). It is the authoritative source: deleting it unbinds the
+domain. The `elaine202309.github.io/adfence-website` address keeps serving the
+same content as a fallback, so links to either one work.
 
 ## Notes for future edits
 

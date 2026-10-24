@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Published at the GitHub Pages project URL. If a custom domain is bound, replace
-     every https://elaine202309.github.io/adfence-website/ below with it. -->
+<!-- Served at https://adfence.mxcode.com/ (GitHub Pages + CNAME). If the domain
+     ever changes, replace every occurrence in this file and in robots.txt. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://elaine202309.github.io/adfence-website/</loc>
+    <loc>https://adfence.mxcode.com/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://elaine202309.github.io/adfence-website/support.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://adfence.mxcode.com/support.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://elaine202309.github.io/adfence-website/privacy.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://adfence.mxcode.com/privacy.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://elaine202309.github.io/adfence-website/terms.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://adfence.mxcode.com/terms.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

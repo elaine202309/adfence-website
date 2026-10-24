@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # TODO: replace with the real domain once CNAME is set
-Sitemap: https://elaine202309.github.io/adfence-website/sitemap.xml
+Sitemap: https://adfence.mxcode.com/sitemap.xml

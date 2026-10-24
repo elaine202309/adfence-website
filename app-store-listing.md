@@ -142,9 +142,9 @@ First release. Ad and tracker blocking, cookie and pop-up hiding, adult-site fil
 
 | Field | Value |
 | --- | --- |
-| Support URL | `https://elaine202309.github.io/adfence-website/support.html` |
-| Marketing URL | `https://elaine202309.github.io/adfence-website/` |
-| Privacy Policy URL | `https://elaine202309.github.io/adfence-website/privacy.html` |
+| Support URL | `https://adfence.mxcode.com/support.html` |
+| Marketing URL | `https://adfence.mxcode.com/` |
+| Privacy Policy URL | `https://adfence.mxcode.com/privacy.html` |
 
 These are the live GitHub Pages URLs as of 24 October 2026. If you bind a
 custom domain, update all three in App Store Connect — Apple will reject a
