@@ -15,10 +15,17 @@ Adult*) are hard-coded in the app, so they stay in English in every language —
 translating them would make the description describe a screen the user can't
 find.
 
-Privacy URL and EULA are identical in every localization:
+The two legal links close every description, word for word in all nine
+languages — the labels stay in English and the URLs never change, so the same
+two lines can be pasted under whichever translation is in use:
 
-- Privacy: `https://adfence.mxcode.com/privacy.html`
-- Terms and Conditions: `https://www.apple.com/legal/internet-services/itunes/dev/stdeula/`
+```
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+```
+
+They are part of the description text, not a separate field, and are included
+in the character counts below.
 
 Nothing here mentions price, a free tier or a trial, and nothing states a
 default on/off state for any filter.
@@ -39,7 +46,7 @@ default on/off state for any filter.
 广告拦截,广告,拦截器,弹窗,跟踪器,成人,色情,恶意软件,钓鱼,隐私,追踪,内容,屏蔽,防护
 ```
 
-### Description — 1234 / 4000
+### Description — 1372 / 4000
 
 ```
 AdFence 是适用于 iPhone、iPad 和 Mac 上 Safari 的广告拦截器。它能拦截广告和跟踪脚本，隐藏 Cookie 提示和弹窗，并把成人网站和已知恶意网站挡在 Safari 之外——无需账号，也没有可供登录的浏览历史记录。
@@ -87,6 +94,9 @@ AdFence 是一个 Safari 扩展，因此在 iPhone、iPad 和 Mac 的 Safari 中
 3. 开始浏览。
 
 AdFence——没有噪音的网络。
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -105,7 +115,7 @@ AdFence——没有噪音的网络。
 廣告封鎖,廣告,封鎖器,彈出視窗,追蹤器,成人,色情,惡意軟體,釣魚,隱私,追蹤,內容,防護,擋廣告
 ```
 
-### Description — 1246 / 4000
+### Description — 1384 / 4000
 
 ```
 AdFence 是適用於 iPhone、iPad 和 Mac 上 Safari 的廣告封鎖器。它能封鎖廣告和追蹤指令碼，隱藏 Cookie 提示和彈出視窗，並把成人網站和已知惡意網站擋在 Safari 之外——無需帳號，也沒有可供登入的瀏覽記錄。
@@ -153,6 +163,9 @@ AdFence 是一個 Safari 擴充功能，因此在 iPhone、iPad 和 Mac 的 Safa
 3. 開始瀏覽。
 
 AdFence——沒有噪音的網路。
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -171,7 +184,7 @@ Bloqueur de pub pour Safari sur iPhone, iPad et Mac. Pubs, pop-up et traqueurs b
 bloqueur,publicité,popup,traqueur,adulte,malware,phishing,cookie,confidentialité,suivi,contenu
 ```
 
-### Description — 3422 / 4000
+### Description — 3560 / 4000
 
 ```
 AdFence est un bloqueur de publicités pour Safari sur iPhone, iPad et Mac. Il bloque les publicités et les scripts de suivi, masque les demandes de cookies et les fenêtres pop-up, et tient les sites pour adultes et les sites malveillants connus hors de Safari — sans compte ni historique de navigation à consulter.
@@ -219,6 +232,9 @@ L'INSTALLATION PREND UNE MINUTE
 3. Naviguez.
 
 AdFence — le web, sans le bruit.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -237,7 +253,7 @@ Safari-Werbeblocker für iPhone, iPad und Mac. Werbung, Pop-ups und Tracker bloc
 werbeblocker,werbung,popup,tracker,erwachsene,malware,phishing,cookie,datenschutz,tracking,inhalte
 ```
 
-### Description — 3176 / 4000
+### Description — 3314 / 4000
 
 ```
 AdFence ist ein Werbeblocker für Safari auf iPhone, iPad und Mac. Er blockiert Werbung und Tracking-Skripte, blendet Cookie-Hinweise und Pop-ups aus und hält Erwachsenenseiten sowie bekannte Schadseiten aus Safari heraus – ohne Konto und ohne Verlaufsliste, in die Sie sich einloggen müssten.
@@ -285,6 +301,9 @@ EINRICHTUNG IN EINER MINUTE
 3. Los surfen.
 
 AdFence — das Web ohne Lärm.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -303,7 +322,7 @@ Blocco pubblicità per Safari su iPhone, iPad e Mac. Blocca annunci, popup e tra
 blocca,pubblicità,popup,tracker,adulti,malware,phishing,cookie,privacy,tracciamento,contenuti
 ```
 
-### Description — 3101 / 4000
+### Description — 3239 / 4000
 
 ```
 AdFence è un blocco pubblicità per Safari su iPhone, iPad e Mac. Blocca annunci e script di tracciamento, nasconde le richieste dei cookie e i popup, e tiene fuori da Safari i siti per adulti e i siti dannosi noti — senza account e senza una cronologia in cui entrare.
@@ -351,6 +370,9 @@ CONFIGURAZIONE IN UN MINUTO
 3. Naviga.
 
 AdFence — il web, senza rumore.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -369,7 +391,7 @@ iPhone、iPad、Mac の Safari 向け広告ブロッカー兼プライバシー�
 広告ブロッカー,広告,ポップアップ,トラッカー,アダルト,マルウェア,フィッシング,Cookie,プライバシー,追跡,コンテンツ
 ```
 
-### Description — 1702 / 4000
+### Description — 1840 / 4000
 
 ```
 AdFence は iPhone、iPad、Mac の Safari 向け広告ブロッカーです。広告とトラッキングスクリプトをブロックし、Cookie の確認表示やポップアップを非表示にし、アダルトサイトや既知のマルウェアサイトを Safari から遠ざけます。アカウントも、ログインする閲覧履歴もありません。
@@ -417,6 +439,9 @@ AdFence は Safari 拡張機能なので、iPhone、iPad、Mac の Safari で動
 3. ブラウジングを始めましょう。
 
 AdFence — ノイズのないウェブを。
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -435,7 +460,7 @@ iPhone, iPad, Mac용 Safari 광고 차단 및 개인정보 보호 도구입니�
 광고차단,광고,팝업,추적기,성인,악성코드,피싱,쿠키,개인정보,추적,콘텐츠,차단기
 ```
 
-### Description — 1643 / 4000
+### Description — 1781 / 4000
 
 ```
 AdFence는 iPhone, iPad, Mac의 Safari용 광고 차단기입니다. 광고와 추적 스크립트를 차단하고, 쿠키 안내와 팝업을 숨기며, 성인 사이트와 알려진 악성 사이트를 Safari 밖으로 밀어냅니다. 계정도, 로그인할 방문 기록도 없습니다.
@@ -483,6 +508,9 @@ AdFence는 Safari 확장 프로그램이므로 iPhone, iPad, Mac의 Safari에서
 3. 탐색을 시작하세요.
 
 AdFence — 소음 없는 웹.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -501,7 +529,7 @@ Bloqueador de anúncios para o Safari no iPhone, iPad e Mac. Bloqueie anúncios,
 bloqueador,anúncios,popup,rastreador,adultos,malware,phishing,cookie,privacidade,rastreio,conteúdo
 ```
 
-### Description — 3152 / 4000
+### Description — 3290 / 4000
 
 ```
 AdFence é um bloqueador de anúncios para o Safari no iPhone, iPad e Mac. Bloqueia anúncios e scripts de rastreamento, oculta os avisos de cookies e as janelas pop-up e mantém fora do Safari os sites para adultos e os sites maliciosos conhecidos — sem conta e sem histórico de navegação onde entrar.
@@ -549,6 +577,9 @@ CONFIGURAR LEVA UM MINUTO
 3. Navegue.
 
 AdFence — a web, sem ruído.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ---
@@ -567,7 +598,7 @@ Bloqueador de anuncios para Safari en iPhone, iPad y Mac. Bloquea anuncios, pop-
 bloqueador,anuncios,popup,rastreador,adultos,malware,phishing,cookie,privacidad,rastreo,contenido
 ```
 
-### Description — 3217 / 4000
+### Description — 3355 / 4000
 
 ```
 AdFence es un bloqueador de anuncios para Safari en iPhone, iPad y Mac. Bloquea anuncios y scripts de rastreo, oculta los avisos de cookies y las ventanas emergentes, y mantiene fuera de Safari los sitios para adultos y los sitios maliciosos conocidos — sin cuenta y sin un historial de navegación en el que entrar.
@@ -615,4 +646,7 @@ LA CONFIGURACIÓN TARDA UN MINUTO
 3. Navega.
 
 AdFence — la web, sin ruido.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```

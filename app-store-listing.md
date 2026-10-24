@@ -80,7 +80,7 @@ This field is also the only one you can change without a new build or review,
 so it is the right place for launch news ("Now on the App Store"), a feature
 spotlight, or a seasonal line once the generic copy has done its job.
 
-## Description — 2750 / 4000
+## Description — 2888 / 4000
 
 ```
 AdFence is an ad blocker for Safari on iPhone, iPad and Mac. It blocks ads and tracking scripts, hides cookie prompts and pop-ups, and keeps adult sites and known malware out of Safari — with no account and no browsing history to log into.
@@ -128,6 +128,9 @@ SETUP TAKES A MINUTE
 3. Browse.
 
 AdFence — the web, without the noise.
+
+Privacy: https://adfence.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 ```
 
 ## What's New (version 1.0) — 162 / 4000
