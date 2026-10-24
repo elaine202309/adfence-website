@@ -134,13 +134,18 @@ is both a legal problem and an App Store rejection risk.
 - [ ] *"Filters ship with the app and update when the app updates"* —
       `support.html` troubleshooting. If filter lists update over the network
       instead, that's an outbound connection and the privacy page must say so.
-- [ ] *iCloud sync of settings* — `privacy.html` mentions it as Apple-handled
-      behaviour. Remove the paragraph if you don't sync settings at all.
+- [ ] *iCloud Backup* — `privacy.html` §3 says Apple may include app data in a
+      device backup if the user has iCloud Backup on. That is true for any app,
+      so it holds whether or not AdFence syncs settings itself. If you add
+      deliberate cross-device sync, say so explicitly instead.
 - [ ] *Adult filter has no passcode* — stated on the homepage and in `terms.html`.
       Keep this: it protects you from "it doesn't work as parental control"
       reviews and it's the honest description.
-- [ ] Both legal pages open with a visible **"Draft — pending review"** callout.
-      Remove those callouts once reviewed. Search for `callout-warn`.
+- [x] `privacy.html` — rewritten as the formal policy on 24 October 2026: draft
+      callout removed, effective date set, sections numbered, legal bases,
+      retention, transfers, security and children added.
+- [ ] `terms.html` still opens with a visible **"Draft — pending review"**
+      callout. Remove it once reviewed. Search for `callout-warn`.
 - [ ] `terms.html` has no governing-law jurisdiction yet. Add it.
 - [ ] The App Store EULA question: either use Apple's standard EULA or supply a
       custom one in App Store Connect. If you use Apple's standard, delete
