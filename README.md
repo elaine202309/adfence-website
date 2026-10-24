@@ -41,6 +41,8 @@ robots.txt
 sitemap.xml
 app-store-listing.md  App Store Connect copy (name, subtitle, keywords,
                   description) and the claims that must match the build.
+app-store-localizations.md  The same promotional text, keywords and
+                  description in the nine App Store Connect languages.
 ```
 
 App Store listing: <https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569>
