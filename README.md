@@ -17,8 +17,7 @@ No framework, no build step, no dependencies. Plain HTML + one stylesheet.
 index.html        The whole site — hero, feature grid, setup, privacy,
                   FAQ, download CTA
 support.html      Setup steps for iOS and Mac, troubleshooting FAQ, contact
-how-to-use.html   Step-by-step walkthrough of the app, screenshot for every
-                  screen (step 1 shows iPhone and Mac side by side)
+how-to-use.html   Step-by-step walkthrough of the app, one screenshot per step
 privacy.html      Privacy policy — DRAFT, needs review
 terms.html        Terms of use — DRAFT, needs review
 css/style.css     All styling. Design tokens are the :root block at the top
@@ -34,10 +33,9 @@ images/adfence-other-settings.png     Gallery, 520×1127
 images/adfence-site-settings.png      Gallery, 520×1127
 images/adfence-custom-rules.png       Gallery, 520×1127
 images/adfence-extension-status.png   Gallery, 520×1127
-images/adfence-safari-extensions.png  How-to page, 880×1090 — the AdFence rows
-                  in Settings → Safari → Extensions on iPhone
-images/adfence-safari-extensions-mac.png   How-to page, 880×661 — the same
-                  extensions in Safari → Settings → Extensions on the Mac
+images/adfence-safari-extensions.png  How-to page, 880×1783 — one canvas, the
+                  AdFence rows in Settings → Safari → Extensions on iPhone with
+                  the Mac Extensions window below them
 images/app-store-badge.svg  Apple's official "Download on the App Store" badge
                   (US-UK, black). Unmodified — do not recolour or redraw it.
 images/source/    Full-resolution originals behind the screenshots above. Not
@@ -45,7 +43,10 @@ images/source/    Full-resolution originals behind the screenshots above. Not
                   regenerated or reused for App Store art. The five phone
                   screens are 1179×2556 16-bit PNG; the extensions list is a
                   1179×1460 JPEG crop; the Mac extensions window is a 948×712
-                  RGBA PNG.
+                  RGBA PNG. The step-1 image is those last two stitched into one
+                  880-wide canvas on a #f2f1f6 background (headless Edge, 32px
+                  gap) — rebuild it from the two sources rather than editing the
+                  stitched copy.
 robots.txt
 sitemap.xml
 app-store-listing.md  App Store Connect copy (name, subtitle, keywords,
