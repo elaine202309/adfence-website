@@ -17,6 +17,7 @@ No framework, no build step, no dependencies. Plain HTML + one stylesheet.
 index.html        The whole site — hero, feature grid, setup, privacy,
                   FAQ, download CTA
 support.html      Setup steps for iOS and Mac, troubleshooting FAQ, contact
+how-to-use.html   Step-by-step walkthrough of the app, one screenshot per step
 privacy.html      Privacy policy — DRAFT, needs review
 terms.html        Terms of use — DRAFT, needs review
 css/style.css     All styling. Design tokens are the :root block at the top
