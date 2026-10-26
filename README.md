@@ -33,11 +33,15 @@ images/adfence-other-settings.png     Gallery, 520×1127
 images/adfence-site-settings.png      Gallery, 520×1127
 images/adfence-custom-rules.png       Gallery, 520×1127
 images/adfence-extension-status.png   Gallery, 520×1127
+images/adfence-safari-extensions.png  How-to page, 600×743 — the AdFence rows
+                  in Settings → Safari → Extensions
 images/app-store-badge.svg  Apple's official "Download on the App Store" badge
                   (US-UK, black). Unmodified — do not recolour or redraw it.
-images/source/    Full-resolution 1179×2556 originals (16-bit PNG) behind the
-                  five screenshots above. Not referenced by any page — kept so
-                  the web copies can be regenerated or reused for App Store art.
+images/source/    Full-resolution originals behind the screenshots above. Not
+                  referenced by any page — kept so the web copies can be
+                  regenerated or reused for App Store art. The five phone
+                  screens are 1179×2556 16-bit PNG; the extensions list is a
+                  1179×1460 JPEG crop.
 robots.txt
 sitemap.xml
 app-store-listing.md  App Store Connect copy (name, subtitle, keywords,
