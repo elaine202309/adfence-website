@@ -486,11 +486,51 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   overflow: hidden;
 }
 
+/* Step 1 runs full width: a phone screen and a Mac window don't fit one column. */
+.howto-row > h2 { margin: 14px 0 16px; }
+.howto-lead,
+.howto-after { color: var(--text-muted); max-width: 64ch; }
+.howto-after { margin-top: 44px; }
+
+/* Subgrid keeps the two screenshots on one baseline even though the lists differ
+   in length. Browsers without subgrid just stack each column normally. */
+.platform-grid {
+  display: grid;
+  /* Unequal columns: the phone screenshot is tall and the Mac window is wide,
+     so this is what gets the two shots closest to the same height. */
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 48px;
+  row-gap: 0;
+  align-items: start;
+  margin-top: 36px;
+}
+.platform {
+  display: grid;
+  grid-row: 1 / span 3;
+  grid-template-rows: subgrid;
+}
+.platform h3 { font-size: 1rem; margin: 0 0 10px; }
+.platform ol { color: var(--text-muted); padding-left: 1.3em; margin: 0; }
+.platform li { margin-bottom: .45em; }
+.platform li:last-child { margin-bottom: 0; }
+.platform strong { color: var(--text); }
+.platform .howto-shot.plain { max-width: 100%; margin: 28px auto 0; }
+
 @media (max-width: 980px) {
   .howto-row.reverse .howto-copy,
   .howto-row.reverse .howto-shot { order: initial; }
   .howto-list > .howto-row + .howto-row { margin-top: 56px; padding-top: 56px; }
   .howto-shot { max-width: 300px; }
+  .platform-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    row-gap: 40px;
+    margin-top: 28px;
+  }
+  .platform { display: block; grid-row: auto; }
+  .platform .howto-shot.plain { max-width: 420px; }
+  .howto-after { margin-top: 32px; }
 }
 
 .panel {
