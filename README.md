@@ -121,8 +121,21 @@ below should reach a live site without being dealt with.
       domain that already carries `support@mxcode.com`, at no extra cost.
 - [ ] `images/og-card.png` — referenced in `index.html` but **does not exist yet**.
       Create a 1200×630 social card.
-- [ ] GA4 — snippet is commented out at the top of `index.html`. Set your
-      measurement ID and uncomment. Consider adding it to the other pages too.
+- [x] Google Search Console — the URL-prefix property
+      `https://adfence.mxcode.com/` is verified by the HTML tag method: the
+      `<meta name="google-site-verification" content="CRHi3cdg…">` line sits in
+      the `<head>` of all five pages (26 October 2026). **Do not delete it** — it
+      is what keeps the property verified, and re-verification fails without it.
+      Still to do in the Search Console UI: submit
+      `https://adfence.mxcode.com/sitemap.xml` under *Sitemaps*, then use *URL
+      Inspection* on the homepage to request indexing.
+- [x] GA4 — live since 26 October 2026 with measurement ID `G-3GFDY4TL3R`
+      (property name in Analytics: check it matches this site). The tag lives in
+      `js/analytics.js` and is loaded from all five pages; privacy.html §5
+      describes it. It only loads after the visitor presses **Accept** on the
+      consent banner, and **Cookie settings** in the footer asks again. To turn
+      analytics off, delete the `js/analytics.js` script tag and section 5 of the
+      privacy policy.
 - [ ] Add a `CNAME` file if you bind a custom domain.
 
 **Claims that must match the app**

@@ -11,6 +11,12 @@
 
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- GA4 (G-3GFDY4TL3R), loaded after the visitor accepts. See js/analytics.js. -->
+<script src="js/analytics.js" defer></script>
+
+<!-- Google Search Console — URL-prefix property for https://adfence.mxcode.com/ -->
+<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
 </head>
 <body>
 
@@ -22,6 +28,11 @@
      matching section has to change in the same release. A policy that
      doesn't match the build is both a legal problem and an App Store
      rejection risk (Guideline 5.1.1).
+
+     The app still ships nothing; the WEBSITE now runs Google Analytics 4
+     behind a consent banner. Section 5 describes exactly that — if the
+     measurement ID changes, update both js/analytics.js and the two cookie
+     names in section 5.
      =================================================================== -->
 
 <header class="site-header">
@@ -56,7 +67,7 @@
       <div class="prose">
 
         <h1>Privacy Policy</h1>
-        <p class="meta">Effective date: 24 October 2026 · Last updated: 24 October 2026</p>
+        <p class="meta">Effective date: 24 October 2026 · Last updated: 26 October 2026</p>
 
         <p>
           AdFence is a Safari extension for iPhone, iPad and Mac. It blocks advertising, hides on-page
@@ -137,8 +148,28 @@
         <h2>5. This website</h2>
         <p>
           This website is a set of static pages hosted on GitHub Pages. It has no login, no comment
-          system, no contact form and no cookie of its own, and it does not run analytics or advertising
-          scripts.
+          system, no contact form, no advertising and no tracking pixel.
+        </p>
+        <p>
+          We use <strong>Google Analytics 4</strong> to count visits and see which pages are read. It
+          runs only after you press <strong>Accept</strong> on the banner shown on your first visit;
+          until then nothing is sent to Google and no cookie is written. While it is running, Google
+          Analytics receives the page you opened, the site you arrived from, an approximate location
+          derived from your IP address, and the usual technical details of the request — browser,
+          language, screen size. It sets two first-party cookies, <code>_ga</code> and
+          <code>_ga_3GFDY4TL3R</code>, which hold a random identifier for your browser and expire
+          after two years. None of it is connected to the app, to an Apple Account or to anything that
+          identifies you, and we only look at it in aggregate.
+        </p>
+        <p>
+          Google processes this data on our behalf and may do so outside your country; Google is
+          certified under the EU–US Data Privacy Framework. See
+          <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a> and
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google
+          uses data from sites that use its services</a>. Our legal basis is your consent, which you
+          can withdraw at any time with <strong>Cookie settings</strong> in the footer — the banner
+          will ask again and analytics stays off if you decline. Google also publishes a
+          <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">browser opt-out add-on</a>.
         </p>
         <p>
           Like any website, the hosting provider processes standard technical request data — such as your
@@ -248,6 +279,7 @@
         <ul>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
+          <li><button type="button" class="linklike" data-consent-reset>Cookie settings</button></li>
         </ul>
       </div>
       <div class="footer-col">
