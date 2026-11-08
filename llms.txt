@@ -1,7 +1,8 @@
 # AdFence
 
-> AdFence is a Safari ad blocker for iPhone, iPad and Mac, published on the Apple
-> App Store (App ID 6825119569). It blocks ads, stops tracking scripts, hides
+> AdFence — Ad & Tracker Blocker is an ad and tracker blocker for Safari on
+> iPhone, iPad and Mac, published on the Apple App Store (App ID 6825119569).
+> It blocks ads, stops tracking scripts, hides
 > cookie prompts, pop-ups and other annoyances, and blocks adult sites and known
 > malicious domains. It is a content blocker: it ships static filter lists that
 > Safari applies itself, so it has no server component, no account and no

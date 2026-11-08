@@ -8,6 +8,15 @@ No framework, no build step, no dependencies. Plain HTML + one stylesheet.
 > no software trademark found. This is not a legal clearance — see the comment
 > block at the top of `index.html` for the caveats and the one remaining
 > pre-submission step.
+>
+> **App Store display name: "AdFence - Ad & Tracker Blocker"** (changed 8
+> November 2026; exactly 30 characters, the field limit). The name field has no
+> room for "Safari", so Safari is carried by the subtitle ("Safari ad blocker for
+> iPhone"), by the first keyword in every locale, by every page `<title>`, and
+> by the footer line — "An ad and tracker blocker for Safari on iPhone, iPad and
+> Mac." Keep that arrangement if you edit any of them. Renaming does not change
+> the App Store URL: the `adfence-safari-ad-blocker` slug is fixed from when the
+> app was created.
 
 ---
 
@@ -108,7 +117,9 @@ grep -rl 'AdFence' . --exclude-dir=.git | xargs sed -i 's/AdFence/YourName/g'
 
 Then fix by hand, because word order varies:
 
-- Every `<title>` and `og:title` — e.g. `AdFence — Safari Ad Blocker on iPhone, iPad &amp; Mac`
+- Every `<title>` and `og:title` — e.g. `AdFence — Safari Ad &amp; Tracker Blocker for iPhone, iPad &amp; Mac`
+- The footer brand line under the logo on all seven pages, and the header
+  `<span class="brand-desc">` (short form, "Ad &amp; Tracker Blocker")
 - The `"name"` field in the JSON-LD block in `index.html`
 - `<meta property="og:site_name">` if you add one
 

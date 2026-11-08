@@ -18,41 +18,55 @@ Nothing here claims a default on/off state for any filter.
 
 ---
 
-## Name — 27 / 30
+## Name — 30 / 30
 
 ```
-AdFence — Safari Ad Blocker
+AdFence - Ad & Tracker Blocker
 ```
 
-## Subtitle — 29 / 30
+The field is full, so "Safari" cannot live here. That is deliberate: the
+subtitle and the keyword field both carry it, and every page title on the
+website says "Safari" too.
+
+Changing the name does **not** change the listing URL — the
+`adfence-safari-ad-blocker` slug was fixed when the app was created, so every
+download button on the site keeps working. App Store Connect stores the name per
+language: set it on the primary language and, if any localized names are filled
+in, make them identical (see `app-store-localizations.md`).
+
+## Subtitle — 28 / 30
 
 ```
-Block ads, pop-ups & trackers
+Safari ad blocker for iPhone
 ```
 
-Alternatives:
+This is where "Safari" earns its index slot: "Safari ad blocker" is the phrase
+people actually type, and the name no longer contains it. iPhone goes here
+rather than iPad or Mac because it is the highest-volume platform query; iPad
+and Mac are in the keyword field.
 
-- `Block ads, trackers & cookies` (29) — swaps "pop-ups" for "cookies"; only use
-  it if hiding cookie notices is the stronger selling point for you.
-- `Safari ad blocker. Zero noise.` (30) — matches the website headline, but
-  repeats "Safari ad blocker" from the name, which wastes indexable words.
+Alternatives, all under 30:
 
-## Keywords — 98 / 100
+- `Safari ad blocker & cookies` (27) — swaps the platform for the second
+  selling point. Only if iPhone is already well covered elsewhere.
+- `Safari & tracker blocker` (24) — closest to the new name, leaves six
+  characters unused.
+
+## Keywords — 100 / 100
 
 ```
-ad,blocker,safari,popup,block,trackers,adult,porn,malware,phishing,cookie,privacy,tracking,content
+safari,popup,block,cookie,adult,porn,malware,phishing,privacy,tracking,iphone,ipad,mac,extension,ads
 ```
 
-Written to stand on its own: every concept the app sells is in this field,
-whether or not the name and subtitle carry it. Single words, one per slot —
-Apple splits the field on commas and combines the words with each other, so
-`cookie,blocker` matches "cookie blocker" without spelling the phrase out.
+The name now carries *ad*, *tracker* and *blocker*, and the subtitle carries
+*safari*, *ad*, *blocker* and *iphone*, so this field spends its slots on what
+neither of them says. Single words, one per slot — Apple splits the field on
+commas and combines the words with each other, so `cookie` + the name's
+"Blocker" matches "cookie blocker" without spelling the phrase out.
 
-Because it doesn't lean on the title, it repeats *ad*, *blocker*, *safari*,
-*block* and *trackers* from the name and subtitle — 33 characters spent on
-insurance against a later rename. If the name and subtitle are locked, those
-five can be swapped for `protection`, `consent`, `safe` or `browsing` and the
-list gets broader without getting longer.
+`safari` is kept in the field even though the subtitle already has it. Six
+characters is cheap insurance: if you ever rewrite the subtitle, the word that
+matters most to this product stays indexed.
 
 `popup` is written without the hyphen on purpose: “pop-up” tokenises as *pop* +
 *up*, which doesn't catch people typing “popup blocker”. `adblock` is
@@ -61,13 +75,13 @@ the keyword field is not worth the risk.
 
 Alternatives:
 
-- `cookie,popup,privacy,tracking,protection,adult,porn,malware,phishing,safe,browsing,consent,extension` (100) — the title-aware version. Only use it if the name and subtitle are final; it drops the duplicated words and spends the space on `protection`, `safe browsing` and `extension`.
-- `ad,blocker,safari,popup,block,trackers,adult,porn,malware,phishing,cookie` (73) — the bare core, no extras.
+- `safari,popup,block,cookie,adult,porn,malware,phishing,privacy,tracking,iphone,ipad,mac,content,ads` (98) — swaps `extension` for `content`. Use it if you would rather catch "content blocker" than "Safari extension" searches; `extension` is the better bet today because the setup step is literally called Extensions.
+- `safari,popup,cookie,adult,porn,malware,phishing,privacy,iphone,ipad,mac` (71) — the bare core, no filler.
 
-## Promotional text — 166 / 170
+## Promotional text — 164 / 170
 
 ```
-Safari ad blocker and privacy tool for iPhone, iPad and Mac. Block ads, pop-ups and trackers, hide cookie banners, filter adult sites — per-site controls, no account.
+Ad and tracker blocker for Safari on iPhone, iPad and Mac. Block ads, pop-ups and trackers, hide cookie banners, filter adult sites — per-site controls, no account.
 ```
 
 Worth knowing: promotional text is **not indexed for App Store search** — Apple's
@@ -80,10 +94,10 @@ This field is also the only one you can change without a new build or review,
 so it is the right place for launch news ("Now on the App Store"), a feature
 spotlight, or a seasonal line once the generic copy has done its job.
 
-## Description — 2888 / 4000
+## Description — 2900 / 4000
 
 ```
-AdFence is an ad blocker for Safari on iPhone, iPad and Mac. It blocks ads and tracking scripts, hides cookie prompts and pop-ups, and keeps adult sites and known malware out of Safari — with no account and no browsing history to log into.
+AdFence is an ad and tracker blocker for Safari on iPhone, iPad and Mac. It blocks ads and tracking scripts, hides cookie prompts and pop-ups, and keeps adult sites and known malware out of Safari — with no account and no browsing history to log into.
 
 A QUIETER WEB
 • Block Ads — display, pop-up and video ads, and the empty boxes they leave behind
@@ -172,6 +186,8 @@ These sentences describe behaviour the shipping build must actually have:
 
 ## Not included on purpose
 
+- No "Safari" in the **name field** — it is full at 30 characters. Safari is
+  the first word of the subtitle and the first keyword instead.
 - No price, subscription, free-trial or "free" wording.
 - No "on by default" or "off by default" anywhere.
 - No competitor names and no claim that other browsers or apps are unsafe.

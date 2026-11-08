@@ -9,7 +9,16 @@ limits: **promotional text 170**, **keywords 100**, **description 4000**
 characters. Character counts are noted above each block and were measured on
 the text as written, including punctuation and spaces.
 
-The app name **AdFence** is not translated. The extension names on the
+The app name **AdFence - Ad & Tracker Blocker** is not translated — it is the
+same 30 characters in every locale. The word **Safari** stays in Latin
+characters everywhere too, for the same reason: it is how Safari is written on
+the device in all nine markets, and it is what people type. Every keyword field
+now ends in `Safari`, and in the four languages where that pushed the field
+past 100 characters the word for "content" (*contenu*, *inhalte*, *conteúdo*,
+*contenido*) was dropped to make room — it was the lowest-value term in each
+list.
+
+The extension names on the
 plugin-status screen (*Ads, Privacy, Social, Safety, Others, Custom, Video,
 Adult*) are hard-coded in the app, so they stay in English in every language —
 translating them would make the description describe a screen the user can't
@@ -40,10 +49,10 @@ default on/off state for any filter.
 适用于 iPhone、iPad 和 Mac 的 Safari 广告拦截与隐私工具。拦截广告、弹窗和跟踪器，隐藏 Cookie 提示，过滤成人网站——支持按站点设置，无需注册账号。
 ```
 
-### Keywords — 47 / 100
+### Keywords — 54 / 100
 
 ```
-广告拦截,广告,拦截器,弹窗,跟踪器,成人,色情,恶意软件,钓鱼,隐私,追踪,内容,屏蔽,防护
+广告拦截,广告,拦截器,弹窗,跟踪器,成人,色情,恶意软件,钓鱼,隐私,追踪,内容,屏蔽,防护,Safari
 ```
 
 ### Description — 1372 / 4000
@@ -109,10 +118,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 適用於 iPhone、iPad 和 Mac 的 Safari 廣告封鎖與隱私工具。封鎖廣告、彈出視窗和追蹤器，隱藏 Cookie 提示，過濾成人網站——支援依網站設定，無需註冊帳號。
 ```
 
-### Keywords — 50 / 100
+### Keywords — 57 / 100
 
 ```
-廣告封鎖,廣告,封鎖器,彈出視窗,追蹤器,成人,色情,惡意軟體,釣魚,隱私,追蹤,內容,防護,擋廣告
+廣告封鎖,廣告,封鎖器,彈出視窗,追蹤器,成人,色情,惡意軟體,釣魚,隱私,追蹤,內容,防護,擋廣告,Safari
 ```
 
 ### Description — 1384 / 4000
@@ -178,10 +187,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 Bloqueur de pub pour Safari sur iPhone, iPad et Mac. Pubs, pop-up et traqueurs bloqués, bannières cookies masquées, sites pour adultes filtrés — sans compte.
 ```
 
-### Keywords — 94 / 100
+### Keywords — 93 / 100
 
 ```
-bloqueur,publicité,popup,traqueur,adulte,malware,phishing,cookie,confidentialité,suivi,contenu
+bloqueur,publicité,popup,traqueur,adulte,malware,phishing,cookie,confidentialité,suivi,Safari
 ```
 
 ### Description — 3560 / 4000
@@ -247,10 +256,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 Safari-Werbeblocker für iPhone, iPad und Mac. Werbung, Pop-ups und Tracker blockieren, Cookie-Hinweise ausblenden, Erwachsenenseiten filtern — ohne Konto.
 ```
 
-### Keywords — 98 / 100
+### Keywords — 97 / 100
 
 ```
-werbeblocker,werbung,popup,tracker,erwachsene,malware,phishing,cookie,datenschutz,tracking,inhalte
+werbeblocker,werbung,popup,tracker,erwachsene,malware,phishing,cookie,datenschutz,tracking,Safari
 ```
 
 ### Description — 3314 / 4000
@@ -316,10 +325,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 Blocco pubblicità per Safari su iPhone, iPad e Mac. Blocca annunci, popup e tracker, nasconde i banner cookie, filtra i siti per adulti — senza account.
 ```
 
-### Keywords — 93 / 100
+### Keywords — 100 / 100
 
 ```
-blocca,pubblicità,popup,tracker,adulti,malware,phishing,cookie,privacy,tracciamento,contenuti
+blocca,pubblicità,popup,tracker,adulti,malware,phishing,cookie,privacy,tracciamento,contenuti,Safari
 ```
 
 ### Description — 3239 / 4000
@@ -385,10 +394,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 iPhone、iPad、Mac の Safari 向け広告ブロッカー兼プライバシーツール。広告・ポップアップ・トラッカーをブロックし、Cookie バナーを非表示、アダルトサイトをフィルタリング。アカウント不要。
 ```
 
-### Keywords — 64 / 100
+### Keywords — 71 / 100
 
 ```
-広告ブロッカー,広告,ポップアップ,トラッカー,アダルト,マルウェア,フィッシング,Cookie,プライバシー,追跡,コンテンツ
+広告ブロッカー,広告,ポップアップ,トラッカー,アダルト,マルウェア,フィッシング,Cookie,プライバシー,追跡,コンテンツ,Safari
 ```
 
 ### Description — 1840 / 4000
@@ -454,10 +463,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 iPhone, iPad, Mac용 Safari 광고 차단 및 개인정보 보호 도구입니다. 광고·팝업·추적기를 차단하고 쿠키 배너를 숨기며 성인 사이트를 필터링합니다. 사이트별 설정, 계정 불필요.
 ```
 
-### Keywords — 44 / 100
+### Keywords — 51 / 100
 
 ```
-광고차단,광고,팝업,추적기,성인,악성코드,피싱,쿠키,개인정보,추적,콘텐츠,차단기
+광고차단,광고,팝업,추적기,성인,악성코드,피싱,쿠키,개인정보,추적,콘텐츠,차단기,Safari
 ```
 
 ### Description — 1781 / 4000
@@ -523,10 +532,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 Bloqueador de anúncios para o Safari no iPhone, iPad e Mac. Bloqueie anúncios, pop-ups e rastreadores, oculte avisos de cookies e filtre sites para adultos — sem conta.
 ```
 
-### Keywords — 98 / 100
+### Keywords — 96 / 100
 
 ```
-bloqueador,anúncios,popup,rastreador,adultos,malware,phishing,cookie,privacidade,rastreio,conteúdo
+bloqueador,anúncios,popup,rastreador,adultos,malware,phishing,cookie,privacidade,rastreio,Safari
 ```
 
 ### Description — 3290 / 4000
@@ -592,10 +601,10 @@ Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/s
 Bloqueador de anuncios para Safari en iPhone, iPad y Mac. Bloquea anuncios, pop-ups y rastreadores, oculta avisos de cookies y filtra sitios para adultos — sin cuenta.
 ```
 
-### Keywords — 97 / 100
+### Keywords — 94 / 100
 
 ```
-bloqueador,anuncios,popup,rastreador,adultos,malware,phishing,cookie,privacidad,rastreo,contenido
+bloqueador,anuncios,popup,rastreador,adultos,malware,phishing,cookie,privacidad,rastreo,Safari
 ```
 
 ### Description — 3355 / 4000
