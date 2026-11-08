@@ -43,6 +43,8 @@ images/adfence-safari-extensions.png  How-to page, 880×1783 — one canvas, the
                   the Mac Extensions window below them
 images/adfence-safari-extensions-iphone.png  Blog post, 880×1090 — the same
                   iPhone list on its own, for narrow article columns
+images/adfence-safari-extensions-mac.png     Blog post, 880×661 — Safari's
+                  Extensions window on the Mac, on the same #f2f1f6 canvas
 images/app-store-badge.svg  Apple's official "Download on the App Store" badge
                   (US-UK, black). Unmodified — do not recolour or redraw it.
 images/source/    Full-resolution originals behind the screenshots above. Not

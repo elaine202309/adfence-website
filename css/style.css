@@ -765,6 +765,8 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .article strong { color: var(--text); }
 .article a { color: var(--primary); }
 .article figure { margin: 36px auto; max-width: 400px; }
+/* A wide desktop window needs more room than a phone screenshot. */
+.article figure.wide { max-width: 560px; }
 .article .callout { margin: 28px 0; }
 .article-foot {
   max-width: 760px;
