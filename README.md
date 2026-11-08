@@ -278,6 +278,11 @@ certificate for a hostname it never sees.
   custom domain without changes. Don't reintroduce `/css/style.css` style paths.
 - Design tokens live in the `:root` block of `css/style.css`. Change the accent
   colour in one place there rather than hunting through the pages.
+- The stylesheet is linked as `css/style.css?v=2`. **Bump that number whenever
+  you change the CSS** (all seven pages, `../css/…` in `blog/`). GitHub Pages
+  sends `Cache-Control: max-age=14400` and Cloudflare is in front of it, so an
+  unchanged URL can keep serving the old stylesheet for up to four hours after
+  a deploy — long enough to make a layout fix look like it never shipped.
 - The FAQ accordion auto-closes other items (`js/main.js`). If you want several
   open at once, delete that block.
 
