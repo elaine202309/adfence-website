@@ -693,6 +693,14 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 
 /* --- Blog index (blog.html) ----------------------------------------------- */
+
+/* Download CTA under the intro — it sits inside the first screen, so the
+   intro section loses the trailing gap the other pages use. */
+.blog-cta { margin-top: 32px; }
+.blog-cta .btn { padding: 13px 26px; }
+.blog-intro { padding-bottom: 72px; }
+.blog-intro .section-head { margin-bottom: 0; }
+
 .post-meta {
   display: block;
   font-size: .8rem;
