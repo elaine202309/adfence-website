@@ -13,7 +13,18 @@
 <meta property="og:title" content="Why your Safari ad blocker isn't working — and the 30-second fix">
 <meta property="og:description" content="Nine times out of ten the app is fine and Safari has switched the extension off. How to check, on iPhone, iPad and Mac.">
 <meta property="og:url" content="https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html">
+<meta property="og:site_name" content="AdFence">
+<meta property="og:image" content="https://adfence.mxcode.com/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AdFence — a Safari ad blocker for iPhone, iPad and Mac">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why your Safari ad blocker isn't working — and the 30-second fix">
+<meta name="twitter:description" content="Nine times out of ten the app is fine and Safari has switched the extension off. How to check, on iPhone, iPad and Mac.">
+<meta name="twitter:image" content="https://adfence.mxcode.com/images/og-card.png">
 <meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
+<meta property="article:section" content="Troubleshooting">
 
 <link rel="icon" href="../images/favicon.png" type="image/png">
 <link rel="stylesheet" href="../css/style.css">
@@ -27,22 +38,90 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Why your Safari ad blocker isn't working — and the 30-second fix",
-  "description": "Nine times out of ten the app is fine and Safari has switched the extension off. How to check, on iPhone, iPad and Mac.",
-  "datePublished": "2026-11-08",
-  "dateModified": "2026-11-08",
-  "author": { "@type": "Organization", "name": "AdFence" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "AdFence",
-    "logo": { "@type": "ImageObject", "url": "https://adfence.mxcode.com/images/logo.png" }
-  },
-  "image": "https://adfence.mxcode.com/images/adfence-safari-extensions.png",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://adfence.mxcode.com/#organization",
+      "name": "AdFence",
+      "url": "https://adfence.mxcode.com/",
+      "logo": { "@type": "ImageObject", "url": "https://adfence.mxcode.com/images/logo.png", "width": 1024, "height": 1024 },
+      "disambiguatingDescription": "AdFence is a Safari ad-blocking app for iPhone, iPad and macOS, published on the Apple App Store under App ID 6825119569. In this context the name refers only to this app.",
+      "email": "support@mxcode.com",
+      "sameAs": [ "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569" ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adfence.mxcode.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adfence.mxcode.com/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "Why your Safari ad blocker isn't working", "item": "https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html" }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html#article",
+      "headline": "Why your Safari ad blocker isn't working — and the 30-second fix",
+      "description": "Nine times out of ten the app is fine and Safari has switched the extension off. How to check, on iPhone, iPad and Mac.",
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "author": { "@id": "https://adfence.mxcode.com/#organization" },
+      "publisher": { "@id": "https://adfence.mxcode.com/#organization" },
+      "image": "https://adfence.mxcode.com/images/adfence-safari-extensions.png",
+      "inLanguage": "en",
+      "articleSection": "Troubleshooting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why did AdFence switch itself off after an update?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "iOS and iPadOS updates occasionally reset Safari's extension settings, and Safari switches an extension off if the app was removed or reinstalled. Check Settings → Safari → Extensions on iPhone or iPad, or Safari → Settings → Extensions on the Mac, before assuming the app broke."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to enable all eight AdFence extensions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Each extension covers a different category, and anything left off is simply not filtered — the others keep working."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to set it up again on each device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Extensions are enabled per device, so an iPhone, an iPad and a Mac each need the extension switched on once."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run AdFence alongside another ad blocker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Safari can run more than one content blocker at once, and AdFence does not check for others. Two blockers aimed at the same requests mostly duplicate rules, so if a page misbehaves, switch one off to find out which."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it block YouTube or Instagram ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It blocks the ad slots served around a YouTube video, but not ads stitched into the video stream itself — those arrive as the video. Instagram and Facebook links open in their own in-app browsers, which no Safari extension can reach; open the page in Safari instead."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -251,6 +330,56 @@
           with the address of the page, what you expected to disappear, and your iOS or macOS
           version. A screenshot of the page is worth more than a description.
         </p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Why did AdFence switch itself off after an update?</summary>
+            <div class="answer">
+              <p>iOS and iPadOS updates occasionally reset Safari's extension settings, and Safari
+              switches an extension off if the app was removed or reinstalled. Check
+              <strong>Settings → Safari → Extensions</strong> on iPhone or iPad, or
+              <strong>Safari → Settings → Extensions</strong> on the Mac, before assuming the app
+              broke.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to enable all eight AdFence extensions?</summary>
+            <div class="answer">
+              <p>No. Each extension covers a different category, and anything left off is simply not
+              filtered &mdash; the others keep working.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I have to set it up again on each device?</summary>
+            <div class="answer">
+              <p>Yes. Extensions are enabled per device, so an iPhone, an iPad and a Mac each need the
+              extension switched on once.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I run AdFence alongside another ad blocker?</summary>
+            <div class="answer">
+              <p>Safari can run more than one content blocker at once, and AdFence does not check for
+              others. Two blockers aimed at the same requests mostly duplicate rules, so if a page
+              misbehaves, switch one off to find out which.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does it block YouTube or Instagram ads?</summary>
+            <div class="answer">
+              <p>It blocks the ad slots served around a YouTube video, but not ads stitched into the
+              video stream itself &mdash; those arrive as the video. Instagram and Facebook links open
+              in their own in-app browsers, which no Safari extension can reach; open the page in
+              Safari instead.</p>
+            </div>
+          </details>
+        </div>
 
       </article>
 

@@ -21,7 +21,7 @@
      =================================================================== -->
 
 <title>AdFence — Safari Ad Blocker on iPhone, iPad &amp; Mac</title>
-<meta name="description" content="AdFence is an ad blocker for Safari on iPhone, iPad and Mac. It blocks ads and trackers, hides cookie prompts and pop-ups, and keeps adult sites and known malware out.">
+<meta name="description" content="AdFence blocks ads, trackers and cookie prompts in Safari on iPhone, iPad and Mac — and keeps adult sites and known malware out.">
 <link rel="canonical" href="https://adfence.mxcode.com/">
 <meta name="theme-color" content="#4b34b8">
 
@@ -29,8 +29,15 @@
 <meta property="og:title" content="AdFence — Safari Ad Blocker">
 <meta property="og:description" content="Blocks ads, hides cookie banners and chat widgets, and keeps adult sites off your screen. Built for iPhone, iPad and Mac.">
 <meta property="og:url" content="https://adfence.mxcode.com/">
+<meta property="og:site_name" content="AdFence">
 <meta property="og:image" content="https://adfence.mxcode.com/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AdFence — a Safari ad blocker for iPhone, iPad and Mac">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AdFence — Safari Ad Blocker">
+<meta name="twitter:description" content="Blocks ads, hides cookie banners and chat widgets, and keeps adult sites off your screen. Built for iPhone, iPad and Mac.">
+<meta name="twitter:image" content="https://adfence.mxcode.com/images/og-card.png">
 
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="stylesheet" href="css/style.css">
@@ -44,15 +51,131 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AdFence",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "iOS, iPadOS, macOS",
-  "description": "Safari ad blocker that blocks ads, hides cookie consent notices and chat widgets, and blocks adult websites.",
-  "url": "https://adfence.mxcode.com/",
-  "downloadUrl": "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569",
-  "sameAs": [
-    "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://adfence.mxcode.com/#organization",
+      "name": "AdFence",
+      "url": "https://adfence.mxcode.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://adfence.mxcode.com/images/logo.png",
+        "width": 1024,
+        "height": 1024
+      },
+      "image": "https://adfence.mxcode.com/images/og-card.png",
+      "description": "AdFence makes a Safari content blocker for iPhone, iPad and Mac.",
+      "disambiguatingDescription": "AdFence is a Safari ad-blocking app for iPhone, iPad and macOS, published on the Apple App Store under App ID 6825119569. In this context the name refers only to this app.",
+      "email": "support@mxcode.com",
+      "sameAs": [
+        "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://adfence.mxcode.com/#website",
+      "url": "https://adfence.mxcode.com/",
+      "name": "AdFence",
+      "description": "The home of AdFence, a Safari ad blocker for iPhone, iPad and Mac.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://adfence.mxcode.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://adfence.mxcode.com/#app",
+      "name": "AdFence",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS, iPadOS, macOS",
+      "description": "Safari ad blocker that blocks ads, hides cookie consent notices and chat widgets, and blocks adult websites.",
+      "url": "https://adfence.mxcode.com/",
+      "installUrl": "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569",
+      "downloadUrl": "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569",
+      "sameAs": [
+        "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569"
+      ],
+      "image": "https://adfence.mxcode.com/images/og-card.png",
+      "screenshot": [
+        "https://adfence.mxcode.com/images/adfence-general-settings.png",
+        "https://adfence.mxcode.com/images/adfence-site-settings.png",
+        "https://adfence.mxcode.com/images/adfence-custom-rules.png"
+      ],
+      "featureList": [
+        "Block ads",
+        "Stop tracking scripts",
+        "Block social buttons",
+        "Block mining scripts",
+        "Safe browsing",
+        "Hide cookie prompts",
+        "Hide popups",
+        "Hide annoyances",
+        "Hide app banners",
+        "Hide article comments",
+        "Block adult sites",
+        "Block custom web fonts",
+        "Don't load images",
+        "Disable scripts",
+        "Force HTTPS",
+        "Pause blocking per site",
+        "Background filter updates",
+        "Bypass anti-adblock walls",
+        "Custom rules"
+      ],
+      "publisher": { "@id": "https://adfence.mxcode.com/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://adfence.mxcode.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is AdFence available now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is on the App Store for iPhone, iPad and Mac."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to pay for it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The App Store listing shows the current price, if there is one. There is nothing to buy on this site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work in Chrome, Firefox or in-app browsers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AdFence is an ad blocker for Safari, so it only works in Safari on iOS, iPadOS and macOS. It cannot reach the in-app browser inside other apps such as Instagram or Facebook — no Safari extension can, because Apple sandboxes them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it slow Safari down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A Safari content blocker hands Safari a pre-compiled list of rules, and Safari applies them itself as the page loads. There is no extra processing running on every request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you collect my browsing data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There is no account and no browsing history stored. See the privacy policy for the details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it break websites I use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aggressive blockers sometimes hide something a page needs. If a site misbehaves, you can turn AdFence off for that site in Safari's extension settings and leave it running everywhere else."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>

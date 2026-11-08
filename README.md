@@ -22,8 +22,8 @@ blog.html         Blog index — the newest post in a wide card, older ones in
                   .post-grid below it
 blog/             One file per post, newest first in blog.html. Paths inside
                   these pages are one level up (../css/style.css)
-privacy.html      Privacy policy — DRAFT, needs review
-terms.html        Terms of use — DRAFT, needs review
+privacy.html      Privacy policy
+terms.html        Terms of use — still opens with a draft callout
 css/style.css     All styling. Design tokens are the :root block at the top
 js/main.js        Mobile nav toggle, FAQ accordion, footer year
 js/analytics.js   GA4 (G-3GFDY4TL3R) behind the consent banner
@@ -33,6 +33,10 @@ images/logo-mark.png  Transparent, trimmed 128×128 mark used in the header
                   and footer (rendered at 30px)
 images/favicon.png    64×64 favicon, generated from the same mark
 images/favicon.svg    Legacy red mark — no longer referenced
+images/og-card.png    1200×630 social card, linked from every page's og:image
+                  and twitter:image. Rendered from a throwaway HTML page in
+                  headless Edge; there is no source file, so re-make it the same
+                  way if the wording changes.
 images/adfence-general-settings.png   Hero screenshot, 600×1301
 images/adfence-other-settings.png     Gallery, 520×1127
 images/adfence-site-settings.png      Gallery, 520×1127
@@ -58,6 +62,9 @@ images/source/    Full-resolution originals behind the screenshots above. Not
                   stitched copy.
 robots.txt
 sitemap.xml
+llms.txt          Plain-text summary for AI assistants: what the app is, what
+                  it does not do, the URL of every page, and the download link.
+                  Hand-maintained — add a line when you add a page.
 app-store-listing.md  App Store Connect copy (name, subtitle, keywords,
                   description) and the claims that must match the build.
 app-store-localizations.md  The same promotional text, keywords and
@@ -128,8 +135,9 @@ below should reach a live site without being dealt with.
       `adfence.dev` and `getadfence.com` were unregistered as of 21 October
       2026. `adfence.mxcode.com` ties the site to the existing `mxcode.com`
       domain that already carries `support@mxcode.com`, at no extra cost.
-- [ ] `images/og-card.png` — referenced in `index.html` but **does not exist yet**.
-      Create a 1200×630 social card.
+- [x] `images/og-card.png` — 1200×630 social card, created 8 November 2026 and
+      now referenced from all seven pages along with `twitter:image`. Regenerate
+      it if the tagline on the card stops matching the site.
 - [x] Google Search Console — the URL-prefix property
       `https://adfence.mxcode.com/` is verified by the HTML tag method: the
       `<meta name="google-site-verification" content="CRHi3cdg…">` line sits in
@@ -209,14 +217,19 @@ is both a legal problem and an App Store rejection risk.
 
 1. Copy `blog/why-safari-ad-blocker-not-working.html` to `blog/<slug>.html` —
    lowercase, hyphens, and the question the post answers rather than a pun.
-2. Change the `<title>`, `description`, `canonical`, the `og:` tags, the
-   `BlogPosting` JSON-LD block, the `.post-meta` line (category · date · reading
-   time) and the `<h1>`. Paths inside `blog/` are one level up:
-   `../css/style.css`, `../images/…`, `../blog.html`.
-3. In `blog.html`, move the current `.post-feature` text into a
+2. Change the `<title>`, `description`, `canonical`, the `og:`/`twitter:` tags,
+   the `BlogPosting` node in the JSON-LD, the breadcrumb name, the `.post-meta`
+   line (category · date · reading time) and the `<h1>`. Paths inside `blog/`
+   are one level up: `../css/style.css`, `../images/…`, `../blog.html`.
+3. Rewrite the FAQ at the bottom of the post — questions, answers, and the
+   matching `FAQPage` entries in the JSON-LD. Delete it if the post genuinely
+   has no questions worth answering.
+4. In `blog.html`, move the current `.post-feature` text into a
    `<a class="card post-card">` inside `.post-grid` (the empty template is
-   commented out in the file) and put the new post in the feature slot.
-4. Add the new URL to `sitemap.xml` with today's `<lastmod>`.
+   commented out in the file), put the new post in the feature slot, and add it
+   to the `blogPost` array in `blog.html`'s JSON-LD.
+5. Add the new URL to `sitemap.xml` with today's `<lastmod>`, and add a line
+   under "## Pages" in `llms.txt`.
 
 There is no RSS feed and no build step; the index is hand-maintained on purpose,
 so what is on the page is exactly what exists.
@@ -241,6 +254,23 @@ The custom domain lives in the `CNAME` file at the repo root
 domain. The `elaine202309.github.io/adfence-website` address keeps serving the
 same content as a fallback, so links to either one work.
 
+### Cloudflare
+
+The domain is proxied by Cloudflare, so two settings there live outside this
+repo and outside GitHub:
+
+- **AI crawlers.** `robots.txt` allows everything, but Cloudflare can block bots
+  at the edge anyway — Bot Fight Mode, "Block AI bots", AI Crawl Control. No
+  error appears in Search Console if it does; the crawlers just never arrive.
+  Check this before concluding that an AI engine is ignoring the site.
+- **Always Use HTTPS.** `http://` does not redirect to `https://` at the moment,
+  and GitHub's certificate reads as null while the record is proxied. Turning on
+  Always Use HTTPS in Cloudflare SSL/TLS → Edge Certificates is the fix.
+
+Verification trick while the domain is proxied: `curl --resolve` against port
+80 works, HTTPS against the GitHub IPs does not, because GitHub holds no
+certificate for a hostname it never sees.
+
 ## Notes for future edits
 
 - All paths are **relative**, not root-absolute. This is deliberate — it means
@@ -250,3 +280,18 @@ same content as a fallback, so links to either one work.
   colour in one place there rather than hunting through the pages.
 - The FAQ accordion auto-closes other items (`js/main.js`). If you want several
   open at once, delete that block.
+
+- Structured data is hand-written JSON-LD in each page's `<head>`, one
+  `@graph` per page. The `Organization` node has a fixed `@id`
+  (`https://adfence.mxcode.com/#organization`) and the other nodes point at it
+  instead of repeating it, so search engines and AI assistants resolve one
+  entity across the whole site. `index.html` carries Organization + WebSite +
+  SoftwareApplication + FAQPage; `support.html` and the blog post carry
+  FAQPage; every page except the homepage carries a `BreadcrumbList`.
+  **If you change the questions shown on a page, change the matching `FAQPage`
+  entry in the same commit** — structured data that disagrees with the visible
+  page is worse than none at all.
+- `llms.txt` is a plain-text brief for AI assistants. It is not read by Google,
+  and no ranking depends on it, but it is cheap and it is what an assistant
+  quotes when someone asks what AdFence is. Keep the "Key facts" section true;
+  it repeats the privacy claims.
