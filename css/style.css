@@ -761,10 +761,30 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   margin: 0 auto;
 }
 
-/* Same first-screen CTA as the blog index, one notch quieter: a reader who
-   arrived from search should see the badge without it shouting over the h1. */
-.article-cta { margin-top: 30px; }
-.article-cta .btn { padding: 13px 26px; }
+/* Download card inside a post. Deliberately quieter than the .cta-band at the
+   foot of the page — it interrupts reading, so it earns its place by sitting
+   exactly where the post starts talking about the app's own screens. */
+.article-promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 28px;
+  margin: 44px 0;
+  padding: 24px 26px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.article-promo p {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: .98rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+.article-promo strong { color: var(--text); }
+.article-promo .appstore-badge img { height: 44px; }
 
 .article { max-width: 700px; margin: 0 auto; }
 .article h2 { font-size: 1.5rem; margin: 46px 0 14px; }
