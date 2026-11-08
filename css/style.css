@@ -690,6 +690,8 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   .mock-wrap::before { width: 330px; height: 330px; }
   .cta-band { padding: 44px 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .article-body { padding-top: 40px; }
 }
 
 /* --- Blog index (blog.html) ----------------------------------------------- */
@@ -751,6 +753,12 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 
 /* --- Article pages (blog/*.html) ------------------------------------------ */
+/* The standfirst and the opening paragraph read as one block. They live in two
+   sections only so the head can be laid out on its own, so the padding between
+   them is removed rather than doubled. */
+.article-intro { padding-bottom: 0; }
+.article-body { padding-top: 56px; }
+
 .article-head { max-width: 760px; margin: 0 auto; text-align: center; }
 .article-head h1 { margin: 16px 0 20px; text-wrap: balance; }
 .article-head .post-meta { margin-bottom: 0; }
