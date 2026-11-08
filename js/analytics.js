@@ -16,6 +16,12 @@
   var ID = 'G-3GFDY4TL3R';
   var KEY = 'adfence:analytics';
 
+  /* Pages in blog/ load this file as ../js/analytics.js, so the privacy link in
+     the banner has to be worked out from where the script itself sits. */
+  var base = '';
+  var self = document.currentScript && document.currentScript.src;
+  if (self) base = self.replace(/js\/analytics\.js.*$/, '');
+
   var choice = null;
   try {
     choice = window.localStorage.getItem(KEY);
@@ -51,7 +57,7 @@
 
     box.innerHTML =
       '<p>We use Google Analytics to count visits and see which pages are read. ' +
-      'No ads, no cross-site tracking. <a href="privacy.html">Privacy Policy</a></p>' +
+      'No ads, no cross-site tracking. <a href="' + base + 'privacy.html">Privacy Policy</a></p>' +
       '<div class="consent-actions">' +
         '<button type="button" class="btn btn-ghost btn-sm" data-consent="denied">Decline</button>' +
         '<button type="button" class="btn btn-primary btn-sm" data-consent="granted">Accept</button>' +

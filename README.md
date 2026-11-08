@@ -18,10 +18,15 @@ index.html        The whole site — hero, feature grid, setup, privacy,
                   FAQ, download CTA
 support.html      Setup steps for iOS and Mac, troubleshooting FAQ, contact
 how-to-use.html   Step-by-step walkthrough of the app, one screenshot per step
+blog.html         Blog index — the newest post in a wide card, older ones in
+                  .post-grid below it
+blog/             One file per post, newest first in blog.html. Paths inside
+                  these pages are one level up (../css/style.css)
 privacy.html      Privacy policy — DRAFT, needs review
 terms.html        Terms of use — DRAFT, needs review
 css/style.css     All styling. Design tokens are the :root block at the top
 js/main.js        Mobile nav toggle, FAQ accordion, footer year
+js/analytics.js   GA4 (G-3GFDY4TL3R) behind the consent banner
 images/logo.png   Source app icon, 1024×1024. Kept as the master file —
                   the pages do not reference it directly.
 images/logo-mark.png  Transparent, trimmed 128×128 mark used in the header
@@ -36,6 +41,8 @@ images/adfence-extension-status.png   Gallery, 520×1127
 images/adfence-safari-extensions.png  How-to page, 880×1783 — one canvas, the
                   AdFence rows in Settings → Safari → Extensions on iPhone with
                   the Mac Extensions window below them
+images/adfence-safari-extensions-iphone.png  Blog post, 880×1090 — the same
+                  iPhone list on its own, for narrow article columns
 images/app-store-badge.svg  Apple's official "Download on the App Store" badge
                   (US-UK, black). Unmodified — do not recolour or redraw it.
 images/source/    Full-resolution originals behind the screenshots above. Not
@@ -195,6 +202,22 @@ is both a legal problem and an App Store rejection risk.
       lookup API returned no result for ID 6825119569, which is normal while the
       app is still in "Pending Developer Release" — but it means the link has
       not yet been seen working from outside App Store Connect.
+
+## Adding a blog post
+
+1. Copy `blog/why-safari-ad-blocker-not-working.html` to `blog/<slug>.html` —
+   lowercase, hyphens, and the question the post answers rather than a pun.
+2. Change the `<title>`, `description`, `canonical`, the `og:` tags, the
+   `BlogPosting` JSON-LD block, the `.post-meta` line (category · date · reading
+   time) and the `<h1>`. Paths inside `blog/` are one level up:
+   `../css/style.css`, `../images/…`, `../blog.html`.
+3. In `blog.html`, move the current `.post-feature` text into a
+   `<a class="card post-card">` inside `.post-grid` (the empty template is
+   commented out in the file) and put the new post in the feature slot.
+4. Add the new URL to `sitemap.xml` with today's `<lastmod>`.
+
+There is no RSS feed and no build step; the index is hand-maintained on purpose,
+so what is on the page is exactly what exists.
 
 ## Deploying to GitHub Pages
 

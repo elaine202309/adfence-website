@@ -21,6 +21,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adfence.mxcode.com/blog.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://adfence.mxcode.com/privacy.html</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>yearly</changefreq>
