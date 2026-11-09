@@ -37,7 +37,8 @@
 
   --container: 1120px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-          Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+          Arial, "PingFang SC", "Hiragino Sans", "Yu Gothic UI", "Malgun Gothic",
+          "Microsoft YaHei", sans-serif;
 }
 
 /* --- Reset ---------------------------------------------------------------- */
@@ -153,6 +154,61 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 
 .nav-menu { display: flex; align-items: center; gap: 30px; }
 
+/* Language menu. A <details> so it works with JS disabled; the nine
+   localized homepages live in /<lang>/ and are linked from here. */
+.lang { position: relative; }
+.lang summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: .86rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--text-muted);
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+}
+.lang summary:hover { color: var(--text); border-color: var(--border-strong); }
+.lang[open] summary { color: var(--text); border-color: var(--border-strong); }
+.lang ul {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 60;
+  min-width: 200px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.lang ul a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.lang ul a:hover { background: var(--bg-alt); color: var(--text); }
+.lang ul a[aria-current] { color: var(--text); font-weight: 700; }
+
 .nav-toggle {
   display: none;
   background: none;
@@ -218,7 +274,9 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 
 .hero h1 { margin-bottom: 20px; }
-.hero h1 .accent { color: var(--primary); }
+/* The accent half of the headline gets its own line. English wraps there
+   anyway; CJK languages would otherwise break mid-phrase ("零 / 干扰"). */
+.hero h1 .accent { display: block; color: var(--primary); }
 .hero .lead { font-size: 1.22rem; max-width: 34em; margin-bottom: 32px; }
 
 .hero-note { font-size: .9rem; color: var(--text-faint); margin-top: 20px; }
@@ -682,6 +740,31 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   }
   .site-header.menu-open .nav-links a { padding: 12px 0; font-size: 1.02rem; }
   .site-header.menu-open .nav-menu .btn { width: 100%; margin-top: 6px; }
+
+  /* Inside the mobile panel the language menu is a plain disclosure: the
+     dropdown would open over the navigation it belongs to. */
+  .site-header.menu-open .lang { margin-top: 8px; }
+  .site-header.menu-open .lang summary {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    font-size: 1.02rem;
+    color: var(--text);
+  }
+  .site-header.menu-open .lang summary::after { transform: rotate(-135deg); }
+  .site-header.menu-open .lang[open] summary::after { transform: rotate(45deg); }
+  .site-header.menu-open .lang ul {
+    position: static;
+    min-width: 0;
+    padding: 0 0 4px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .site-header.menu-open .lang ul a { padding: 10px 0; }
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .price-grid { grid-template-columns: 1fr; }

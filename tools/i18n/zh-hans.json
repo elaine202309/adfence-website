@@ -1,0 +1,180 @@
+{
+  "lang": "zh-Hans",
+  "slug": "zh-hans",
+  "title": "AdFence — Safari 广告与追踪拦截器，适用于 iPhone、iPad 和 Mac",
+  "desc": "AdFence 在 iPhone、iPad 和 Mac 的 Safari 中拦截广告、追踪脚本和 Cookie 提示，并挡住成人网站和已知恶意网站。",
+  "ogTitle": "AdFence — 广告与追踪拦截器",
+  "imgAlt": "AdFence — 适用于 iPhone、iPad 和 Mac 的 Safari 广告拦截器",
+  "orgDesc": "AdFence 为 iPhone、iPad 和 Mac 开发 Safari 内容拦截器。",
+  "siteDesc": "AdFence 官网：适用于 iPhone、iPad 和 Mac 的 Safari 广告与追踪拦截器。",
+  "appDesc": "适用于 Safari 的广告与追踪拦截器，可拦截广告、隐藏 Cookie 提示和聊天浮窗，并拦截成人网站。",
+  "brandDesc": "广告与追踪拦截",
+
+  "nav": {
+    "features": "功能",
+    "howto": "使用方法",
+    "support": "支持",
+    "blog": "博客",
+    "download": "下载"
+  },
+
+  "hero": {
+    "pill": "适用于 iPhone、iPad 和 Mac 的 Safari 扩展",
+    "h1a": "Safari 广告拦截。",
+    "h1b": "零干扰。",
+    "lead": "AdFence 是一款适用于 Safari 的广告与追踪拦截器。它会清除广告和追踪脚本，隐藏 Cookie 提示和聊天浮窗，并把成人网站和已知恶意网站挡在浏览器之外。",
+    "ghost": "看看它能拦截什么",
+    "note": "无需账号、无需注册 —— 在 iPhone、iPad 和 Mac 的 Safari 中即可使用。",
+    "badge": "从 App Store 下载 AdFence",
+    "shotAlt": "iPhone 上 AdFence 的「通用」页面：总开关下方是拦截广告、绕过反广告拦截、安全浏览和拦截跟踪器四个开关。"
+  },
+
+  "shots": {
+    "eyebrow": "应用内部",
+    "title": "看看 AdFence 里面",
+    "lead": "没有账号，没有面板，没有玄机。每一项过滤都是一个开关，每个开关都写清了它做什么。",
+    "items": [
+      {
+        "alt": "AdFence 的其他设置：拦截成人网站、隐藏 Cookie 提示、拦截弹窗、App 横幅、干扰元素、隐藏评论、拦截社交按钮和自定义网页字体等开关。",
+        "strong": "其他一切，也一样",
+        "cap": "Cookie 横幅、弹窗、App 横幅、评论区、社交按钮和挖矿脚本 —— 每一项都有自己的开关。"
+      },
+      {
+        "alt": "AdFence 的网站设置面板：屏蔽网站、暂停拦截、自定义元素拦截，以及针对广告、跟踪脚本、不安全浏览和社交按钮的单站覆盖选项。",
+        "strong": "按站点控制",
+        "cap": "屏蔽整个网站、在某个站点暂停拦截，或只覆盖某一项过滤而不动其他设置。"
+      },
+      {
+        "alt": "AdFence 的自定义规则页面，包含启用自定义规则的开关和一个等待添加第一个网站的空白列表。",
+        "strong": "属于你自己的规则",
+        "cap": "添加一次网站，它的规则就会留在这里 —— 拦截、暂停和覆盖设置都按站点保存。"
+      },
+      {
+        "alt": "AdFence 的插件状态页，列出广告、隐私、社交、安全、其他、自定义、视频和成人八个扩展在 Safari 中均为启用状态。",
+        "strong": "确认它正在运行",
+        "cap": "AdFence 会向 Safari 查询每个扩展是否真的启用，静默失效不会被忽略。"
+      }
+    ]
+  },
+
+  "features": {
+    "eyebrow": "它能做什么",
+    "title": "挡路的一切，全部关掉",
+    "lead": "广告、追踪器和页面杂物 —— 每一项过滤都相互独立，你只打开自己讨厌的那些，其余保持原样。",
+    "items": [
+      { "t": "拦截广告", "d": "展示广告、弹窗广告和视频广告" },
+      { "t": "阻止跟踪脚本", "d": "分析与行为脚本" },
+      { "t": "拦截社交按钮", "d": "分享按钮及其跟踪像素" },
+      { "t": "拦截挖矿脚本", "d": "加密货币挖矿脚本" },
+      { "t": "安全浏览", "d": "恶意软件和钓鱼域名" },
+      { "t": "隐藏 Cookie 提示", "d": "同意横幅不再挡路" },
+      { "t": "隐藏弹窗", "d": "订阅和促销浮层" },
+      { "t": "隐藏干扰元素", "d": "聊天浮窗和营销模块" },
+      { "t": "隐藏 App 横幅", "d": "固定在页面上的「在 App 中打开」横条" },
+      { "t": "隐藏文章评论", "d": "评论区，可选隐藏" },
+      { "t": "拦截成人网站", "d": "可选的成人域名过滤" },
+      { "t": "拦截自定义网页字体", "d": "跳过下载字体" },
+      { "t": "不加载图片", "d": "弱网环境下跳过图片" },
+      { "t": "禁用脚本", "d": "关闭 JavaScript" },
+      { "t": "强制 HTTPS", "d": "升级到安全连接" }
+    ],
+    "sub": "另外还内置",
+    "extras": [
+      { "t": "暂停拦截", "d": "临时关闭全部过滤。" },
+      { "t": "后台更新", "d": "过滤规则自动保持最新。" },
+      { "t": "绕过反广告拦截", "d": "越过检测到拦截器的网站。" },
+      { "t": "自定义规则", "d": "为熟悉的网站写隐藏规则。" }
+    ]
+  },
+
+  "setup": {
+    "eyebrow": "设置",
+    "title": "大约一分钟就能用上",
+    "lead": "Safari 扩展需要手动开启。整个过程如下。",
+    "steps": [
+      {
+        "t": "安装 App",
+        "d": "从 <a href=\"https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569\" target=\"_blank\" rel=\"noopener\">App Store</a> 下载 AdFence。它会安装到你的 iPhone、iPad 和 Mac 上。"
+      },
+      {
+        "t": "允许扩展",
+        "d": "打开 <strong>设置 → Safari 浏览器 → 扩展</strong> 并开启 AdFence。在 Mac 上，请在 Safari 的设置中操作。"
+      },
+      {
+        "t": "继续浏览",
+        "d": "就这样。页面加载时不再有广告、横幅和弹窗。"
+      }
+    ],
+    "more": "逐步查看每一个界面",
+    "calloutStrong": "仅在 Safari 中生效。",
+    "callout": "Safari 扩展按设计被沙盒隔离 —— 广告拦截器无法进入其他 App 的内置浏览器。所有 Safari 广告拦截器都有同样的限制，而这也正是扩展看不到你浏览内容的原因。"
+  },
+
+  "privacy": {
+    "eyebrow": "隐私",
+    "title": "你的浏览只属于你",
+    "lead": "AdFence 依靠随 App 一起提供的预置过滤规则工作。它不会观察你读了什么，也没有可以登录查看的历史面板。",
+    "more": "阅读完整的<a href=\"../privacy.html\">隐私政策</a>。",
+    "rows": [
+      { "l": "读取你的浏览历史", "v": "否" },
+      { "l": "把页面发送到服务器", "v": "否" },
+      { "l": "需要账号或登录", "v": "否" },
+      { "l": "在 Safari 中运行", "v": "是", "tick": true },
+      { "l": "在其他 App 中运行", "v": "无法做到" }
+    ]
+  },
+
+  "faq": {
+    "eyebrow": "常见问题",
+    "title": "你可能会问",
+    "items": [
+      {
+        "q": "AdFence 现在已经上架了吗？",
+        "a": "是的。它已在 App Store 上架，支持 iPhone、iPad 和 Mac。"
+      },
+      {
+        "q": "需要付费吗？",
+        "a": "App Store 的商品页会显示当前价格（如果有的话）。本网站没有任何可购买的内容。"
+      },
+      {
+        "q": "它在 Chrome、Firefox 或 App 内置浏览器里能用吗？",
+        "a": "不能。AdFence 是 Safari 的广告拦截器，因此只能在 iOS、iPadOS 和 macOS 的 Safari 中工作。它无法进入 Instagram、Facebook 等 App 的内置浏览器 —— 任何 Safari 扩展都做不到，因为 Apple 对它们做了沙盒隔离。"
+      },
+      {
+        "q": "它会让 Safari 变慢吗？",
+        "a": "不会。Safari 内容拦截器只是把一份预先编译好的规则列表交给 Safari，由 Safari 在页面加载时自行套用，不会在每次请求时额外运算。"
+      },
+      {
+        "q": "你们会收集我的浏览数据吗？",
+        "a": "不会。没有账号，也不保存浏览历史。详情见隐私政策。"
+      },
+      {
+        "q": "它会让我常用的网站出问题吗？",
+        "a": "激进的拦截器有时会隐藏页面需要的内容。如果某个网站不正常，你可以在 Safari 的扩展设置里对那个站点关闭 AdFence，其余站点照常生效。"
+      }
+    ]
+  },
+
+  "cta": {
+    "title": "在 App Store 获取 AdFence",
+    "lead": "AdFence 支持 iPhone、iPad 和 Mac。无需账号，无需注册 —— 在 Safari 里开启一次扩展就完成了。",
+    "badge": "从 App Store 下载 AdFence"
+  },
+
+  "footer": {
+    "tagline": "适用于 iPhone、iPad 和 Mac 的 Safari 广告与追踪拦截器。",
+    "product": "产品",
+    "legal": "法律",
+    "contact": "联系",
+    "features": "功能",
+    "howto": "使用方法",
+    "support": "支持",
+    "blog": "博客",
+    "download": "下载",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "cookies": "Cookie 设置",
+    "rights": "保留所有权利。",
+    "made": "为 iOS、iPadOS 和 macOS 上的 Safari 打造。"
+  }
+}

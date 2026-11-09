@@ -1,0 +1,180 @@
+{
+  "lang": "pt-PT",
+  "slug": "pt",
+  "title": "AdFence — Bloqueador de anúncios e rastreadores para o Safari",
+  "desc": "O AdFence bloqueia anúncios, rastreadores e avisos de cookies no Safari do iPhone, iPad e Mac, e mantém fora os sites para adultos e os domínios maliciosos conhecidos.",
+  "ogTitle": "AdFence — Bloqueador de anúncios e rastreadores",
+  "imgAlt": "AdFence — um bloqueador de anúncios para o Safari no iPhone, iPad e Mac",
+  "orgDesc": "A AdFence desenvolve um bloqueador de conteúdos para o Safari no iPhone, iPad e Mac.",
+  "siteDesc": "O site do AdFence, um bloqueador de anúncios e rastreadores para o Safari no iPhone, iPad e Mac.",
+  "appDesc": "Bloqueador de anúncios e rastreadores para o Safari, que bloqueia anúncios, esconde avisos de cookies e janelas de chat, e bloqueia sites para adultos.",
+  "brandDesc": "Anúncios e rastreadores",
+
+  "nav": {
+    "features": "Funcionalidades",
+    "howto": "Como usar",
+    "support": "Suporte",
+    "blog": "Blog",
+    "download": "Transferir"
+  },
+
+  "hero": {
+    "pill": "Extensão do Safari para iPhone, iPad e Mac",
+    "h1a": "Bloqueador de anúncios Safari.",
+    "h1b": "Zero ruído.",
+    "lead": "O AdFence é um bloqueador de anúncios e rastreadores para o Safari. Remove anúncios e scripts de rastreio, esconde avisos de cookies e janelas de chat, e mantém os sites para adultos e os domínios maliciosos conhecidos fora do navegador.",
+    "ghost": "Ver o que bloqueia",
+    "note": "Sem conta, sem registo — funciona no Safari do iPhone, iPad e Mac.",
+    "badge": "Transferir o AdFence na App Store",
+    "shotAlt": "O separador Geral do AdFence no iPhone: um interruptor principal e, abaixo, interruptores para Bloquear anúncios, Contornar anti-bloqueio, Navegação segura e Bloquear rastreadores."
+  },
+
+  "shots": {
+    "eyebrow": "Dentro da app",
+    "title": "Um olhar por dentro do AdFence",
+    "lead": "Sem conta, sem painel, sem mistério. Cada filtro é um interruptor, e cada interruptor diz o que faz.",
+    "items": [
+      {
+        "alt": "As restantes definições do AdFence: bloquear sites para adultos, avisos de cookies, pop-ups, faixas de app, distrações, comentários, botões sociais e tipos de letra web personalizados.",
+        "strong": "Tudo o resto também",
+        "cap": "Avisos de cookies, pop-ups, faixas de app, comentários, botões sociais e scripts de mineração — cada um no seu interruptor."
+      },
+      {
+        "alt": "O painel de definições por site do AdFence: bloquear site, suspender bloqueio, bloqueador de elementos personalizado e exceções por site para anúncios, scripts de rastreio, navegação insegura e botões sociais.",
+        "strong": "Controlo por site",
+        "cap": "Bloqueie um site inteiro, suspenda o bloqueio só nele, ou abra uma exceção a um único filtro sem mexer no resto."
+      },
+      {
+        "alt": "O ecrã de Regras personalizadas do AdFence, com um interruptor e uma lista vazia à espera do primeiro site.",
+        "strong": "Regras suas",
+        "cap": "Adicione um site uma vez e as regras ficam aqui — bloqueio, suspensão e exceções, guardados por site."
+      },
+      {
+        "alt": "O ecrã de estado das extensões do AdFence, com as extensões Ads, Privacy, Social, Safety, Others, Custom, Video e Adult ativas no Safari.",
+        "strong": "Saber que está a funcionar",
+        "cap": "O AdFence pergunta ao Safari se cada extensão está mesmo ativa, para que uma falha silenciosa não passe despercebida."
+      }
+    ]
+  },
+
+  "features": {
+    "eyebrow": "O que faz",
+    "title": "Tudo o que estorva, desligado",
+    "lead": "Anúncios, rastreadores e desordem nas páginas — cada filtro é independente: liga o que te incomoda e deixa o resto em paz.",
+    "items": [
+      { "t": "Bloquear anúncios", "d": "Anúncios de ecrã, pop-up e vídeo" },
+      { "t": "Parar scripts de rastreio", "d": "Scripts de análise e comportamento" },
+      { "t": "Bloquear botões sociais", "d": "Botões de partilha e os seus píxeis" },
+      { "t": "Bloquear mineração", "d": "Scripts de mineração de criptomoedas" },
+      { "t": "Navegação segura", "d": "Domínios maliciosos e de phishing" },
+      { "t": "Esconder avisos de cookies", "d": "Faixas de consentimento fora do caminho" },
+      { "t": "Esconder pop-ups", "d": "Sobreposições de subscrição e promoções" },
+      { "t": "Esconder distrações", "d": "Janelas de chat e blocos de marketing" },
+      { "t": "Esconder faixas de app", "d": "Barras «abrir na app»" },
+      { "t": "Esconder comentários", "d": "Secções de comentários, se quiser" },
+      { "t": "Bloquear sites para adultos", "d": "Filtro de domínios adultos opcional" },
+      { "t": "Bloquear tipos de letra web", "d": "Não descarregar tipos de letra" },
+      { "t": "Não carregar imagens", "d": "Imagens ignoradas em ligações lentas" },
+      { "t": "Desativar scripts", "d": "JavaScript desligado" },
+      { "t": "Forçar HTTPS", "d": "Passar para ligações seguras" }
+    ],
+    "sub": "Também incluído",
+    "extras": [
+      { "t": "Suspender bloqueio", "d": "Desliga todos os filtros temporariamente." },
+      { "t": "Atualizações em segundo plano", "d": "As listas de filtros mantêm-se atuais." },
+      { "t": "Contornar anti-bloqueio", "d": "Passa por sites que detetam bloqueadores." },
+      { "t": "Regras personalizadas", "d": "Escrever regras de ocultação." }
+    ]
+  },
+
+  "setup": {
+    "eyebrow": "Configuração",
+    "title": "Ativo em cerca de um minuto",
+    "lead": "As extensões do Safari têm de ser ligadas à mão. Este é o processo todo.",
+    "steps": [
+      {
+        "t": "Instalar a app",
+        "d": "Transfira o AdFence da <a href=\"https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569\" target=\"_blank\" rel=\"noopener\">App Store</a>. Instala-se no iPhone, iPad e Mac."
+      },
+      {
+        "t": "Permitir a extensão",
+        "d": "Abra <strong>Definições → Safari → Extensões</strong> e ligue o AdFence. No Mac, faça-o nas definições do Safari."
+      },
+      {
+        "t": "Continue a navegar",
+        "d": "É tudo. As páginas abrem sem anúncios, faixas e pop-ups."
+      }
+    ],
+    "more": "Ver cada ecrã, passo a passo",
+    "calloutStrong": "Funciona apenas no Safari.",
+    "callout": "As extensões do Safari são isoladas por conceção — um bloqueador de anúncios não entra nos navegadores integrados de outras apps. É o mesmo limite de qualquer bloqueador Safari, e é isso que impede a extensão de ver a sua navegação."
+  },
+
+  "privacy": {
+    "eyebrow": "Privacidade",
+    "title": "A sua navegação é só sua",
+    "lead": "O AdFence trabalha com listas de filtros já prontas que vêm com a app. Não vê o que lê e não há painel do seu histórico.",
+    "more": "Ler a <a href=\"../privacy.html\">política de privacidade</a> completa.",
+    "rows": [
+      { "l": "Lê o seu histórico de navegação", "v": "Não" },
+      { "l": "Envia páginas para um servidor", "v": "Não" },
+      { "l": "Precisa de conta ou início de sessão", "v": "Não" },
+      { "l": "Funciona no Safari", "v": "Sim", "tick": true },
+      { "l": "Funciona noutras apps", "v": "Impossível" }
+    ]
+  },
+
+  "faq": {
+    "eyebrow": "Perguntas",
+    "title": "Antes de perguntar",
+    "items": [
+      {
+        "q": "O AdFence já está disponível?",
+        "a": "Sim. Está na App Store para iPhone, iPad e Mac."
+      },
+      {
+        "q": "Tenho de pagar?",
+        "a": "A página da App Store mostra o preço atual, se houver. Não há nada para comprar neste site."
+      },
+      {
+        "q": "Funciona no Chrome, no Firefox ou nos navegadores integrados?",
+        "a": "Não. O AdFence é um bloqueador de anúncios para o Safari, por isso só funciona no Safari em iOS, iPadOS e macOS. Não chega aos navegadores integrados de apps como o Instagram ou o Facebook — nenhuma extensão Safari consegue, porque a Apple as isola."
+      },
+      {
+        "q": "Deixa o Safari mais lento?",
+        "a": "Não. Um bloqueador de conteúdos do Safari entrega ao Safari uma lista de regras pré-compilada, que o Safari aplica sozinho enquanto a página carrega. Não corre processamento extra a cada pedido."
+      },
+      {
+        "q": "Recolhem os meus dados de navegação?",
+        "a": "Não. Sem conta e sem histórico guardado. Veja a política de privacidade para os detalhes."
+      },
+      {
+        "q": "Vai estragar os sites que uso?",
+        "a": "Os bloqueadores agressivos escondem às vezes algo de que a página precisa. Se um site se portar mal, pode desligar o AdFence só para esse site nas definições de extensões do Safari e mantê-lo ativo nos restantes."
+      }
+    ]
+  },
+
+  "cta": {
+    "title": "O AdFence na App Store",
+    "lead": "AdFence para iPhone, iPad e Mac. Sem conta, sem registo — ative a extensão no Safari uma vez e está feito.",
+    "badge": "Transferir o AdFence na App Store"
+  },
+
+  "footer": {
+    "tagline": "Um bloqueador de anúncios e rastreadores para o Safari no iPhone, iPad e Mac.",
+    "product": "Produto",
+    "legal": "Informação legal",
+    "contact": "Contacto",
+    "features": "Funcionalidades",
+    "howto": "Como usar",
+    "support": "Suporte",
+    "blog": "Blog",
+    "download": "Transferir",
+    "privacy": "Privacidade",
+    "terms": "Termos de utilização",
+    "cookies": "Definições de cookies",
+    "rights": "Todos os direitos reservados.",
+    "made": "Feito para o Safari em iOS, iPadOS e macOS."
+  }
+}

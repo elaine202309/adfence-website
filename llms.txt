@@ -19,6 +19,13 @@
 - [Home](https://adfence.mxcode.com/): What AdFence blocks — 19 switches across
   ads, privacy, annoyances, social widgets, safety and video — plus the setup
   steps, a privacy summary and a short FAQ.
+- [Home — 简体中文](https://adfence.mxcode.com/zh-hans/), [繁體中文](https://adfence.mxcode.com/zh-hant/),
+  [Français](https://adfence.mxcode.com/fr/), [Deutsch](https://adfence.mxcode.com/de/),
+  [Italiano](https://adfence.mxcode.com/it/), [日本語](https://adfence.mxcode.com/ja/),
+  [한국어](https://adfence.mxcode.com/ko/), [Português (Portugal)](https://adfence.mxcode.com/pt/),
+  [Español (España)](https://adfence.mxcode.com/es/): The same homepage page in
+  nine languages. Only the homepage is translated; the pages below are
+  English-only.
 - [How to use](https://adfence.mxcode.com/how-to-use.html): A screenshot-by-
   screenshot walkthrough — enable the extension in Safari, choose filters, and
   tune or pause blocking for a single site.

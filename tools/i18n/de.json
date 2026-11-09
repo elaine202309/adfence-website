@@ -1,0 +1,180 @@
+{
+  "lang": "de",
+  "slug": "de",
+  "title": "AdFence — Werbe- und Tracker-Blocker für Safari",
+  "desc": "AdFence blockiert Werbung, Tracker und Cookie-Hinweise in Safari auf iPhone, iPad und Mac – und hält Erwachsenenseiten und bekannte Schadseiten fern.",
+  "ogTitle": "AdFence — Werbe- und Tracker-Blocker",
+  "imgAlt": "AdFence — ein Werbeblocker für Safari auf iPhone, iPad und Mac",
+  "orgDesc": "AdFence entwickelt einen Content-Blocker für Safari auf iPhone, iPad und Mac.",
+  "siteDesc": "Die Website von AdFence, einem Werbe- und Tracker-Blocker für Safari auf iPhone, iPad und Mac.",
+  "appDesc": "Werbe- und Tracker-Blocker für Safari, der Anzeigen blockiert, Cookie-Hinweise und Chat-Widgets ausblendet und Erwachsenenseiten sperrt.",
+  "brandDesc": "Werbung & Tracker",
+
+  "nav": {
+    "features": "Funktionen",
+    "howto": "Anleitung",
+    "support": "Support",
+    "blog": "Blog",
+    "download": "Laden"
+  },
+
+  "hero": {
+    "pill": "Safari-Erweiterung für iPhone, iPad und Mac",
+    "h1a": "Werbeblocker für Safari.",
+    "h1b": "Null Störung.",
+    "lead": "AdFence ist ein Werbe- und Tracker-Blocker für Safari. Er entfernt Anzeigen und Tracking-Skripte, blendet Cookie-Hinweise und Chat-Blasen aus und hält Erwachsenenseiten und bekannte Schadseiten aus dem Browser.",
+    "ghost": "Sehen, was er blockiert",
+    "note": "Kein Konto, keine Anmeldung — er läuft in Safari auf iPhone, iPad und Mac.",
+    "badge": "AdFence im App Store laden",
+    "shotAlt": "Der Tab „Allgemein“ von AdFence auf dem iPhone: ein Hauptschalter, darunter Schalter für Werbung blockieren, Anti-Adblock umgehen, Sichere Suche und Tracker blockieren."
+  },
+
+  "shots": {
+    "eyebrow": "In der App",
+    "title": "Ein Blick in AdFence",
+    "lead": "Kein Konto, kein Dashboard, kein Rätselraten. Jeder Filter ist ein Schalter, und jeder Schalter sagt, was er tut.",
+    "items": [
+      {
+        "alt": "Die weiteren Einstellungen von AdFence: Erwachsenenseiten sperren, Cookie-Hinweise, Pop-ups, App-Banner, Ablenkungen, Kommentare, Social-Buttons und eigene Webfonts ausblenden.",
+        "strong": "Alles andere auch",
+        "cap": "Cookie-Banner, Pop-ups, App-Banner, Kommentare, Social-Buttons und Mining-Skripte — jeder auf einem eigenen Schalter."
+      },
+      {
+        "alt": "Das Website-Menü von AdFence: Website sperren, Blockierung pausieren, eigener Elementblocker und Ausnahmen pro Website für Werbung, Tracking-Skripte, unsicheres Surfen und Social-Buttons.",
+        "strong": "Kontrolle pro Website",
+        "cap": "Eine ganze Website sperren, die Blockierung dort pausieren oder einen einzelnen Filter aushebeln, ohne den Rest anzufassen."
+      },
+      {
+        "alt": "Der Bildschirm „Eigene Regeln“ in AdFence mit einem Schalter und einer leeren Liste für die erste Website.",
+        "strong": "Eigene Regeln",
+        "cap": "Einmal eine Website hinzufügen, und ihre Regeln bleiben hier — Sperren, Pausieren und Ausnahmen, pro Website gespeichert."
+      },
+      {
+        "alt": "Der Statusbildschirm der AdFence-Erweiterungen: Ads, Privacy, Social, Safety, Others, Custom, Video und Adult sind in Safari aktiv.",
+        "strong": "Wissen, dass er läuft",
+        "cap": "AdFence fragt Safari, ob jede Erweiterung wirklich aktiv ist — ein stilles Versagen bleibt nicht unbemerkt."
+      }
+    ]
+  },
+
+  "features": {
+    "eyebrow": "Was er kann",
+    "title": "Alles im Weg, ausgeschaltet",
+    "lead": "Werbung, Tracker und Seitenballast — jeder Filter ist unabhängig: Sie schalten ein, was stört, und lassen den Rest in Ruhe.",
+    "items": [
+      { "t": "Werbung blockieren", "d": "Display-, Pop-up- und Videowerbung" },
+      { "t": "Tracking-Skripte stoppen", "d": "Analyse- und Verhaltensskripte" },
+      { "t": "Social-Buttons blockieren", "d": "Teilen-Buttons und ihre Pixel" },
+      { "t": "Mining blockieren", "d": "Krypto-Mining-Skripte" },
+      { "t": "Sichere Suche", "d": "Schad- und Phishing-Domains" },
+      { "t": "Cookie-Hinweise ausblenden", "d": "Zustimmungsbanner aus dem Weg" },
+      { "t": "Pop-ups ausblenden", "d": "Newsletter- und Werbe-Overlays" },
+      { "t": "Ablenkungen ausblenden", "d": "Chat-Blasen und Marketing-Blöcke" },
+      { "t": "App-Banner ausblenden", "d": "Klebende „In App öffnen“-Leisten" },
+      { "t": "Kommentare ausblenden", "d": "Kommentarbereiche, wenn Sie mögen" },
+      { "t": "Erwachsenenseiten sperren", "d": "Optionaler Erwachsenen-Filter" },
+      { "t": "Eigene Webfonts blockieren", "d": "Schriften nicht nachladen" },
+      { "t": "Bilder nicht laden", "d": "Bilder bei langsamer Verbindung überspringen" },
+      { "t": "Skripte deaktivieren", "d": "JavaScript aus" },
+      { "t": "HTTPS erzwingen", "d": "Auf sichere Verbindungen umstellen" }
+    ],
+    "sub": "Außerdem dabei",
+    "extras": [
+      { "t": "Blockierung pausieren", "d": "Alle Filter kurz ausschalten." },
+      { "t": "Updates im Hintergrund", "d": "Filterlisten bleiben aktuell." },
+      { "t": "Anti-Adblock umgehen", "d": "Seiten überlisten, die Blocker erkennen." },
+      { "t": "Eigene Regeln", "d": "Ausblendregeln für bekannte Seiten." }
+    ]
+  },
+
+  "setup": {
+    "eyebrow": "Einrichtung",
+    "title": "In etwa einer Minute aktiv",
+    "lead": "Safari-Erweiterungen müssen von Hand eingeschaltet werden. Hier ist der ganze Ablauf.",
+    "steps": [
+      {
+        "t": "App installieren",
+        "d": "Laden Sie AdFence aus dem <a href=\"https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569\" target=\"_blank\" rel=\"noopener\">App Store</a>. Es installiert sich auf iPhone, iPad und Mac."
+      },
+      {
+        "t": "Erweiterung erlauben",
+        "d": "Öffnen Sie <strong>Einstellungen → Safari → Erweiterungen</strong> und schalten Sie AdFence ein. Auf dem Mac in den Safari-Einstellungen."
+      },
+      {
+        "t": "Weiter surfen",
+        "d": "Das war's. Seiten laden ohne Werbung, Banner und Pop-ups."
+      }
+    ],
+    "more": "Jeden Bildschirm Schritt für Schritt ansehen",
+    "calloutStrong": "Funktioniert nur in Safari.",
+    "callout": "Safari-Erweiterungen sind von Apple bewusst abgeschottet — ein Werbeblocker kommt nicht in die In-App-Browser anderer Apps. Das ist die Grenze jedes Safari-Blockers, und genau sie sorgt dafür, dass die Erweiterung Ihr Surfverhalten nicht sieht."
+  },
+
+  "privacy": {
+    "eyebrow": "Datenschutz",
+    "title": "Ihr Surfverhalten bleibt Ihre Sache",
+    "lead": "AdFence arbeitet mit fertigen Filterlisten, die mit der App ausgeliefert werden. Es sieht nicht, was Sie lesen, und es gibt kein Dashboard Ihrer Historie.",
+    "more": "Die vollständige <a href=\"../privacy.html\">Datenschutzerklärung</a> lesen.",
+    "rows": [
+      { "l": "Liest Ihren Browserverlauf", "v": "Nein" },
+      { "l": "Sendet Seiten an einen Server", "v": "Nein" },
+      { "l": "Braucht ein Konto oder eine Anmeldung", "v": "Nein" },
+      { "l": "Läuft in Safari", "v": "Ja", "tick": true },
+      { "l": "Läuft in anderen Apps", "v": "Nicht möglich" }
+    ]
+  },
+
+  "faq": {
+    "eyebrow": "Fragen",
+    "title": "Bevor Sie fragen",
+    "items": [
+      {
+        "q": "Ist AdFence schon erhältlich?",
+        "a": "Ja. Es ist im App Store für iPhone, iPad und Mac."
+      },
+      {
+        "q": "Muss ich dafür zahlen?",
+        "a": "Die App-Store-Seite zeigt den aktuellen Preis, falls es einen gibt. Auf dieser Website gibt es nichts zu kaufen."
+      },
+      {
+        "q": "Funktioniert es in Chrome, Firefox oder In-App-Browsern?",
+        "a": "Nein. AdFence ist ein Werbeblocker für Safari und läuft daher nur in Safari unter iOS, iPadOS und macOS. Er kommt nicht in die In-App-Browser von Apps wie Instagram oder Facebook — keine Safari-Erweiterung kann das, weil Apple sie abschottet."
+      },
+      {
+        "q": "Macht es Safari langsamer?",
+        "a": "Nein. Ein Safari-Content-Blocker übergibt Safari eine vorkompilierte Regelliste, die Safari beim Laden der Seite selbst anwendet. Bei jeder Anfrage läuft keine zusätzliche Verarbeitung."
+      },
+      {
+        "q": "Sammeln Sie meine Surf-Daten?",
+        "a": "Nein. Kein Konto, kein gespeicherter Verlauf. Details in der Datenschutzerklärung."
+      },
+      {
+        "q": "Bringt es Websites, die ich nutze, durcheinander?",
+        "a": "Aggressive Blocker verstecken manchmal etwas, das die Seite braucht. Wenn eine Website nicht funktioniert, können Sie AdFence dafür in den Safari-Erweiterungseinstellungen ausschalten und anderswo weiterlaufen lassen."
+      }
+    ]
+  },
+
+  "cta": {
+    "title": "AdFence im App Store",
+    "lead": "AdFence für iPhone, iPad und Mac. Kein Konto, keine Anmeldung — einmal in Safari aktivieren, fertig.",
+    "badge": "AdFence im App Store laden"
+  },
+
+  "footer": {
+    "tagline": "Ein Werbe- und Tracker-Blocker für Safari auf iPhone, iPad und Mac.",
+    "product": "Produkt",
+    "legal": "Rechtliches",
+    "contact": "Kontakt",
+    "features": "Funktionen",
+    "howto": "Anleitung",
+    "support": "Support",
+    "blog": "Blog",
+    "download": "Laden",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Einstellungen",
+    "rights": "Alle Rechte vorbehalten.",
+    "made": "Für Safari unter iOS, iPadOS und macOS."
+  }
+}
