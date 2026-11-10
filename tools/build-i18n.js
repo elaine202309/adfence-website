@@ -1,17 +1,24 @@
 #!/usr/bin/env node
 /* ==========================================================================
-   Builds the localized homepages — /zh-hans/, /fr/, /ja/ … — from the JSON in
-   tools/i18n/<slug>.json.
+   Builds the localized pages — /zh-hans/, /fr/, /ja/ … — from the JSON in
+   tools/i18n/.
 
      node tools/build-i18n.js
 
-   The output is committed, so the site still needs no build step to serve.
-   This script exists only so the nine pages stay structurally identical and
-   a missing string fails loudly instead of silently shipping English.
+   Four pages per language:
 
-   The English homepage (index.html) is NOT generated from here: it carries
-   hand-written comments and copy that should stay hand-edited. When its
-   structure changes, mirror the change in the template below.
+     <slug>/index.html        copy from tools/i18n/<slug>.json
+     <slug>/how-to-use.html   copy from tools/i18n/pages/<slug>.json
+     <slug>/support.html
+     <slug>/blog.html
+
+   The output is committed, so the site still needs no build step to serve.
+   This script exists only so the pages stay structurally identical and a
+   missing string fails loudly instead of silently shipping English.
+
+   The English pages are NOT generated from here: they carry hand-written
+   comments and copy that should stay hand-edited. When their structure
+   changes, mirror the change in the templates below.
    ========================================================================== */
 
 'use strict';
@@ -23,6 +30,7 @@ const ROOT = path.join(__dirname, '..');
 const SITE = 'https://adfence.mxcode.com';
 const STORE = 'https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569';
 const CSS_VERSION = 6;
+const GSC = 'CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0';
 
 /* Order matters: this is the order of the language menu. */
 const LANGS = [
@@ -38,16 +46,37 @@ const LANGS = [
   { slug: 'es',        code: 'es-ES',   og: 'es_ES', label: 'Español',  short: 'ES'  }
 ];
 
-const urlFor = (slug) => SITE + '/' + (slug ? slug + '/' : '');
+/* The pages that exist in every language, in menu order. */
+const LOCALIZED_PAGES = ['index.html', 'how-to-use.html', 'support.html', 'blog.html'];
 
-/* Where a language lives, seen from a page one directory deep. */
-const relFor = (slug) => '../' + (slug ? slug + '/' : '');
+const urlFor = (slug, page) =>
+  SITE + '/' + (slug ? slug + '/' : '') + (page === 'index.html' ? '' : page);
+
+/* Where the same page lives in another language, seen from <slug>/. */
+function langHref(targetSlug, page) {
+  const file = page === 'index.html' ? '' : page;
+  return targetSlug === '' ? '../' + file : '../' + targetSlug + '/' + file;
+}
 
 function esc(s) {
   return String(s)
     .replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}
+
+/* Raw HTML -> plain text, for the FAQPage entries that have to agree with a
+   visible answer written as markup. */
+function plain(html) {
+  return String(html)
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 /* Category icons, in the same order as features.items in the JSON. */
@@ -83,19 +112,51 @@ const SHOT_FILES = [
   { src: 'adfence-extension-status.png', w: 520, h: 1127 }
 ];
 
+/* One figure per how-to step, in step order. The first sits on a plain canvas. */
+const HOWTO_SHOTS = [
+  { src: 'adfence-safari-extensions.png', w: 880, h: 1783, plain: true },
+  { src: 'adfence-general-settings.png', w: 600, h: 1301, plain: false },
+  { src: 'adfence-other-settings.png', w: 520, h: 1127, plain: false },
+  { src: 'adfence-site-settings.png', w: 520, h: 1127, plain: false },
+  { src: 'adfence-custom-rules.png', w: 520, h: 1127, plain: false }
+];
+
+/* The blog index points at an English article, so its title and excerpt stay
+   in English on every localized page. Dates and labels are translated. */
+const POST_URL = 'blog/why-safari-ad-blocker-not-working.html';
+const POST_TITLE = 'Why your Safari ad blocker isn’t working — and the 30-second fix';
+const POST_EXCERPT = 'Nine times out of ten the app is doing its job and Safari has quietly switched ' +
+  'the extension off. Here is how to check it in half a minute on iPhone, iPad and Mac, and what ' +
+  'to look at if that isn’t it.';
+
+const ORG_NODE = {
+  '@type': 'Organization',
+  '@id': SITE + '/#organization',
+  name: 'AdFence',
+  alternateName: 'AdFence - Ad & Tracker Blocker',
+  url: SITE + '/',
+  logo: { '@type': 'ImageObject', url: SITE + '/images/logo.png', width: 1024, height: 1024 },
+  image: SITE + '/images/og-card.png',
+  disambiguatingDescription: 'AdFence is a Safari ad and tracker blocker for iPhone, iPad and macOS, published on the Apple App Store under App ID 6825119569. In this context the name refers only to this app.',
+  email: 'support@mxcode.com',
+  sameAs: [STORE]
+};
+
 function svg(inner) {
   return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" ' +
          'stroke-linecap="round" stroke-linejoin="round">' + inner + '</svg>';
 }
 
-function languageMenu(currentSlug) {
+/* --- shared chrome -------------------------------------------------------- */
+
+function languageMenu(slug, page) {
   const items = LANGS.map(function (l) {
-    const current = l.slug === currentSlug ? ' aria-current="page"' : '';
-    return '          <li><a href="' + relFor(l.slug) + '" hreflang="' + l.code +
+    const current = l.slug === slug ? ' aria-current="page"' : '';
+    return '          <li><a href="' + langHref(l.slug, page) + '" hreflang="' + l.code +
            '" lang="' + l.code + '"' + current + '>' + esc(l.label) + '</a></li>';
   }).join('\n');
 
-  const here = LANGS.find(function (l) { return l.slug === currentSlug; });
+  const here = LANGS.find(function (l) { return l.slug === slug; });
 
   return '<details class="lang">\n' +
     '        <summary aria-label="' + esc(here.label) + '">' + esc(here.short) + '</summary>\n' +
@@ -103,29 +164,187 @@ function languageMenu(currentSlug) {
     '      </details>';
 }
 
-function alternates() {
+function alternates(page) {
   const rows = LANGS.map(function (l) {
-    return '<link rel="alternate" hreflang="' + l.code + '" href="' + urlFor(l.slug) + '">';
+    return '<link rel="alternate" hreflang="' + l.code + '" href="' + urlFor(l.slug, page) + '">';
   });
-  rows.push('<link rel="alternate" hreflang="x-default" href="' + urlFor('') + '">');
+  rows.push('<link rel="alternate" hreflang="x-default" href="' + urlFor('', page) + '">');
   return rows.join('\n');
 }
 
-function structuredData(d) {
-  const org = {
-    '@type': 'Organization',
-    '@id': SITE + '/#organization',
-    name: 'AdFence',
-    alternateName: 'AdFence - Ad & Tracker Blocker',
-    url: SITE + '/',
-    logo: { '@type': 'ImageObject', url: SITE + '/images/logo.png', width: 1024, height: 1024 },
-    image: SITE + '/images/og-card.png',
-    description: d.orgDesc,
-    disambiguatingDescription: 'AdFence is a Safari ad and tracker blocker for iPhone, iPad and macOS, published on the Apple App Store under App ID 6825119569. In this context the name refers only to this app.',
-    email: 'support@mxcode.com',
-    sameAs: [STORE]
-  };
+function ogAlternates(slug) {
+  return LANGS.filter(function (l) { return l.slug !== slug; })
+    .map(function (l) { return '<meta property="og:locale:alternate" content="' + l.og + '">'; })
+    .join('\n');
+}
 
+function head(o) {
+  return `<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Generated by tools/build-i18n.js from ${o.source} — edit that file and
+     re-run the script rather than editing this page by hand. -->
+
+<title>${esc(o.title)}</title>
+<meta name="description" content="${esc(o.desc)}">
+<link rel="canonical" href="${o.url}">
+${alternates(o.page)}
+<meta name="theme-color" content="#4b34b8">
+
+<script type="application/ld+json">
+${o.jsonld}
+</script>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="${esc(o.ogTitle)}">
+<meta property="og:description" content="${esc(o.desc)}">
+<meta property="og:url" content="${o.url}">
+<meta property="og:site_name" content="AdFence">
+<meta property="og:locale" content="${o.og}">
+${ogAlternates(o.slug)}
+<meta property="og:image" content="${SITE}/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(o.imgAlt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(o.ogTitle)}">
+<meta name="twitter:description" content="${esc(o.desc)}">
+<meta name="twitter:image" content="${SITE}/images/og-card.png">
+
+<link rel="icon" href="../images/favicon.png" type="image/png">
+<link rel="stylesheet" href="../css/style.css?v=${CSS_VERSION}">
+
+<!-- GA4 (G-3GFDY4TL3R), loaded after the visitor accepts. See js/analytics.js. -->
+<script src="../js/analytics.js" defer></script>
+
+<!-- Google Search Console — URL-prefix property for https://adfence.mxcode.com/ -->
+<meta name="google-site-verification" content="${GSC}">
+</head>`;
+}
+
+function header(d, page) {
+  const active = function (p) { return p === page ? ' class="active"' : ''; };
+  const navCta = page === 'support.html'
+    ? '<a class="btn btn-primary btn-sm" href="#contact">' + esc(d.footer.contact) + '</a>'
+    : '<a class="btn btn-primary btn-sm" href="' + STORE + '" target="_blank" rel="noopener">' +
+      esc(d.nav.download) + '</a>';
+
+  return `<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="../images/logo-mark.png" alt="" width="30" height="30">
+        <span class="brand-text">
+          <span class="brand-name">AdFence</span>
+          <span class="brand-desc">${esc(d.brandDesc)}</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="index.html#features">${esc(d.nav.features)}</a>
+          <a href="how-to-use.html"${active('how-to-use.html')}>${esc(d.nav.howto)}</a>
+          <a href="support.html"${active('support.html')}>${esc(d.nav.support)}</a>
+          <a href="blog.html"${active('blog.html')}>${esc(d.nav.blog)}</a>
+        </div>
+        ${languageMenu(d.slug, page)}
+        ${navCta}
+      </div>
+    </nav>
+  </div>
+</header>`;
+}
+
+/* Privacy and Terms are English-only, so they keep the parent-relative path. */
+function footer(d) {
+  return `<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="../images/logo-mark.png" alt="" width="30" height="30">
+          AdFence
+        </a>
+        <p>${esc(d.footer.tagline)}</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>${esc(d.footer.product)}</h4>
+        <ul>
+          <li><a href="index.html#features">${esc(d.footer.features)}</a></li>
+          <li><a href="how-to-use.html">${esc(d.footer.howto)}</a></li>
+          <li><a href="support.html">${esc(d.footer.support)}</a></li>
+          <li><a href="blog.html">${esc(d.footer.blog)}</a></li>
+          <li><a href="${STORE}" target="_blank" rel="noopener">${esc(d.footer.download)}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>${esc(d.footer.legal)}</h4>
+        <ul>
+          <li><a href="../privacy.html">${esc(d.footer.privacy)}</a></li>
+          <li><a href="../terms.html">${esc(d.footer.terms)}</a></li>
+          <li><button type="button" class="linklike" data-consent-reset>${esc(d.footer.cookies)}</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>${esc(d.footer.contact)}</h4>
+        <ul>
+          <li><a href="mailto:support@mxcode.com">support@mxcode.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> AdFence. ${esc(d.footer.rights)}</span>
+      <span>${esc(d.footer.made)}</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>`;
+}
+
+function doc(lang, page, body) {
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+${body.head}
+</head>
+<body>
+
+${body.header}
+
+<main>
+
+${body.main}
+
+</main>
+
+${footer(body.d)}
+</body>
+</html>
+`;
+}
+
+function breadcrumb(page, crumbName) {
+  return {
+    '@type': 'BreadcrumbList',
+    '@id': urlFor('', page) + '#breadcrumb',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: crumbName, item: urlFor('', page) }
+    ]
+  };
+}
+
+/* --- homepage ------------------------------------------------------------- */
+
+function homeStructuredData(d) {
   const site = {
     '@type': 'WebSite',
     '@id': SITE + '/#website',
@@ -157,7 +376,7 @@ function structuredData(d) {
 
   const faq = {
     '@type': 'FAQPage',
-    '@id': SITE + '/' + d.slug + '/#faq',
+    '@id': urlFor(d.slug, 'index.html') + '#faq',
     inLanguage: d.lang,
     mainEntity: d.faq.items.map(function (i) {
       return {
@@ -170,16 +389,12 @@ function structuredData(d) {
 
   return JSON.stringify({
     '@context': 'https://schema.org',
-    '@graph': [org, site, app, faq]
+    '@graph': [ORG_NODE, site, app, faq]
   }, null, 2);
 }
 
-function render(d) {
+function renderHome(d) {
   const me = LANGS.find(function (l) { return l.slug === d.slug; });
-  const url = urlFor(d.slug);
-  const ogAlt = LANGS.filter(function (l) { return l.slug !== d.slug; })
-    .map(function (l) { return '<meta property="og:locale:alternate" content="' + l.og + '">'; })
-    .join('\n');
 
   const cats = d.features.items.map(function (item, i) {
     return '        <div class="cat">\n          ' + svg(CAT_ICONS[i]) + '\n' +
@@ -230,87 +445,7 @@ function render(d) {
       '        </details>';
   }).join('\n\n');
 
-  return `<!DOCTYPE html>
-<html lang="${me.code}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Generated by tools/build-i18n.js from tools/i18n/${d.slug}.json — edit that
-     file and re-run the script rather than editing this page by hand. -->
-
-<title>${esc(d.title)}</title>
-<meta name="description" content="${esc(d.desc)}">
-<link rel="canonical" href="${url}">
-${alternates()}
-<meta name="theme-color" content="#4b34b8">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="${esc(d.ogTitle)}">
-<meta property="og:description" content="${esc(d.desc)}">
-<meta property="og:url" content="${url}">
-<meta property="og:site_name" content="AdFence">
-<meta property="og:locale" content="${me.og}">
-${ogAlt}
-<meta property="og:image" content="${SITE}/images/og-card.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="${esc(d.imgAlt)}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${esc(d.ogTitle)}">
-<meta name="twitter:description" content="${esc(d.desc)}">
-<meta name="twitter:image" content="${SITE}/images/og-card.png">
-
-<script type="application/ld+json">
-${structuredData(d)}
-</script>
-
-<link rel="icon" href="../images/favicon.png" type="image/png">
-<link rel="stylesheet" href="../css/style.css?v=${CSS_VERSION}">
-
-<!-- GA4 (G-3GFDY4TL3R), loaded after the visitor accepts. See js/analytics.js. -->
-<script src="../js/analytics.js" defer></script>
-
-<!-- Google Search Console — URL-prefix property for https://adfence.mxcode.com/ -->
-<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
-</head>
-<body>
-
-<!-- The English pages are the source of truth for structure; this page is a
-     translation of index.html. Internal links point at the English pages for
-     now — only the homepage is localized. -->
-
-<header class="site-header">
-  <div class="container">
-    <nav class="nav" aria-label="Main">
-      <a class="brand" href="../index.html">
-        <img class="brand-mark" src="../images/logo-mark.png" alt="" width="30" height="30">
-        <span class="brand-text">
-          <span class="brand-name">AdFence</span>
-          <span class="brand-desc">${esc(d.brandDesc)}</span>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-menu">
-        <div class="nav-links">
-          <a href="#features">${esc(d.nav.features)}</a>
-          <a href="../how-to-use.html">${esc(d.nav.howto)}</a>
-          <a href="../support.html">${esc(d.nav.support)}</a>
-          <a href="../blog.html">${esc(d.nav.blog)}</a>
-        </div>
-        ${languageMenu(d.slug)}
-        <a class="btn btn-primary btn-sm" href="${STORE}" target="_blank" rel="noopener">${esc(d.nav.download)}</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- ======================= HERO ======================= -->
+  const main = `  <!-- ======================= HERO ======================= -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -400,7 +535,7 @@ ${steps}
       </div>
 
       <p class="center mt-32">
-        <a href="../how-to-use.html">${esc(d.setup.more)}</a>
+        <a href="how-to-use.html">${esc(d.setup.more)}</a>
       </p>
 
       <div class="callout callout-info mt-48">
@@ -456,70 +591,365 @@ ${faqs}
         </a>
       </div>
     </div>
+  </section>`;
+
+  return doc(me.code, 'index.html', {
+    d: d,
+    header: header(d, 'index.html'),
+    head: head({
+      source: 'tools/i18n/' + d.slug + '.json',
+      page: 'index.html', slug: d.slug, og: me.og,
+      title: d.title, desc: d.desc, ogTitle: d.ogTitle, imgAlt: d.imgAlt,
+      url: urlFor(d.slug, 'index.html'),
+      jsonld: homeStructuredData(d)
+    }),
+    main: main
+  });
+}
+
+/* --- how to use ----------------------------------------------------------- */
+
+function howtoStructuredData(d, p) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [ORG_NODE, breadcrumb('how-to-use.html', p.meta.crumb)]
+  }, null, 2);
+}
+
+function renderHowTo(d, p) {
+  const me = LANGS.find(function (l) { return l.slug === d.slug; });
+
+  const rows = p.steps.map(function (s, i) {
+    const f = HOWTO_SHOTS[i];
+    const cls = 'split howto-row' + (i % 2 ? ' reverse' : '');
+    const figCls = 'shot howto-shot' + (f.plain ? ' plain' : '');
+
+    const blocks = s.blocks.map(function (b) {
+      if (b.t === 'h3') return '            <h3>' + b.html + '</h3>';
+      if (b.t === 'p') return '            <p>\n              ' + b.html + '\n            </p>';
+      const tag = b.t; // ol | ul
+      return '            <' + tag + '>\n' +
+        b.items.map(function (li) { return '              <li>' + li + '</li>'; }).join('\n') +
+        '\n            </' + tag + '>';
+    }).join('\n');
+
+    return `        <!-- STEP ${i + 1} -->
+        <div class="${cls}">
+          <div class="howto-copy">
+            <span class="eyebrow">${esc(s.eyebrow)}</span>
+            <h2>${esc(s.h2)}</h2>
+${blocks}
+          </div>
+          <figure class="${figCls}">
+            <div class="shot-screen">
+              <img src="../images/${f.src}"
+                   alt="${esc(s.shot.alt)}"
+                   width="${f.w}" height="${f.h}" loading="lazy" decoding="async">
+            </div>
+            <figcaption>
+              <strong>${esc(s.shot.capStrong)}</strong>
+              ${esc(s.shot.cap)}
+            </figcaption>
+          </figure>
+        </div>`;
+  }).join('\n\n');
+
+  const fixes = p.fixes.items.map(function (c) {
+    return `        <div class="card">
+          <h3>${esc(c.h3)}</h3>
+          <p>${c.p}</p>
+          <p><a href="support.html">${esc(c.more)}</a></p>
+        </div>`;
+  }).join('\n');
+
+  const main = `  <!-- ======================= INTRO ======================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">${esc(p.intro.eyebrow)}</span>
+        <h1>${esc(p.intro.h1)}</h1>
+        <p>${esc(p.intro.lead)}</p>
+      </div>
+    </div>
   </section>
 
-</main>
+  <!-- ======================= STEPS ======================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="howto-list">
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="../index.html">
-          <img class="brand-mark" src="../images/logo-mark.png" alt="" width="30" height="30">
-          AdFence
+${rows}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= QUICK FIXES ======================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">${esc(p.fixes.eyebrow)}</span>
+        <h2>${esc(p.fixes.h2)}</h2>
+      </div>
+
+      <div class="grid grid-3">
+${fixes}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <section class="section section-tight" id="get">
+    <div class="container">
+      <div class="cta-band">
+        <h2>${esc(d.cta.title)}</h2>
+        <p>${esc(d.cta.lead)}</p>
+        <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
+          <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
         </a>
-        <p>${esc(d.footer.tagline)}</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>${esc(d.footer.product)}</h4>
-        <ul>
-          <li><a href="#features">${esc(d.footer.features)}</a></li>
-          <li><a href="../how-to-use.html">${esc(d.footer.howto)}</a></li>
-          <li><a href="../support.html">${esc(d.footer.support)}</a></li>
-          <li><a href="../blog.html">${esc(d.footer.blog)}</a></li>
-          <li><a href="${STORE}" target="_blank" rel="noopener">${esc(d.footer.download)}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>${esc(d.footer.legal)}</h4>
-        <ul>
-          <li><a href="../privacy.html">${esc(d.footer.privacy)}</a></li>
-          <li><a href="../terms.html">${esc(d.footer.terms)}</a></li>
-          <li><button type="button" class="linklike" data-consent-reset>${esc(d.footer.cookies)}</button></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>${esc(d.footer.contact)}</h4>
-        <ul>
-          <li><a href="mailto:support@mxcode.com">support@mxcode.com</a></li>
-        </ul>
       </div>
     </div>
+  </section>`;
 
-    <div class="footer-bottom">
-      <span>&copy; <span id="year">2026</span> AdFence. ${esc(d.footer.rights)}</span>
-      <span>${esc(d.footer.made)}</span>
+  return doc(me.code, 'how-to-use.html', {
+    d: d,
+    header: header(d, 'how-to-use.html'),
+    head: head({
+      source: 'tools/i18n/pages/' + d.slug + '.json',
+      page: 'how-to-use.html', slug: d.slug, og: me.og,
+      title: p.meta.title, desc: p.meta.desc, ogTitle: p.meta.ogTitle,
+      imgAlt: d.imgAlt, url: urlFor(d.slug, 'how-to-use.html'),
+      jsonld: howtoStructuredData(d, p)
+    }),
+    main: main
+  });
+}
+
+/* --- support -------------------------------------------------------------- */
+
+const PHONE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18.5h2"/></svg>';
+const MAC_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="4" width="20" height="13" rx="2.5"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>';
+
+function supportStructuredData(d, p) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      ORG_NODE,
+      breadcrumb('support.html', p.meta.crumb),
+      {
+        '@type': 'FAQPage',
+        '@id': urlFor(d.slug, 'support.html') + '#faq',
+        inLanguage: d.lang,
+        mainEntity: p.trouble.items.map(function (i) {
+          return {
+            '@type': 'Question',
+            name: plain(i.q),
+            acceptedAnswer: { '@type': 'Answer', text: plain(i.a) }
+          };
+        })
+      }
+    ]
+  }, null, 2);
+}
+
+function renderSupport(d, p) {
+  const me = LANGS.find(function (l) { return l.slug === d.slug; });
+  const icons = [PHONE_ICON, MAC_ICON];
+
+  const cards = p.setup.cards.map(function (c, i) {
+    return `        <div class="card">
+          <div class="card-icon">
+            ${icons[i]}
+          </div>
+          <h3>${esc(c.h3)}</h3>
+          <ol>
+${c.items.map(function (li) { return '            <li>' + li + '</li>'; }).join('\n')}
+          </ol>
+        </div>`;
+  }).join('\n\n');
+
+  const faqs = p.trouble.items.map(function (item, i) {
+    return '        <details' + (i === 0 ? ' open' : '') + '>\n' +
+      '          <summary>' + esc(item.q) + '</summary>\n' +
+      '          <div class="answer">\n' +
+      '            ' + item.a + '\n' +
+      '          </div>\n' +
+      '        </details>';
+  }).join('\n\n');
+
+  const main = `  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">${esc(p.intro.eyebrow)}</span>
+        <h1>${esc(p.intro.h1)}</h1>
+        <p>${esc(p.intro.lead)}</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script src="../js/main.js"></script>
-</body>
-</html>
-`;
+  <!-- ---------------- SETUP ---------------- -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>${esc(p.setup.h2)}</h2>
+        <p>${p.setup.lead}</p>
+      </div>
+
+      <div class="grid grid-2">
+${cards}
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- TROUBLESHOOTING ---------------- -->
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <h2>${esc(p.trouble.h2)}</h2>
+      </div>
+
+      <div class="faq">
+${faqs}
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- CONTACT ---------------- -->
+  <section class="section section-alt" id="contact">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <span class="eyebrow">${esc(p.contact.eyebrow)}</span>
+        <h2>${esc(p.contact.h2)}</h2>
+        <p>${esc(p.contact.lead)}</p>
+      </div>
+
+      <div class="panel center">
+        <p style="margin-bottom:1.2em"><strong>support@mxcode.com</strong></p>
+        <a class="btn btn-primary" href="mailto:support@mxcode.com?subject=AdFence%20support">${esc(p.contact.button)}</a>
+      </div>
+    </div>
+  </section>`;
+
+  return doc(me.code, 'support.html', {
+    d: d,
+    header: header(d, 'support.html'),
+    head: head({
+      source: 'tools/i18n/pages/' + d.slug + '.json',
+      page: 'support.html', slug: d.slug, og: me.og,
+      title: p.meta.title, desc: p.meta.desc, ogTitle: p.meta.ogTitle,
+      imgAlt: d.imgAlt, url: urlFor(d.slug, 'support.html'),
+      jsonld: supportStructuredData(d, p)
+    }),
+    main: main
+  });
+}
+
+/* --- blog ----------------------------------------------------------------- */
+
+function blogStructuredData(d, p) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      ORG_NODE,
+      breadcrumb('blog.html', p.meta.crumb),
+      {
+        '@type': 'Blog',
+        '@id': urlFor(d.slug, 'blog.html') + '#blog',
+        name: p.meta.jsonName,
+        description: p.meta.jsonDesc,
+        url: urlFor(d.slug, 'blog.html'),
+        inLanguage: d.lang,
+        publisher: { '@id': SITE + '/#organization' },
+        blogPost: [
+          {
+            '@type': 'BlogPosting',
+            headline: POST_TITLE,
+            url: SITE + '/' + POST_URL,
+            datePublished: '2026-11-08',
+            dateModified: '2026-11-08',
+            description: POST_EXCERPT,
+            author: { '@id': SITE + '/#organization' }
+          }
+        ]
+      }
+    ]
+  }, null, 2);
+}
+
+function renderBlog(d, p) {
+  const me = LANGS.find(function (l) { return l.slug === d.slug; });
+
+  const main = `  <!-- ======================= INTRO ======================= -->
+  <section class="section blog-intro">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">${esc(p.intro.eyebrow)}</span>
+        <h1>${esc(p.intro.h1)}</h1>
+        <p>
+          ${esc(p.intro.lead)}
+        </p>
+
+        <!-- The download CTA has to be reachable without scrolling this page,
+             not only at the bottom of it. -->
+        <div class="btn-row center blog-cta">
+          <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
+            <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
+          </a>
+          <a class="btn btn-ghost" href="how-to-use.html">${esc(p.intro.ghost)}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= POSTS ======================= -->
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="post-feature">
+        <span class="post-meta"><span class="tag">${esc(p.post.tag)}</span> · ${esc(p.post.date)} · ${esc(p.post.readTime)}</span>
+        <h2>
+          <a href="../${POST_URL}">
+            ${esc(POST_TITLE)}
+          </a>
+        </h2>
+        <p>
+          ${esc(POST_EXCERPT)}
+        </p>
+        <a class="post-more" href="../${POST_URL}">${esc(p.post.more)}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <section class="section section-tight" id="get">
+    <div class="container">
+      <div class="cta-band">
+        <h2>${esc(d.cta.title)}</h2>
+        <p>${esc(d.cta.lead)}</p>
+        <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
+          <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
+        </a>
+      </div>
+    </div>
+  </section>`;
+
+  return doc(me.code, 'blog.html', {
+    d: d,
+    header: header(d, 'blog.html'),
+    head: head({
+      source: 'tools/i18n/pages/' + d.slug + '.json',
+      page: 'blog.html', slug: d.slug, og: me.og,
+      title: p.meta.title, desc: p.meta.desc, ogTitle: p.meta.ogTitle,
+      imgAlt: d.imgAlt, url: urlFor(d.slug, 'blog.html'),
+      jsonld: blogStructuredData(d, p)
+    }),
+    main: main
+  });
 }
 
 /* --- run ------------------------------------------------------------------ */
 
-const dir = path.join(__dirname, 'i18n');
-const files = fs.readdirSync(dir).filter(function (f) { return f.endsWith('.json'); });
-let written = 0;
-
-files.forEach(function (file) {
-  const d = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+function checkHome(file, d) {
   if (!d.slug) throw new Error(file + ': missing "slug"');
   if (d.slug !== file.replace(/\.json$/, '')) {
     throw new Error(file + ': "slug" must match the file name');
@@ -530,12 +960,56 @@ files.forEach(function (file) {
   if (d.setup.steps.length !== 3) throw new Error(file + ': expected 3 setup steps');
   if (d.privacy.rows.length !== 5) throw new Error(file + ': expected 5 privacy rows');
   if (d.faq.items.length !== 6) throw new Error(file + ': expected 6 FAQ items');
+}
 
-  const out = path.join(ROOT, d.slug, 'index.html');
-  fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, render(d));
-  written++;
-  console.log('wrote ' + path.relative(ROOT, out));
+function checkPages(file, d) {
+  if (!d.howto || !d.support || !d.blog) throw new Error(file + ': missing howto/support/blog');
+  if (d.howto.steps.length !== 5) throw new Error(file + ': expected 5 how-to steps');
+  if (d.howto.fixes.items.length !== 3) throw new Error(file + ': expected 3 quick fixes');
+  if (d.support.setup.cards.length !== 2) throw new Error(file + ': expected 2 setup cards');
+  d.support.setup.cards.forEach(function (c, i) {
+    if (c.items.length !== 5) throw new Error(file + ': setup card ' + i + ' needs 5 items');
+  });
+  if (d.support.trouble.items.length !== 5) throw new Error(file + ': expected 5 troubleshooting items');
+}
+
+const homeDir = path.join(__dirname, 'i18n');
+const pagesDir = path.join(homeDir, 'pages');
+let written = 0;
+
+const homeFiles = fs.readdirSync(homeDir).filter(function (f) { return f.endsWith('.json'); });
+
+homeFiles.forEach(function (file) {
+  const d = JSON.parse(fs.readFileSync(path.join(homeDir, file), 'utf8'));
+  checkHome(file, d);
+
+  const legalPages = path.join(pagesDir, file);
+  const p = fs.existsSync(legalPages)
+    ? JSON.parse(fs.readFileSync(legalPages, 'utf8'))
+    : null;
+
+  const out = [
+    { page: 'index.html', html: renderHome(d) }
+  ];
+
+  if (p) {
+    checkPages(file, p);
+    if (p.slug !== d.slug) throw new Error(file + ': pages file has a different slug');
+    out.push({ page: 'how-to-use.html', html: renderHowTo(d, p.howto) });
+    out.push({ page: 'support.html', html: renderSupport(d, p.support) });
+    out.push({ page: 'blog.html', html: renderBlog(d, p.blog) });
+  } else {
+    console.log('  !! no ' + path.relative(ROOT, legalPages) + ' — skipping how-to/support/blog for ' + d.slug);
+  }
+
+  out.forEach(function (o) {
+    const target = path.join(ROOT, d.slug, o.page);
+    fs.mkdirSync(path.dirname(target), { recursive: true });
+    fs.writeFileSync(target, o.html);
+    written++;
+    console.log('wrote ' + path.relative(ROOT, target));
+  });
 });
 
+console.log('\n' + written + ' file(s) written.');
 if (!written) console.log('nothing to build — no JSON in tools/i18n/');

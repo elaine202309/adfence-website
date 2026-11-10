@@ -1,0 +1,273 @@
+{
+  "lang": "fr",
+  "slug": "fr",
+  "howto": {
+    "meta": {
+      "title": "Mode d’emploi — AdFence, bloqueur de publicités et de traqueurs",
+      "desc": "Configurez AdFence en une minute : activez l’extension Safari, choisissez ce qu’il faut bloquer et réglez un site en particulier — avec une capture d’écran à chaque étape.",
+      "ogTitle": "Mode d’emploi d’AdFence — bloqueur de publicités et de traqueurs",
+      "crumb": "Mode d’emploi"
+    },
+    "intro": {
+      "eyebrow": "Pour commencer",
+      "h1": "Mode d’emploi d’AdFence",
+      "lead": "L’activation prend environ une minute. Tout le reste est un réglage facultatif — cinq écrans, dans l’ordre où vous les rencontrerez."
+    },
+    "steps": [
+      {
+        "eyebrow": "Étape 1",
+        "h2": "Activez-le dans Safari",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Installer AdFence n’est pas la dernière étape. Safari garde toutes les extensions désactivées tant que vous ne les activez pas à la main, et c’est souvent pour cela qu’un bloqueur semble ne rien faire."
+          },
+          {
+            "t": "h3",
+            "html": "iPhone et iPad"
+          },
+          {
+            "t": "ol",
+            "items": [
+              "Ouvrez <strong>Réglages</strong> et touchez <strong>Safari</strong>.",
+              "Touchez <strong>Extensions</strong>, puis <strong>AdFence</strong>.",
+              "Activez-le, puis autorisez l’accès aux sites sur lesquels vous voulez qu’il fonctionne."
+            ]
+          },
+          {
+            "t": "h3",
+            "html": "Mac"
+          },
+          {
+            "t": "ol",
+            "items": [
+              "Ouvrez <strong>Safari</strong>.",
+              "Allez dans <strong>Safari → Réglages → Extensions</strong>.",
+              "Cochez <strong>AdFence</strong>, puis choisissez les sites auxquels il peut accéder."
+            ]
+          },
+          {
+            "t": "p",
+            "html": "Ouvrez ensuite AdFence et touchez <strong>Extensions</strong>. L’app interroge directement Safari et affiche un <strong>Actif</strong> vert en regard de chacune de ses huit extensions. <strong>Actualiser l’état</strong> vérifie à nouveau, et <strong>Ouvrir les réglages des extensions Safari</strong> vous amène à l’écran ci-dessus."
+          }
+        ],
+        "shot": {
+          "alt": "Les huit extensions d’AdFence activées, montrées deux fois : sous forme de liste dans Réglages → Safari → Extensions sur iPhone, et sous forme de cases cochées dans la fenêtre Extensions de Safari sur le Mac.",
+          "capStrong": "Réglages → Safari → Extensions",
+          "cap": "Les huit, activées — iPhone en haut, Mac en bas."
+        }
+      },
+      {
+        "eyebrow": "Étape 2",
+        "h2": "Choisissez ce qu’il faut bloquer",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "L’onglet <strong>Général</strong> s’ouvre sur un interrupteur maître nommé <strong>Blocage</strong>. Tant qu’il est désactivé, chaque bloqueur charge une liste de règles vide et rien n’est bloqué, où que ce soit. Laissez-le activé et utilisez la <strong>Liste de blocage</strong> en dessous pour choisir les filtres un par un."
+          },
+          {
+            "t": "ul",
+            "items": [
+              "<strong>Bloquer les pubs</strong> — les publicités web et les bannières, ainsi que les cases vides qu’elles laissent derrière elles.",
+              "<strong>Contourner l’anti-blocage</strong> — franchit les pages qui détectent un bloqueur et masque le mur qu’elles dressent devant vous.",
+              "<strong>Navigation sécurisée</strong> — bloque les domaines malveillants et d’hameçonnage connus avant le chargement de la page.",
+              "<strong>Bloquer les traqueurs</strong> — les cookies de suivi et les scripts d’analyse."
+            ]
+          },
+          {
+            "t": "p",
+            "html": "Les interrupteurs sont indépendants : en désactiver un laisse les autres exactement tels qu’ils étaient."
+          }
+        ],
+        "shot": {
+          "alt": "L’onglet Général d’AdFence : un interrupteur maître Blocage, puis Bloquer les pubs, Contourner l’anti-blocage, Navigation sécurisée et Bloquer les traqueurs.",
+          "capStrong": "Général",
+          "cap": "L’interrupteur maître, puis les quatre filtres essentiels."
+        }
+      },
+      {
+        "eyebrow": "Étape 3",
+        "h2": "Masquez l’encombrement dont vous vous passeriez bien",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Continuez à faire défiler l’onglet <strong>Général</strong>. <strong>Autres réglages</strong> regroupe le reste des filtres — bandeaux de cookies, fenêtres pop-up, bannières d’app, commentaires, boutons sociaux, scripts de minage et plus encore. Chacun dispose de son propre interrupteur : masquer les bandeaux de cookies ne vous oblige donc jamais à bloquer les publicités."
+          },
+          {
+            "t": "p",
+            "html": "Certains masquent un élément de la page avec du CSS plutôt que de bloquer une requête ; la ligne sous chaque interrupteur précise lequel des deux il applique."
+          },
+          {
+            "t": "p",
+            "html": "<strong>Bloquer les sites pour adultes</strong> se trouve ici aussi. C’est une liste noire de domaines facultative, sans code d’accès — une commodité, pas un contrôle parental."
+          }
+        ],
+        "shot": {
+          "alt": "Autres réglages dans AdFence : les interrupteurs pour Bloquer les sites pour adultes, Masquer les bandeaux de cookies, Bloquer les fenêtres pop-up, Bannières d’app, Distractions, Masquer les commentaires et Bloquer les boutons sociaux.",
+          "capStrong": "Autres réglages",
+          "cap": "Chaque nuisance a son propre interrupteur."
+        }
+      },
+      {
+        "eyebrow": "Étape 4",
+        "h2": "Réglez un site sans toucher au reste",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Tous les sites ne méritent pas le même traitement. Ouvrez l’onglet <strong>Règles personnalisées</strong>, touchez <strong>+</strong>, et le panneau <strong>Réglages du site</strong> s’ouvre avec un champ pour l’adresse."
+          },
+          {
+            "t": "ul",
+            "items": [
+              "<strong>Bloquer le site</strong> — empêche tout accès au site.",
+              "<strong>Suspendre le blocage</strong> — désactive AdFence pour ce seul site ; partout ailleurs, rien ne change.",
+              "<strong>Bloqueur d’éléments personnalisé</strong> — vos propres règles CSS pour les éléments de ce site.",
+              "<strong>Exceptions par site</strong> — autorisez les publicités, ou les scripts de suivi, la navigation non sécurisée, les boutons sociaux ou les bandeaux de cookies, pour cette adresse uniquement."
+            ]
+          },
+          {
+            "t": "p",
+            "html": "Touchez <strong>Enregistrer</strong> et le site rejoint votre liste."
+          }
+        ],
+        "shot": {
+          "alt": "Le panneau Réglages du site : un champ pour l’adresse du site, Bloquer le site, Suspendre le blocage, Bloqueur d’éléments personnalisé et des exceptions par site.",
+          "capStrong": "Réglages du site",
+          "cap": "Bloquez, suspendez ou autorisez un seul filtre pour une adresse."
+        }
+      },
+      {
+        "eyebrow": "Étape 5",
+        "h2": "Gardez une liste de vos propres règles",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Chaque site que vous configurez apparaît dans l’onglet <strong>Règles personnalisées</strong>. <strong>Activer les règles personnalisées</strong> est l’interrupteur maître de toute la liste : tant qu’il est désactivé, aucune règle de site ne s’applique. Les extensions qui portent ces règles doivent aussi être activées dans Safari — c’est à cela que sert l’onglet <strong>Extensions</strong>."
+          },
+          {
+            "t": "p",
+            "html": "<strong>Modifier</strong> vous permet de réordonner ou de supprimer des entrées ; <strong>+</strong> ajoute un autre site."
+          }
+        ],
+        "shot": {
+          "alt": "L’onglet Règles personnalisées d’AdFence, avec Activer les règles personnalisées activé et une liste vide en attente du premier site.",
+          "capStrong": "Règles personnalisées",
+          "cap": "Vos sites enregistrés, réunis dans une seule liste."
+        }
+      }
+    ],
+    "fixes": {
+      "eyebrow": "Si quelque chose cloche",
+      "h2": "Trois choses à vérifier en premier",
+      "items": [
+        {
+          "h3": "Un site semble cassé",
+          "p": "Activez « Suspendre le blocage » pour ce seul site dans les réglages du site, et laissez-le actif partout ailleurs.",
+          "more": "Plus d’aide dans l’assistance"
+        },
+        {
+          "h3": "Rien n’est bloqué nulle part",
+          "p": "Ouvrez l’onglet « Extensions ». Une extension qui n’est pas « Actif » dans Safari ne peut rien bloquer, quels que soient les réglages de l’app.",
+          "more": "Plus d’aide dans l’assistance"
+        },
+        {
+          "h3": "Les bandeaux de cookies apparaissent toujours",
+          "p": "Les bandeaux de cookies ont un interrupteur distinct de celui des publicités. Regardez dans « Autres réglages », sur l’onglet Général.",
+          "more": "Plus d’aide dans l’assistance"
+        }
+      ]
+    }
+  },
+  "support": {
+    "meta": {
+      "title": "Assistance et installation — AdFence, bloqueur de publicités et de traqueurs",
+      "desc": "Comment installer et activer l’extension Safari AdFence sur iPhone, iPad et Mac, avec les réponses aux questions fréquentes et comment nous contacter.",
+      "ogTitle": "Assistance — AdFence",
+      "crumb": "Assistance"
+    },
+    "intro": {
+      "eyebrow": "Assistance",
+      "h1": "Faire fonctionner AdFence",
+      "lead": "Presque tous les signalements « ça ne bloque rien » viennent d’une extension qui n’est pas activée. Commencez ici."
+    },
+    "setup": {
+      "h2": "Activer l’extension",
+      "lead": "Vous ne l’avez pas encore ? <a href=\"https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569\" target=\"_blank\" rel=\"noopener\">Téléchargez AdFence sur l’App Store</a>, puis suivez les étapes pour votre appareil.",
+      "cards": [
+        {
+          "h3": "Sur iPhone et iPad",
+          "items": [
+            "Ouvrez l’app <strong>Réglages</strong>",
+            "Faites défiler vers le bas et touchez <strong>Safari</strong>",
+            "Touchez <strong>Extensions</strong>",
+            "Touchez <strong>AdFence</strong>, puis activez-le",
+            "Autorisez l’accès aux sites sur lesquels vous voulez qu’il fonctionne"
+          ]
+        },
+        {
+          "h3": "Sur Mac",
+          "items": [
+            "Ouvrez <strong>Safari</strong>",
+            "Allez dans <strong>Safari → Réglages</strong> (ou <strong>Préférences</strong>)",
+            "Ouvrez l’onglet <strong>Extensions</strong>",
+            "Cochez <strong>AdFence</strong> dans la liste",
+            "Choisissez les sites auxquels il peut accéder"
+          ]
+        }
+      ]
+    },
+    "trouble": {
+      "h2": "Si ça ne fonctionne pas",
+      "items": [
+        {
+          "q": "Des publicités s’affichent encore sur un site",
+          "a": "<p>Quelques possibilités, dans l’ordre où il vaut la peine de vérifier :</p><ul><li>L’extension est activée, mais n’est pas autorisée sur ce site — vérifiez les autorisations d’extension de Safari pour ce site.</li><li>Les publicités sont servies depuis le domaine du site lui-même. Elles sont difficiles à distinguer du vrai contenu, alors les bloqueurs les laissent généralement tranquilles.</li><li>Il s’agit d’une publicité vidéo YouTube intégrée à la vidéo. Ces publicités sont livrées avec la vidéo elle-même et échappent largement à tout bloqueur de contenu.</li><li>La liste de filtres est en retard. Mettre l’app à jour met les listes à jour.</li></ul>"
+        },
+        {
+          "q": "Une page est cassée — du contenu manque ou un menu ne s’ouvre pas",
+          "a": "<p>Un blocage agressif peut parfois masquer un élément dont la page a besoin. Désactivez AdFence pour ce seul site dans les réglages d’extensions de Safari et laissez-le actif partout ailleurs.</p>"
+        },
+        {
+          "q": "Les bandeaux de cookies apparaissent toujours",
+          "a": "<p>Les filtres de nuisances doivent être activés séparément des filtres de publicités. Vérifiez les interrupteurs dans l’app.</p>"
+        },
+        {
+          "q": "Rien n’est bloqué nulle part, du tout",
+          "a": "<p>L’extension n’est pas activée. Suivez les étapes d’installation ci-dessus — les extensions Safari restent désactivées tant que vous ne les activez pas à la main.</p>"
+        },
+        {
+          "q": "Puis-je débloquer un seul site ?",
+          "a": "<p>Oui. Dans les réglages d’extensions de Safari, vous pouvez demander à AdFence de poser la question site par site, de l’autoriser partout ou de le refuser partout, puis de faire des exceptions pour des sites individuels.</p>"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "h2": "Toujours bloqué ?",
+      "lead": "Écrivez-nous et nous vous répondrons. Indiquer votre appareil et votre version d’iOS ou de macOS nous évite un aller-retour.",
+      "button": "Envoyer un e-mail"
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog — AdFence, bloqueur de publicités et de traqueurs",
+      "desc": "Notes sur le blocage des publicités dans Safari : pourquoi les extensions se désactivent, ce qu’un bloqueur de contenu peut atteindre ou non, et comment régler un site en particulier.",
+      "ogTitle": "Blog — AdFence, bloqueur de publicités et de traqueurs",
+      "crumb": "Blog",
+      "jsonName": "Blog AdFence",
+      "jsonDesc": "Notes sur le blocage des publicités dans Safari : pourquoi les extensions se désactivent, ce qu’un bloqueur de contenu peut atteindre ou non, et comment régler un site en particulier."
+    },
+    "intro": {
+      "eyebrow": "Blog",
+      "h1": "Un web plus calme, en pratique",
+      "lead": "Notes sur le blocage des publicités dans Safari — ce qu’un bloqueur de contenu peut atteindre ou non, pourquoi une extension se désactive toute seule, et comment régler un site sans relâcher tout le reste.",
+      "ghost": "Voir comment le configurer"
+    },
+    "post": {
+      "tag": "Dernier article",
+      "date": "8 novembre 2026",
+      "readTime": "7 min de lecture",
+      "more": "Lire le guide →"
+    }
+  }
+}

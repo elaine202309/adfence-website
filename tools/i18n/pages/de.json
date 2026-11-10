@@ -1,0 +1,270 @@
+{
+  "lang": "de",
+  "slug": "de",
+
+  "howto": {
+    "meta": {
+      "title": "Anleitung — AdFence, Werbe- und Tracker-Blocker",
+      "desc": "AdFence in einer Minute einrichten: Safari-Erweiterung aktivieren, auswählen, was blockiert wird, und eine einzelne Website anpassen – mit einem Screenshot jedes Bildschirms.",
+      "ogTitle": "So verwenden Sie AdFence — Werbe- und Tracker-Blocker",
+      "crumb": "Anleitung"
+    },
+    "intro": {
+      "eyebrow": "Erste Schritte",
+      "h1": "So verwenden Sie AdFence",
+      "lead": "Das Einschalten dauert etwa eine Minute. Alles danach ist optionale Feinarbeit — fünf Bildschirme, in der Reihenfolge, in der Sie ihnen begegnen."
+    },
+    "steps": [
+      {
+        "eyebrow": "Schritt 1",
+        "h2": "In Safari einschalten",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Die Installation von AdFence ist nicht der letzte Schritt. Safari lässt jede Erweiterung ausgeschaltet, bis Sie sie von Hand einschalten — und genau deshalb wirkt ein Blocker oft, als würde er gar nichts tun."
+          },
+          { "t": "h3", "html": "iPhone &amp; iPad" },
+          {
+            "t": "ol",
+            "items": [
+              "<strong>Einstellungen</strong> öffnen und auf <strong>Safari</strong> tippen.",
+              "Auf <strong>Erweiterungen</strong> und dann auf <strong>AdFence</strong> tippen.",
+              "Einschalten und den Zugriff auf die Websites erlauben, auf denen er arbeiten soll."
+            ]
+          },
+          { "t": "h3", "html": "Mac" },
+          {
+            "t": "ol",
+            "items": [
+              "<strong>Safari</strong> öffnen.",
+              "Zu <strong>Safari → Einstellungen → Erweiterungen</strong> gehen.",
+              "<strong>AdFence</strong> ankreuzen und dann auswählen, auf welche Websites er zugreifen darf."
+            ]
+          },
+          {
+            "t": "p",
+            "html": "Öffnen Sie dann AdFence und tippen Sie auf <strong>Plugins</strong>. Die App fragt Safari direkt ab und zeigt neben jeder ihrer acht Erweiterungen ein grünes <strong>Aktiv</strong>. <strong>Status aktualisieren</strong> prüft erneut, und <strong>Safari-Erweiterungseinstellungen öffnen</strong> springt zum oben gezeigten Bildschirm."
+          }
+        ],
+        "shot": {
+          "alt": "Die acht AdFence-Erweiterungen eingeschaltet, zweimal gezeigt: als Liste unter Einstellungen → Safari → Erweiterungen auf dem iPhone und als angekreuzte Einträge im Erweiterungen-Fenster von Safari auf dem Mac.",
+          "capStrong": "Einstellungen → Safari → Erweiterungen",
+          "cap": "Alle acht eingeschaltet — iPhone oben, Mac unten."
+        }
+      },
+      {
+        "eyebrow": "Schritt 2",
+        "h2": "Auswählen, was blockiert wird",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Der Tab <strong>Allgemein</strong> öffnet sich mit einem Hauptschalter namens <strong>Blockierung</strong>. Solange er aus ist, lädt jeder Blocker eine leere Regelliste, und nirgendwo wird etwas blockiert. Lassen Sie ihn an und wählen Sie darunter in der <strong>Blockierliste</strong> die Filter einzeln aus."
+          },
+          {
+            "t": "ul",
+            "items": [
+              "<strong>Werbung blockieren</strong> — Webanzeigen und Banner sowie die leeren Kästen, die sie hinterlassen.",
+              "<strong>Anti-Adblock umgehen</strong> — kommt an Seiten vorbei, die einen Blocker erkennen, und blendet die Sperrseite aus, die sie in den Weg stellen.",
+              "<strong>Sichere Suche</strong> — blockiert bekannte Malware- und Phishing-Domains, bevor die Seite lädt.",
+              "<strong>Tracker blockieren</strong> — Tracking-Cookies und Analyse-Skripte."
+            ]
+          },
+          {
+            "t": "p",
+            "html": "Die Schalter sind unabhängig: Wenn Sie einen ausschalten, bleiben die anderen genau so, wie sie waren."
+          }
+        ],
+        "shot": {
+          "alt": "Der Tab „Allgemein“ in AdFence: ein Hauptschalter „Blockierung“, darunter Werbung blockieren, Anti-Adblock umgehen, Sichere Suche und Tracker blockieren.",
+          "capStrong": "Allgemein",
+          "cap": "Der Hauptschalter, dann die vier Kernfilter."
+        }
+      },
+      {
+        "eyebrow": "Schritt 3",
+        "h2": "Blenden Sie unerwünschten Ballast aus",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Scrollen Sie im Tab <strong>Allgemein</strong> weiter. Unter <strong>Weitere Einstellungen</strong> finden Sie die übrigen Filter — Cookie-Hinweise, Pop-ups, App-Banner, Kommentare, Social-Buttons, Mining-Skripte und mehr. Jeder ist ein eigener Schalter: Cookie-Banner auszublenden zwingt Sie also nie, Werbung zu blockieren."
+          },
+          {
+            "t": "p",
+            "html": "Einige davon blenden ein Element mit CSS aus der Seite aus, statt eine Anfrage zu blockieren; die Zeile unter jedem Schalter sagt, was jeweils passiert."
+          },
+          {
+            "t": "p",
+            "html": "<strong>Erwachsenenseiten sperren</strong> finden Sie ebenfalls hier. Es handelt sich um eine optionale Domain-Blacklist ohne Passcode — eine Annehmlichkeit, keine Kindersicherung."
+          }
+        ],
+        "shot": {
+          "alt": "Weitere Einstellungen in AdFence: Schalter für Erwachsenenseiten sperren, Cookie-Hinweise ausblenden, Pop-ups ausblenden, App-Banner ausblenden, Ablenkungen ausblenden, Kommentare ausblenden und Social-Buttons blockieren.",
+          "capStrong": "Weitere Einstellungen",
+          "cap": "Jede Störung bekommt ihren eigenen Schalter."
+        }
+      },
+      {
+        "eyebrow": "Schritt 4",
+        "h2": "Eine Website reparieren, ohne den Rest anzufassen",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Nicht jede Website verdient dieselbe Behandlung. Öffnen Sie den Tab <strong>Eigene</strong>, tippen Sie auf <strong>+</strong>, und das Blatt <strong>Website-Einstellungen</strong> öffnet sich mit einem Feld für die Adresse."
+          },
+          {
+            "t": "ul",
+            "items": [
+              "<strong>Website sperren</strong> — verhindert den Zugriff auf die Website vollständig.",
+              "<strong>Blockierung pausieren</strong> — schaltet AdFence nur für diese Website aus; überall sonst bleibt alles unberührt.",
+              "<strong>Eigener Elementblocker</strong> — Ihre eigenen CSS-Regeln für Elemente auf dieser Website.",
+              "<strong>Ausnahmen pro Website</strong> — erlauben Sie Werbung oder Tracking-Skripte, unsicheres Surfen, Social-Buttons oder Cookie-Hinweise nur für diese Adresse."
+            ]
+          },
+          {
+            "t": "p",
+            "html": "Tippen Sie auf <strong>Sichern</strong>, und die Website landet in Ihrer Liste."
+          }
+        ],
+        "shot": {
+          "alt": "Das Blatt „Website-Einstellungen“: ein Feld für die Website-Adresse, Website sperren, Blockierung pausieren, Eigener Elementblocker und Ausnahmen pro Website.",
+          "capStrong": "Website-Einstellungen",
+          "cap": "Eine einzelne Adresse sperren, pausieren oder einen einzelnen Filter erlauben."
+        }
+      },
+      {
+        "eyebrow": "Schritt 5",
+        "h2": "Führen Sie eine Liste Ihrer eigenen Regeln",
+        "blocks": [
+          {
+            "t": "p",
+            "html": "Jede Website, die Sie einrichten, landet im Tab <strong>Eigene</strong>. <strong>Eigene Regeln aktivieren</strong> ist der Hauptschalter für die gesamte Liste: Solange er aus ist, gelten überhaupt keine Website-Regeln. Die Erweiterungen hinter diesen Regeln müssen außerdem in Safari eingeschaltet sein — dafür ist der Tab <strong>Plugins</strong> da."
+          },
+          {
+            "t": "p",
+            "html": "Mit <strong>Bearbeiten</strong> ordnen Sie Einträge um oder entfernen sie; <strong>+</strong> fügt eine weitere Website hinzu."
+          }
+        ],
+        "shot": {
+          "alt": "Der Tab „Eigene“ in AdFence mit eingeschaltetem „Eigene Regeln aktivieren“ und einer leeren Liste, die auf die erste Website wartet.",
+          "capStrong": "Eigene",
+          "cap": "Ihre gespeicherten Websites, alle in einer Liste."
+        }
+      }
+    ],
+    "fixes": {
+      "eyebrow": "Wenn etwas nicht stimmt",
+      "h2": "Drei Dinge, die Sie zuerst prüfen sollten",
+      "items": [
+        {
+          "h3": "Eine Website wirkt kaputt",
+          "p": "Schalten Sie in den Website-Einstellungen für genau diese Website <strong>Blockierung pausieren</strong> ein und lassen Sie AdFence überall sonst weiterlaufen.",
+          "more": "Mehr im Support"
+        },
+        {
+          "h3": "Nirgends wird etwas blockiert",
+          "p": "Öffnen Sie den Tab <strong>Plugins</strong>. Eine Erweiterung, die in Safari nicht <strong>Aktiv</strong> ist, kann nichts blockieren — egal, wie die App eingestellt ist.",
+          "more": "Mehr im Support"
+        },
+        {
+          "h3": "Cookie-Banner erscheinen weiterhin",
+          "p": "Cookie-Hinweise haben einen eigenen Schalter, getrennt von der Werbung. Schauen Sie im Tab Allgemein unter <strong>Weitere Einstellungen</strong> nach.",
+          "more": "Mehr im Support"
+        }
+      ]
+    }
+  },
+
+  "support": {
+    "meta": {
+      "title": "Support & Einrichtung — AdFence, Werbe- und Tracker-Blocker",
+      "desc": "So installieren und aktivieren Sie die AdFence-Safari-Erweiterung auf iPhone, iPad und Mac – dazu Antworten auf häufige Fragen und Kontaktmöglichkeiten.",
+      "ogTitle": "Support — AdFence",
+      "crumb": "Support"
+    },
+    "intro": {
+      "eyebrow": "Support",
+      "h1": "AdFence zum Laufen bringen",
+      "lead": "Fast jede Meldung „Es blockiert nichts“ bedeutet, dass die Erweiterung nicht eingeschaltet ist. Hier beginnen."
+    },
+    "setup": {
+      "h2": "Die Erweiterung aktivieren",
+      "lead": "Noch nicht installiert? <a href=\"https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569\" target=\"_blank\" rel=\"noopener\">Laden Sie AdFence im App Store</a> und folgen Sie dann den Schritten für Ihr Gerät.",
+      "cards": [
+        {
+          "h3": "Auf iPhone & iPad",
+          "items": [
+            "<strong>Einstellungen</strong>-App öffnen",
+            "Nach unten scrollen und auf <strong>Safari</strong> tippen",
+            "Auf <strong>Erweiterungen</strong> tippen",
+            "Auf <strong>AdFence</strong> tippen und es einschalten",
+            "Den Zugriff für die Websites erlauben, auf denen er arbeiten soll"
+          ]
+        },
+        {
+          "h3": "Auf dem Mac",
+          "items": [
+            "<strong>Safari</strong> öffnen",
+            "Zu <strong>Safari → Einstellungen</strong> gehen (oder <strong>Voreinstellungen</strong>)",
+            "Den Tab <strong>Erweiterungen</strong> öffnen",
+            "<strong>AdFence</strong> in der Liste ankreuzen",
+            "Auswählen, auf welche Websites er zugreifen darf"
+          ]
+        }
+      ]
+    },
+    "trouble": {
+      "h2": "Wenn es nicht funktioniert",
+      "items": [
+        {
+          "q": "Auf einer Website erscheint weiterhin Werbung",
+          "a": "<p>Ein paar Möglichkeiten, in der Reihenfolge, in der es sich zu prüfen lohnt:</p><ul><li>Die Erweiterung ist an, aber für diese Website nicht zugelassen — prüfen Sie die Erweiterungsberechtigungen von Safari für die Website.</li><li>Die Werbung wird von der Domain der Website selbst ausgeliefert. Solche Anzeigen lassen sich kaum von echten Inhalten unterscheiden, deshalb lassen Blocker sie in der Regel in Ruhe.</li><li>Es ist eine Werbeanzeige im YouTube-Video. Sie wird mit dem Video selbst ausgeliefert und ist für praktisch jeden Content-Blocker unerreichbar.</li><li>Die Filterliste ist veraltet. Ein Update der App aktualisiert die Listen.</li></ul>"
+        },
+        {
+          "q": "Eine Seite ist kaputt — Inhalte fehlen oder ein Menü öffnet sich nicht",
+          "a": "<p>Aggressives Blockieren kann gelegentlich etwas ausblenden, das eine Seite braucht. Schalten Sie AdFence in den Safari-Erweiterungseinstellungen für diese eine Website aus und lassen Sie es überall sonst an.</p>"
+        },
+        {
+          "q": "Cookie-Banner erscheinen weiterhin",
+          "a": "<p>Die Filter für Störungen müssen getrennt von den Werbefiltern eingeschaltet werden. Prüfen Sie die Schalter in der App.</p>"
+        },
+        {
+          "q": "Nirgends wird überhaupt etwas blockiert",
+          "a": "<p>Die Erweiterung ist nicht aktiviert. Folgen Sie den Einrichtungsschritten oben — Safari-Erweiterungen sind aus, bis Sie sie von Hand einschalten.</p>"
+        },
+        {
+          "q": "Kann ich eine einzelne Website freigeben?",
+          "a": "<p>Ja. In den Safari-Erweiterungseinstellungen können Sie AdFence so einstellen, dass es pro Website fragt, überall erlaubt oder überall verweigert wird, und dann Ausnahmen für einzelne Websites festlegen.</p>"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "h2": "Kommen Sie noch nicht weiter?",
+      "lead": "Schreiben Sie uns eine E-Mail, und wir melden uns zurück. Wenn Sie Ihr Gerät und Ihre iOS- oder macOS-Version nennen, sparen Sie eine Rückfrage.",
+      "button": "E-Mail senden"
+    }
+  },
+
+  "blog": {
+    "meta": {
+      "title": "Blog — AdFence, Werbe- und Tracker-Blocker",
+      "desc": "Notizen zum Werbeblockieren in Safari: Warum sich Erweiterungen selbst ausschalten, was ein Content-Blocker erreichen kann und was nicht, und wie Sie eine einzelne Website anpassen.",
+      "ogTitle": "Blog — AdFence, Werbe- und Tracker-Blocker",
+      "crumb": "Blog",
+      "jsonName": "AdFence Blog",
+      "jsonDesc": "Notizen zum Werbeblockieren in Safari: Warum sich Erweiterungen selbst ausschalten, was ein Content-Blocker erreichen kann und was nicht, und wie Sie eine einzelne Website anpassen."
+    },
+    "intro": {
+      "eyebrow": "Blog",
+      "h1": "Ein ruhigeres Web, in der Praxis",
+      "lead": "Notizen zum Werbeblockieren in Safari — was ein Content-Blocker erreichen kann und was nicht, warum sich eine Erweiterung ausschaltet und wie Sie eine Website reparieren, ohne alles andere zu lockern.",
+      "ghost": "Sehen, wie Sie es einrichten"
+    },
+    "post": {
+      "tag": "Neueste",
+      "date": "8. November 2026",
+      "readTime": "7 Min. Lesezeit",
+      "more": "Leitfaden lesen →"
+    }
+  }
+}
