@@ -263,11 +263,17 @@
       "lead": "Apuntes sobre el bloqueo de anuncios en Safari: a qué puede llegar un bloqueador de contenido y a qué no, por qué una extensión se desactiva sola y cómo arreglar un solo sitio sin aflojar todo lo demás.",
       "ghost": "Ver cómo se configura"
     },
-    "post": {
-      "tag": "Lo último",
-      "date": "8 de noviembre de 2026",
-      "readTime": "7 min de lectura",
-      "more": "Leer la guía →"
-    }
+    "posts": [
+      {
+        "tag": "Lo último",
+        "date": "11 de noviembre de 2026",
+        "readTime": "6 min de lectura"
+      },
+      {
+        "date": "8 de noviembre de 2026",
+        "readTime": "7 min de lectura"
+      }
+    ],
+    "more": "Leer la guía →"
   }
 }

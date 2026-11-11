@@ -251,12 +251,16 @@ is both a legal problem and an App Store rejection risk.
 3. Rewrite the FAQ at the bottom of the post — questions, answers, and the
    matching `FAQPage` entries in the JSON-LD. Delete it if the post genuinely
    has no questions worth answering.
-4. In `blog.html`, move the current `.post-feature` text into a
-   `<a class="card post-card">` inside `.post-grid` (the empty template is
-   commented out in the file), put the new post in the feature slot, and add it
-   to the `blogPost` array in `blog.html`'s JSON-LD.
+4. In `blog.html`, move the current `.post-feature` markup into a
+   `<a class="card post-card">` inside `.post-grid`, put the new post in the
+   feature slot, and add it to the `blogPost` array in `blog.html`'s JSON-LD.
 5. Add the new URL to `sitemap.xml` with today's `<lastmod>`, and add a line
    under "## Pages" in `llms.txt`.
+6. Add the post to the `POSTS` array at the top of `tools/build-i18n.js`
+   (newest first) and add a matching `blog.posts[]` entry — localized `date`
+   and `readTime` — to all nine `tools/i18n/pages/*.json`, then re-run the
+   generator. The build throws if the counts disagree, which is the only thing
+   stopping the nine localized blog indexes from going stale.
 
 There is no RSS feed and no build step; the index is hand-maintained on purpose,
 so what is on the page is exactly what exists.

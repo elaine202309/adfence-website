@@ -263,11 +263,17 @@
       "lead": "Note sul blocco pubblicità in Safari: cosa un blocco di contenuti può e non può raggiungere, perché un'estensione si spegne da sola e come sistemare un sito senza allentare tutto il resto.",
       "ghost": "Scopri come configurarlo"
     },
-    "post": {
-      "tag": "Ultimo",
-      "date": "8 novembre 2026",
-      "readTime": "7 min di lettura",
-      "more": "Leggi la guida →"
-    }
+    "posts": [
+      {
+        "tag": "Ultimo",
+        "date": "11 novembre 2026",
+        "readTime": "6 min di lettura"
+      },
+      {
+        "date": "8 novembre 2026",
+        "readTime": "7 min di lettura"
+      }
+    ],
+    "more": "Leggi la guida →"
   }
 }

@@ -35,6 +35,10 @@
   contact address.
 - [Blog](https://adfence.mxcode.com/blog.html): Notes on how Safari content
   blocking actually behaves.
+- [How to block pop-up ads on iPhone Safari](https://adfence.mxcode.com/blog/how-to-block-popup-ads-on-iphone-safari.html):
+  The three things people call pop-ups — windows, overlays drawn inside the page,
+  and taps that leave the page — which setting catches each, and what no content
+  blocker can reach.
 - [Why your Safari ad blocker isn't working](https://adfence.mxcode.com/blog/why-safari-ad-blocker-not-working.html):
   The 30-second check (Safari switches extensions off until you turn them on),
   four more causes worth ruling out, and how to fix one site without loosening

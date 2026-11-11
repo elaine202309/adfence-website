@@ -263,11 +263,17 @@
       "lead": "Notes sur le blocage des publicités dans Safari — ce qu’un bloqueur de contenu peut atteindre ou non, pourquoi une extension se désactive toute seule, et comment régler un site sans relâcher tout le reste.",
       "ghost": "Voir comment le configurer"
     },
-    "post": {
-      "tag": "Dernier article",
-      "date": "8 novembre 2026",
-      "readTime": "7 min de lecture",
-      "more": "Lire le guide →"
-    }
+    "posts": [
+      {
+        "tag": "Dernier article",
+        "date": "11 novembre 2026",
+        "readTime": "6 min de lecture"
+      },
+      {
+        "date": "8 novembre 2026",
+        "readTime": "7 min de lecture"
+      }
+    ],
+    "more": "Lire le guide →"
   }
 }

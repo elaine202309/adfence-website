@@ -1,7 +1,6 @@
 {
   "lang": "de",
   "slug": "de",
-
   "howto": {
     "meta": {
       "title": "Anleitung — AdFence, Werbe- und Tracker-Blocker",
@@ -23,7 +22,10 @@
             "t": "p",
             "html": "Die Installation von AdFence ist nicht der letzte Schritt. Safari lässt jede Erweiterung ausgeschaltet, bis Sie sie von Hand einschalten — und genau deshalb wirkt ein Blocker oft, als würde er gar nichts tun."
           },
-          { "t": "h3", "html": "iPhone &amp; iPad" },
+          {
+            "t": "h3",
+            "html": "iPhone &amp; iPad"
+          },
           {
             "t": "ol",
             "items": [
@@ -32,7 +34,10 @@
               "Einschalten und den Zugriff auf die Websites erlauben, auf denen er arbeiten soll."
             ]
           },
-          { "t": "h3", "html": "Mac" },
+          {
+            "t": "h3",
+            "html": "Mac"
+          },
           {
             "t": "ol",
             "items": [
@@ -173,7 +178,6 @@
       ]
     }
   },
-
   "support": {
     "meta": {
       "title": "Support & Einrichtung — AdFence, Werbe- und Tracker-Blocker",
@@ -244,7 +248,6 @@
       "button": "E-Mail senden"
     }
   },
-
   "blog": {
     "meta": {
       "title": "Blog — AdFence, Werbe- und Tracker-Blocker",
@@ -260,11 +263,17 @@
       "lead": "Notizen zum Werbeblockieren in Safari — was ein Content-Blocker erreichen kann und was nicht, warum sich eine Erweiterung ausschaltet und wie Sie eine Website reparieren, ohne alles andere zu lockern.",
       "ghost": "Sehen, wie Sie es einrichten"
     },
-    "post": {
-      "tag": "Neueste",
-      "date": "8. November 2026",
-      "readTime": "7 Min. Lesezeit",
-      "more": "Leitfaden lesen →"
-    }
+    "posts": [
+      {
+        "tag": "Neueste",
+        "date": "11. November 2026",
+        "readTime": "6 Min. Lesezeit"
+      },
+      {
+        "date": "8. November 2026",
+        "readTime": "7 Min. Lesezeit"
+      }
+    ],
+    "more": "Leitfaden lesen →"
   }
 }

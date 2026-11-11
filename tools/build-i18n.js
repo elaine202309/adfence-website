@@ -121,13 +121,29 @@ const HOWTO_SHOTS = [
   { src: 'adfence-custom-rules.png', w: 520, h: 1127, plain: false }
 ];
 
-/* The blog index points at an English article, so its title and excerpt stay
-   in English on every localized page. Dates and labels are translated. */
-const POST_URL = 'blog/why-safari-ad-blocker-not-working.html';
-const POST_TITLE = 'Why your Safari ad blocker isn’t working — and the 30-second fix';
-const POST_EXCERPT = 'Nine times out of ten the app is doing its job and Safari has quietly switched ' +
-  'the extension off. Here is how to check it in half a minute on iPhone, iPad and Mac, and what ' +
-  'to look at if that isn’t it.';
+/* The blog index points at English articles, so titles and excerpts stay in
+   English on every localized page. Only the meta line is translated, which is
+   why each language file carries one `blog.posts[]` entry per post below —
+   same order, same length. Add a post here and to all nine files together;
+   checkPages() throws if the counts disagree. */
+const POSTS = [
+  {
+    url: 'blog/how-to-block-popup-ads-on-iphone-safari.html',
+    title: 'How to block pop-up ads on iPhone Safari',
+    excerpt: '“Pop-up ad” is three different things on an iPhone, and only one of them is a ' +
+      'window. Safari’s own blocker closes the windows; the boxes drawn inside the page need a ' +
+      'content blocker — and a few of them nothing can reach.',
+    date: '2026-11-11'
+  },
+  {
+    url: 'blog/why-safari-ad-blocker-not-working.html',
+    title: 'Why your Safari ad blocker isn’t working — and the 30-second fix',
+    excerpt: 'Nine times out of ten the app is doing its job and Safari has quietly switched ' +
+      'the extension off. Here is how to check it in half a minute on iPhone, iPad and Mac, and ' +
+      'what to look at if that isn’t it.',
+    date: '2026-11-08'
+  }
+];
 
 const ORG_NODE = {
   '@type': 'Organization',
@@ -860,20 +876,38 @@ function blogStructuredData(d, p) {
         url: urlFor(d.slug, 'blog.html'),
         inLanguage: d.lang,
         publisher: { '@id': SITE + '/#organization' },
-        blogPost: [
-          {
+        blogPost: POSTS.map(function (post) {
+          return {
             '@type': 'BlogPosting',
-            headline: POST_TITLE,
-            url: SITE + '/' + POST_URL,
-            datePublished: '2026-11-08',
-            dateModified: '2026-11-08',
-            description: POST_EXCERPT,
+            headline: post.title,
+            url: SITE + '/' + post.url,
+            datePublished: post.date,
+            dateModified: post.date,
+            description: post.excerpt,
             author: { '@id': SITE + '/#organization' }
-          }
-        ]
+          };
+        })
       }
     ]
   }, null, 2);
+}
+
+/* Older posts go in the .post-grid under the feature card, newest first. The
+   English title and excerpt are used as-is; only the meta line is localized,
+   taken from the same index in the language file's `blog.posts`. */
+function gridPosts(p) {
+  const rest = POSTS.slice(1);
+  if (!rest.length) return '';
+  const cards = rest.map(function (post, i) {
+    const m = p.posts[i + 1];
+    return `        <a class="card post-card" href="../${post.url}">
+          <span class="post-meta">${esc(m.date)} · ${esc(m.readTime)}</span>
+          <h3>${esc(post.title)}</h3>
+          <p>${esc(post.excerpt)}</p>
+          <span class="post-more">${esc(p.more)}</span>
+        </a>`;
+  }).join('\n');
+  return `      <div class="post-grid">\n${cards}\n      </div>`;
 }
 
 function renderBlog(d, p) {
@@ -906,17 +940,18 @@ function renderBlog(d, p) {
   <section class="section section-alt">
     <div class="container">
       <div class="post-feature">
-        <span class="post-meta"><span class="tag">${esc(p.post.tag)}</span> · ${esc(p.post.date)} · ${esc(p.post.readTime)}</span>
+        <span class="post-meta"><span class="tag">${esc(p.posts[0].tag)}</span> · ${esc(p.posts[0].date)} · ${esc(p.posts[0].readTime)}</span>
         <h2>
-          <a href="../${POST_URL}">
-            ${esc(POST_TITLE)}
+          <a href="../${POSTS[0].url}">
+            ${esc(POSTS[0].title)}
           </a>
         </h2>
         <p>
-          ${esc(POST_EXCERPT)}
+          ${esc(POSTS[0].excerpt)}
         </p>
-        <a class="post-more" href="../${POST_URL}">${esc(p.post.more)}</a>
+        <a class="post-more" href="../${POSTS[0].url}">${esc(p.more)}</a>
       </div>
+${gridPosts(p)}
     </div>
   </section>
 
@@ -971,6 +1006,14 @@ function checkPages(file, d) {
     if (c.items.length !== 5) throw new Error(file + ': setup card ' + i + ' needs 5 items');
   });
   if (d.support.trouble.items.length !== 5) throw new Error(file + ': expected 5 troubleshooting items');
+  if (!d.blog.posts || d.blog.posts.length !== POSTS.length) {
+    throw new Error(file + ': blog.posts needs one entry per POSTS item (' + POSTS.length + ')');
+  }
+  if (!d.blog.more) throw new Error(file + ': missing blog.more');
+  d.blog.posts.forEach(function (post, i) {
+    if (!post.date || !post.readTime) throw new Error(file + ': blog.posts[' + i + '] needs date and readTime');
+  });
+  if (!d.blog.posts[0].tag) throw new Error(file + ': blog.posts[0] needs the "tag" label');
 }
 
 const homeDir = path.join(__dirname, 'i18n');

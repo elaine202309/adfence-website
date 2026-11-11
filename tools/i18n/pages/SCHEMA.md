@@ -51,7 +51,11 @@ shape. Every string is shown to a visitor, so nothing here is optional.
   "blog": {
     "meta": { "title": "", "desc": "", "ogTitle": "", "crumb": "", "jsonName": "", "jsonDesc": "" },
     "intro": { "eyebrow": "", "h1": "", "lead": "", "ghost": "" },
-    "post": { "tag": "", "date": "", "readTime": "", "more": "" }
+    "posts": [
+      { "tag": "", "date": "", "readTime": "" },
+      { "date": "", "readTime": "" }
+    ],
+    "more": ""
   }
 }
 ```
@@ -81,10 +85,16 @@ shape. Every string is shown to a visitor, so nothing here is optional.
   text, no markup.
 - `support.trouble.items[].a` is raw HTML: an answer paragraph, plus a `<ul>`
   where the English one has one.
-- The blog index links to an English article. **Do not translate the article
-  title or its excerpt** — the template carries the English headline. Translate
-  only `tag`, `date` (localized date, e.g. `8 novembre 2026`), `readTime`
-  (e.g. `7 min de lecture`) and `more` (the "Read the guide →" label).
+- The blog index links to English articles. **Do not translate the titles or
+  the excerpts** — the build carries those. Translate only the meta line and
+  the read-more label: `posts[]` has one entry per post, **newest first, in the
+  same order as the `POSTS` array in `build-i18n.js`** — `date` (localized,
+  e.g. `8 novembre 2026`) and `readTime` (e.g. `7 min de lecture`); the first
+  entry also carries `tag` (the "Latest" chip, e.g. `Dernier article`).
+  `more` is the "Read the guide →" label, shared by every card.
+- Adding a post means adding it to `POSTS`, to `blog.html`, to every
+  `tools/i18n/pages/*.json`, to `sitemap.xml` and to `llms.txt` in the same
+  commit. The build throws if `blog.posts` and `POSTS` disagree in length.
 - Keep **Safari**, **iPhone**, **iPad**, **Mac**, **iOS**, **iPadOS**,
   **macOS**, **AdFence**, **App Store**, **Google Analytics**, **YouTube**,
   **CSS** and the in-app extension names (Ads, Privacy, Social, Safety, Others,
