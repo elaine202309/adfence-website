@@ -58,6 +58,14 @@ images/adfence-safari-extensions-iphone.png  Blog post, 880×1090 — the same
                   iPhone list on its own, for narrow article columns
 images/adfence-safari-extensions-mac.png     Blog post, 880×661 — Safari's
                   Extensions window on the Mac, on the same #f2f1f6 canvas
+images/adfence-safari-settings-block-popups.png  Blog post, 520×1125 — the
+                  Block Pop-ups switch on Safari's own settings screen. This one
+                  is NOT a device capture: it was rendered from
+                  `images/source/safari-settings-block-popups.html` in headless
+                  Edge at 3× and downscaled, because there was no screenshot of
+                  Apple's Settings to hand. The markup is in the repo so it can
+                  be corrected or re-rendered; replace the PNG with a real
+                  capture when you have one.
 images/app-store-badge.svg  Apple's official "Download on the App Store" badge
                   (US-UK, black). Unmodified — do not recolour or redraw it.
 images/source/    Full-resolution originals behind the screenshots above. Not
@@ -68,7 +76,8 @@ images/source/    Full-resolution originals behind the screenshots above. Not
                   RGBA PNG. The step-1 image is those last two stitched into one
                   880-wide canvas on a #f2f1f6 background (headless Edge, 32px
                   gap) — rebuild it from the two sources rather than editing the
-                  stitched copy.
+                  stitched copy. `safari-settings-block-popups.html` is the
+                  source of the recreated Settings screen above.
 zh-hans/          Nine localized directories, one per language (zh-hans,
 zh-hant/          zh-hant, fr, de, it, ja, ko, pt, es). Each holds four pages:
 fr/ de/ it/ ja/   index.html, how-to-use.html, support.html and blog.html —
