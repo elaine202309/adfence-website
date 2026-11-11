@@ -245,8 +245,17 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
 .btn:active { transform: none; }
 
-.btn-primary { background: var(--text); color: #fff; box-shadow: var(--shadow-sm); }
-.btn-primary:hover { background: #232730; }
+/* The download CTA. Brand violet rather than near-black, so it reads as the
+   one thing to click on a page that is otherwise white and grey. The shadow
+   is tinted the same hue — a neutral drop shadow on a coloured button looks
+   like a mistake. Apple's App Store badge keeps its own black artwork; this
+   is the button, not the badge. */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(75, 52, 184, .28);
+}
+.btn-primary:hover { background: var(--primary-dark); box-shadow: 0 10px 24px rgba(75, 52, 184, .34); }
 
 .btn-ghost { background: #fff; color: var(--text); border-color: var(--border-strong); }
 .btn-ghost:hover { border-color: var(--text-faint); }
@@ -633,16 +642,31 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .prose .meta { font-size: .89rem; color: var(--text-faint); margin-bottom: 2.5em; }
 
 /* --- CTA band ------------------------------------------------------------- */
+/* The end-of-page download block. It carries the highest-intent link on the
+   page, so it gets the brand violet instead of the pale panel every other
+   section uses. Apple's badge artwork is black, which disappears on a dark
+   background — hence the white plate behind it. The badge itself is still the
+   untouched SVG. */
 .cta-band {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
+  background:
+    radial-gradient(760px 300px at 18% -10%, rgba(255, 255, 255, .18), transparent 62%),
+    linear-gradient(148deg, var(--primary) 0%, #5b3fc4 46%, #7a44b8 100%);
+  border: 1px solid transparent;
   border-radius: var(--radius-lg);
   padding: 72px 48px;
   text-align: center;
-  color: var(--text);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(75, 52, 184, .28);
 }
-.cta-band h2 { color: var(--text); }
-.cta-band p { color: var(--text-muted); max-width: 30em; margin: 0 auto 30px; }
+.cta-band h2 { color: #fff; }
+.cta-band p { color: rgba(255, 255, 255, .86); max-width: 30em; margin: 0 auto 32px; }
+.cta-band .appstore-badge {
+  background: #fff;
+  padding: 11px 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(23, 12, 66, .30);
+}
+.cta-band .appstore-badge:hover { background: #fff; }
 
 /* --- Footer --------------------------------------------------------------- */
 .site-footer {
