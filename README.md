@@ -58,26 +58,21 @@ images/adfence-safari-extensions-iphone.png  Blog post, 880×1090 — the same
                   iPhone list on its own, for narrow article columns
 images/adfence-safari-extensions-mac.png     Blog post, 880×661 — Safari's
                   Extensions window on the Mac, on the same #f2f1f6 canvas
-images/adfence-safari-settings-block-popups.png  Blog post, 520×1125 — the
-                  Block Pop-ups switch on Safari's own settings screen. This one
-                  is NOT a device capture: it was rendered from
-                  `images/source/safari-settings-block-popups.html` in headless
-                  Edge at 3× and downscaled, because there was no screenshot of
-                  Apple's Settings to hand. The markup is in the repo so it can
-                  be corrected or re-rendered; replace the PNG with a real
-                  capture when you have one.
+images/adfence-safari-settings.png   Blog post, 520×1127 — the General section
+                  of Safari's settings on iPhone, with Block Pop-ups switched on.
+                  A real device capture; the 1179×2556 original is in
+                  images/source/.
 images/app-store-badge.svg  Apple's official "Download on the App Store" badge
                   (US-UK, black). Unmodified — do not recolour or redraw it.
 images/source/    Full-resolution originals behind the screenshots above. Not
                   referenced by any page — kept so the web copies can be
-                  regenerated or reused for App Store art. The five phone
+                  regenerated or reused for App Store art. The six phone
                   screens are 1179×2556 16-bit PNG; the extensions list is a
                   1179×1460 JPEG crop; the Mac extensions window is a 948×712
                   RGBA PNG. The step-1 image is those last two stitched into one
                   880-wide canvas on a #f2f1f6 background (headless Edge, 32px
                   gap) — rebuild it from the two sources rather than editing the
-                  stitched copy. `safari-settings-block-popups.html` is the
-                  source of the recreated Settings screen above.
+                  stitched copy.
 zh-hans/          Nine localized directories, one per language (zh-hans,
 zh-hant/          zh-hant, fr, de, it, ja, ko, pt, es). Each holds four pages:
 fr/ de/ it/ ja/   index.html, how-to-use.html, support.html and blog.html —
