@@ -29,7 +29,7 @@
           {
             "t": "ol",
             "items": [
-              "Ouvrez <strong>Réglages</strong> et touchez <strong>Safari</strong>.",
+              "Ouvrez <strong>Réglages</strong>, touchez <strong>Apps</strong>, puis <strong>Safari</strong>.",
               "Touchez <strong>Extensions</strong>, puis <strong>AdFence</strong>.",
               "Activez-le, puis autorisez l’accès aux sites sur lesquels vous voulez qu’il fonctionne."
             ]
@@ -52,8 +52,8 @@
           }
         ],
         "shot": {
-          "alt": "Les huit extensions d’AdFence activées, montrées deux fois : sous forme de liste dans Réglages → Safari → Extensions sur iPhone, et sous forme de cases cochées dans la fenêtre Extensions de Safari sur le Mac.",
-          "capStrong": "Réglages → Safari → Extensions",
+          "alt": "Les huit extensions d’AdFence activées, montrées deux fois : sous forme de liste dans Réglages → Apps → Safari → Extensions sur iPhone, et sous forme de cases cochées dans la fenêtre Extensions de Safari sur le Mac.",
+          "capStrong": "Réglages → Apps → Safari → Extensions",
           "cap": "Les huit, activées — iPhone en haut, Mac en bas."
         }
       },
@@ -198,7 +198,8 @@
           "h3": "Sur iPhone et iPad",
           "items": [
             "Ouvrez l’app <strong>Réglages</strong>",
-            "Faites défiler vers le bas et touchez <strong>Safari</strong>",
+            "Faites défiler vers le bas et touchez <strong>Apps</strong>",
+            "Touchez <strong>Safari</strong>",
             "Touchez <strong>Extensions</strong>",
             "Touchez <strong>AdFence</strong>, puis activez-le",
             "Autorisez l’accès aux sites sur lesquels vous voulez qu’il fonctionne"

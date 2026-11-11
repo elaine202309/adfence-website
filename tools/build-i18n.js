@@ -29,7 +29,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://adfence.mxcode.com';
 const STORE = 'https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569';
-const CSS_VERSION = 8;
+const CSS_VERSION = 9;
 const GSC = 'CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0';
 
 /* Order matters: this is the order of the language menu. */
@@ -63,6 +63,17 @@ function esc(s) {
     .replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}
+
+/* The App Store link. Apple's badge artwork can't be recoloured, so the site
+   uses a button of its own in brand violet instead — same target, same
+   label, no Apple asset. */
+function storeButton(label, indent) {
+  const pad = indent || '';
+  return `<a class="btn-store" href="${STORE}" target="_blank" rel="noopener">
+${pad}  <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v11m0 0 4-4m-4 4-4-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 16.5V19a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+${pad}  <span>${esc(label)}</span>
+${pad}</a>`;
 }
 
 /* Raw HTML -> plain text, for the FAQPage entries that have to agree with a
@@ -473,9 +484,7 @@ function renderHome(d) {
             ${esc(d.hero.lead)}
           </p>
           <div class="btn-row">
-            <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
-              <img src="../images/app-store-badge.svg" alt="${esc(d.hero.badge)}" width="120" height="40">
-            </a>
+            ${storeButton(d.hero.badge, '            ')}
             <a class="btn btn-ghost btn-lg" href="#features">${esc(d.hero.ghost)}</a>
           </div>
           <p class="hero-note">${esc(d.hero.note)}</p>
@@ -602,9 +611,7 @@ ${faqs}
       <div class="cta-band">
         <h2>${esc(d.cta.title)}</h2>
         <p>${esc(d.cta.lead)}</p>
-        <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
-          <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
-        </a>
+        ${storeButton(d.cta.badge, '        ')}
       </div>
     </div>
   </section>`;
@@ -720,9 +727,7 @@ ${fixes}
       <div class="cta-band">
         <h2>${esc(d.cta.title)}</h2>
         <p>${esc(d.cta.lead)}</p>
-        <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
-          <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
-        </a>
+        ${storeButton(d.cta.badge, '        ')}
       </div>
     </div>
   </section>`;
@@ -926,9 +931,7 @@ function renderBlog(d, p) {
         <!-- The download CTA has to be reachable without scrolling this page,
              not only at the bottom of it. -->
         <div class="btn-row center blog-cta">
-          <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
-            <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
-          </a>
+          ${storeButton(d.cta.badge, '          ')}
           <a class="btn btn-ghost" href="how-to-use.html">${esc(p.intro.ghost)}</a>
         </div>
       </div>
@@ -961,9 +964,7 @@ ${gridPosts(p)}
       <div class="cta-band">
         <h2>${esc(d.cta.title)}</h2>
         <p>${esc(d.cta.lead)}</p>
-        <a class="appstore-badge" href="${STORE}" target="_blank" rel="noopener">
-          <img src="../images/app-store-badge.svg" alt="${esc(d.cta.badge)}" width="120" height="40">
-        </a>
+        ${storeButton(d.cta.badge, '        ')}
       </div>
     </div>
   </section>`;
@@ -1003,7 +1004,10 @@ function checkPages(file, d) {
   if (d.howto.fixes.items.length !== 3) throw new Error(file + ': expected 3 quick fixes');
   if (d.support.setup.cards.length !== 2) throw new Error(file + ': expected 2 setup cards');
   d.support.setup.cards.forEach(function (c, i) {
-    if (c.items.length !== 5) throw new Error(file + ': setup card ' + i + ' needs 5 items');
+    /* The iPhone card has six since iOS 18 moved Safari under Apps. */
+    if (c.items.length !== (i === 0 ? 6 : 5)) {
+      throw new Error(file + ': setup card ' + i + ' needs ' + (i === 0 ? 6 : 5) + ' items');
+    }
   });
   if (d.support.trouble.items.length !== 5) throw new Error(file + ': expected 5 troubleshooting items');
   if (!d.blog.posts || d.blog.posts.length !== POSTS.length) {

@@ -101,8 +101,9 @@ shape. Every string is shown to a visitor, so nothing here is optional.
   Custom, Video, Adult) in Latin script — they are hard-coded in the build and
   in the app.
 - UI labels quoted from Apple's Settings app should match the wording Apple
-  ships in that language, e.g. Spanish *Ajustes → Safari → Extensiones*,
-  French *Réglages → Safari → Extensions*, Japanese *設定 → Safari → 機能拡張*.
+  ships in that language, e.g. Spanish *Ajustes → Apps → Safari → Extensiones*,
+  French *Réglages → Apps → Safari → Extensions*, Japanese
+  *設定 → アプリ → Safari → 機能拡張*.
 - Match the terminology already used in the same language's homepage file
   (`tools/i18n/<slug>.json`) — the nav labels, the CTA wording and the
   footer all come from there.

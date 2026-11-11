@@ -98,7 +98,7 @@
       },
       {
         "t": "拡張機能を許可",
-        "d": "<strong>設定 → Safari → 機能拡張</strong> を開き、AdFence をオンにします。Mac では Safari の設定で行います。"
+        "d": "<strong>設定 → アプリ → Safari → 機能拡張</strong> を開き、AdFence をオンにします。Mac では Safari の設定で行います。"
       },
       {
         "t": "そのままブラウズ",

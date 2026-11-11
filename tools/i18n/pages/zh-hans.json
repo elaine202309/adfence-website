@@ -29,7 +29,7 @@
           {
             "t": "ol",
             "items": [
-              "打开<strong>设置</strong>，然后轻点<strong>Safari 浏览器</strong>。",
+              "打开<strong>设置</strong>，轻点<strong>App</strong>，再轻点<strong>Safari 浏览器</strong>。",
               "轻点<strong>扩展</strong>，再轻点<strong>AdFence</strong>。",
               "将它开启，并允许它访问你希望其生效的网站。"
             ]
@@ -52,8 +52,8 @@
           }
         ],
         "shot": {
-          "alt": "八个 AdFence 扩展全部开启，分两处展示：iPhone 上「设置 → Safari 浏览器 → 扩展」中的列表，以及 Mac 上 Safari 扩展窗口中已勾选的条目。",
-          "capStrong": "设置 → Safari 浏览器 → 扩展",
+          "alt": "八个 AdFence 扩展全部开启，分两处展示：iPhone 上「设置 → App → Safari 浏览器 → 扩展」中的列表，以及 Mac 上 Safari 扩展窗口中已勾选的条目。",
+          "capStrong": "设置 → App → Safari 浏览器 → 扩展",
           "cap": "八个扩展全部开启 —— 上方是 iPhone，下方是 Mac。"
         }
       },
@@ -198,7 +198,8 @@
           "h3": "在 iPhone 和 iPad 上",
           "items": [
             "打开<strong>设置</strong> App",
-            "向下滚动并轻点<strong>Safari 浏览器</strong>",
+            "向下滚动并轻点<strong>App</strong>",
+            "轻点<strong>Safari 浏览器</strong>",
             "轻点<strong>扩展</strong>",
             "轻点<strong>AdFence</strong>，然后将其开启",
             "允许它访问你希望其生效的网站"

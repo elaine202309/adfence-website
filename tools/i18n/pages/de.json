@@ -29,7 +29,7 @@
           {
             "t": "ol",
             "items": [
-              "<strong>Einstellungen</strong> öffnen und auf <strong>Safari</strong> tippen.",
+              "<strong>Einstellungen</strong> öffnen, auf <strong>Apps</strong> und dann auf <strong>Safari</strong> tippen.",
               "Auf <strong>Erweiterungen</strong> und dann auf <strong>AdFence</strong> tippen.",
               "Einschalten und den Zugriff auf die Websites erlauben, auf denen er arbeiten soll."
             ]
@@ -52,8 +52,8 @@
           }
         ],
         "shot": {
-          "alt": "Die acht AdFence-Erweiterungen eingeschaltet, zweimal gezeigt: als Liste unter Einstellungen → Safari → Erweiterungen auf dem iPhone und als angekreuzte Einträge im Erweiterungen-Fenster von Safari auf dem Mac.",
-          "capStrong": "Einstellungen → Safari → Erweiterungen",
+          "alt": "Die acht AdFence-Erweiterungen eingeschaltet, zweimal gezeigt: als Liste unter Einstellungen → Apps → Safari → Erweiterungen auf dem iPhone und als angekreuzte Einträge im Erweiterungen-Fenster von Safari auf dem Mac.",
+          "capStrong": "Einstellungen → Apps → Safari → Erweiterungen",
           "cap": "Alle acht eingeschaltet — iPhone oben, Mac unten."
         }
       },
@@ -198,7 +198,8 @@
           "h3": "Auf iPhone & iPad",
           "items": [
             "<strong>Einstellungen</strong>-App öffnen",
-            "Nach unten scrollen und auf <strong>Safari</strong> tippen",
+            "Nach unten scrollen und auf <strong>Apps</strong> tippen",
+            "Auf <strong>Safari</strong> tippen",
             "Auf <strong>Erweiterungen</strong> tippen",
             "Auf <strong>AdFence</strong> tippen und es einschalten",
             "Den Zugriff für die Websites erlauben, auf denen er arbeiten soll"

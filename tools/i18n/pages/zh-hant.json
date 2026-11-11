@@ -29,7 +29,7 @@
           {
             "t": "ol",
             "items": [
-              "開啟<strong>設定</strong>，然後點一下 <strong>Safari</strong>。",
+              "開啟<strong>設定</strong>，點一下 <strong>App</strong>，再點一下 <strong>Safari</strong>。",
               "點一下<strong>擴充功能</strong>，然後點一下 <strong>AdFence</strong>。",
               "將它開啟，並允許存取你希望它生效的網站。"
             ]
@@ -52,8 +52,8 @@
           }
         ],
         "shot": {
-          "alt": "八個 AdFence 擴充功能皆已開啟，並以兩種方式呈現：iPhone 上「設定 → Safari → 擴充功能」中的清單，以及 Mac 上 Safari 擴充功能視窗中已勾選的項目。",
-          "capStrong": "設定 → Safari → 擴充功能",
+          "alt": "八個 AdFence 擴充功能皆已開啟，並以兩種方式呈現：iPhone 上「設定 → App → Safari → 擴充功能」中的清單，以及 Mac 上 Safari 擴充功能視窗中已勾選的項目。",
+          "capStrong": "設定 → App → Safari → 擴充功能",
           "cap": "八個全部開啟 —— 上方是 iPhone，下方是 Mac。"
         }
       },
@@ -198,7 +198,8 @@
           "h3": "在 iPhone 和 iPad 上",
           "items": [
             "開啟<strong>設定</strong> App",
-            "向下捲動並點一下 <strong>Safari</strong>",
+            "向下捲動並點一下 <strong>App</strong>",
+            "點一下 <strong>Safari</strong>",
             "點一下<strong>擴充功能</strong>",
             "點一下 <strong>AdFence</strong>，然後將它開啟",
             "允許存取你希望它生效的網站"

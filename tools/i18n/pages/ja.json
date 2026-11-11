@@ -29,7 +29,7 @@
           {
             "t": "ol",
             "items": [
-              "<strong>設定</strong>を開き、<strong>Safari</strong> をタップします。",
+              "<strong>設定</strong>を開き、<strong>アプリ</strong>、<strong>Safari</strong> の順にタップします。",
               "<strong>機能拡張</strong>をタップし、次に <strong>AdFence</strong> をタップします。",
               "オンにして、動作させたい Web サイトへのアクセスを許可します。"
             ]
@@ -52,8 +52,8 @@
           }
         ],
         "shot": {
-          "alt": "8 つの AdFence 機能拡張がオンになっている様子。iPhone では設定 → Safari → 機能拡張の一覧として、Mac では Safari の機能拡張ウインドウにチェック済みの項目として表示されています。",
-          "capStrong": "設定 → Safari → 機能拡張",
+          "alt": "8 つの AdFence 機能拡張がオンになっている様子。iPhone では設定 → アプリ → Safari → 機能拡張の一覧として、Mac では Safari の機能拡張ウインドウにチェック済みの項目として表示されています。",
+          "capStrong": "設定 → アプリ → Safari → 機能拡張",
           "cap": "8 つすべてがオン — 上は iPhone、下は Mac。"
         }
       },
@@ -198,7 +198,8 @@
           "h3": "iPhone と iPad",
           "items": [
             "設定アプリを開きます",
-            "下にスクロールして Safari をタップします",
+            "下にスクロールして アプリ をタップします",
+            "Safari をタップします",
             "機能拡張をタップします",
             "AdFence をタップして、オンにします",
             "動作させたい Web サイトへのアクセスを許可します"

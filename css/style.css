@@ -268,9 +268,31 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 
 /* Official App Store badge. The SVG is Apple's artwork, unmodified — only the
    rendered height is set, so it scales proportionally. Don't recolour it. */
-.appstore-badge { display: inline-flex; align-items: center; }
-.appstore-badge img { width: auto; height: 50px; }
-.appstore-badge:hover { text-decoration: none; }
+/* The App Store link. Apple's badge artwork may not be recoloured, so the
+   site uses its own button in brand violet: same target, same wording, no
+   Apple asset. Its height matches the 50px the badge used to be. */
+.btn-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 24px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #fff;
+  font-size: .97rem;
+  font-weight: 650;
+  line-height: 1;
+  box-shadow: 0 6px 18px rgba(75, 52, 184, .28);
+  transition: background-color .15s ease, transform .15s ease;
+}
+.btn-store:hover {
+  background: var(--primary-dark);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.btn-store:active { transform: none; }
+.btn-store .store-icon { width: 20px; height: 20px; flex: none; }
 
 /* --- Hero ----------------------------------------------------------------- */
 .hero { padding: 96px 0 104px; overflow: hidden; }
@@ -644,9 +666,8 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 /* --- CTA band ------------------------------------------------------------- */
 /* The end-of-page download block. It carries the highest-intent link on the
    page, so it gets the brand violet instead of the pale panel every other
-   section uses. Apple's badge artwork is black, which disappears on a dark
-   background — hence the white plate behind it. The badge itself is still the
-   untouched SVG. */
+   section uses. The store button flips to a white plate here so it still
+   reads against the violet. */
 .cta-band {
   background:
     radial-gradient(760px 300px at 18% -10%, rgba(255, 255, 255, .18), transparent 62%),
@@ -660,13 +681,12 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 .cta-band h2 { color: #fff; }
 .cta-band p { color: rgba(255, 255, 255, .86); max-width: 30em; margin: 0 auto 32px; }
-.cta-band .appstore-badge {
+.cta-band .btn-store {
   background: #fff;
-  padding: 11px 20px;
-  border-radius: 14px;
+  color: var(--primary);
   box-shadow: 0 10px 26px rgba(23, 12, 66, .30);
 }
-.cta-band .appstore-badge:hover { background: #fff; }
+.cta-band .btn-store:hover { background: var(--primary-soft); color: var(--primary-dark); }
 
 /* --- Footer --------------------------------------------------------------- */
 .site-footer {
@@ -899,7 +919,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   color: var(--text-muted);
 }
 .article-promo strong { color: var(--text); }
-.article-promo .appstore-badge img { height: 44px; }
+.article-promo .btn-store { padding: 12px 20px; }
 
 .article { max-width: 700px; margin: 0 auto; }
 .article h2 { font-size: 1.5rem; margin: 46px 0 14px; }
@@ -912,6 +932,8 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 .article li { margin-bottom: .5em; }
 .article strong { color: var(--text); }
 .article a { color: var(--primary); }
+/* ...but not the promo's store button, which carries its own white label. */
+.article a.btn-store { color: #fff; }
 .article figure { margin: 36px auto; max-width: 400px; }
 /* A wide desktop window needs more room than a phone screenshot. */
 .article figure.wide { max-width: 560px; }

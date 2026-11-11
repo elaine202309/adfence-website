@@ -62,8 +62,6 @@ images/adfence-safari-settings.png   Blog post, 520×1127 — the General sectio
                   of Safari's settings on iPhone, with Block Pop-ups switched on.
                   A real device capture; the 1179×2556 original is in
                   images/source/.
-images/app-store-badge.svg  Apple's official "Download on the App Store" badge
-                  (US-UK, black). Unmodified — do not recolour or redraw it.
 images/source/    Full-resolution originals behind the screenshots above. Not
                   referenced by any page — kept so the web copies can be
                   regenerated or reused for App Store art. The six phone
@@ -235,9 +233,10 @@ is both a legal problem and an App Store rejection risk.
       status bar before launch, and keep the same file names so the HTML does
       not need touching.
 - [x] Download CTAs. The header button, hero, setup step, FAQ answer, closing
-      band and every footer now link to the App Store listing, and the hero and
-      closing band use Apple's official badge (`images/app-store-badge.svg`,
-      downloaded unmodified from the App Store marketing tools).
+      band and every footer now link to the App Store listing. The store link
+      is the site's own violet `.btn-store` button (arrow icon + the localized
+      "Download on the App Store" label). Apple's badge artwork can't be
+      recoloured, so it is not used at all.
 - [ ] Check the listing link resolves publicly on launch day. As of 24 October
       2026 the public URL redirected to the storefront home and the iTunes
       lookup API returned no result for ID 6825119569, which is normal while the
