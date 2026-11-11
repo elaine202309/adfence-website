@@ -318,7 +318,7 @@ certificate for a hostname it never sees.
   custom domain without changes. Don't reintroduce `/css/style.css` style paths.
 - Design tokens live in the `:root` block of `css/style.css`. Change the accent
   colour in one place there rather than hunting through the pages.
-- The stylesheet is linked as `css/style.css?v=7`. **Bump that number whenever
+- The stylesheet is linked as `css/style.css?v=8`. **Bump that number whenever
   you change the CSS** — in all seven English pages (`../css/…` in `blog/`) and
   in `CSS_VERSION` at the top of `tools/build-i18n.js`, then re-run the
   generator. GitHub Pages sends `Cache-Control: max-age=14400` and Cloudflare is

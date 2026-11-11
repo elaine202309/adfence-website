@@ -29,7 +29,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://adfence.mxcode.com';
 const STORE = 'https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569';
-const CSS_VERSION = 7;
+const CSS_VERSION = 8;
 const GSC = 'CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0';
 
 /* Order matters: this is the order of the language menu. */
