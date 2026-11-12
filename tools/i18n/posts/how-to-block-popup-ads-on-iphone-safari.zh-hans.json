@@ -1,0 +1,14 @@
+{
+  "title": "如何在 iPhone 的 Safari 上拦截弹窗广告 — 博客 — AdFence，广告与追踪拦截器",
+  "headline": "如何在 iPhone 的 Safari 上拦截弹窗广告",
+  "description": "Safari 自带的弹窗拦截器关的是窗口。iPhone 上多数弹窗是画在页面内部的方框，需要内容拦截器来处理。以下是简要说明。",
+  "teaser": "「弹窗广告」在 iPhone 上指的是三种不同的东西，其中只有一种是窗口。Safari 自带的拦截器负责关掉窗口；画在页面内部的方框则需要内容拦截器。而其中还有少数，什么都够不着。",
+  "lede": "「弹窗广告」在 iPhone 上描述的是三种不同的东西，其中只有一种是窗口。挡在你面前的是哪一种，决定了它到底能不能被拦截。",
+  "metaLine": "广告与弹窗 · 2026 年 11 月 11 日 · 6 分钟阅读",
+  "section": "广告与弹窗",
+  "written": "写于 2026 年 11 月 11 日 · AdFence",
+  "allPosts": "← 全部文章",
+  "crumbBlog": "博客",
+  "promo": "<strong>Block Pop-ups</strong> 是 <strong>AdFence</strong> 中的一个开关，这是一款适用于 iPhone、iPad 和 Mac 的 Safari 广告拦截器。",
+  "image": "adfence-other-settings.png"
+}

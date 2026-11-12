@@ -1,0 +1,210 @@
+
+
+        <p>
+          大家常把這些情況用同一個詞概括，所以在動任何設定之前，值得先把它們分清楚：
+        </p>
+        <ul>
+          <li><strong>自己彈出的視窗。</strong>一個新分頁，通常夾帶廣告或假的獎品。這正是
+          Safari 內建的彈出式視窗封鎖功能要處理的情況。</li>
+          <li><strong>畫在頁面上方的方塊。</strong>電子報訂閱提示、「10% off」面板、佔滿畫面的
+          同意牆。它沒有獨立視窗，也沒有自己的網址 —— 它本身就是頁面的一部分。</li>
+          <li><strong>會把你帶離頁面的點擊。</strong>App Store 自己跳出來，或是一層看不見的
+          遮罩蓋在文章上，讓你打開了原本無意開啟的分頁。</li>
+        </ul>
+        <p>
+          第一種是 Safari 的問題。第二種才是 iPhone 上絕大多數惱人之處的真正來源，而 Safari 的
+          封鎖器根本看不到它。第三種則兩者都算一點。
+        </p>
+
+        <h2>步驟 1 —— 確認 Safari 內建的封鎖器已開啟</h2>
+        <p>
+          這只要十秒鐘，就能解決最單純的情況：
+        </p>
+        <ol>
+          <li>開啟<strong>設定</strong>，向下捲動到 <strong>App</strong>。</li>
+          <li>點一下 <strong>Safari</strong>，開啟它的設定。</li>
+          <li>找到<strong>一般</strong>區段，確認<strong>封鎖彈出式視窗</strong>已開啟。</li>
+        </ol>
+
+        <figure class="shot howto-shot">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-settings.png"
+                 alt="iPhone 上 Safari 設定的「一般」區段，顯示「自動填寫」、「起始頁面喜好項目」、「封鎖彈出式視窗」、「擴充功能」與「下載項目」，並已開啟「封鎖彈出式視窗」。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>封鎖彈出式視窗</strong>
+            位於 Safari 設定畫面的「一般」區段。
+          </figcaption>
+        </figure>
+
+        <p>
+          在 Mac 上，它位於 Safari → <strong>設定</strong>（⌘,）→ <strong>網站</strong> →
+          <strong>彈出式視窗</strong>，設為<em>封鎖</em>。
+        </p>
+        <p>
+          這個設定的作用是拒絕新視窗。它做不到的，是隱藏頁面已經決定要繪製的元素 —— 它也無法
+          阻止點擊開啟分頁，因為那是對真實目標的真實點擊。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>簡單來說：</strong>Safari 的<strong>封鎖彈出式視窗</strong>攔得住視窗。
+            在 AdFence 中開啟 <strong>Block Pop-ups</strong>，攔下的則是畫在頁面裡的方塊 ——
+            幾乎所有彈出視窗都屬於這一類。
+          </p>
+        </div>
+
+        <h2>步驟 2 —— 了解遮罩為什麼還在</h2>
+        <p>
+          遮罩不是視窗。它是頁面的一部分，被放在所有內容之上：文章還在下面、也仍然載入著，只是
+          被蓋住了。Safari 的彈出式視窗封鎖器是一條關於「開啟視窗」的規則，所以在這裡無從發揮。
+        </p>
+        <p>
+          要移除遮罩有兩種方法，而內容封鎖器兩種都會用上。它可以完全不讓建立遮罩的腳本載入，也
+          可以在元素出現後用 CSS 把它隱藏起來。AdFence 中對應的開關叫做
+          <strong>Block Pop-ups</strong>，它的副標題也老實說明了這兩半：它會封鎖彈出式視窗
+          <em>和</em>浮動彈出視窗。
+        </p>
+
+        <h2>步驟 3 —— 將它開啟</h2>
+        <p>
+          這個擴充功能必須先在 Safari 中啟用一次，任何內容封鎖器都是如此。那是與下面這個開關
+          不同的另一個開關，而且每台裝置只需做一次 ——
+          <a href="../how-to-use.html">逐步操作指南</a>有完整流程。
+        </p>
+        <ol>
+          <li>開啟 <strong>AdFence</strong> App。</li>
+          <li>在 <strong>General</strong> 分頁，捲動到 <strong>Other Settings</strong>。</li>
+          <li>開啟 <strong>Block Pop-ups</strong>。</li>
+          <li>回到 Safari 並重新載入頁面。</li>
+        </ol>
+
+        <figure class="shot howto-shot">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="AdFence 的 Other Settings：Block Adult Sites、Hide Cookie Notices、Block Pop-ups、App Banners、Distractions、Hide Comments 與 Block Social Buttons 等開關。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>Block Pop-ups</strong>
+            一個開關，就在 Other Settings 裡。清單其餘項目都維持你原本的設定。
+          </figcaption>
+        </figure>
+
+        <p>
+          重新載入很重要。已經顯示在畫面上的頁面，會保留擴充功能開始運作前所抓取的內容，所以之後
+          才開啟的開關，要等頁面重新抓取才會生效。在 iPhone 上，從頁面往下拉；在 Mac 上，按 ⌘R。
+        </p>
+        <p>
+          清單裡的每個開關彼此獨立。開啟 Block Pop-ups 不會連帶開啟廣告封鎖，隱藏 Cookie 提示
+          也不代表你得接受其他任何設定 —— 把它們分開放置的用意正是在此。
+        </p>
+
+        <!-- In-article download card, placed once the post has actually named the
+             switch a reader would be looking for. -->
+        <!--PROMO-->
+
+
+        <h2>步驟 4 ——「請關閉你的廣告封鎖器」那道牆</h2>
+        <p>
+          這是反方向的彈出視窗：網站偵測到封鎖器，於是在文章前面擋了一塊面板，直到你停用它為止。
+          用 CSS 規則擋掉它，只在網站還沒改掉元素名稱之前有效，這就是它需要獨立設定的原因。
+        </p>
+        <p>
+          <strong>Bypass Anti-Adblock</strong> 位於同一個 <strong>General</strong> 分頁的
+          <strong>Blocking List</strong> 之下，它做兩件事：反制偵測腳本，並隱藏那些網站架起的
+          牆。如果你一再遇到的不是廣告，而是空白頁面上寫著「我們偵測到你正在使用廣告封鎖器」，
+          就把它開啟。
+        </p>
+
+        <h2>如果某個網站還是會彈出</h2>
+        <p>
+          請依序嘗試 —— 前兩項不花任何成本：
+        </p>
+        <ul>
+          <li><strong>好好地重新載入頁面。</strong>所謂「它沒用」，有一半是頁面在開關開啟前
+          就已經抓取過了。</li>
+          <li><strong>試試閱讀器。</strong>在 Safari 的網址列點一下 <strong>aA</strong> 選單，
+          選擇<strong>顯示閱讀器</strong>。在文章頁面上，這會一次去掉大部分的遮罩，完全不必動
+          任何設定。對於只拜訪一次的網站，這是最好的備案。</li>
+          <li><strong>為單一網站覆寫單一過濾器。</strong>在 AdFence 的 <strong>Custom</strong>
+          分頁中，<strong>Site Overrides</strong> 可以只針對那個網址放行單一過濾器。反過來也
+          同樣可用：如果封鎖之後頁面被一層空白蓋住，代表網站在等一個始終沒出現的方塊。</li>
+          <li><strong>暫停該網站。</strong><strong>Site Settings</strong> →
+          <strong>Pause Blocking</strong> 只會讓 AdFence 對單一網址停止運作，其餘一切不受
+          影響。它會讓彈出視窗回來，所以請當成最後手段，而不是第一步。</li>
+        </ul>
+
+        <h2>沒有任何工具擋得住的東西</h2>
+        <p>
+          把界線說清楚是值得的，因為整個廣告產業正朝這些邊界移動：
+        </p>
+        <ul>
+          <li><strong>Safari 自己的提示。</strong>定位、相機、麥克風和通知的對話框是 iOS 繪製
+          的，不是頁面。沒有任何內容封鎖器碰得到它們。直接拒絕就好 —— 它們通常不是你打開這個
+          網站的原因。</li>
+          <li><strong>其他 App 內的彈出視窗。</strong>從 Instagram、Facebook、Gmail 或 Reddit
+          開啟的連結，會在那個 App 自己的瀏覽器中執行，而那並不支援 Safari 擴充功能。請改在
+          Safari 中開啟該頁面。</li>
+          <li><strong>由網站自身網域的腳本繪製的方塊</strong>，而該模式還沒被收進過濾清單。
+          過濾清單隨 App 一起提供，並在 App 更新時更新，所以要等下一版才能補上這個缺口 ——
+          或者用自訂規則現在就補起來。</li>
+        </ul>
+        <p>
+          內容封鎖器不會看著頁面、判斷哪些方塊很煩人。它是拿已知的網址和元素模式去比對清單。
+          這正是它既快速又保有隱私的原因，也是它永遠無法完全周延的原因。
+        </p>
+
+        <h2>如何確認它真的在運作</h2>
+        <p>
+          開啟 AdFence，點一下 <strong>Plugins</strong>。當 Safari 回報某個擴充功能已啟用時，
+          該項目會顯示綠色的 <strong>Active</strong>；未啟用則顯示灰色。
+          <strong>Refresh Status</strong> 會再次向 Safari 查詢。如果 Safari 裡的開關看起來
+          是開的，某一列卻是灰色，代表 App 讀到的是過期的結果 —— 請先重新整理，再改動任何設定。
+        </p>
+        <p>
+          最後一項檢查：General 分頁最上方的總開關 <strong>Blocking</strong>。當它關閉時，
+          每個擴充功能都會載入空的規則清單，因此無論 App 其餘設定如何，任何地方都不會封鎖任何
+          東西。
+        </p>
+
+        <h2>常見問題</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>這能在 iPhone 上的 Chrome 或 Firefox 擋掉彈出視窗嗎？</summary>
+            <div class="answer">
+              <p>不行。iOS 上的內容封鎖器是 Safari 擴充功能，只有 Safari 會執行它們。iPhone
+              上的 Chrome 和 Firefox 會自行繪製頁面，完全不理會 Safari 的擴充功能清單。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>為什麼我已經開啟開關，某個網站還是會顯示彈出視窗？</summary>
+            <div class="answer">
+              <p>常見原因有兩個：頁面在擴充功能開始運作前就已經載入，所以需要重新載入；或是
+              那個方塊來自網站自己的網域，還沒被收進過濾清單。請先重新載入，再針對那一個網站
+              使用 <strong>Site Overrides</strong> 或自訂規則。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>封鎖彈出視窗會讓網站壞掉嗎？</summary>
+            <div class="answer">
+              <p>偶爾會。有些網站會鎖住捲動，直到你關掉它的電子報訂閱框；如果那個框始終沒
+              出現，頁面就可能卡住。請為那一個網站使用 <strong>Pause Blocking</strong> ——
+              其他網站仍會維持這個設定。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>在 Mac 上也適用嗎？</summary>
+            <div class="answer">
+              <p>適用 —— 同一個 App、同一個開關。在 Mac 上於 Safari →
+              <strong>設定</strong> → <strong>擴充功能</strong> 啟用 AdFence 擴充功能一次，
+              然後在 App 的 General 分頁開啟 <strong>Block Pop-ups</strong>。</p>
+            </div>
+          </details>
+        </div>
+

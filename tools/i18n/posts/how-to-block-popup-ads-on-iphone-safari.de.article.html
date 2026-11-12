@@ -1,0 +1,243 @@
+
+        <p>
+          Für alle drei werden dieselben Wörter benutzt, deshalb lohnt es sich, sie zu trennen,
+          bevor Sie an einer Einstellung drehen:
+        </p>
+        <ul>
+          <li><strong>Ein Fenster, das sich von selbst öffnet.</strong> Ein neuer Tab, meist mit
+          einer Anzeige oder einem falschen Gewinnversprechen. Dafür ist Safaris eigener
+          Pop-up-Blocker da.</li>
+          <li><strong>Ein Kasten, der über die Seite gelegt wird.</strong> Die
+          Newsletter-Aufforderung, das Panel mit „10 % Rabatt“, die bildschirmfüllende
+          Zustimmungswand. Er hat kein Fenster und keine eigene Adresse — er ist Teil der Seite.</li>
+          <li><strong>Ein Tippen, das die Seite verlässt.</strong> Der App Store, der sich von
+          selbst öffnet, oder ein Tab, den Sie nicht öffnen wollten, weil eine unsichtbare Ebene
+          über dem Artikel lag.</li>
+        </ul>
+        <p>
+          Die erste Art ist ein Safari-Problem. Die zweite ist der Ort, an dem die meiste
+          Belästigung auf einem iPhone tatsächlich stattfindet, und Safaris Blocker sieht sie nie.
+          Die dritte ist teils beides.
+        </p>
+
+        <h2>Schritt 1 — sicherstellen, dass Safaris eigener Blocker aktiv ist</h2>
+        <p>
+          Das dauert zehn Sekunden und erledigt die einfachsten Fälle:
+        </p>
+        <ol>
+          <li>Öffnen Sie <strong>Einstellungen</strong> und scrollen Sie nach unten zu
+          <strong>Apps</strong>.</li>
+          <li>Tippen Sie auf <strong>Safari</strong>, um die Safari-Einstellungen zu öffnen.</li>
+          <li>Suchen Sie den Abschnitt <strong>Allgemein</strong> und prüfen Sie, ob
+          <strong>Pop-ups blockieren</strong> eingeschaltet ist.</li>
+        </ol>
+
+        <figure class="shot howto-shot">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-settings.png"
+                 alt="Der Abschnitt „Allgemein“ der Safari-Einstellungen auf dem iPhone mit AutoFill, Startseiten-Favoriten, Pop-ups blockieren, Erweiterungen und Downloads; „Pop-ups blockieren“ ist eingeschaltet."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>Pop-ups blockieren</strong>
+            Im Abschnitt „Allgemein“ der Safari-Einstellungen.
+          </figcaption>
+        </figure>
+
+        <p>
+          Auf dem Mac finden Sie es unter Safari → <strong>Einstellungen</strong> (⌘,) →
+          <strong>Websites</strong> → <strong>Pop-up-Fenster</strong>, dort auf <em>Blockieren</em>
+          gestellt.
+        </p>
+        <p>
+          Diese Einstellung verweigert neue Fenster. Was sie nicht kann, ist ein Element
+          auszublenden, das die Seite bereits zu zeichnen beschlossen hat — und sie kann auch
+          nicht verhindern, dass ein Tippen einen Tab öffnet, denn das ist ein echter Tipp auf ein
+          echtes Ziel.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>Die Kurzfassung:</strong> Safaris <strong>Pop-ups blockieren</strong> fängt
+            Fenster. <strong>Block Pop-ups</strong> in AdFence fängt die Kästen, die innerhalb der
+            Seite gezeichnet werden — und von dort stammen fast alle.
+          </p>
+        </div>
+
+        <h2>Schritt 2 — verstehen, warum das Overlay überlebt hat</h2>
+        <p>
+          Ein Overlay ist kein Fenster. Es ist ein Stück der Seite, das über alles andere gelegt
+          wird: Der Artikel liegt weiterhin darunter, ist weiterhin geladen, nur eben verdeckt.
+          Safaris Pop-up-Blocker ist eine Regel über das Öffnen von Fenstern — hier gibt es für
+          ihn nichts zu tun.
+        </p>
+        <p>
+          Es gibt zwei Wege, ein Overlay loszuwerden, und ein Content-Blocker nutzt beide. Er kann
+          verhindern, dass das Skript, das das Overlay aufbaut, überhaupt geladen wird, und er kann
+          das Element per CSS ausblenden, sobald es erscheint. Bei AdFence heißt dieser Schalter
+          <strong>Block Pop-ups</strong>, und der Untertitel meint die beiden Hälften wörtlich: Er
+          blockiert Pop-up-Fenster <em>und</em> schwebende Pop-ups.
+        </p>
+
+        <h2>Schritt 3 — einschalten</h2>
+        <p>
+          Die Erweiterung muss einmal in Safari aktiviert werden, so wie jeder Content-Blocker.
+          Das ist ein anderer Schalter als der unten, und Sie erledigen es nur einmal pro Gerät —
+          <a href="../how-to-use.html">die Schritt-für-Schritt-Anleitung</a> führt Sie durch.
+        </p>
+        <ol>
+          <li>Öffnen Sie die App <strong>AdFence</strong>.</li>
+          <li>Scrollen Sie im Tab <strong>General</strong> zu <strong>Other Settings</strong>.</li>
+          <li>Schalten Sie <strong>Block Pop-ups</strong> ein.</li>
+          <li>Kehren Sie zu Safari zurück und laden Sie die Seite neu.</li>
+        </ol>
+
+        <figure class="shot howto-shot">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="Other Settings in AdFence: Schalter für Erwachsenenseiten sperren, Cookie-Hinweise ausblenden, Block Pop-ups, App-Banner, Ablenkungen, Kommentare ausblenden und Social-Buttons blockieren."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>Block Pop-ups</strong>
+            Ein Schalter, in Other Settings. Der Rest der Liste bleibt, wie Sie ihn hinterlassen
+            haben.
+          </figcaption>
+        </figure>
+
+        <p>
+          Das Neuladen ist wichtig. Eine Seite, die bereits auf dem Bildschirm steht, behält, was
+          sie geladen hat, bevor die Erweiterung lief — ein danach eingeschalteter Schalter
+          bewirkt also nichts, bis die Seite erneut geladen wird. Auf dem iPhone ziehen Sie die
+          Seite nach unten; auf dem Mac ⌘R.
+        </p>
+        <p>
+          Jeder Schalter in dieser Liste ist unabhängig. Block Pop-ups einzuschalten schaltet nicht
+          die Werbeblockierung ein, und das Ausblenden von Cookie-Hinweisen verpflichtet Sie zu
+          nichts Weiterem — genau dafür sind sie getrennt.
+        </p>
+
+        <!-- In-article download card, placed once the post has actually named the
+             switch a reader would be looking for. -->
+        <!--PROMO-->
+
+
+        <h2>Schritt 4 — die Wand „Bitte deaktivieren Sie Ihren Werbeblocker“</h2>
+        <p>
+          Das ist ein Pop-up in die andere Richtung: Die Website hat einen Blocker bemerkt und ein
+          Panel vor den Artikel gesetzt, bis Sie ihn deaktivieren. Es mit einer CSS-Regel zu
+          blockieren funktioniert so lange, bis die Website das Element umbenennt — deshalb braucht
+          es eine eigene Einstellung.
+        </p>
+        <p>
+          <strong>Bypass Anti-Adblock</strong> im selben Tab <strong>General</strong> unter
+          <strong>Blocking List</strong> tut zwei Dinge: Es wirkt dem Erkennungsskript entgegen und
+          blendet die Wand aus, die solche Seiten aufbauen. Schalten Sie es ein, wenn Ihnen immer
+          wieder eine leere Seite mit der Meldung „Wir haben bemerkt, dass Sie einen Werbeblocker
+          verwenden“ begegnet statt einer Anzeige.
+        </p>
+
+        <h2>Wenn eine einzelne Website weiterhin eines zeigt</h2>
+        <p>
+          Gehen Sie in dieser Reihenfolge vor — die ersten beiden kosten nichts:
+        </p>
+        <ul>
+          <li><strong>Laden Sie die Seite richtig neu.</strong> Die Hälfte aller Fälle von „Hat
+          nicht funktioniert“ ist eine Seite, die geladen wurde, bevor der Schalter an war.</li>
+          <li><strong>Probieren Sie den Reader.</strong> Tippen Sie in der Adressleiste von Safari
+          auf das Menü <strong>aA</strong> und wählen Sie <strong>Reader anzeigen</strong>. Auf
+          einer Artikelseite entfernt das die meisten Overlays auf einen Schlag, ohne dass Sie an
+          Einstellungen müssen. Es ist die beste Notlösung für eine Website, die Sie nur einmal
+          besuchen.</li>
+          <li><strong>Heben Sie einen Filter für eine Website auf.</strong> Im Tab
+          <strong>Custom</strong> von AdFence lässt <strong>Site Overrides</strong> einen einzelnen
+          Filter nur für diese Adresse durch. Nutzen Sie es auch andersherum: Wenn eine Seite nach
+          dem Blockieren von einer leeren Ebene bedeckt ist, wartet die Website auf einen Kasten,
+          der nie erschienen ist.</li>
+          <li><strong>Pausieren Sie diese Website.</strong> <strong>Site Settings</strong> →
+          <strong>Pause Blocking</strong> stellt AdFence für eine Adresse ab und lässt alles andere
+          in Ruhe. Das Pop-up kommt dadurch zurück — betrachten Sie es als letztes Mittel, nicht
+          als erstes.</li>
+        </ul>
+
+        <h2>Was niemand blockieren kann</h2>
+        <p>
+          Es lohnt sich, bei den Grenzen ehrlich zu sein, denn die Werbeindustrie bewegt sich mit
+          ihrer ganzen Richtung genau dorthin:
+        </p>
+        <ul>
+          <li><strong>Safaris eigene Abfragen.</strong> Die Dialoge für Standort, Kamera, Mikrofon
+          und Mitteilungen zeichnet iOS, nicht die Seite. Kein Content-Blocker rührt sie an. Lehnen
+          Sie sie ab — sie sind meist nicht der Grund, warum Sie die Website geöffnet haben.</li>
+          <li><strong>Pop-ups in anderen Apps.</strong> Links, die aus Instagram, Facebook, Gmail
+          oder Reddit geöffnet werden, laufen im Browser der jeweiligen App, und der unterstützt
+          keine Safari-Erweiterungen. Öffnen Sie die Seite stattdessen in Safari.</li>
+          <li><strong>Ein Kasten, den die Skripte der Website von ihrer eigenen Domain aus
+          zeichnen,</strong> wenn dieses Muster noch nicht in einer Filterliste steht. Filterlisten
+          werden mit der App ausgeliefert und aktualisieren sich, wenn die App aktualisiert wird —
+          die Lücke schließt also das nächste Update, oder eine eigene Regel schließt sie sofort.</li>
+        </ul>
+        <p>
+          Ein Content-Blocker betrachtet keine Seite und urteilt, welche Kästen störend sind. Er
+          gleicht Adressen und Elementmuster, die er bereits kennt, mit einer Liste ab. Deshalb ist
+          er schnell und privat — und deshalb ist er nie ganz vollständig.
+        </p>
+
+        <h2>Wie Sie erkennen, dass er wirklich läuft</h2>
+        <p>
+          Öffnen Sie AdFence und tippen Sie auf <strong>Plugins</strong>. Jede Erweiterung zeigt
+          ein grünes <strong>Active</strong>, wenn Safari sie als aktiviert meldet, und Grau, wenn
+          nicht. <strong>Refresh Status</strong> fragt Safari erneut. Ist eine Zeile grau, während
+          der Schalter in Safari eingeschaltet aussieht, liest die App eine veraltete Antwort —
+          aktualisieren Sie, bevor Sie etwas ändern.
+        </p>
+        <p>
+          Eine letzte Kontrolle: der Hauptschalter <strong>Blocking</strong> oben im Tab General.
+          Solange er aus ist, lädt jede Erweiterung eine leere Regelliste — dann wird nirgends
+          etwas blockiert, egal wie der Rest der App eingestellt ist.
+        </p>
+
+        <h2>Häufig gestellte Fragen</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Blockiert das auch Pop-ups in Chrome oder Firefox auf dem iPhone?</summary>
+            <div class="answer">
+              <p>Nein. Content-Blocker unter iOS sind Safari-Erweiterungen, und nur Safari führt
+              sie aus. Chrome und Firefox auf dem iPhone zeichnen ihre eigenen Seiten und
+              ignorieren die Erweiterungsliste von Safari vollständig.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Warum zeigt eine Website noch ein Pop-up, nachdem ich den Schalter
+            eingeschaltet habe?</summary>
+            <div class="answer">
+              <p>Zwei übliche Gründe: Die Seite war bereits geladen, bevor die Erweiterung startete,
+              und braucht daher ein Neuladen; oder der Kasten stammt von der eigenen Domain der
+              Website und steht noch nicht in einer Filterliste. Laden Sie zuerst neu und nutzen
+              Sie dann <strong>Site Overrides</strong> oder eine eigene Regel für diese eine
+              Website.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Bringt das Blockieren von Pop-ups eine Website durcheinander?</summary>
+            <div class="answer">
+              <p>Gelegentlich. Manche Websites sperren das Scrollen, bis ihr Newsletter-Kasten
+              geschlossen ist, und wenn der Kasten nie erscheint, kann sich die Seite festgefahren
+              anfühlen. Nutzen Sie <strong>Pause Blocking</strong> für diese eine Website — die
+              anderen behalten die Einstellung.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Funktioniert das auch auf dem Mac?</summary>
+            <div class="answer">
+              <p>Ja — dieselbe App, derselbe Schalter. Aktivieren Sie die AdFence-Erweiterungen
+              einmal in Safari → <strong>Einstellungen</strong> → <strong>Erweiterungen</strong>
+              auf dem Mac und schalten Sie dann im Tab General der App
+              <strong>Block Pop-ups</strong> ein.</p>
+            </div>
+          </details>
+        </div>

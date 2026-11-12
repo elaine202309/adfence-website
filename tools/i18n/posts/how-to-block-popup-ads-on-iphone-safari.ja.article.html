@@ -1,0 +1,229 @@
+
+
+        <p>
+          どれも同じ言葉で呼ばれているので、設定を触る前に整理しておくと役に立ちます:
+        </p>
+        <ul>
+          <li><strong>ひとりでに開くウィンドウ。</strong> 新しいタブで、たいていは広告か偽の賞品が
+          載っています。これが Safari 標準のポップアップブロッカーの対象です。</li>
+          <li><strong>ページの上に描かれるボックス。</strong> ニュースレターの勧誘、「10% オフ」の
+          パネル、全画面の同意ウォールなどです。ウィンドウも独自のアドレスも持たず、
+          ページの一部として表示されます。</li>
+          <li><strong>ページから離れるタップ。</strong> App Store が勝手に開く、あるいは記事の上に
+          透明なレイヤーが重なっていて、意図しないタブが開いてしまう場合です。</li>
+        </ul>
+        <p>
+          1 つ目は Safari 側の問題です。2 つ目こそが iPhone で感じる煩わしさの大半を占めていて、
+          Safari のブロッカーはそれをまったく見ません。3 つ目は両方に半分ずつ関係します。
+        </p>
+
+        <h2>ステップ 1 — Safari 標準のブロッカーがオンになっているか確認する</h2>
+        <p>
+          10 秒で終わり、もっとも単純なケースはこれで片づきます:
+        </p>
+        <ol>
+          <li><strong>設定</strong>を開き、下にスクロールして<strong>アプリ</strong>をタップします。</li>
+          <li><strong>Safari</strong> をタップして設定を開きます。</li>
+          <li><strong>一般</strong>セクションを見つけ、<strong>ポップアップをブロック</strong>が
+          オンになっていることを確認します。</li>
+        </ol>
+
+        <figure class="shot howto-shot">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-settings.png"
+                 alt="iPhone の Safari 設定の「一般」セクション。「オートフィル」「スタートページのお気に入り」「ポップアップをブロック」「機能拡張」「ダウンロード」が並び、「ポップアップをブロック」がオンになっている。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>ポップアップをブロック</strong>
+            Safari 設定画面の「一般」セクションにあります。
+          </figcaption>
+        </figure>
+
+        <p>
+          Mac では Safari → <strong>設定</strong>（⌘,）→ <strong>Webサイト</strong> →
+          <strong>ポップアップウィンドウ</strong>にあり、<em>ブロック</em>に設定します。
+        </p>
+        <p>
+          この設定が行うのは、新しいウィンドウを拒否することです。できないのは、ページがすでに
+          描くと決めた要素を隠すこと — そして、タップでタブが開くのを止めることもできません。
+          それは本物のターゲットへの本物のタップだからです。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>要するに:</strong> Safari の<strong>「ポップアップをブロック」</strong>が
+            捕まえるのはウィンドウです。AdFence の <strong>Block Pop-ups</strong> をオンにすると、
+            ページの中に描かれるボックスを捕まえます — ポップアップのほとんどはそこから来ます。
+          </p>
+        </div>
+
+        <h2>ステップ 2 — オーバーレイが残った理由を知る</h2>
+        <p>
+          オーバーレイはウィンドウではありません。ほかのすべての上に置かれた、ページの一部です。
+          記事はその下にあり、読み込まれたままで、ただ覆われているだけです。Safari の
+          ポップアップブロッカーはウィンドウを開くことに関するルールなので、ここで働きかける
+          対象がありません。
+        </p>
+        <p>
+          取り除く方法は 2 つあり、コンテンツブロッカーはその両方を使います。オーバーレイを
+          組み立てるスクリプトを読み込ませないことと、表示された要素を CSS で隠すことです。
+          AdFence のこの機能のスイッチは <strong>Block Pop-ups</strong> という名前で、その
+          サブタイトルは 2 つの半分をそのまま表しています。ポップアップウィンドウ<em>と</em>
+          フローティングポップアップをブロックします。
+        </p>
+
+        <h2>ステップ 3 — オンにする</h2>
+        <p>
+          機能拡張は、ほかのコンテンツブロッカーと同じように、Safari で一度有効にする必要が
+          あります。下のスイッチとは別のスイッチで、端末ごとに 1 回だけ行います —
+          <a href="../how-to-use.html">手順を追ったガイド</a>で説明しています。
+        </p>
+        <ol>
+          <li><strong>AdFence</strong> アプリを開きます。</li>
+          <li><strong>General</strong> タブで、<strong>Other Settings</strong> までスクロールします。</li>
+          <li><strong>Block Pop-ups</strong> をオンにします。</li>
+          <li>Safari に戻り、ページを再読み込みします。</li>
+        </ol>
+
+        <figure class="shot howto-shot">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="AdFence の Other Settings。Block Adult Sites、Hide Cookie Notices、Block Pop-ups、App Banners、Distractions、Hide Comments、Block Social Buttons の各スイッチ。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>Block Pop-ups</strong>
+            Other Settings にある 1 つのスイッチです。リストのほかの項目は、そのままの状態に
+            保たれます。
+          </figcaption>
+        </figure>
+
+        <p>
+          再読み込みは重要です。すでに画面に表示されているページは、機能拡張が動く前に取得した
+          内容をそのまま保持しているので、あとからオンにしたスイッチは、ページを取得し直すまで
+          何の効果もありません。iPhone ではページを下に引っ張り、Mac では ⌘R を押します。
+        </p>
+        <p>
+          このリストのスイッチはすべて独立しています。Block Pop-ups をオンにしても広告ブロックは
+          オンになりませんし、Cookie 通知を隠してもほかの何かに同意したことにはなりません —
+          分けてあるのはそのためです。
+        </p>
+
+        <!-- In-article download card, placed once the post has actually named the
+             switch a reader would be looking for. -->
+        <!--PROMO-->
+
+
+        <h2>ステップ 4 — 「広告ブロッカーをオフにしてください」の壁</h2>
+        <p>
+          これは逆向きのポップアップです。サイトがブロッカーに気づき、広告ブロッカーを無効に
+          するまで記事の前にパネルを置いています。CSS ルールでブロックしても、サイトが要素名を
+          変えるまでしか効きません。だから専用の設定が必要になります。
+        </p>
+        <p>
+          同じ <strong>General</strong> タブの <strong>Blocking List</strong> にある
+          <strong>Bypass Anti-Adblock</strong> は 2 つのことを行います。検出スクリプトに対抗し、
+          そうしたサイトが立てる壁を隠します。広告ではなく、「広告ブロッカーを使用していることを
+          検出しました」というメッセージの空白ページに何度も出会うなら、これをオンにしてください。
+        </p>
+
+        <h2>それでも 1 つのサイトで出るとき</h2>
+        <p>
+          上から順に試してください — 最初の 2 つは何のコストもかかりません:
+        </p>
+        <ul>
+          <li><strong>ページをきちんと再読み込みする。</strong> 「効かなかった」の半分は、スイッチを
+          オンにする前に取得されたページです。</li>
+          <li><strong>リーダーを試す。</strong> Safari のアドレスバーで <strong>aA</strong> メニューを
+          タップし、<strong>リーダーを表示</strong>を選びます。記事ページではこれだけでほとんどの
+          オーバーレイが取り除かれ、設定は一切関係しません。一度しか訪れないサイトでは最良の
+          代替手段です。</li>
+          <li><strong>1 つのサイトのためにフィルタを 1 つ例外にする。</strong> AdFence の
+          <strong>Custom</strong> タブでは、<strong>Site Overrides</strong> を使って、そのアドレスに
+          限り 1 つのフィルタを通せます。逆の使い方もできます。ブロック後に空白のレイヤーで
+          ページが覆われているなら、サイトは表示されなかったボックスを待っているのです。</li>
+          <li><strong>そのサイトを一時停止する。</strong> <strong>Site Settings</strong> →
+          <strong>Pause Blocking</strong> で、AdFence は 1 つのアドレスだけ停止し、ほかはそのままに
+          します。ポップアップが戻ってくるので、最初の手段ではなく最後の手段と考えてください。</li>
+        </ul>
+
+        <h2>何もブロックできないもの</h2>
+        <p>
+          限界について正直に話しておく価値があります。広告業界はこぞって、その限界の側へ
+          移ろうとしているからです:
+        </p>
+        <ul>
+          <li><strong>Safari 自身の確認ダイアログ。</strong> 位置情報、カメラ、マイク、通知の
+          ダイアログは、ページではなく iOS が描いています。どのコンテンツブロッカーも触れません。
+          断ってください — たいていは、そのサイトを開いた理由ではありません。</li>
+          <li><strong>ほかのアプリの中のポップアップ。</strong> Instagram、Facebook、Gmail、
+          Reddit から開いたリンクは、そのアプリ独自のブラウザで動きます。Safari の機能拡張には
+          対応していません。代わりに Safari でページを開いてください。</li>
+          <li><strong>サイト自身のスクリプトが自ドメインから描くボックス</strong>で、そのパターンが
+          まだフィルタリストに入っていないもの。フィルタリストはアプリに同梱され、アプリの更新と
+          ともに更新されるので、次のリリースがその隙間を埋めます — あるいはカスタムルールで
+          今すぐ埋められます。</li>
+        </ul>
+        <p>
+          コンテンツブロッカーは、ページを見てどのボックスが煩わしいかを判断するわけではありません。
+          すでに知っているアドレスと要素のパターンを、リストと照合します。だから速く、
+          プライバシーも守られる一方で、決して完全にはならないのです。
+        </p>
+
+        <h2>実際に動いているか確かめる方法</h2>
+        <p>
+          AdFence を開いて <strong>Plugins</strong> をタップします。各機能拡張は、Safari が有効と
+          報告していれば緑の <strong>Active</strong>、そうでなければグレーで表示されます。
+          <strong>Refresh Status</strong> は Safari にもう一度問い合わせます。Safari 側のスイッチは
+          オンに見えるのに行がグレーの場合、アプリは古い答えを読んでいます — 何かを変更する前に
+          更新してください。
+        </p>
+        <p>
+          最後にもう 1 つ確認してください。General タブの上部にある全体スイッチ
+          <strong>Blocking</strong> です。これがオフの間は、どの機能拡張も空のルールリストを
+          読み込むため、ほかの設定がどうであれ、どこでも何もブロックされません。
+        </p>
+
+        <h2>よくある質問</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>iPhone の Chrome や Firefox でもポップアップをブロックできますか？</summary>
+            <div class="answer">
+              <p>いいえ。iOS のコンテンツブロッカーは Safari の機能拡張で、動かせるのは Safari
+              だけです。iPhone の Chrome と Firefox は独自にページを描画し、Safari の機能拡張
+              リストをまったく無視します。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>スイッチをオンにしたのに、サイトがまだポップアップを表示するのはなぜですか？</summary>
+            <div class="answer">
+              <p>よくある理由は 2 つです。機能拡張が動き出す前にページが読み込まれていたので
+              再読み込みが必要なこと、あるいはボックスがサイト自身のドメインから来ていて、
+              まだフィルタリストに入っていないことです。まず再読み込みし、それでも出るなら
+              そのサイト用に <strong>Site Overrides</strong> かカスタムルールを使ってください。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>ポップアップをブロックすると、サイトが壊れますか？</summary>
+            <div class="answer">
+              <p>ときどき壊れます。ニュースレターのボックスを閉じるまでスクロールをロックする
+              サイトがあり、ボックスが表示されないとページが固まったように感じることがあります。
+              そのサイトだけ <strong>Pause Blocking</strong> を使ってください。ほかのサイトは
+              設定を保ちます。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac でも使えますか？</summary>
+            <div class="answer">
+              <p>はい。同じアプリ、同じスイッチです。Mac の Safari →
+              <strong>設定</strong> → <strong>機能拡張</strong>で AdFence の機能拡張を一度有効にし、
+              アプリの General タブで <strong>Block Pop-ups</strong> をオンにします。</p>
+            </div>
+          </details>
+        </div>
+
