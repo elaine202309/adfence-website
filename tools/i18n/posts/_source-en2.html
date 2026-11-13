@@ -1,0 +1,211 @@
+
+
+        <p>
+          Safari treats ad blockers differently from almost every other kind of app. Installing one
+          does not switch it on. The extension ships turned off, and Safari is the only place that
+          can turn it on — not the App Store, not the app itself, and not a restart. That single
+          detail accounts for most of the "this blocker does nothing" complaints, including the ones
+          where it worked fine last month.
+        </p>
+
+        <p>
+          So the first thing to check is not a setting inside the app. It is a switch inside Safari.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>The short version:</strong> open <strong>Settings → Apps → Safari → Extensions</strong>
+            on iPhone or iPad, or <strong>Safari → Settings → Extensions</strong> on the Mac, and make
+            sure the AdFence switch is on. If it was off, that was the problem — reload the page.
+          </p>
+        </div>
+
+        <h2>The 30-second check</h2>
+
+        <h3>On iPhone and iPad</h3>
+        <ol>
+          <li>Open <strong>Settings</strong>, scroll down to <strong>Apps</strong>, then tap
+          <strong>Safari</strong>.</li>
+          <li>Tap <strong>Extensions</strong>, then <strong>AdFence</strong>.</li>
+          <li>Turn the switch on, and allow access to the websites you want it to work on.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-iphone.png"
+                 alt="Settings → Apps → Safari → Extensions on iPhone, listing eight AdFence extensions, each switched on: Ad Blocking, Adult Content, Custom, Malicious Sites, Others, Privacy &amp; Tracking, Social Buttons and Video Ads."
+                 width="880" height="1090" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Eight separate extensions, one switch each.
+          </figcaption>
+        </figure>
+
+        <h3>On the Mac</h3>
+        <ol>
+          <li>In Safari, open <strong>Settings</strong> (⌘,) and go to the <strong>Extensions</strong> tab.</li>
+          <li>Tick <strong>AdFence</strong> in the list on the left.</li>
+          <li>Choose which sites it can access in the pane on the right.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Safari's Extensions settings window on the Mac, with the eight AdFence extensions ticked in the sidebar and Ad Blocking selected in the detail pane."
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            The same eight, ticked in Safari's Extensions tab on the Mac.
+          </figcaption>
+        </figure>
+
+        <p>
+          AdFence ships eight extensions rather than one, so they each appear in that list. If at
+          least one of them is off, the ads that extension handles will come back while everything
+          else keeps working — which is why a blocker can look "half broken" rather than off.
+        </p>
+
+        <p>
+          Once the switch is on, go back to Safari and reload the page properly. A page that was
+          already loaded keeps the content it fetched before the extension was running.
+        </p>
+
+        <!--PROMO-->
+
+        <h2>Already switched on? Check these four, in order</h2>
+
+        <h3>1. The site is paused in the app</h3>
+        <p>
+          AdFence has a per-site <strong>Pause Blocking</strong> switch, and once a site is on that
+          list it stays paused until you take it off. Open the <strong>Custom</strong> tab, find the
+          site, and check. If you added a site to get a video player working months ago, it is still
+          paused now.
+        </p>
+
+        <h3>2. The extension can't see that site</h3>
+        <p>
+          Safari has its own per-site permission, separate from anything the app does. If AdFence is
+          set to <strong>Ask</strong> rather than <strong>Allow</strong> for a website, Safari waits
+          for you to grant access, and until you do, the blocker has nothing to work with. The same
+          screen that shows the on/off switch, a level down, lists every site you have given or
+          refused access to; delete the entry to be asked again.
+        </p>
+
+        <h3>3. You aren't actually in Safari</h3>
+        <p>
+          Taps on links inside Instagram, Facebook, Gmail, Reddit and most other apps open a browser
+          built into that app, not Safari. Those browsers do not support Safari extensions at all, so
+          no ad blocker of this kind can reach them. This is a limit of how the app is built, not a
+          setting you have missed. The fix is to open the page in Safari — usually the share menu,
+          then <strong>Open in Safari</strong> — or paste the address into the address bar yourself.
+        </p>
+
+        <h3>4. The ad isn't in a filter list</h3>
+        <p>
+          A content blocker does not look at a page and decide what looks like an ad. It matches the
+          requests and page elements it knows about against filter lists that ship inside the app,
+          and it is only as good as those lists. Plenty of advertising falls outside them:
+        </p>
+        <ul>
+          <li>Sponsored posts written to look like the site's own content.</li>
+          <li>Ads served from the site's own domain, with no separate address to block.</li>
+          <li>Video ads stitched into the stream on the server, which arrive as the video itself.</li>
+        </ul>
+        <p>
+          It is also worth knowing that filter lists update when the app updates, not continuously.
+          If a site has just changed how it serves ads, the next AdFence release is what closes the
+          gap.
+        </p>
+
+        <h2>What the app should say</h2>
+        <p>
+          AdFence can ask Safari which of its extensions are actually running, and it is worth
+          checking that the app and Safari agree. Open the app and tap <strong>Plugins</strong>. Each
+          of the eight extensions gets a green <strong>Active</strong> when Safari reports it is
+          enabled, and stays grey when it isn't. <strong>Refresh Status</strong> asks again, and
+          <strong>Open Safari Extension Settings</strong> jumps straight to the screen shown above.
+        </p>
+        <p>
+          If Plugins shows a row as inactive while the switch in Safari looks on, the app is probably
+          looking at a stale answer — tap <strong>Refresh Status</strong> before doing anything else.
+        </p>
+
+        <h2>Fix one site without loosening everything else</h2>
+        <p>
+          The usual reason someone turns a blocker off entirely is one site that breaks. There is a
+          narrower option: open <strong>Site Settings</strong> for that address and use
+          <strong>Pause Blocking</strong>. AdFence then stands down for that site alone, and every
+          other site keeps the settings you chose.
+        </p>
+        <p>
+          <strong>Site Overrides</strong> goes one step further. Instead of pausing everything, it
+          lets a single filter through for that one address — ad requests, tracking scripts, cookie
+          notices — which is usually enough to make a stubborn site work without inviting the ads
+          back everywhere.
+        </p>
+
+        <h2>If it still doesn't work</h2>
+        <p>
+          Two more things are worth checking before you write to us. First, make sure the app's own
+          master <strong>Blocking</strong> switch on the <strong>General</strong> tab is on: while it
+          is off, every extension loads an empty rule list and nothing is blocked anywhere, however
+          Safari is set. Second, try the same page in a private window — if it behaves there and not
+          in your normal window, the difference is a saved setting rather than the extension itself.
+        </p>
+        <p>
+          If none of that helps, email <a href="mailto:support@mxcode.com">support@mxcode.com</a>
+          with the address of the page, what you expected to disappear, and your iOS or macOS
+          version. A screenshot of the page is worth more than a description.
+        </p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Why did AdFence switch itself off after an update?</summary>
+            <div class="answer">
+              <p>iOS and iPadOS updates occasionally reset Safari's extension settings, and Safari
+              switches an extension off if the app was removed or reinstalled. Check
+              <strong>Settings → Apps → Safari → Extensions</strong> on iPhone or iPad, or
+              <strong>Safari → Settings → Extensions</strong> on the Mac, before assuming the app
+              broke.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need to enable all eight AdFence extensions?</summary>
+            <div class="answer">
+              <p>No. Each extension covers a different category, and anything left off is simply not
+              filtered &mdash; the others keep working.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I have to set it up again on each device?</summary>
+            <div class="answer">
+              <p>Yes. Extensions are enabled per device, so an iPhone, an iPad and a Mac each need the
+              extension switched on once.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I run AdFence alongside another ad blocker?</summary>
+            <div class="answer">
+              <p>Safari can run more than one content blocker at once, and AdFence does not check for
+              others. Two blockers aimed at the same requests mostly duplicate rules, so if a page
+              misbehaves, switch one off to find out which.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does it block YouTube or Instagram ads?</summary>
+            <div class="answer">
+              <p>It blocks the ad slots served around a YouTube video, but not ads stitched into the
+              video stream itself &mdash; those arrive as the video. Instagram and Facebook links open
+              in their own in-app browsers, which no Safari extension can reach; open the page in
+              Safari instead.</p>
+            </div>
+          </details>
+        </div>
+
+      

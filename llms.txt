@@ -26,9 +26,10 @@
   [Español (España)](https://adfence.mxcode.com/es/): The homepage, how-to page,
   support page and blog index exist in these nine languages — replace the slug
   in any of the three URLs below, e.g. /fr/how-to-use.html or /ja/support.html.
-  The pop-up guide below is also translated into all nine, at the same path
-  under each language, e.g. /de/blog/how-to-block-popup-ads-on-iphone-safari.html.
-  The other blog post and the two legal pages are English-only.
+  Both blog posts below are also translated into all nine, at the same path
+  under each language, e.g. /de/blog/how-to-block-popup-ads-on-iphone-safari.html
+  or /ja/blog/why-safari-ad-blocker-not-working.html. The two legal pages are
+  English-only.
 - [How to use](https://adfence.mxcode.com/how-to-use.html): A screenshot-by-
   screenshot walkthrough — enable the extension in Safari, choose filters, and
   tune or pause blocking for a single site.

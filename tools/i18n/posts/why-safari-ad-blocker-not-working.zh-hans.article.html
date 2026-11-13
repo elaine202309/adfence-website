@@ -1,0 +1,191 @@
+        <p>
+          Safari 对待广告拦截器的方式和几乎所有其他类 App 都不一样。装上并不等于打开。扩展默认是关闭的，
+          而唯一能把它打开的地方是 Safari —— 既不是 App Store，也不是 App 本身，重启也没用。
+          几乎所有「这个拦截器一点用都没有」的抱怨，包括上个月还好好的那种，都是这一个细节造成的。
+        </p>
+
+        <p>
+          所以第一件要查的不是 App 里的设置，而是 Safari 里的一个开关。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>简单说：</strong>在 iPhone 或 iPad 上打开 <strong>设置 → App → Safari 浏览器 → 扩展</strong>，
+            在 Mac 上打开 <strong>Safari → 设置 → 扩展</strong>，确认 AdFence 的开关是打开的。
+            如果之前是关的，那问题就出在这里 —— 重新加载页面即可。
+          </p>
+        </div>
+
+        <h2>30 秒自查</h2>
+
+        <h3>在 iPhone 和 iPad 上</h3>
+        <ol>
+          <li>打开<strong>设置</strong>，向下滚动到 <strong>App</strong>，然后轻点
+          <strong>Safari 浏览器</strong>。</li>
+          <li>轻点<strong>扩展</strong>，再轻点 <strong>AdFence</strong>。</li>
+          <li>打开这个开关，并允许它在你希望生效的网站上访问。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-iphone.png"
+                 alt="iPhone 上 设置 → App → Safari 浏览器 → 扩展 页面，列出八个 AdFence 扩展，全部已开启：Ad Blocking、Adult Content、Custom、Malicious Sites、Others、Privacy &amp; Tracking、Social Buttons 和 Video Ads。"
+                 width="880" height="1090" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            八个独立的扩展，每个一个开关。
+          </figcaption>
+        </figure>
+
+        <h3>在 Mac 上</h3>
+        <ol>
+          <li>在 Safari 中打开<strong>设置</strong>（⌘,），进入<strong>扩展</strong>标签页。</li>
+          <li>在左侧列表中勾选 <strong>AdFence</strong>。</li>
+          <li>在右侧面板中选择它可以访问的网站。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Mac 上 Safari 的扩展设置窗口，侧边栏中八个 AdFence 扩展均被勾选，右侧详情面板中选中了 Ad Blocking。"
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            同样八个扩展，在 Mac 上 Safari 的扩展标签页里勾选。
+          </figcaption>
+        </figure>
+
+        <p>
+          AdFence 提供的是八个扩展而不是一个，所以它们会分别出现在这个列表里。只要其中一个被关掉，
+          由它负责的那类广告就会回来，而其他部分照常工作 —— 这就是为什么拦截器看起来像「半坏」，
+          而不是完全关掉。
+        </p>
+
+        <p>
+          开关打开后，回到 Safari，正式地重新加载页面。已经加载过的页面会一直保留扩展开始运行之前
+          取到的内容。
+        </p>
+
+<!--PROMO-->
+
+        <h2>已经打开了？按顺序查这四处</h2>
+
+        <h3>1. 这个网站在 App 里被暂停了</h3>
+        <p>
+          AdFence 有一个按网站生效的 <strong>Pause Blocking</strong> 开关，网站一旦进入那个列表
+          就会一直保持暂停，直到你把它移出。打开 <strong>Custom</strong> 标签页，找到这个网站确认一下。
+          如果你几个月前为了让某个视频播放器能用而把它加了进去，那它现在仍然处于暂停状态。
+        </p>
+
+        <h3>2. 扩展看不到这个网站</h3>
+        <p>
+          Safari 有一套自己的按网站授权，和 App 里做的任何事都无关。如果某个网站对 AdFence 的设置是
+          <strong>Ask</strong>（询问）而不是 <strong>Allow</strong>（允许），Safari 会等你授权，
+          在授权之前拦截器拿不到任何东西。显示开关的同一个界面再进去一层，会列出所有你授权或拒绝过的
+          网站；删掉那一条就会重新询问。
+        </p>
+
+        <h3>3. 你其实不在 Safari 里</h3>
+        <p>
+          在 Instagram、Facebook、Gmail、Reddit 以及大多数其他 App 里点链接，打开的是那个 App 内建的
+          浏览器，不是 Safari。那些浏览器根本不支持 Safari 扩展，所以这一类广告拦截器都够不到。
+          这是 App 的构造所限，不是你漏掉了哪个设置。解决办法是在 Safari 里打开这个页面 —— 通常是分享
+          菜单，然后选<strong>在 Safari 中打开</strong> —— 或者自己把网址粘到地址栏里。
+        </p>
+
+        <h3>4. 这条广告不在过滤列表里</h3>
+        <p>
+          内容拦截器不会看着页面猜什么像广告。它拿自己认识的请求和页面元素去比对 App 内置的过滤列表，
+          列表有多全，它就有多管用。很多广告并不在这些列表里：
+        </p>
+        <ul>
+          <li>写成看起来像网站自家内容的赞助帖。</li>
+          <li>从网站自己的域名发出、没有单独地址可拦的广告。</li>
+          <li>在服务器端拼进视频流、随视频一起送达的广告。</li>
+        </ul>
+        <p>
+          另外要知道，过滤列表是随 App 更新而更新的，不是实时更新。如果某个网站刚换了投放广告的方式，
+          要等 AdFence 的下一个版本才能补上这个缺口。
+        </p>
+
+        <h2>App 里应该显示成什么样</h2>
+        <p>
+          AdFence 可以向 Safari 查询它的哪些扩展正在实际运行，值得对一下 App 和 Safari 的说法是否一致。
+          打开 App，轻点 <strong>Plugins</strong>。Safari 报告某个扩展已启用时，八个扩展中对应的那一行
+          会显示绿色的 <strong>Active</strong>，没启用则是灰色。<strong>Refresh Status</strong> 会再问一次，
+          <strong>Open Safari Extension Settings</strong> 会直接跳到上面那个界面。
+        </p>
+        <p>
+          如果 Plugins 里有一行显示未启用，而 Safari 里的开关看起来是开着的，那多半是 App 读到的是旧的
+          答案 —— 先点 <strong>Refresh Status</strong> 再说。
+        </p>
+
+        <h2>只修一个网站，不放松其他所有网站</h2>
+        <p>
+          很多人干脆把拦截器整个关掉，是因为有一个网站坏了。还有一个更窄的做法：打开那个网址的
+          <strong>Site Settings</strong>，用 <strong>Pause Blocking</strong>。这样 AdFence 只对那一个
+          网站退让，其他网站仍按你选的设置工作。
+        </p>
+        <p>
+          <strong>Site Overrides</strong> 更进一步。它不是把一切都暂停，而是只对那一个地址放行某一类
+          过滤 —— 广告请求、追踪脚本、Cookie 提示 —— 通常足以让一个顽固的网站恢复正常，又不会到处
+          把广告请回来。
+        </p>
+
+        <h2>如果还是不行</h2>
+        <p>
+          写信给我们之前，还有两件事值得查。第一，确认 <strong>General</strong> 标签页顶部 App 自己的总
+          开关 <strong>Blocking</strong> 是打开的：它关着的时候，每个扩展加载的都是空规则列表，不管
+          Safari 怎么设置，哪里都不会拦截。第二，用无痕窗口打开同一个页面试试 —— 如果无痕窗口正常、
+          普通窗口不正常，那差异来自某个保存下来的设置，而不是扩展本身。
+        </p>
+        <p>
+          如果这些都没用，请发邮件到 <a href="mailto:support@mxcode.com">support@mxcode.com</a>，
+          附上页面地址、你期望消失的内容，以及你的 iOS 或 macOS 版本。一张页面截图比一段描述更有用。
+        </p>
+
+        <h2>常见问题</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>为什么 AdFence 在更新后自己关掉了？</summary>
+            <div class="answer">
+              <p>iOS 和 iPadOS 更新偶尔会重置 Safari 的扩展设置，而如果 App 被移除或重新安装，
+              Safari 会把扩展关掉。在 iPhone 或 iPad 上先查
+              <strong>设置 → App → Safari 浏览器 → 扩展</strong>，在 Mac 上查
+              <strong>Safari → 设置 → 扩展</strong>，再判断是不是 App 出了问题。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>需要把八个 AdFence 扩展全部启用吗？</summary>
+            <div class="answer">
+              <p>不需要。每个扩展负责不同类别，没开的那些只是不参与过滤 —— 其他扩展照常工作。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>每台设备都要重新设置一次吗？</summary>
+            <div class="answer">
+              <p>是的。扩展是按设备启用的，iPhone、iPad 和 Mac 各自需要打开一次扩展。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>AdFence 可以和别的广告拦截器同时用吗？</summary>
+            <div class="answer">
+              <p>Safari 可以同时运行多个内容拦截器，AdFence 也不会检查有没有别的。两个拦截器针对同样的
+              请求，规则大多重复，所以如果某个页面不正常，关掉其中一个看看是哪个造成的。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>它能拦 YouTube 或 Instagram 的广告吗？</summary>
+            <div class="answer">
+              <p>它能拦 YouTube 视频周围投放的广告位，但拦不了拼进视频流本身的广告 —— 那些是跟着视频
+              一起送来的。Instagram 和 Facebook 的链接会在它们自己的 App 内浏览器里打开，任何 Safari
+              扩展都够不到；请改在 Safari 里打开页面。</p>
+            </div>
+          </details>
+        </div>
+
