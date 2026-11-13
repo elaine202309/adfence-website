@@ -903,7 +903,8 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  /* When the button drops below the text it sits in the middle of the card. */
+  justify-content: center;
   gap: 18px 28px;
   margin: 44px 0;
   padding: 24px 26px;
@@ -920,6 +921,11 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0; }
 }
 .article-promo strong { color: var(--text); }
 .article-promo .btn-store { padding: 12px 20px; }
+/* Long localized labels (Korean especially) otherwise break over two lines
+   inside the pill once the card is phone-width. */
+@media (max-width: 480px) {
+  .article-promo .btn-store { padding: 12px 16px; font-size: .92rem; }
+}
 
 .article { max-width: 700px; margin: 0 auto; }
 .article h2 { font-size: 1.5rem; margin: 46px 0 14px; }
