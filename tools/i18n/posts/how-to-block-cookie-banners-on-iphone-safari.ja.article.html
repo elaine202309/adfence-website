@@ -1,0 +1,247 @@
+        <p>
+          Cookie バナーは広告ではありません。当たり前のようですが、これが「広告をブロック」スイッチ
+          を入れても消えないことがある理由です。広告は他人のサーバーへのリクエストで、フィルターが
+          拒否できます。一方、同意バナーはたいていページそのものの一部 —— 同意管理サービスの
+          スクリプトか、暗いオーバーレイを伴う普通の HTML マークアップ —— なので、消すというのは
+          すでに届いた要素を隠すことを意味します。
+        </p>
+
+        <p>
+          AdFence は両方をこなし、スイッチは別々です。フィルターがリクエストを扱い、
+          <strong>Hide Cookie Notices</strong> がバナーを扱います。バナーだけが気になるなら、
+          触るのは後者です。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>結論から言うと：</strong>AdFence を開き、<strong>General</strong> タブのまま
+            <strong>Other Settings</strong> までスクロールして、<strong>Hide Cookie Notices</strong>
+            がオンになっているか確認します。Safari に戻ってページを再読み込みしてください。これで
+            特定のサイトが動かなくなった場合は、そのアドレスだけバナーを許可します —— 手順は下に
+            あります。
+          </p>
+        </div>
+
+        <h2>Cookie バナーとは何か</h2>
+        <p>
+          目にするバナーのほとんどは次の 3 つのどれかで、それぞれ挙動が違います。
+        </p>
+        <ul>
+          <li>
+            <strong>第三者スクリプトによる同意ダイアログ。</strong> 大手メディアの多くは既製品を
+            借りています。バナーに表示される名前 —— OneTrust、Cookiebot、Didomi、Quantcast など
+            —— がパネルを生成し、ページを暗くし、スクロールを止めます。そのスクリプトと
+            スタイルシートは判別できるアドレスを持つので、リクエストもパネルも止められます。
+          </li>
+          <li>
+            <strong>自前のマークアップとオーバーレイ。</strong> 仕組みは同じで、サイト自身が
+            書いたもの：画面下の固定ボックスと、その背後に全幅のレイヤー。外から止めるものは
+            なく、要素を非表示にするだけです。
+          </li>
+          <li>
+            <strong>同意の壁。</strong> 回答するまで記事がサーバー側で本当に止められています。
+            サイトが送らないものを、コンテンツブロッカーが取り戻すことはできません。
+          </li>
+        </ul>
+        <p>
+          <strong>Hide Cookie Notices</strong> が効くのは前の 2 つです。パネルを隠すと、ページの
+          スクロールとタップも戻ってきます —— スマートフォンで一番はっきり分かる部分です。
+        </p>
+
+        <h2>オンにする</h2>
+        <ol>
+          <li>AdFence を開き、<strong>General</strong> タブのままでいます。</li>
+          <li><strong>Other Settings</strong> までスクロールし、<strong>Hide Cookie
+          Notices</strong> をオンにします。</li>
+          <li>Safari に戻ってページを再読み込みします。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="iPhone の AdFence の Other Settings 一覧：Block Adult Sites、Hide Cookie Notices、Block Pop-ups、App Banners、Distractions、Hide Comments、Block Social Buttons、Custom Web Fonts が、それぞれ独立したスイッチで並んでいる。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Hide Cookie Notices はページ単位の迷惑要素の側にあり、広告フィルターとは分かれています。
+          </figcaption>
+        </figure>
+
+        <p>
+          意図的に独立したスイッチにしてあります。広告は消したいけれど同意の質問には一度答えても
+          いい、という人は多いですし、バナーは二度と見たくないという人もいます。分けておけば、
+          片方の選択がもう片方を犠牲にしません。
+        </p>
+
+        <h2>同じバナーが何度も戻ってくる理由</h2>
+        <p>
+          理由は 3 つで、不具合なのはそのうち 1 つだけです。
+        </p>
+        <ul>
+          <li>
+            <strong>そもそも答えていない。</strong> 隠されたダイアログは未回答のままです。多くの
+            サイトは「まだ回答なし」として記録し、次のページや次の訪問でまた表示します ——
+            つまり毎回隠し直しているだけで、閉じたものとして覚えられてはいません。
+          </li>
+          <li>
+            <strong>同意は人ではなくサイトごとに保存される。</strong> 新聞の記事ページ、動画
+            セクション、ショップは、ブラウザから見れば別々の 3 つのサイトで、それぞれに保存された
+            回答があります。Web サイトデータを消したり、プライベートウインドウを開いたりすると、
+            すべてリセットされます。
+          </li>
+          <li>
+            <strong>サイトがパネルを変えた。</strong> 同意サービスは新しいクラス名を付けた新版を
+            継続的に出します。同梱のルールは古い形に合っていて、次の AdFence のリリースが新しい形を
+            載せるまでずれます —— この遅れはアプリの更新ペースに沿ったもので、設定ミスでは
+            ありません。
+          </li>
+        </ul>
+        <p>
+          「0.5 秒版」もあります。パネルが消える前に一瞬ちらつくことがあります。非表示のルールは
+          ページの描画に合わせて適用されるので、回線が遅いとダイアログが先に一瞬見えます。同じ
+          ルールが仕事をしているだけで、あなたの望むタイミングより少し遅いだけです。
+        </p>
+
+<!--PROMO-->
+
+        <h2>サイトにバナーが必要な場合</h2>
+        <p>
+          パネルをゲートとして使うサイトがあります。答えると記事が出て、隠すとスクロールできない
+          灰色の文字だけが残ります。バナーに <strong>Manage preferences</strong> のリンクを残して
+          いるサイトもあり、そこにログイン導線があることもあります。そういう場合は機能ごと切らず、
+          その 1 つのアドレスだけ許可します。
+        </p>
+        <ol>
+          <li><strong>Site Settings</strong> を開き、そのサイトのアドレスを入力します。</li>
+          <li><strong>Site Overrides</strong> で <strong>Allow Cookie Notices</strong> をオンにします。</li>
+          <li><strong>Save</strong> をタップし、Safari でページを再読み込みします。</li>
+        </ol>
+        <p>
+          この上書きはそのアドレスだけに効き、ほかのサイトはバナーを隠したままです。
+          <strong>Pause Blocking</strong> と同じ仕組みを、1 つのフィルターに絞ったものです。
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-site-settings.png"
+                 alt="AdFence の 1 サイト用 Site Settings シート：上部に Website Address、その下に Block Website と Pause Blocking、さらに下に Site Overrides の一覧があり、Allow Cookie Notices が含まれている。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            1 つのアドレスに 1 つのフィルター —— ほかのブロックはそのままです。
+          </figcaption>
+        </figure>
+
+        <h2>できないこと</h2>
+        <ul>
+          <li>
+            <strong>代わりに答える。</strong> ダイアログを隠しても何もクリックしません。同意または
+            拒否をしないと使えないサイトなら、それは自分で行う必要があります。アプリが取り除くのは
+            パネルであり、判断ではありません。
+          </li>
+          <li>
+            <strong>同意の壁を突破する。</strong> 回答するまで記事が本当に送られないなら、どんな
+            ブロッカーにも出せません。
+          </li>
+          <li>
+            <strong>Safari の外で働く。</strong> Instagram、Facebook、Gmail、Reddit などのアプリ内で
+            開いたリンクは、そのアプリ内蔵のブラウザを使い、Safari の機能拡張は動作しません。
+            Safari でページを開いてください。
+          </li>
+        </ul>
+        <p>
+          単体ではトラッカーブロッカーでもありません。パネルを隠しても、すでに読み込まれた
+          スクリプトは止まりません。広告とトラッキングのリクエストには専用のスイッチがあり、
+          同じ画面に並んでいます。
+        </p>
+
+        <h2>バナーがまだ出る場合</h2>
+        <p>
+          次の順に確認してください —— 最初の 2 つでほとんどのケースは解決します。
+        </p>
+        <ol>
+          <li>
+            <strong>Safari の拡張機能がオン。</strong> アプリではなく Safari 側のスイッチで、
+            アップデート後に Safari がオフにすることがあります。30 秒でできる確認は
+            <a href="why-safari-ad-blocker-not-working.html">こちらの記事</a>にあります。
+          </li>
+          <li>
+            <strong>総合スイッチがオン。</strong> <strong>General</strong> タブのいちばん上にある
+            <strong>Blocking</strong> もオンである必要があります。これがオフの間は、どの拡張機能も
+            空のルールリストを読み込むので、どこでも何も隠されません。
+          </li>
+          <li>
+            <strong>サイトが一時停止リストに入っている。</strong> <strong>Custom</strong> タブを
+            見てください。そこにあるものは削除するまで一時停止のままです。いつ追加したかは関係
+            ありません。
+          </li>
+          <li>
+            <strong>Safari 側のサイト権限。</strong> そのサイトで AdFence が<strong>許可</strong>
+            ではなく<strong>確認</strong>になっていると、Safari はあなたの返事を待ち、拡張機能は
+            動けません。
+          </li>
+          <li>
+            <strong>Safari ではない。</strong> アプリ内蔵ブラウザでは、設定がどう見えても拡張機能は
+            動きません。
+          </li>
+        </ol>
+        <p>
+          これらをすべて外してもパネルが残るなら、最近マークアップを変えたサービスのものでしょう
+          —— 次の AdFence 更新で埋まります。それまでは自分で隠せます：<strong>Site Settings</strong>
+          から <strong>Custom Element Blocker</strong> を開き、その要素を追加してください。手を
+          入れたくない場合は、ページのアドレスとバナーのスクリーンショットを添えて
+          <a href="mailto:support@mxcode.com">support@mxcode.com</a> までご連絡ください。それで
+          十分に確認できます。
+        </p>
+
+        <h2>よくある質問</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>バナーを隠すと、私の代わりに Cookie を許可または拒否したことになりますか？</summary>
+            <div class="answer">
+              <p>どちらでもありません。パネルを隠すのは表示の変更で、何もクリックせず、何も許可
+              せず、すでに保存されたものも消しません。サイトに選択を記録してほしいなら、隠される
+              前にパネルへ回答するか閉じるか、<strong>Site Overrides</strong> でそのサイトのバナーを
+              許可してください。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Cookie バナーを隠すとサイトが壊れますか？</summary>
+            <div class="answer">
+              <p>まれですが、回答をしないとコンテンツを出さず、パネルの背後を灰色のままにする
+              サイトがあります。その場合は <strong>Site Settings</strong> から
+              <strong>Site Overrides</strong> を開き、その 1 つのアドレスだけ
+              <strong>Allow Cookie Notices</strong> をオンにしてください —— ほかのサイトはバナーを
+              隠したままです。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>iPad や Mac でも使えますか？</summary>
+            <div class="answer">
+              <p>はい。<strong>Hide Cookie Notices</strong> は iPad と Mac アプリでも同じスイッチで、
+              <strong>Site Overrides</strong> もどのプラットフォームでも同じように動きます。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>バナーが消える前に一瞬ちらつくのはなぜですか？</summary>
+            <div class="answer">
+              <p>非表示のルールはページの描画に合わせて適用されるため、回線が遅いとパネルが隠れる
+              前に一瞬描かれます。同じルールが仕事をしているだけで、あなたの望むより少し遅いだけ
+              です —— ページそのものより早くする設定はありません。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Cookie バナーを隠すのは広告をブロックするのと同じですか？</summary>
+            <div class="answer">
+              <p>いいえ、意図的に別のスイッチです。広告はほかのサーバーへのリクエストで、フィルター
+              が拒否できます。Cookie バナーはたいていページの一部なので、隠すというのはページ要素を
+              隠すことです。分けておけば、どちらか一方だけを選べます。</p>
+            </div>
+          </details>
+        </div>
+

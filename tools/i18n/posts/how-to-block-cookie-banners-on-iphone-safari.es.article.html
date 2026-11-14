@@ -1,0 +1,255 @@
+        <p>
+          Un banner de cookies no es un anuncio. Suena obvio, y es justo por eso que el interruptor
+          «bloquear anuncios» no siempre lo hace desaparecer. Un anuncio es una petición al servidor
+          de otra persona, que un filtro puede rechazar. Un panel de consentimiento suele formar parte
+          de la propia página —un script de un proveedor de consentimiento o simple marcado con una
+          capa oscura detrás—, así que quitarlo significa ocultar elementos que ya han llegado.
+        </p>
+
+        <p>
+          AdFence hace las dos cosas, con dos interruptores separados: los filtros se ocupan de las
+          peticiones y <strong>Hide Cookie Notices</strong> del panel. Si solo te molestan los
+          banners, el que quieres es el segundo.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>En resumen:</strong> abre AdFence, quédate en la pestaña <strong>General</strong>,
+            baja hasta <strong>Other Settings</strong> y comprueba que <strong>Hide Cookie
+            Notices</strong> está activado. Recarga la página en Safari. Si después un sitio concreto
+            deja de funcionar, permite su banner solo para esa dirección: los pasos están más abajo.
+          </p>
+        </div>
+
+        <h2>Qué es en realidad un banner de cookies</h2>
+        <p>
+          Casi todos los paneles que encuentras son una de tres cosas, y se comportan de forma
+          distinta:
+        </p>
+        <ul>
+          <li>
+            <strong>Una ventana de consentimiento generada por un script de terceros.</strong> La
+            mayoría de los grandes editores alquila una. El nombre del banner —OneTrust, Cookiebot,
+            Didomi, Quantcast y similares— construye el panel, oscurece la página y bloquea el
+            desplazamiento. Ese script y su hoja de estilos tienen direcciones reconocibles, así que
+            se pueden interceptar tanto la petición como el panel.
+          </li>
+          <li>
+            <strong>Marcado propio con una capa encima.</strong> La misma idea, escrita por el propio
+            sitio: una caja fija en la parte inferior de la pantalla y una capa a todo lo ancho detrás.
+            Nada externo que bloquear; los elementos simplemente se ocultan.
+          </li>
+          <li>
+            <strong>Un muro de consentimiento.</strong> El artículo se retiene de verdad en el
+            servidor hasta que respondes. Ningún bloqueador de contenido puede recuperar lo que el
+            sitio se niega a enviar.
+          </li>
+        </ul>
+        <p>
+          <strong>Hide Cookie Notices</strong> sirve para los dos primeros casos. Ocultar el panel
+          también devuelve a la página su desplazamiento y sus toques, que es la parte que más se nota
+          en un teléfono.
+        </p>
+
+        <h2>Activarlo</h2>
+        <ol>
+          <li>Abre AdFence y quédate en la pestaña <strong>General</strong>.</li>
+          <li>Baja hasta <strong>Other Settings</strong> y activa <strong>Hide Cookie
+          Notices</strong>.</li>
+          <li>Vuelve a Safari y recarga la página.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="La lista Other Settings de AdFence en el iPhone: Block Adult Sites, Hide Cookie Notices, Block Pop-ups, App Banners, Distractions, Hide Comments, Block Social Buttons y Custom Web Fonts, cada una con su interruptor."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Hide Cookie Notices está con las molestias de página, aparte de los filtros de anuncios.
+          </figcaption>
+        </figure>
+
+        <p>
+          Es un interruptor propio a propósito. Mucha gente quiere los anuncios fuera y no le importa
+          responder una vez a una pregunta de consentimiento; otra preferiría no volver a ver el panel
+          nunca. Separarlos hace que una elección no cueste la otra.
+        </p>
+
+        <h2>Por qué el mismo banner vuelve siempre</h2>
+        <p>
+          Tres motivos, y solo uno es un fallo:
+        </p>
+        <ul>
+          <li>
+            <strong>Nunca lo has respondido.</strong> Una ventana oculta sigue sin respuesta. Muchos
+            sitios guardan «aún sin respuesta» y vuelven a mostrar el panel en la página siguiente o
+            en la visita siguiente — así que se oculta otra vez cada vez, en lugar de quedar
+            registrado como cerrado.
+          </li>
+          <li>
+            <strong>El consentimiento se guarda por sitio, no por persona.</strong> Las páginas de
+            artículos de un periódico, su sección de vídeo y su tienda pueden ser tres sitios
+            distintos a ojos del navegador, cada uno con su respuesta guardada. Borrar los datos de
+            sitios web o abrir una ventana privada los reinicia todos.
+          </li>
+          <li>
+            <strong>El sitio ha cambiado el panel.</strong> Los proveedores de consentimiento publican
+            versiones nuevas con nuevos nombres de clase de forma continua. Las reglas incluidas
+            corresponden a la forma anterior hasta que la siguiente versión de AdFence trae la nueva:
+            ese desfase sigue el ritmo de actualización de la app y no es un ajuste mal puesto.
+          </li>
+        </ul>
+        <p>
+          También existe la versión de medio segundo: el panel puede parpadear antes de desaparecer.
+          Las reglas de ocultación se aplican a medida que se dibuja la página, así que con una
+          conexión lenta la ventana puede verse un instante primero. Es la misma regla haciendo su
+          trabajo, solo más tarde de lo que te gustaría.
+        </p>
+
+<!--PROMO-->
+
+        <h2>Cuando un sitio necesita su banner</h2>
+        <p>
+          Algunos sitios usan el panel como puerta: responde y aparece el artículo; ocúltalo y te queda
+          texto en gris que no se desplaza. Otros mantienen el enlace
+          <strong>Manage preferences</strong> en el banner, y a veces ahí está también la entrada a la
+          cuenta. En esos casos, no desactives la función: permite el banner solo para una dirección.
+        </p>
+        <ol>
+          <li>Abre <strong>Site Settings</strong> e introduce la dirección de ese sitio.</li>
+          <li>En <strong>Site Overrides</strong>, activa <strong>Allow Cookie Notices</strong>.</li>
+          <li>Toca <strong>Save</strong> y recarga la página en Safari.</li>
+        </ol>
+        <p>
+          La excepción se aplica solo a esa dirección, y todos los demás sitios siguen con el banner
+          oculto. Es el mismo mecanismo que <strong>Pause Blocking</strong>, reducido a un solo filtro.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-site-settings.png"
+                 alt="La hoja Site Settings de AdFence para un solo sitio: Website Address arriba, Block Website y Pause Blocking debajo, y luego la lista Site Overrides con Allow Cookie Notices."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Una dirección, un filtro: el resto del bloqueo se queda como estaba.
+          </figcaption>
+        </figure>
+
+        <h2>Lo que no puede hacer</h2>
+        <ul>
+          <li>
+            <strong>Responder por ti.</strong> Ocultar la ventana no pulsa nada. Si un sitio solo
+            funciona tras aceptar o rechazar, sigues teniendo que hacerlo tú; la app quita el panel,
+            no la decisión.
+          </li>
+          <li>
+            <strong>Atravesar un muro de consentimiento.</strong> Cuando el artículo realmente no se
+            envía hasta que respondes, ningún bloqueador puede hacerlo aparecer.
+          </li>
+          <li>
+            <strong>Funcionar fuera de Safari.</strong> Los enlaces abiertos en Instagram, Facebook,
+            Gmail, Reddit y la mayoría de las demás apps usan los navegadores integrados de esas apps,
+            y ninguna extensión de Safari se ejecuta ahí. Abre la página en Safari.
+          </li>
+        </ul>
+        <p>
+          Tampoco es un bloqueador de rastreadores por sí solo: ocultar el panel no detiene un script
+          que ya se ha cargado. Las peticiones de publicidad y rastreo tienen sus propios
+          interruptores, en la misma pantalla.
+        </p>
+
+        <h2>Si el banner sigue ahí</h2>
+        <p>
+          Comprueba esto en orden: los dos primeros resuelven la mayoría de los casos.
+        </p>
+        <ol>
+          <li>
+            <strong>La extensión está activa en Safari.</strong> Es un interruptor dentro de Safari,
+            no dentro de la app, y Safari puede apagarlo tras una actualización. La comprobación de
+            30 segundos está <a href="why-safari-ad-blocker-not-working.html">en este artículo</a>.
+          </li>
+          <li>
+            <strong>El interruptor principal está activo.</strong> En la parte superior de la pestaña
+            <strong>General</strong>, <strong>Blocking</strong> también tiene que estar encendido;
+            mientras esté apagado, cada extensión carga una lista de reglas vacía y no se oculta nada
+            en ninguna parte.
+          </li>
+          <li>
+            <strong>El sitio está en la lista de pausas.</strong> Mira la pestaña
+            <strong>Custom</strong>. Lo que haya allí sigue en pausa hasta que lo quites, sin importar
+            cuánto tiempo lleve añadido.
+          </li>
+          <li>
+            <strong>El permiso de Safari.</strong> Si para ese sitio AdFence está en
+            <strong>Preguntar</strong> y no en <strong>Permitir</strong>, Safari espera tu respuesta
+            antes de que cualquier extensión pueda actuar.
+          </li>
+          <li>
+            <strong>No estás en Safari.</strong> Un navegador integrado no puede ejecutar la
+            extensión, por muy correctos que parezcan los ajustes.
+          </li>
+        </ol>
+        <p>
+          Si el panel sobrevive a todo esto, probablemente venga de un proveedor cuyo marcado ha
+          cambiado hace poco: la siguiente actualización de AdFence cerrará la diferencia. Mientras
+          tanto, puedes ocultarlo tú: <strong>Site Settings</strong>, luego
+          <strong>Custom Element Blocker</strong>, y añade el elemento. Si prefieres no tocar nada,
+          escribe a <a href="mailto:support@mxcode.com">support@mxcode.com</a> con la dirección de la
+          página y una captura del banner; con eso nos basta para mirarlo.
+        </p>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>¿Ocultar el banner acepta o rechaza cookies por mí?</summary>
+            <div class="answer">
+              <p>Ninguna de las dos cosas. Ocultar el panel es un cambio de presentación: no pulsa
+              nada, no acepta nada y no borra nada de lo ya guardado. Si quieres que un sitio registre
+              tu elección, responde o cierra el panel antes de que se oculte, o permite los banners
+              para ese sitio en <strong>Site Overrides</strong>.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Ocultar los banners de cookies puede romper un sitio?</summary>
+            <div class="answer">
+              <p>Rara vez, pero algunos sitios condicionan su contenido a una respuesta y dejan la
+              página en gris detrás del panel. Para esos, abre <strong>Site Settings</strong>, luego
+              <strong>Site Overrides</strong>, y activa <strong>Allow Cookie Notices</strong> solo
+              para esa dirección: todos los demás sitios siguen con el banner oculto.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Funciona también en iPad y Mac?</summary>
+            <div class="answer">
+              <p>Sí. <strong>Hide Cookie Notices</strong> es el mismo interruptor en el iPad y en la
+              app para Mac, y <strong>Site Overrides</strong> funciona igual en todas las
+              plataformas.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Por qué el banner parpadea un segundo antes de desaparecer?</summary>
+            <div class="answer">
+              <p>Las reglas de ocultación se aplican a medida que se dibuja la página, así que con una
+              conexión lenta el panel puede verse un instante antes de ocultarse. Es la misma regla
+              haciendo su trabajo, solo más tarde de lo que te gustaría: ningún ajuste puede
+              adelantarla a la propia página.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Ocultar los banners de cookies es lo mismo que bloquear anuncios?</summary>
+            <div class="answer">
+              <p>No, y son interruptores separados a propósito. Los anuncios son peticiones a otros
+              servidores, que los filtros pueden rechazar; un banner de cookies suele formar parte de
+              la página, así que ocultarlo significa ocultar elementos de página. Separarlos te deja
+              elegir solo uno de los dos.</p>
+            </div>
+          </details>
+        </div>
+

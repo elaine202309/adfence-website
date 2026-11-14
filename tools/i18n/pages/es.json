@@ -267,6 +267,10 @@
     "posts": [
       {
         "tag": "Lo último",
+        "date": "14 de noviembre de 2026",
+        "readTime": "7 min de lectura"
+      },
+      {
         "date": "11 de noviembre de 2026",
         "readTime": "6 min de lectura"
       },

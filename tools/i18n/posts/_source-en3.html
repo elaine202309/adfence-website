@@ -1,0 +1,248 @@
+
+
+        <p>
+          A cookie banner is not an ad. That sounds obvious, and it is the reason the usual "block
+          ads" switch does not always make it go away. An ad is a request to somebody else's server,
+          which a filter can refuse. A consent panel is usually part of the page itself — a script
+          from a consent vendor, or plain markup with a dark overlay behind it — so removing it means
+          hiding elements that have already arrived.
+        </p>
+
+        <p>
+          AdFence does both, with two separate switches: the filters handle requests, and
+          <strong>Hide Cookie Notices</strong> handles the panel. If you are only seeing banners, the
+          second one is the one you want.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>The short version:</strong> open AdFence, stay on the <strong>General</strong>
+            tab, scroll to <strong>Other Settings</strong>, and make sure <strong>Hide Cookie
+            Notices</strong> is on. Reload the page in Safari. If one particular site stops working
+            afterwards, allow its notice back for that address only — the steps are below.
+          </p>
+        </div>
+
+        <h2>What a cookie banner actually is</h2>
+        <p>
+          Almost every panel you meet is one of three things, and they behave differently:
+        </p>
+        <ul>
+          <li>
+            <strong>A consent dialog from a third-party script.</strong> Most large publishers rent
+            one. The name on the banner — OneTrust, Cookiebot, Didomi, Quantcast and the like — builds
+            the panel, dims the page and locks scrolling. That script and its stylesheet have
+            recognisable addresses, so both the request and the panel can be caught.
+          </li>
+          <li>
+            <strong>First-party markup with an overlay.</strong> The same idea, written by the site
+            itself: a fixed box at the bottom of the screen and a full-width layer behind it. Nothing
+            external to block; the elements are simply hidden.
+          </li>
+          <li>
+            <strong>A consent wall.</strong> The article genuinely is withheld until you answer, on
+            the server. No content blocker can bring back what the site refuses to send.
+          </li>
+        </ul>
+        <p>
+          <strong>Hide Cookie Notices</strong> is for the first two. Hiding the panel also gives the
+          page back its scrolling and its taps, which is the part you notice most on a phone.
+        </p>
+
+        <h2>Switching it on</h2>
+        <ol>
+          <li>Open AdFence and stay on the <strong>General</strong> tab.</li>
+          <li>Scroll to <strong>Other Settings</strong> and switch on <strong>Hide Cookie
+          Notices</strong>.</li>
+          <li>Return to Safari and reload the page.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="AdFence's Other Settings list on iPhone: Block Adult Sites, Hide Cookie Notices, Block Pop-ups, App Banners, Distractions, Hide Comments, Block Social Buttons and Custom Web Fonts, each with its own switch."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Hide Cookie Notices sits with the page-level annoyances, apart from the ad filters.
+          </figcaption>
+        </figure>
+
+        <p>
+          It is deliberately its own switch. Plenty of people want the ads gone and are happy to
+          answer a consent question once; others would rather never see the panel at all. Keeping the
+          two apart means neither choice costs the other.
+        </p>
+
+        <h2>Why the same banner keeps coming back</h2>
+        <p>
+          Three reasons, and only one of them is a fault:
+        </p>
+        <ul>
+          <li>
+            <strong>You never answered it.</strong> A hidden dialog is still unanswered. Many sites
+            store "no answer yet" and show the panel again on the next page or the next visit — so it
+            is hidden again each time rather than being remembered as dismissed.
+          </li>
+          <li>
+            <strong>Consent is stored per site, not per person.</strong> A newspaper's article pages,
+            its video section and its shop can be three different sites as far as the browser is
+            concerned, each with its own stored answer. Clearing website data, or opening a private
+            window, resets all of them.
+          </li>
+          <li>
+            <strong>The site changed the panel.</strong> Consent vendors ship new versions with new
+            class names on a rolling basis. The shipped rules match the older shape until the next
+            AdFence release carries the newer one — that lag follows the app's update schedule, and
+            is not a setting you got wrong.
+          </li>
+        </ul>
+        <p>
+          There is also a half-second version of this: the panel can flash before it disappears. The
+          hiding rules are applied as the page renders, so on a slow connection the dialog may be
+          visible for a moment first. It is the same rule doing its job, just later than you would
+          like.
+        </p>
+
+<!--PROMO-->
+
+        <h2>When a site needs its banner</h2>
+        <p>
+          Some sites treat the panel as a gate: answer it and the article appears; hide it and you
+          get greyed-out text you cannot scroll. Others keep the <strong>Manage preferences</strong>
+          link in the banner, and sometimes the sign-in link lives there too. For these, do not switch
+          the feature off — allow the notice for one address:
+        </p>
+        <ol>
+          <li>Open <strong>Site Settings</strong> and enter the address of that site.</li>
+          <li>Under <strong>Site Overrides</strong>, switch on <strong>Allow Cookie Notices</strong>.</li>
+          <li>Tap <strong>Save</strong>, then reload the page in Safari.</li>
+        </ol>
+        <p>
+          The override applies to that address alone, and every other site keeps the notice hidden.
+          It is the same mechanism as <strong>Pause Blocking</strong>, narrowed to one filter.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-site-settings.png"
+                 alt="AdFence's Site Settings sheet for a single website, with Website Address at the top, Block Website and Pause Blocking below it, and the Site Overrides list including Allow Cookie Notices."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            One address, one filter — the rest of the blocking stays exactly as it was.
+          </figcaption>
+        </figure>
+
+        <h2>What it can't do</h2>
+        <ul>
+          <li>
+            <strong>Answer for you.</strong> Hiding the dialog clicks nothing. If a site only works
+            after you accept or reject, you still have to do that; the app removes the panel, not the
+            decision.
+          </li>
+          <li>
+            <strong>Reach a consent wall.</strong> When the article genuinely isn't sent until you
+            answer, no blocker can conjure it up.
+          </li>
+          <li>
+            <strong>Work outside Safari.</strong> Links opened inside Instagram, Facebook, Gmail,
+            Reddit and most other apps use those apps' own browsers, and no Safari extension runs
+            there. Open the page in Safari instead.
+          </li>
+        </ul>
+        <p>
+          Nor is it a tracker blocker by itself: hiding the panel does not stop a script that has
+          already loaded. Advertising and tracking requests are their own switches, and the same
+          screen has those too.
+        </p>
+
+        <h2>If the banner is still there</h2>
+        <p>
+          Check these in order — the first two solve most cases:
+        </p>
+        <ol>
+          <li>
+            <strong>The extension is on in Safari.</strong> It is a switch inside Safari, not inside
+            the app, and Safari can turn it off after an update. The 30-second check is
+            <a href="why-safari-ad-blocker-not-working.html">in this post</a>.
+          </li>
+          <li>
+            <strong>The master switch is on.</strong> At the top of the <strong>General</strong> tab,
+            <strong>Blocking</strong> has to be on as well; while it is off, every extension loads an
+            empty rule list and nothing is hidden anywhere.
+          </li>
+          <li>
+            <strong>The site is on the paused list.</strong> Look in the <strong>Custom</strong> tab.
+            Anything there stays paused until you remove it, however long ago it was added.
+          </li>
+          <li>
+            <strong>Safari's own site permission.</strong> If AdFence is set to <strong>Ask</strong>
+            rather than <strong>Allow</strong> for that website, Safari waits for you before any
+            extension can act on it.
+          </li>
+          <li>
+            <strong>You are not in Safari.</strong> An in-app browser cannot run the extension at all,
+            however the settings look.
+          </li>
+        </ol>
+        <p>
+          If the panel survives all of that, it is probably from a vendor whose markup changed
+          recently — the next AdFence update closes the gap. Until then, you can hide it yourself:
+          <strong>Site Settings</strong>, then <strong>Custom Element Blocker</strong>, and add the
+          element. If you would rather not, email
+          <a href="mailto:support@mxcode.com">support@mxcode.com</a> with the address of the page and
+          a screenshot of the banner; that is enough for us to look at it.
+        </p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Does hiding the banner accept or reject cookies for me?</summary>
+            <div class="answer">
+              <p>Neither. Hiding the panel is a display change: it clicks nothing, accepts nothing and
+              deletes nothing already stored. If you want a site to record your choice, answer or
+              dismiss the panel before it is hidden, or allow notices for that site under
+              <strong>Site Overrides</strong>.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Will hiding cookie banners break a website?</summary>
+            <div class="answer">
+              <p>Rarely, but some sites gate their content on an answer and leave the page greyed out
+              behind the panel. For those, open <strong>Site Settings</strong>, then
+              <strong>Site Overrides</strong>, and switch on <strong>Allow Cookie Notices</strong> for
+              that address alone — every other site keeps the notice hidden.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does it work on iPad and Mac as well?</summary>
+            <div class="answer">
+              <p>Yes. <strong>Hide Cookie Notices</strong> is the same switch on iPad and in the Mac
+              app, and <strong>Site Overrides</strong> work the same way on every platform.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why does the banner flash for a second before it goes away?</summary>
+            <div class="answer">
+              <p>The hiding rules are applied as the page renders, so on a slow connection the panel
+              can be drawn for a moment before it is hidden. It is the same rule working, just later
+              than you would like — no setting can make it earlier than the page itself.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Is hiding cookie notices the same as blocking ads?</summary>
+            <div class="answer">
+              <p>No, and they are separate switches on purpose. Ads are requests to other servers,
+              which filters can refuse; a cookie banner is usually part of the page, so hiding it
+              means hiding page elements. Keeping them apart lets you choose either one.</p>
+            </div>
+          </details>
+        </div>
+
+      

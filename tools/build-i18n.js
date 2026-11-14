@@ -139,6 +139,15 @@ const HOWTO_SHOTS = [
    checkPages() throws if the counts disagree. */
 const POSTS = [
   {
+    slug: 'how-to-block-cookie-banners-on-iphone-safari',
+    url: 'blog/how-to-block-cookie-banners-on-iphone-safari.html',
+    title: 'How to block cookie banners on iPhone Safari',
+    excerpt: 'Every site asks, you press Reject all, and the panel is back by the next page. ' +
+      'Cookie notices are hidden by their own switch — here is the one to flip, and how to let a ' +
+      'stubborn site keep its banner.',
+    date: '2026-11-14'
+  },
+  {
     slug: 'how-to-block-popup-ads-on-iphone-safari',
     url: 'blog/how-to-block-popup-ads-on-iphone-safari.html',
     title: 'How to block pop-up ads on iPhone Safari',

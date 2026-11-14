@@ -26,8 +26,8 @@
   [Español (España)](https://adfence.mxcode.com/es/): The homepage, how-to page,
   support page and blog index exist in these nine languages — replace the slug
   in any of the three URLs below, e.g. /fr/how-to-use.html or /ja/support.html.
-  Both blog posts below are also translated into all nine, at the same path
-  under each language, e.g. /de/blog/how-to-block-popup-ads-on-iphone-safari.html
+  All three blog posts below are also translated into all nine, at the same
+  path under each language, e.g. /de/blog/how-to-block-popup-ads-on-iphone-safari.html
   or /ja/blog/why-safari-ad-blocker-not-working.html. The two legal pages are
   English-only.
 - [How to use](https://adfence.mxcode.com/how-to-use.html): A screenshot-by-
@@ -38,6 +38,9 @@
   contact address.
 - [Blog](https://adfence.mxcode.com/blog.html): Notes on how Safari content
   blocking actually behaves.
+- [How to block cookie banners on iPhone Safari](https://adfence.mxcode.com/blog/how-to-block-cookie-banners-on-iphone-safari.html):
+  Why a consent panel is not an ad, the one switch that hides it, why the same
+  banner keeps returning, and how to let a single site keep its notice.
 - [How to block pop-up ads on iPhone Safari](https://adfence.mxcode.com/blog/how-to-block-popup-ads-on-iphone-safari.html):
   The three things people call pop-ups — windows, overlays drawn inside the page,
   and taps that leave the page — which setting catches each, and what no content

@@ -1,0 +1,224 @@
+        <p>
+          Cookie 橫幅不是廣告。這聽起來很明顯，卻正是「封鎖廣告」開關不一定能把它清掉的原因。
+          廣告是送往別人伺服器的請求，篩選器可以拒絕；而同意橫幅通常是頁面本身的一部分 —— 來自
+          同意管理服務商的腳本，或者一段帶著深色遮罩的普通 HTML 標記 —— 所以要移除它，等於隱藏
+          已經下載到本機的元素。
+        </p>
+
+        <p>
+          AdFence 兩件事都做，用的是兩個獨立的開關：篩選器處理請求，<strong>Hide Cookie
+          Notices</strong> 處理橫幅。如果你只被橫幅困擾，要動的就是後一個。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>簡單說：</strong>開啟 AdFence，留在 <strong>General</strong> 標籤頁，向下找到
+            <strong>Other Settings</strong>，確認 <strong>Hide Cookie Notices</strong> 已開啟。回到
+            Safari 重新載入頁面。如果某個網站因此打不開，只給那個位址放行橫幅即可 —— 步驟在下面。
+          </p>
+        </div>
+
+        <h2>Cookie 橫幅到底是什麼</h2>
+        <p>
+          你遇到的橫幅幾乎都是三種之一，行為各不相同：
+        </p>
+        <ul>
+          <li>
+            <strong>第三方腳本產生的同意對話框。</strong> 大型媒體大多租用現成的方案。橫幅上的
+            名字 —— OneTrust、Cookiebot、Didomi、Quantcast 之類 —— 負責產生面板、壓暗頁面並
+            鎖住捲動。那份腳本和它的樣式表位址是固定可辨的，所以請求和面板本身都能被攔下。
+          </li>
+          <li>
+            <strong>網站自己寫的標記加遮罩。</strong> 原理相同，只是由網站自己實作：畫面底部一個
+            固定方塊，後面鋪一層整寬遮罩。沒有外部東西可攔，直接把元素隱藏即可。
+          </li>
+          <li>
+            <strong>同意牆。</strong> 內容確實在伺服器端被扣住了，你不回答就不發。任何內容封鎖器
+            都拿不回網站拒絕傳送的東西。
+          </li>
+        </ul>
+        <p>
+          <strong>Hide Cookie Notices</strong> 針對的是前兩種。隱藏面板的同時，也把頁面的捲動和
+          點擊還給你 —— 在手機上這一點最明顯。
+        </p>
+
+        <h2>開啟它</h2>
+        <ol>
+          <li>開啟 AdFence，留在 <strong>General</strong> 標籤頁。</li>
+          <li>向下找到 <strong>Other Settings</strong>，開啟 <strong>Hide Cookie
+          Notices</strong>。</li>
+          <li>回到 Safari，重新載入頁面。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-other-settings.png"
+                 alt="iPhone 上 AdFence 的 Other Settings 列表：Block Adult Sites、Hide Cookie Notices、Block Pop-ups、App Banners、Distractions、Hide Comments、Block Social Buttons 和 Custom Web Fonts，每項各有一個開關。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Hide Cookie Notices 和頁面級的各種干擾放在一起，與廣告篩選器分開。
+          </figcaption>
+        </figure>
+
+        <p>
+          它被刻意做成獨立開關。很多人想讓廣告消失，但願意回答一次同意問題；也有人寧可永遠不見
+          那個面板。分開之後，兩種選擇互不牽連。
+        </p>
+
+        <h2>為什麼同一個橫幅總回來</h2>
+        <p>
+          三個原因，其中只有一個是故障：
+        </p>
+        <ul>
+          <li>
+            <strong>你從沒回答過它。</strong> 被隱藏的對話框仍然沒有答案。很多網站記錄的仍是
+            「尚未回答」，下一頁或下次造訪會再顯示 —— 所以它每次都被重新隱藏，而不是被記住為
+            已關閉。
+          </li>
+          <li>
+            <strong>同意狀態按網站儲存，不按人儲存。</strong> 一家報紙的文章頁、影片頻道和商店，
+            在瀏覽器眼裡可能是三個不同的網站，各有各的已存答案。清除網站資料，或者開啟私密瀏覽
+            視窗，會把它們一起重設。
+          </li>
+          <li>
+            <strong>網站改了面板。</strong> 同意服務商會持續推出帶新類別名稱的新版本。隨 App
+            下發的規則比對的是舊的結構，直到下一次 AdFence 更新帶上新的 —— 這個落差取決於 App
+            的更新節奏，不是你哪裡設錯了。
+          </li>
+        </ul>
+        <p>
+          還有一種「半秒版」：面板會先閃一下再消失。隱藏規則是隨頁面繪製套用的，所以在網速慢的
+          時候，對話框可能先露個面。還是同一條規則在運作，只是比你希望的晚一點。
+        </p>
+
+<!--PROMO-->
+
+        <h2>當網站必須保留橫幅</h2>
+        <p>
+          有些網站把面板當成閘門：回答了才顯示文章，隱藏了就只剩一片無法捲動的灰色文字。還有些
+          網站把 <strong>Manage preferences</strong> 連結留在橫幅上，登入入口有時也在那裡。遇到
+          這類情況，不要關掉整個功能 —— 只給那一個位址放行：
+        </p>
+        <ol>
+          <li>開啟 <strong>Site Settings</strong>，填入該網站的位址。</li>
+          <li>在 <strong>Site Overrides</strong> 下開啟 <strong>Allow Cookie Notices</strong>。</li>
+          <li>點 <strong>Save</strong>，再回到 Safari 重新載入頁面。</li>
+        </ol>
+        <p>
+          這個覆寫只作用於那一個位址，其他網站照舊隱藏橫幅。它和 <strong>Pause Blocking</strong>
+          是同一套機制，只是縮窄到一個篩選器。
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-site-settings.png"
+                 alt="AdFence 針對單一網站的 Site Settings 面板：頂部是 Website Address，下面是 Block Website 和 Pause Blocking，再往下是 Site Overrides 列表，其中有 Allow Cookie Notices。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            一個位址，一個篩選器 —— 其餘封鎖照舊。
+          </figcaption>
+        </figure>
+
+        <h2>它做不到的事</h2>
+        <ul>
+          <li>
+            <strong>替你做決定。</strong> 隱藏對話框不會點任何按鈕。如果一個網站必須回答才能用，
+            你還是得回答；App 拿掉的是面板，不是那個決定。
+          </li>
+          <li>
+            <strong>突破同意牆。</strong> 當文章真的在你回答之前不會送出，任何封鎖器都變不出來。
+          </li>
+          <li>
+            <strong>在 Safari 之外生效。</strong> 在 Instagram、Facebook、Gmail、Reddit 等大多數
+            App 裡開啟的連結，用的是這些 App 內建的瀏覽器，Safari 擴充功能在那裡根本不會執行。
+            請改在 Safari 裡開啟。
+          </li>
+        </ul>
+        <p>
+          它本身也不是追蹤封鎖器：隱藏面板並不會阻止已經載入的腳本。廣告和追蹤請求有各自的開關，
+          同一個畫面上也有。
+        </p>
+
+        <h2>橫幅還在的話</h2>
+        <p>
+          按順序檢查下面幾項 —— 前兩項能解決大多數情況：
+        </p>
+        <ol>
+          <li>
+            <strong>Safari 裡的擴充功能是開著的。</strong> 那是 Safari 裡的開關，不在 App 裡，
+            而且 Safari 在更新後可能把它關掉。30 秒就能做完的檢查寫在
+            <a href="why-safari-ad-blocker-not-working.html">這篇文章裡</a>。
+          </li>
+          <li>
+            <strong>總開關是開著的。</strong> 在 <strong>General</strong> 標籤頁頂部，
+            <strong>Blocking</strong> 也必須開啟；它關著的時候，所有擴充功能載入的都是空規則
+            列表，哪裡都不會隱藏。
+          </li>
+          <li>
+            <strong>網站被加入了暫停列表。</strong> 看看 <strong>Custom</strong> 標籤頁。裡面的
+            項目會一直暫停，直到你刪掉，不管當初是什麼時候加上的。
+          </li>
+          <li>
+            <strong>Safari 自己的網站權限。</strong> 如果這個網站被設成<strong>詢問</strong>而不是
+            <strong>允許</strong>，Safari 會先等你，擴充功能才可能生效。
+          </li>
+          <li>
+            <strong>你其實不在 Safari 裡。</strong> App 內建瀏覽器無論設定如何都跑不了擴充功能。
+          </li>
+        </ol>
+        <p>
+          如果這些都排除了，面板多半來自一個剛改了標記的服務商 —— 下一次 AdFence 更新會補上。
+          在那之前，你可以自己隱藏它：<strong>Site Settings</strong>，然後
+          <strong>Custom Element Blocker</strong>，加入那個元素。不想折騰的話，寫信給
+          <a href="mailto:support@mxcode.com">support@mxcode.com</a>，附上頁面位址和橫幅截圖，
+          足夠我們去看。
+        </p>
+
+        <h2>常見問題</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>隱藏橫幅等於替我接受或拒絕了 Cookie 嗎？</summary>
+            <div class="answer">
+              <p>都不是。隱藏只是顯示上的變化：不點任何東西、不接受什麼、也不刪除已經存下的
+              內容。如果你希望網站記下你的選擇，就在它被隱藏之前回答或關閉面板，或者給那個網站
+              開啟 <strong>Site Overrides</strong> 裡的允許項目。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>隱藏 Cookie 橫幅會讓網站出問題嗎？</summary>
+            <div class="answer">
+              <p>很少，但確實有些網站要等你回答才放出內容，面板被隱藏後頁面就停在灰色狀態。遇到
+              這種，開啟 <strong>Site Settings</strong>，再進 <strong>Site Overrides</strong>，只給
+              那個位址開啟 <strong>Allow Cookie Notices</strong> —— 其他網站照舊隱藏。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>iPad 和 Mac 上也可以嗎？</summary>
+            <div class="answer">
+              <p>可以。<strong>Hide Cookie Notices</strong> 在 iPad 和 Mac App 裡是同一個開關，
+              <strong>Site Overrides</strong> 在各平台用法也一致。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>為什麼橫幅會先閃一下再消失？</summary>
+            <div class="answer">
+              <p>隱藏規則是隨頁面繪製生效的，網速慢時面板會先被畫出來一瞬間。還是同一條規則在
+              運作，只是比你希望的晚 —— 沒有任何設定能讓它比頁面本身更早。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>隱藏 Cookie 提示和封鎖廣告是一回事嗎？</summary>
+            <div class="answer">
+              <p>不是，它們刻意分成兩個開關。廣告是送往其他伺服器的請求，篩選器可以拒絕；Cookie
+              橫幅通常是頁面的一部分，隱藏它就是隱藏頁面元素。分開之後，你可以只要其中一樣。</p>
+            </div>
+          </details>
+        </div>
+
