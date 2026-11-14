@@ -257,6 +257,10 @@ is both a legal problem and an App Store rejection risk.
    the `BlogPosting` node in the JSON-LD, the breadcrumb name, the `.post-meta`
    line (category · date · reading time) and the `<h1>`. Paths inside `blog/`
    are one level up: `../css/style.css`, `../images/…`, `../blog.html`.
+   The header language menu must point at *this article* in each language —
+   `../<lang>/blog/<slug>.html`, with the English entry linking to the file
+   itself plus `aria-current="page"` — not at `<lang>/index.html`, or the
+   switcher silently drops readers on the localized homepage.
 3. Rewrite the FAQ at the bottom of the post — questions, answers, and the
    matching `FAQPage` entries in the JSON-LD. Delete it if the post genuinely
    has no questions worth answering.
