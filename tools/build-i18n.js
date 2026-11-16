@@ -139,6 +139,14 @@ const HOWTO_SHOTS = [
    checkPages() throws if the counts disagree. */
 const POSTS = [
   {
+    slug: 'can-you-block-youtube-ads-in-safari',
+    url: 'blog/can-you-block-youtube-ads-in-safari.html',
+    title: 'Can you block YouTube ads in Safari?',
+    excerpt: 'In-video ads are part of the video stream, so a Safari content blocker can’t refuse ' +
+      'them. What it can quiet down around the player, and what honestly cannot be done.',
+    date: '2026-11-16'
+  },
+  {
     slug: 'how-to-block-cookie-banners-on-iphone-safari',
     url: 'blog/how-to-block-cookie-banners-on-iphone-safari.html',
     title: 'How to block cookie banners on iPhone Safari',

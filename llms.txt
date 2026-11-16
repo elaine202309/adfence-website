@@ -26,8 +26,8 @@
   [Español (España)](https://adfence.mxcode.com/es/): The homepage, how-to page,
   support page and blog index exist in these nine languages — replace the slug
   in any of the three URLs below, e.g. /fr/how-to-use.html or /ja/support.html.
-  All three blog posts below are also translated into all nine, at the same
-  path under each language, e.g. /de/blog/how-to-block-popup-ads-on-iphone-safari.html
+  Every blog post below is also translated into all nine, at the same path
+  under each language, e.g. /de/blog/how-to-block-popup-ads-on-iphone-safari.html
   or /ja/blog/why-safari-ad-blocker-not-working.html. The two legal pages are
   English-only.
 - [How to use](https://adfence.mxcode.com/how-to-use.html): A screenshot-by-
@@ -38,6 +38,9 @@
   contact address.
 - [Blog](https://adfence.mxcode.com/blog.html): Notes on how Safari content
   blocking actually behaves.
+- [Can you block YouTube ads in Safari?](https://adfence.mxcode.com/blog/can-you-block-youtube-ads-in-safari.html):
+  Why in-video ads can't be blocked by a content blocker — they are part of the
+  stream — what the page around the player allows, and where the honest line is.
 - [How to block cookie banners on iPhone Safari](https://adfence.mxcode.com/blog/how-to-block-cookie-banners-on-iphone-safari.html):
   Why a consent panel is not an ad, the one switch that hides it, why the same
   banner keeps returning, and how to let a single site keep its notice.

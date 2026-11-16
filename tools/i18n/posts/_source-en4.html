@@ -1,0 +1,201 @@
+
+
+        <p>
+          The short answer, without the usual hedging: <strong>not the ads inside the video</strong>.
+          A Safari content blocker works by refusing requests and hiding page elements, and a
+          pre-roll does not look like either. It is part of the same media stream as the video you
+          clicked on, assembled on YouTube's servers and delivered from YouTube's own address. There
+          is no separate request to refuse and no element to hide — it is simply not a separate
+          thing.
+        </p>
+
+        <p>
+          So when a blocker that makes the rest of the web quiet does nothing here, nothing is
+          actually wrong. It is doing exactly what it can reach, and this is the part it can't.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>The short version:</strong> in-video ads — pre-rolls, mid-rolls, the sponsored
+            clips between chapters — cannot be blocked by a Safari content blocker. What can be
+            quieted down is everything around the player: banners, promoted shelves, panels, the
+            comment clutter. Other video sites are often different, because many of them request
+            their ads separately.
+          </p>
+        </div>
+
+        <h2>Why the ad is not a separate request</h2>
+        <p>
+          A banner ad on a news site is a request to another company's server. Refuse that request
+          and the space stays empty. A YouTube pre-roll is not like that. YouTube stitches it into
+          the video response on its own side, so by the time the stream reaches your iPhone, the ad
+          and the video are one continuous thing from one address. A filter list can only say "do not
+          load this address" or "hide this element". Neither applies.
+        </p>
+        <p>
+          The same is true inside the app and in the browser — the app and youtube.com receive the
+          same stream. The 30-second wait exists in the video itself, not in a box drawn over it.
+        </p>
+
+        <h2>What AdFence does on a YouTube page</h2>
+        <p>
+          The page around the player is ordinary web: images, scripts, panels and recommended-video
+          shelves, most of which come from places a filter list already knows. With the extensions
+          enabled, that part gets noticeably quieter — fewer promoted rows, no banner across the top,
+          less tracking around the page. Reload the page after changing any switch so the new rules
+          apply.
+        </p>
+        <p>
+          It is worth being clear about what this is and is not. It is a cleaner page and less
+          tracking around a video; it is not an ad-free player, and no setting in the app will make
+          it one.
+        </p>
+
+        <h2>The YouTube app is not Safari</h2>
+        <p>
+          On iPhone and iPad, the YouTube app runs outside Safari and cannot use Safari extensions at
+          all. Neither can the browser that opens when you tap a YouTube link inside another app.
+          The extension only exists inside Safari, so if you are watching in the app, none of this
+          applies — including the page cleanup. If you want the quieter page, open youtube.com in
+          Safari.
+        </p>
+
+<!--PROMO-->
+
+        <h2>Other video sites are often different</h2>
+        <p>
+          YouTube is not every video site. Plenty of publishers rent their player and its ads from
+          someone else, and the ad arrives as a separate request to an ad server — exactly the kind
+          of request a filter list can refuse. The quick way to tell them apart:
+        </p>
+        <ul>
+          <li>
+            <strong>The ad is a separate clip with its own countdown and player UI</strong> — often
+            blockable, because something external had to load.
+          </li>
+          <li>
+            <strong>The ad arrives as part of one continuous stream</strong>, and the player behaves
+            as if nothing changed — stitched in, like YouTube, and not blockable from Safari.
+          </li>
+        </ul>
+        <p>
+          That is why a blocker can make one site ad-free and leave another untouched, without any
+          setting being wrong.
+        </p>
+
+        <h2>Tuning a single site</h2>
+        <p>
+          If a page keeps showing one element you would rather not see, AdFence has per-site tools.
+          Open <strong>Site Settings</strong> for that address: <strong>Pause Blocking</strong> steps
+          back entirely, and <strong>Custom Element Blocker</strong> lets you add a single element
+          instead. The rules you create collect on the <strong>Custom</strong> tab, where you can
+          review or remove them.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-custom-rules.png"
+                 alt="AdFence's Custom Rules screen: an Enable Custom Rules switch at the top, a Custom Rules list that is currently empty, and a hint to tap + to add a website."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Per-site rules collect on the Custom tab, ready to review or remove.
+          </figcaption>
+        </figure>
+
+        <h2>If ads you expected to disappear are still there</h2>
+        <p>
+          The in-video case is settled, but other ads should be going. Check these in order —
+          <a href="why-safari-ad-blocker-not-working.html">the 30-second extension check</a> comes
+          first:
+        </p>
+        <ol>
+          <li>
+            <strong>The extension is on in Safari.</strong> Safari keeps its own switch, and updates
+            can turn it off.
+          </li>
+          <li>
+            <strong>The master switch is on.</strong> <strong>Blocking</strong> at the top of the
+            <strong>General</strong> tab has to be on; while it is off, every extension loads an
+            empty rule list.
+          </li>
+          <li>
+            <strong>The site is paused.</strong> The <strong>Custom</strong> tab lists every paused
+            site; anything there stays paused until removed.
+          </li>
+          <li>
+            <strong>You are in Safari, not an in-app browser.</strong> Links from other apps open
+            their own browser, where no extension runs.
+          </li>
+          <li>
+            <strong>The filter lists are older than the site's latest change.</strong> Lists update
+            with app updates, not continuously.
+          </li>
+        </ol>
+
+        <h2>What actually removes the pre-rolls</h2>
+        <p>
+          On iPhone, iPad and Mac, the dependable way is YouTube's own paid tier, which removes ads
+          in the app and on the site. That is a fact about how the video is delivered, not a
+          shortcoming of this app: a content blocker is a rules file Safari applies to requests and
+          page elements, and the inside of a video stream is neither. If an app in the App Store
+          promises otherwise, look closely at what it is actually changing — it is not doing it with
+          Safari's content-blocking APIs.
+        </p>
+        <p>
+          What AdFence can do is make the rest of the web quiet, including the page around a video.
+          That is a smaller claim than some advertising makes, and it is the one that holds up.
+        </p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Does AdFence block YouTube ads?</summary>
+            <div class="answer">
+              <p>It blocks the advertising around a video — banners, promoted shelves, panels and the
+              clutter of the page — but not the pre-roll and mid-roll ads inside the video itself.
+              Those are part of the same stream as the video, so there is no separate request for a
+              content blocker to refuse.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why do some people say a Safari blocker removes YouTube ads?</summary>
+            <div class="answer">
+              <p>Sometimes they mean the page around the player, which does get quieter. Other times
+              they are describing a different kind of tool — a browser or a traffic filter outside
+              Safari — which is not what a Safari content blocker is or can be.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does using the YouTube website instead of the app help?</summary>
+            <div class="answer">
+              <p>Not for the in-video ads. The website and the app receive the same stream, and a
+              content blocker cannot alter it. The website does benefit from the page cleanup, which
+              the app cannot offer at all because it does not run Safari extensions.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Is there anything that removes the pre-rolls?</summary>
+            <div class="answer">
+              <p>On iPhone and iPad, the reliable way is YouTube's own paid tier, which removes ads in
+              the app and on the web. Safari extensions cannot, and an app that claims to is either
+              doing something outside the content-blocking model or describing a feature that does not
+              hold up.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Are ads on other video sites different?</summary>
+            <div class="answer">
+              <p>Often, yes. Many sites request their video ads separately from an ad server, and
+              those requests can be refused like any other. The tell is whether the ad is a separate
+              clip with its own countdown or arrives as part of one continuous stream.</p>
+            </div>
+          </details>
+        </div>
+
+      

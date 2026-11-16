@@ -1,0 +1,174 @@
+        <p>
+          直接說，不繞彎：<strong>影片裡的廣告不行</strong>。Safari 內容封鎖器的作用是拒絕請求、
+          隱藏頁面元素，而貼片廣告兩樣都不像。它和你點開的影片屬於同一路媒體流，在 YouTube 自己的
+          伺服器上拼進去，從 YouTube 自己的位址送出。沒有單獨的請求可以拒絕，也沒有元素可以隱藏
+          —— 它根本不是一個獨立的東西。
+        </p>
+
+        <p>
+          所以，一個能把其他網頁收拾乾淨的封鎖器在這裡毫無作用，並不是哪裡壞了。它做到的是它能
+          觸及的部分，而這正是它做不到的那一塊。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>簡單說：</strong>影片內廣告 —— 片頭、片中和章節之間的贊助片段 —— 無法被
+            Safari 內容封鎖器攔掉。能安靜下來的是播放器周圍的一切：橫幅、推廣欄目、面板、留言區
+            的雜亂。其他影片網站往往不同，因為很多網站是單獨請求廣告的。
+          </p>
+        </div>
+
+        <h2>為什麼這則廣告不是單獨的請求</h2>
+        <p>
+          新聞網站上的橫幅廣告是送往另一家公司伺服器的請求。拒絕它，那塊位置就空著。YouTube 的
+          片頭廣告不是這樣。YouTube 在自己這一側把它拼進影片回應，等流到達你的 iPhone 時，廣告
+          和影片是從同一個位址送來的連續一體。篩選器列表只能說「不要載入這個位址」或「隱藏這個
+          元素」，兩者都不適用。
+        </p>
+        <p>
+          App 裡和瀏覽器裡都一樣 —— App 和 youtube.com 收到的是同一路流。那 30 秒的等待存在於
+          影片本身，而不是畫在影片上方的方框裡。
+        </p>
+
+        <h2>AdFence 在 YouTube 頁面上做什麼</h2>
+        <p>
+          播放器周圍的頁面是普通網頁：圖片、腳本、面板、推薦影片欄目，其中大部分來自篩選器列表
+          已經認識的地方。開啟擴充功能後，這部分會明顯安靜下來 —— 推廣欄少了，頂部不再有橫幅，
+          頁面周圍的追蹤減少。改過任何開關後要重新載入頁面，新規則才會生效。
+        </p>
+        <p>
+          說清楚這是什麼、不是什麼：它是更乾淨的頁面和更少的追蹤，不是無廣告播放器，App 裡沒有
+          任何設定能把它變成無廣告播放器。
+        </p>
+
+        <h2>YouTube App 不是 Safari</h2>
+        <p>
+          在 iPhone 和 iPad 上，YouTube App 執行在 Safari 之外，完全用不了 Safari 擴充功能。在
+          別的 App 裡點 YouTube 連結時開啟的瀏覽器同樣用不了。擴充功能只存在於 Safari 中，所以
+          如果你在 App 裡看影片，這一套都不適用 —— 包括頁面清理。想要更乾淨的頁面，就在 Safari
+          裡開啟 youtube.com。
+        </p>
+
+<!--PROMO-->
+
+        <h2>其他影片網站往往不一樣</h2>
+        <p>
+          YouTube 不是所有影片網站的樣子。很多出版方把播放器連同廣告一起租給別人，廣告作為到
+          廣告伺服器的單獨請求抵達 —— 正是篩選器列表能拒絕的那類請求。快速分辨的辦法：
+        </p>
+        <ul>
+          <li>
+            <strong>廣告是一段獨立短片，有自己的倒數計時和播放器控制項</strong> —— 通常可以攔，
+            因為有外部東西必須載入。
+          </li>
+          <li>
+            <strong>廣告作為同一路連續流的一部分抵達</strong>，播放器表現得像什麼都沒發生 ——
+            和 YouTube 一樣是拼進去的，從 Safari 這一側攔不了。
+          </li>
+        </ul>
+        <p>
+          所以一個封鎖器能讓某個網站沒有廣告，卻對另一個毫髮無損，而沒有任何設定是錯的。
+        </p>
+
+        <h2>只調整一個網站</h2>
+        <p>
+          如果某個頁面總出現你不想看的某個元素，AdFence 有按網站的設定。開啟該位址的
+          <strong>Site Settings</strong>：<strong>Pause Blocking</strong> 整體退讓，
+          <strong>Custom Element Blocker</strong> 則讓你只加入一個元素。你建立的規則會收集在
+          <strong>Custom</strong> 標籤頁裡，可以隨時查看或刪除。
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-custom-rules.png"
+                 alt="AdFence 的 Custom Rules 畫面：頂部是 Enable Custom Rules 開關，中間的 Custom Rules 列表目前為空，並提示點 + 加入網站。"
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            按網站的規則都收集在 Custom 標籤頁，方便查看和刪除。
+          </figcaption>
+        </figure>
+
+        <h2>該消失的廣告還在</h2>
+        <p>
+          影片內那種情況已經說清楚，但其他廣告應該會消失。按順序檢查 —— 先做
+          <a href="why-safari-ad-blocker-not-working.html">30 秒擴充功能檢查</a>：
+        </p>
+        <ol>
+          <li>
+            <strong>Safari 裡的擴充功能開著。</strong> Safari 有自己的開關，更新可能把它關掉。
+          </li>
+          <li>
+            <strong>總開關開著。</strong> <strong>General</strong> 標籤頁頂部的
+            <strong>Blocking</strong> 必須開啟；它關著時，所有擴充功能載入的都是空規則列表。
+          </li>
+          <li>
+            <strong>網站被暫停了。</strong> <strong>Custom</strong> 標籤頁列出所有暫停的網站；
+            裡面的項目在刪除前一直暫停。
+          </li>
+          <li>
+            <strong>你在 Safari 裡，不在 App 內建瀏覽器。</strong> 從其他 App 開啟的連結用的是
+            它們自己的瀏覽器，那裡不執行任何擴充功能。
+          </li>
+          <li>
+            <strong>篩選器列表比網站的最新改動舊。</strong> 列表隨 App 更新而更新，不是持續更新。
+          </li>
+        </ol>
+
+        <h2>真正能去掉片頭廣告的辦法</h2>
+        <p>
+          在 iPhone、iPad 和 Mac 上，可靠的辦法是 YouTube 自己的付費方案，它在 App 和網站上都能
+          去掉廣告。這是影片如何投遞的事實，不是這個 App 的短板：內容封鎖器是一份 Safari 用於
+          請求和頁面元素的規則檔，而影片流的內部兩者都不是。如果 App Store 裡有 App 承諾相反的
+          事，仔細看看它實際改動了什麼 —— 它不是用 Safari 的內容封鎖 API 做到的。
+        </p>
+        <p>
+          AdFence 能做的是讓網路的其他部分安靜下來，包括影片周圍的頁面。這比一些廣告宣傳的承諾
+          要小，但它是站得住的。
+        </p>
+
+        <h2>常見問題</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>AdFence 會攔 YouTube 廣告嗎？</summary>
+            <div class="answer">
+              <p>它會攔掉影片周圍的廣告 —— 橫幅、推廣欄目、面板、頁面的雜亂 —— 但不攔影片內部的
+              片頭和片中廣告。那些和影片屬於同一路流，沒有單獨的請求可供內容封鎖器拒絕。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>為什麼有人說 Safari 封鎖器能去掉 YouTube 廣告？</summary>
+            <div class="answer">
+              <p>有時他們指的是播放器周圍的頁面，那確實會安靜下來。另一些時候他們描述的是另一種
+              工具 —— Safari 之外的瀏覽器或流量過濾 —— 那不是 Safari 內容封鎖器，也不可能成為。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>用 YouTube 網站而不是 App 會有幫助嗎？</summary>
+            <div class="answer">
+              <p>對影片內廣告沒有。網站和 App 收到的是同一路流，內容封鎖器改不了它。網站倒是能
+              享受頁面清理，而 App 因為不執行 Safari 擴充功能，完全提供不了這一點。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>有什麼能去掉片頭廣告？</summary>
+            <div class="answer">
+              <p>在 iPhone 和 iPad 上，可靠的辦法是 YouTube 自己的付費方案，App 和網頁都能去掉
+              廣告。Safari 擴充功能做不到，聲稱能做到的 App 要嘛在做內容封鎖模型之外的事，要嘛
+              描述的是一項經不起驗證的功能。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>其他影片網站的廣告不一樣嗎？</summary>
+            <div class="answer">
+              <p>往往不一樣。很多網站從廣告伺服器單獨請求影片廣告，那些請求可以像其他請求一樣被
+              拒絕。判斷標準是：廣告是帶自己倒數計時的獨立片段，還是作為一路連續流的一部分抵達。</p>
+            </div>
+          </details>
+        </div>
+

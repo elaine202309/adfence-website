@@ -1,0 +1,203 @@
+        <p>
+          La risposta breve, senza le solite cautele: <strong>non gli annunci dentro il video</strong>.
+          Un blocco dei contenuti per Safari funziona rifiutando richieste e nascondendo elementi di
+          pagina, e un pre-roll non somiglia a nessuno dei due. Fa parte dello stesso flusso media del
+          video su cui hai toccato, composto sui server di YouTube e consegnato dall’indirizzo di
+          YouTube. Non c’è una richiesta separata da rifiutare e nessun elemento da nascondere: non è
+          semplicemente una cosa a sé.
+        </p>
+
+        <p>
+          Quindi, se un blocco che fa tacere il resto del web qui non fa nulla, non c’è niente di
+          rotto. Sta facendo esattamente ciò che riesce a raggiungere, e questa è la parte che non
+          raggiunge.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>In breve:</strong> gli annunci dentro il video — pre-roll, mid-roll, i clip
+            sponsorizzati tra un capitolo e l’altro — non possono essere bloccati da un blocco dei
+            contenuti per Safari. Ciò che può diventare più tranquillo è tutto ciò che circonda il
+            player: banner, scaffali promossi, pannelli, il disordine dei commenti. Gli altri siti
+            video sono spesso diversi, perché molti chiedono i loro annunci separatamente.
+          </p>
+        </div>
+
+        <h2>Perché l’annuncio non è una richiesta separata</h2>
+        <p>
+          Un banner su un sito di notizie è una richiesta al server di un’altra azienda. Rifiutala e
+          lo spazio resta vuoto. Un pre-roll di YouTube non è così. YouTube lo inserisce nella risposta
+          video dalla sua parte, quindi quando il flusso arriva al tuo iPhone annuncio e video sono
+          una cosa continua da un solo indirizzo. Una lista di filtri può solo dire «non caricare
+          questo indirizzo» o «nascondi questo elemento». Nessuna delle due si applica.
+        </p>
+        <p>
+          È lo stesso nell’app e nel browser: l’app e youtube.com ricevono lo stesso flusso. I 30
+          secondi di attesa sono dentro il video, non in un riquadro disegnato sopra.
+        </p>
+
+        <h2>Cosa fa AdFence su una pagina di YouTube</h2>
+        <p>
+          La pagina intorno al player è web normale: immagini, script, pannelli e scaffali di video
+          consigliati, in gran parte provenienti da luoghi che una lista di filtri conosce già. Con le
+          estensioni attive quella parte diventa decisamente più tranquilla: meno righe sponsorizzate,
+          niente banner in alto, meno tracciamento intorno alla pagina. Ricarica la pagina dopo aver
+          cambiato un interruttore, così le nuove regole si applicano.
+        </p>
+        <p>
+          Vale la pena dire chiaramente cos’è e cosa non è: una pagina più pulita e meno tracciamento
+          intorno a un video, non un player senza pubblicità — e nessuna impostazione dell’app lo
+          trasformerà in uno.
+        </p>
+
+        <h2>L’app YouTube non è Safari</h2>
+        <p>
+          Su iPhone e iPad l’app YouTube gira fuori da Safari e non può usare le estensioni di Safari.
+          Nemmeno il browser che si apre quando tocchi un link di YouTube dentro un’altra app.
+          L’estensione esiste solo dentro Safari, quindi se guardi nell’app niente di tutto questo vale
+          — compresa la pulizia della pagina. Se vuoi la pagina più tranquilla, apri youtube.com in
+          Safari.
+        </p>
+
+<!--PROMO-->
+
+        <h2>Gli altri siti video sono spesso diversi</h2>
+        <p>
+          YouTube non è tutti i siti video. Molti editori affittano il loro player e i suoi annunci da
+          qualcun altro, e l’annuncio arriva come richiesta separata a un ad server — esattamente il
+          tipo di richiesta che una lista di filtri può rifiutare. Il modo rapido per distinguerli:
+        </p>
+        <ul>
+          <li>
+            <strong>L’annuncio è un clip a parte, con il suo conto alla rovescia e i suoi comandi del
+            player</strong> — spesso bloccabile, perché qualcosa di esterno ha dovuto caricarsi.
+          </li>
+          <li>
+            <strong>L’annuncio arriva come parte di un unico flusso continuo</strong>, e il player si
+            comporta come se non fosse cambiato nulla — inserito come su YouTube, e non bloccabile da
+            Safari.
+          </li>
+        </ul>
+        <p>
+          È per questo che un blocco può rendere un sito senza pubblicità e lasciarne un altro intatto,
+          senza che nessuna impostazione sia sbagliata.
+        </p>
+
+        <h2>Regolare un solo sito</h2>
+        <p>
+          Se una pagina continua a mostrare un elemento che preferiresti non vedere, AdFence ha
+          strumenti per sito. Apri <strong>Site Settings</strong> per quell’indirizzo:
+          <strong>Pause Blocking</strong> si ritira del tutto, mentre
+          <strong>Custom Element Blocker</strong> ti lascia aggiungere un singolo elemento. Le regole
+          che crei si raccolgono nella scheda <strong>Custom</strong>, dove puoi rivederle o
+          eliminarle.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-custom-rules.png"
+                 alt="La schermata Custom Rules di AdFence: in alto un interruttore Enable Custom Rules, sotto un elenco Custom Rules attualmente vuoto e l’invito a toccare + per aggiungere un sito."
+                 width="520" height="1127" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Le regole per sito si raccolgono nella scheda Custom, pronte da rivedere o eliminare.
+          </figcaption>
+        </figure>
+
+        <h2>Se restano annunci che dovrebbero sparire</h2>
+        <p>
+          Il caso del video è chiarito, ma gli altri annunci dovrebbero andarsene. Controlla in
+          quest’ordine — <a href="why-safari-ad-blocker-not-working.html">il controllo
+          dell’estensione da 30 secondi</a> viene per primo:
+        </p>
+        <ol>
+          <li>
+            <strong>L’estensione è attiva in Safari.</strong> Safari ha un interruttore proprio, e gli
+            aggiornamenti possono spegnerlo.
+          </li>
+          <li>
+            <strong>L’interruttore principale è attivo.</strong> <strong>Blocking</strong> in cima
+            alla scheda <strong>General</strong> deve essere attivo; altrimenti ogni estensione carica
+            una lista di regole vuota.
+          </li>
+          <li>
+            <strong>Il sito è in pausa.</strong> La scheda <strong>Custom</strong> elenca ogni sito in
+            pausa; ciò che c’è resta in pausa finché non lo rimuovi.
+          </li>
+          <li>
+            <strong>Sei in Safari, non in un browser integrato.</strong> I link aperti da altre app
+            usano il loro browser, dove nessuna estensione viene eseguita.
+          </li>
+          <li>
+            <strong>Le liste di filtri sono più vecchie dell’ultima modifica del sito.</strong> Le
+            liste si aggiornano con gli aggiornamenti dell’app, non in continuo.
+          </li>
+        </ol>
+
+        <h2>Cosa toglie davvero i pre-roll</h2>
+        <p>
+          Su iPhone, iPad e Mac il modo affidabile è l’offerta a pagamento di YouTube, che toglie gli
+          annunci nell’app e sul sito. È un fatto su come viene consegnato il video, non un limite di
+          questa app: un blocco dei contenuti è un file di regole che Safari applica a richieste ed
+          elementi di pagina, e l’interno di un flusso video non è né l’uno né l’altro. Se un’app
+          dell’App Store promette il contrario, guarda bene cosa cambia davvero — non lo fa con le API
+          di blocco dei contenuti di Safari.
+        </p>
+        <p>
+          Quello che AdFence può fare è far tacere il resto del web, compresa la pagina intorno a un
+          video. È una promessa più piccola di quella di alcune pubblicità, ed è quella che regge.
+        </p>
+
+        <h2>Domande frequenti</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>AdFence blocca gli annunci di YouTube?</summary>
+            <div class="answer">
+              <p>Blocca la pubblicità intorno a un video — banner, scaffali promossi, pannelli e il
+              disordine della pagina — ma non gli annunci pre-roll e mid-roll dentro il video stesso.
+              Fanno parte dello stesso flusso del video, quindi non c’è una richiesta separata che un
+              blocco dei contenuti possa rifiutare.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Perché alcuni dicono che un blocco per Safari toglie gli annunci di YouTube?</summary>
+            <div class="answer">
+              <p>A volte intendono la pagina intorno al player, che effettivamente diventa più
+              tranquilla. Altre volte descrivono un altro tipo di strumento — un browser o un filtro
+              del traffico fuori da Safari — che non è ciò che un blocco dei contenuti per Safari è,
+              né può esserlo.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Usare il sito YouTube invece dell’app aiuta?</summary>
+            <div class="answer">
+              <p>Non per gli annunci dentro il video. Il sito e l’app ricevono lo stesso flusso, e un
+              blocco dei contenuti non può modificarlo. Il sito però beneficia della pulizia della
+              pagina, che l’app non può offrire affatto perché non esegue estensioni di Safari.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>C’è qualcosa che toglie i pre-roll?</summary>
+            <div class="answer">
+              <p>Su iPhone e iPad il modo affidabile è l’offerta a pagamento di YouTube, che toglie gli
+              annunci nell’app e sul web. Le estensioni di Safari non possono, e un’app che lo
+              promette o sta facendo qualcosa fuori dal modello di blocco dei contenuti o sta
+              descrivendo una funzione che non regge.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Gli annunci sugli altri siti video sono diversi?</summary>
+            <div class="answer">
+              <p>Spesso sì. Molti siti chiedono i loro annunci video separatamente a un ad server, e
+              quelle richieste possono essere rifiutate come qualsiasi altra. Il segnale è se
+              l’annuncio è un clip a parte con il suo conto alla rovescia o arriva come parte di un
+              unico flusso continuo.</p>
+            </div>
+          </details>
+        </div>
+
