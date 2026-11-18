@@ -1,0 +1,179 @@
+        <p>
+          有時這個請求是合理的：一家小型出版方請你允許那些為文章付費的廣告。有時這道牆激進到
+          讓頁面完全沒法用，那是網站不講理。無論哪種，你都不必為了過去而把封鎖器整個關掉 ——
+          也不需要先去猜這是哪一類網站。
+        </p>
+
+        <p>
+          了解頁面是怎麼知道的會有幫助。廣告封鎖偵測通常只是一個小測試。頁面裡放一個偽裝成廣告
+          的元素 —— 一個帶廣告類名的橫幅，或者一個位址看起來像廣告伺服器的腳本 —— 然後檢查它
+          是否出現。內容封鎖器正好隱藏或拒絕這些東西，所以元素缺席就是訊號。有些網站更進一步，
+          檢查版面，或者檢查本來該有廣告的空缺。
+        </p>
+
+        <p>
+          這也是為什麼這道牆顯得冷冰冰：它確實冷冰冰。一個腳本檢查了一個元素，沒找到就畫了一個
+          框。網站根本不知道你是誰。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>簡單說：</strong>在 <strong>General</strong> 標籤頁開啟
+            <strong>Bypass Anti-Adblock</strong>，然後重新載入頁面。如果某個網站還是能識破，只在
+            <strong>Site Overrides</strong> 裡給那個位址放行廣告。兩步的細節都在下面。
+          </p>
+        </div>
+
+        <h2>開啟繞過</h2>
+        <ol>
+          <li>開啟 AdFence，留在 <strong>General</strong> 標籤頁。</li>
+          <li>在 <strong>Blocking List</strong> 下開啟 <strong>Bypass Anti-Adblock</strong>。</li>
+          <li>回到 Safari，重新載入頁面。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence 的 General 標籤頁：頂部是 Blocking 總開關，下面 Blocking List 裡有 Block Ads、Bypass Anti-Adblock、Safe Browsing 和 Block Trackers。"
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Bypass Anti-Adblock 和其餘封鎖規則一起放在 General 標籤頁。
+          </figcaption>
+        </figure>
+
+        <p>
+          這個開關針對常見的偵測模式，並隱藏它們畫出來的那道牆。它是全域設定，一次對所有網站
+          生效；從不偵測封鎖器的網站不會感覺到任何差別。
+        </p>
+
+        <p>
+          和篩選器列表一樣，反廣告封鎖規則隨 App 下發，也隨 App 更新。改了偵測方式的網站會在下
+          一次發佈時被補上 —— 這個落差是更新節奏，不是你哪裡設錯了。
+        </p>
+
+<!--PROMO-->
+
+        <h2>牆還在的時候</h2>
+        <p>
+          有些網站用的偵測還沒被隨 App 下發的規則覆蓋。這裡有三個更窄的選擇，從最寬鬆到最徹底。
+        </p>
+
+        <h3>仍然被識破的網站</h3>
+        <p>
+          開啟該位址的 <strong>Site Settings</strong>，在 <strong>Site Overrides</strong> 下開啟
+          <strong>Whitelist Ads</strong>。該網站的廣告請求得以通過，偵測不再找到被攔的元素，而
+          其他所有篩選器在這個網站上照常運作。只影響那一個位址。
+        </p>
+
+        <h3>還有其他故障的網站</h3>
+        <p>
+          如果頁面在牆之外還有問題 —— 影片播放器起不來、表單送不出去 —— 對這個位址使用
+          <strong>Pause Blocking</strong>。那裡全部關閉，其他什麼都不變。項目會留在列表裡，直到
+          你刪除，不管當初是什麼時候加上的。
+        </p>
+
+        <h3>可以直接隱藏的牆</h3>
+        <p>
+          當內容已經在頁面上、只是有一個面板蓋在上面時，這道牆就是一個普通元素。
+          <strong>Site Settings</strong> 裡的 <strong>Custom Element Blocker</strong> 讓你加入那
+          一個元素並隱藏它；規則會收集在 <strong>Custom</strong> 標籤頁，之後隨時可以刪除。
+        </p>
+
+        <h2>它繞不過的東西</h2>
+        <ul>
+          <li>
+            <strong>伺服器從未傳送的內容。</strong> 真正的付費牆在文章到達瀏覽器之前就扣住了。
+            Safari 裡沒有任何辦法讓伺服器傳送它。
+          </li>
+          <li>
+            <strong>比隨附規則更新的偵測。</strong> 偵測服務商會改測試；規則隨 App 更新追上來。
+          </li>
+          <li>
+            <strong>App 內建瀏覽器。</strong> 在 Instagram、Facebook、Gmail 或 Reddit 裡開啟的
+            連結用的是那些 App 自己的瀏覽器，Safari 擴充功能在那裡根本不會執行。
+          </li>
+        </ul>
+
+        <h2>繞過它，公平嗎？</h2>
+        <p>
+          這是你和網站之間的事。有些網站直接詢問，並提供付費或訂閱的途徑；有些在條款裡禁止封鎖。
+          App 給你開關，網站決定它提供什麼。如果你經常讀一家小媒體，為那一個位址暫停是合理的
+          交換 —— 網路的其他部分繼續被封鎖，而他們的廣告維持著你來看的那一頁。
+        </p>
+
+        <h2>牆還在的話</h2>
+        <p>
+          按順序檢查 —— 前三項能解決大多數情況：
+        </p>
+        <ol>
+          <li>
+            <strong>Safari 裡的擴充功能開著。</strong> Safari 有自己的開關，更新可能把它關掉。
+            30 秒檢查寫在這<a href="why-safari-ad-blocker-not-working.html">篇文章裡</a>。
+          </li>
+          <li>
+            <strong>總開關開著。</strong> <strong>General</strong> 標籤頁頂部的
+            <strong>Blocking</strong> 必須開啟；它關著時，所有擴充功能載入的都是空規則列表。
+          </li>
+          <li>
+            <strong>Bypass Anti-Adblock 開著。</strong> 如果你為某個網站開啟後又關掉，牆會在所有
+            地方回來。
+          </li>
+          <li>
+            <strong>網站沒有被暫停或放行廣告。</strong> 兩者都是網站設定，都會讓偵測故意成功。
+          </li>
+          <li>
+            <strong>好好重新載入，或者用私密瀏覽視窗。</strong> 已載入的頁面保留先前檢查的
+            結果；私密瀏覽視窗從乾淨狀態開始，能告訴你差別在規則還是儲存的狀態。
+          </li>
+        </ol>
+        <p>
+          如果都不管用，寫信給 <a href="mailto:support@mxcode.com">support@mxcode.com</a>，附上
+          頁面位址和那道牆的截圖。這就夠我們去看這個偵測了。
+        </p>
+
+        <h2>常見問題</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>我需要為某些網站關掉 Bypass Anti-Adblock 嗎？</summary>
+            <div class="answer">
+              <p>不需要。如果某個網站在開啟時出問題，更窄的工具是按網站的：在
+              <strong>Site Overrides</strong> 裡給那個位址放行廣告，或者只對它暫停封鎖。全域
+              開關可以一直開著。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>以前能用的網站為什麼牆又回來了？</summary>
+            <div class="answer">
+              <p>偵測服務商會改檢查方式，而對付它們的規則隨 AdFence 更新下發。在網站改動和下一次
+              發佈之間，舊規則可能已經對不上。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>網站知道我繞過了它的牆嗎？</summary>
+            <div class="answer">
+              <p>它能看出牆的元素被隱藏了，有些網站會重新畫出來。那是對隱藏的偵測，不是對你的
+              識別：不涉及帳號、姓名或瀏覽記錄。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>反廣告封鎖的牆和付費牆是一回事嗎？</summary>
+            <div class="answer">
+              <p>不是。付費牆在伺服器上扣住文章，直到你訂閱，Safari 裡沒有任何辦法找回伺服器
+              沒送的東西。反廣告封鎖的牆是在內容到達之後畫在頁面上的。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>開啟它會讓頁面變慢嗎？</summary>
+            <div class="answer">
+              <p>它只是給 Safari 已經在套用的同一份規則表增加規則，不會有額外的連線或背景程序。
+              對頁面速度的影響你不會察覺；這個開關是為了擋住牆，而不是改變頁面如何載入。</p>
+            </div>
+          </details>
+        </div>
+

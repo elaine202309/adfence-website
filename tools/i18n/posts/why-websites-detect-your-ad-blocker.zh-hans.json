@@ -1,0 +1,14 @@
+{
+  "title": "网站为什么让我关掉广告拦截器？ — 博客 — AdFence，广告与追踪拦截器",
+  "headline": "网站为什么让我关掉广告拦截器？",
+  "description": "反广告拦截墙通常只是一个自动化小检测，而 App 有对应的开关。它测什么、怎样只给一个地址放行，以及诚实的边界。",
+  "teaser": "那道墙是自动化的，往往只检查一个元素 —— 而 App 里有专门的开关。它测的是什么、怎样只给一个地址放行、哪些绕不过去。",
+  "lede": "第一段还没开始，一个方框盖住了文章：「我们发现你在使用广告拦截器。」这句话背后是一个很小的自动检查 —— 而它有对应的开关。",
+  "metaLine": "反广告拦截 · 2026 年 11 月 18 日 · 6 分钟阅读",
+  "section": "反广告拦截",
+  "written": "写于 2026 年 11 月 18 日 · AdFence",
+  "allPosts": "← 全部文章",
+  "crumbBlog": "博客",
+  "promo": "<strong>Bypass Anti-Adblock</strong> 是 <strong>AdFence</strong> 里的开关之一 —— 一款适用于 iPhone、iPad 和 Mac 的 Safari 广告拦截器。",
+  "image": "adfence-general-settings.png"
+}

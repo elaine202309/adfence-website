@@ -38,6 +38,9 @@
   contact address.
 - [Blog](https://adfence.mxcode.com/blog.html): Notes on how Safari content
   blocking actually behaves.
+- [Why do websites ask you to turn off your ad blocker?](https://adfence.mxcode.com/blog/why-websites-detect-your-ad-blocker.html):
+  How anti-adblock detection works, the Bypass Anti-Adblock switch, per-site
+  whitelisting, and why paywalls can't be bypassed.
 - [Can you block YouTube ads in Safari?](https://adfence.mxcode.com/blog/can-you-block-youtube-ads-in-safari.html):
   Why in-video ads can't be blocked by a content blocker — they are part of the
   stream — what the page around the player allows, and where the honest line is.

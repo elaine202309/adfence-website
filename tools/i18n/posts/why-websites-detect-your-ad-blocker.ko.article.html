@@ -1,0 +1,202 @@
+        <p>
+          때로는 이 요청이 정당합니다. 글을 떠받치는 광고를 허용해 달라는 작은 출판사의 요청일 수
+          있습니다. 때로는 그 벽이 너무 공격적이라 페이지가 쓸모없어지고, 그때는 사이트가 과한
+          것입니다. 어느 쪽이든, 통과하려고 차단기를 전부 끌 필요는 없습니다 — 어떤 종류의
+          사이트인지 먼저 짐작할 필요도 없습니다.
+        </p>
+
+        <p>
+          페이지가 어떻게 알아차리는지 알면 도움이 됩니다. 광고 차단 감지는 보통 작은 테스트
+          하나입니다. 페이지에 광고처럼 보이는 요소 — 광고 같은 클래스 이름의 배너, 혹은 광고
+          서버처럼 보이는 주소의 스크립트 — 를 넣고, 그 요소가 나타났는지 확인합니다. 콘텐츠
+          차단기는 바로 그런 것들을 숨기거나 거절하므로, 요소가 없다는 것이 증거가 됩니다. 어떤
+          사이트는 더 나아가 레이아웃을, 혹은 광고가 있어야 할 빈자리를 살핍니다.
+        </p>
+
+        <p>
+          그 벽이 개인적이지 않게 느껴지는 이유이기도 합니다. 실제로 개인적이지 않습니다. 스크립트가
+          요소 하나를 확인하고, 없으니 상자를 그렸을 뿐입니다. 사이트는 당신이 누구인지
+          모릅니다.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>요약하면:</strong> <strong>General</strong> 탭에서
+            <strong>Bypass Anti-Adblock</strong>을 켜고 페이지를 새로고침하세요. 특정 사이트가
+            여전히 알아챈다면 <strong>Site Overrides</strong>에서 그 주소에만 광고를 허용합니다.
+            두 가지 방법 모두 아래에 있습니다.
+          </p>
+        </div>
+
+        <h2>우회 기능 켜기</h2>
+        <ol>
+          <li>AdFence를 열고 <strong>General</strong> 탭에 그대로 있습니다.</li>
+          <li><strong>Blocking List</strong> 아래에서 <strong>Bypass Anti-Adblock</strong>을
+          켭니다.</li>
+          <li>Safari로 돌아가 페이지를 새로고침합니다.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence의 General 탭: 맨 위에 Blocking 기본 스위치, 그 아래 Blocking List에 Block Ads, Bypass Anti-Adblock, Safe Browsing, Block Trackers 스위치가 있음."
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Bypass Anti-Adblock은 다른 차단 규칙과 함께 General 탭에 있습니다.
+          </figcaption>
+        </figure>
+
+        <p>
+          이 스위치는 흔한 감지 패턴에 대응하고, 그들이 그리는 벽을 숨깁니다. 전체 설정이라 모든
+          사이트에 한 번에 적용됩니다. 차단기를 확인하지 않는 사이트에서는 아무 차이도 느껴지지
+          않습니다.
+        </p>
+
+        <p>
+          필터 목록과 마찬가지로 안티 애드블록 규칙은 앱과 함께 제공되고 앱 업데이트와 함께
+          갱신됩니다. 감지 방식을 바꾼 사이트는 다음 릴리스에서 따라잡습니다 — 이 지연은 업데이트
+          주기 때문이고, 설정을 잘못한 것이 아닙니다.
+        </p>
+
+<!--PROMO-->
+
+        <h2>그래도 벽이 나온다면</h2>
+        <p>
+          함께 제공되는 규칙이 아직 다루지 못하는 감지를 쓰는 사이트가 있습니다. 더 좁은 선택지가
+          세 가지 있고, 관대함이 낮은 순서대로 다음과 같습니다.
+        </p>
+
+        <h3>여전히 알아채는 사이트</h3>
+        <p>
+          그 주소의 <strong>Site Settings</strong>를 열고 <strong>Site Overrides</strong>에서
+          <strong>Whitelist Ads</strong>를 켭니다. 그 사이트의 광고 요청이 통과되어 감지가 차단된
+          요소를 찾지 못하고, 그 사이트에서 다른 모든 필터는 그대로 작동합니다. 영향을 받는 것은
+          그 주소뿐입니다.
+        </p>
+
+        <h3>다른 문제도 있는 사이트</h3>
+        <p>
+          벽 말고도 페이지가 이상하다면 — 동영상 플레이어가 시작되지 않거나, 양식이 제출되지
+          않는다면 — 그 주소에 <strong>Pause Blocking</strong>을 사용하세요. 거기서는 모두 꺼지고
+          다른 것은 바뀌지 않습니다. 항목은 삭제할 때까지 목록에 남습니다. 언제 추가했는지는
+          상관없습니다.
+        </p>
+
+        <h3>그냥 숨길 수 있는 벽</h3>
+        <p>
+          콘텐츠가 이미 페이지에 있고 패널만 덮여 있다면, 그 벽도 평범한 요소입니다.
+          <strong>Site Settings</strong>의 <strong>Custom Element Blocker</strong>로 그 요소를
+          추가해 숨길 수 있습니다. 규칙은 <strong>Custom</strong> 탭에 모여 나중에 지울 수
+          있습니다.
+        </p>
+
+        <h2>넘지 못하는 것</h2>
+        <ul>
+          <li>
+            <strong>서버가 한 번도 보내지 않은 콘텐츠.</strong> 진짜 페이월은 글이 브라우저에
+            도착하기 전에 서버 쪽에서 붙잡습니다. Safari의 어떤 것도 서버가 보내도록 만들 수
+            없습니다.
+          </li>
+          <li>
+            <strong>함께 제공되는 규칙보다 새로운 감지.</strong> 감지 업체는 테스트를 바꾸고,
+            규칙은 앱 업데이트로 따라잡습니다.
+          </li>
+          <li>
+            <strong>앱 내장 브라우저.</strong> Instagram, Facebook, Gmail, Reddit에서 연 링크는 그
+            앱의 브라우저를 쓰고, Safari 확장 프로그램은 거기서 실행되지 않습니다.
+          </li>
+        </ul>
+
+        <h2>우회하는 것이 공정한가요?</h2>
+        <p>
+          그것은 당신과 사이트 사이의 일입니다. 어떤 사이트는 직접 요청하고 결제나 구독의 길을
+          제공합니다. 다른 사이트는 약관에서 차단을 금지합니다. 앱은 스위치를 주고, 사이트는
+          무엇을 제공할지 결정합니다. 작은 매체를 자주 읽는다면 그 한 주소에만 일시 중지하는 것은
+          합리적인 교환입니다 — 웹의 나머지는 계속 차단되고, 그들의 광고가 당신이 온 페이지를
+          지탱합니다.
+        </p>
+
+        <h2>벽이 여전히 있다면</h2>
+        <p>
+          다음 순서로 확인하세요 — 앞의 세 가지로 대부분 해결됩니다.
+        </p>
+        <ol>
+          <li>
+            <strong>Safari에서 확장 프로그램이 켜져 있음.</strong> Safari에 자체 스위치가 있고,
+            업데이트가 꺼 버릴 수 있습니다. 30초 점검은
+            <a href="why-safari-ad-blocker-not-working.html">이 글</a>에 있습니다.
+          </li>
+          <li>
+            <strong>기본 스위치가 켜져 있음.</strong> <strong>General</strong> 탭 맨 위의
+            <strong>Blocking</strong>도 켜져 있어야 합니다. 꺼져 있는 동안에는 모든 확장
+            프로그램이 빈 규칙 목록을 불러옵니다.
+          </li>
+          <li>
+            <strong>Bypass Anti-Adblock이 켜져 있음.</strong> 어떤 사이트를 위해 켰다가 나중에
+            껐다면, 벽은 어디서나 돌아옵니다.
+          </li>
+          <li>
+            <strong>사이트가 일시 중지되거나 광고 허용 상태가 아님.</strong> 둘 다 사이트 설정이고,
+            둘 다 감지를 일부러 성공시킵니다.
+          </li>
+          <li>
+            <strong>제대로 새로고침하거나 개인 정보 보호 브라우징 창에서 시도.</strong> 이미
+            로드된 페이지는 이전 확인 결과를 유지합니다. 개인 정보 보호 브라우징 창은 깨끗한
+            상태에서 시작하므로, 차이가 규칙 때문인지 저장된 상태 때문인지 알려 줍니다.
+          </li>
+        </ol>
+        <p>
+          그래도 안 된다면 페이지 주소와 벽의 스크린샷을 첨부해
+          <a href="mailto:support@mxcode.com">support@mxcode.com</a>으로 보내 주세요. 그것만으로도
+          감지를 살펴보기에 충분합니다.
+        </p>
+
+        <h2>자주 묻는 질문</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>사이트에 따라 Bypass Anti-Adblock을 꺼야 하나요?</summary>
+            <div class="answer">
+              <p>아니요. 켜 둔 상태에서 특정 사이트가 문제를 일으킨다면, 더 좁은 도구는 사이트
+              단위입니다: <strong>Site Overrides</strong>에서 그 주소의 광고를 허용하거나, 그
+              사이트만 차단을 일시 중지하세요. 전체 스위치는 켜 둔 채로 두면 됩니다.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>예전에 되던 사이트에서 벽이 다시 나오는 이유는 무엇인가요?</summary>
+            <div class="answer">
+              <p>감지 업체는 테스트를 바꾸고, 그에 대응하는 규칙은 AdFence 업데이트로 옵니다. 사이트의
+              변경과 다음 릴리스 사이에는 이전 규칙이 더 이상 맞지 않을 수 있습니다.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>사이트가 제가 벽을 우회한 것을 아나요?</summary>
+            <div class="answer">
+              <p>벽 요소가 숨겨진 것은 알 수 있고, 어떤 사이트는 다시 그려 넣습니다. 그것은 숨김에
+              대한 감지이지 당신을 식별하는 것이 아닙니다. 계정, 이름, 브라우징 기록은 관련되지
+              않습니다.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>안티 애드블록 벽과 페이월은 같은 것인가요?</summary>
+            <div class="answer">
+              <p>아니요. 페이월은 구독할 때까지 글을 서버에서 붙잡고 있고, 서버가 보내지 않은 것을
+              Safari에서 되찾을 수는 없습니다. 안티 애드블록 벽은 콘텐츠가 이미 도착한 뒤 페이지에
+              그려지는 것입니다.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>켜면 페이지가 느려지나요?</summary>
+            <div class="answer">
+              <p>Safari가 이미 적용하는 같은 규칙 목록에 규칙을 더할 뿐이라 추가 연결이나 백그라운드
+              프로세스는 없습니다. 속도에 미치는 영향은 느낄 수 없습니다. 이 스위치는 벽을 멈추기
+              위한 것이지 페이지 로딩 방식을 바꾸기 위한 것이 아닙니다.</p>
+            </div>
+          </details>
+        </div>
+

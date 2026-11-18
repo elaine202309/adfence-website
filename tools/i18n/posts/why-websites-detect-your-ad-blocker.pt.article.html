@@ -1,0 +1,202 @@
+        <p>
+          Por vezes o pedido é justo: um pequeno editor que pede a publicidade que paga o artigo.
+          Outras vezes o muro é agressivo ao ponto de tornar a página inútil, e aí é o site que está a
+          exagerar. De qualquer forma, não tem de desligar o bloqueador em todo o lado para passar — e
+          não tem de adivinhar que tipo de site tem à frente.
+        </p>
+
+        <p>
+          Ajuda saber como a página o descobre. A deteção de bloqueadores costuma ser um pequeno
+          teste. A página inclui um elemento feito para parecer um anúncio — um banner com um nome de
+          classe que soa a publicidade, ou um script num endereço que parece um servidor de anúncios
+          — e depois verifica se esse elemento apareceu. Um bloqueador de conteúdos esconde ou recusa
+          exatamente essas coisas, por isso o elemento em falta é a pista. Alguns sites vão mais longe
+          e verificam o esquema da página, ou o espaço vazio onde devia estar um anúncio.
+        </p>
+
+        <p>
+          É também por isso que o muro parece impessoal: é. Um script verificou um elemento e desenhou
+          uma caixa quando não o encontrou. O site não faz ideia de quem é.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>Em resumo:</strong> no separador <strong>General</strong>, ative
+            <strong>Bypass Anti-Adblock</strong> e recarregue a página. Se um site específico ainda o
+            deteta, permita os anúncios só para esse endereço em <strong>Site Overrides</strong>. Os
+            dois caminhos estão explicados abaixo.
+          </p>
+        </div>
+
+        <h2>Ativar a contornagem</h2>
+        <ol>
+          <li>Abra o AdFence e fique no separador <strong>General</strong>.</li>
+          <li>Em <strong>Blocking List</strong>, ative <strong>Bypass Anti-Adblock</strong>.</li>
+          <li>Volte ao Safari e recarregue a página.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="O separador General do AdFence: o interruptor principal Blocking no topo e, em Blocking List, os interruptores Block Ads, Bypass Anti-Adblock, Safe Browsing e Block Trackers."
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            O Bypass Anti-Adblock fica com as restantes regras de bloqueio, no separador General.
+          </figcaption>
+        </figure>
+
+        <p>
+          O interruptor contraria os padrões de deteção comuns e esconde o muro que desenham. É uma
+          definição global, por isso aplica-se a todos os sites ao mesmo tempo; os sites que nunca
+          verificam a presença de um bloqueador não notam diferença.
+        </p>
+
+        <p>
+          Tal como as listas de filtros, as regras anti-adblock vêm com a app e atualizam-se com ela.
+          Um site que mude o seu teste é apanhado na versão seguinte — esse atraso segue o calendário
+          de atualizações, não é uma definição mal feita.
+        </p>
+
+<!--PROMO-->
+
+        <h2>Quando o muro continua a aparecer</h2>
+        <p>
+          Alguns sites usam um teste que as regras incluídas ainda não cobrem. Há três opções mais
+          estreitas, da menos à mais permissiva.
+        </p>
+
+        <h3>Um site que ainda o apanha</h3>
+        <p>
+          Abra as <strong>Site Settings</strong> desse endereço e, em <strong>Site Overrides</strong>,
+          ative <strong>Whitelist Ads</strong>. Os pedidos de publicidade do site passam, a deteção
+          deixa de encontrar um elemento bloqueado, e todos os outros filtros continuam ativos nesse
+          site. Afeta apenas esse endereço.
+        </p>
+
+        <h3>Um site que se avaria de outra forma</h3>
+        <p>
+          Se a página se portar mal para além do muro — um leitor de vídeo que não arranca, um
+          formulário que não envia — use <strong>Pause Blocking</strong> para esse endereço. Lá está
+          tudo desligado e nada mais muda. A entrada fica na lista até a remover, seja qual for a sua
+          idade.
+        </p>
+
+        <h3>Um muro que se pode simplesmente esconder</h3>
+        <p>
+          Quando o conteúdo já está na página e só um painel o cobre, o muro é um elemento como
+          qualquer outro. O <strong>Custom Element Blocker</strong> nas
+          <strong>Site Settings</strong> deixa-o adicionar esse elemento e escondê-lo; as regras
+          reúnem-se no separador <strong>Custom</strong>, prontas a remover mais tarde.
+        </p>
+
+        <h2>O que não consegue ultrapassar</h2>
+        <ul>
+          <li>
+            <strong>Conteúdo que o servidor nunca enviou.</strong> Uma paywall verdadeira retém o
+            artigo antes de chegar ao navegador. Nada no Safari consegue obrigar o servidor a
+            enviá-lo.
+          </li>
+          <li>
+            <strong>Um teste mais recente do que as regras incluídas.</strong> Os fornecedores de
+            deteção mudam os testes; as regras recuperam com as atualizações da app.
+          </li>
+          <li>
+            <strong>Navegadores integrados.</strong> Os links abertos no Instagram, Facebook, Gmail ou
+            Reddit usam os navegadores dessas apps, onde nenhuma extensão do Safari corre.
+          </li>
+        </ul>
+
+        <h2>Passar por cima é justo?</h2>
+        <p>
+          É uma questão entre si e o site. Alguns pedem diretamente e oferecem uma forma de pagar ou
+          subscrever; outros fixam termos que proíbem o bloqueio. A app dá-lhe o interruptor, o site
+          decide o que serve. Se lê regularmente uma pequena publicação, pausar só para esse endereço
+          é uma troca razoável — o resto da web continua bloqueado, e a publicidade deles sustenta a
+          página por que veio.
+        </p>
+
+        <h2>Se o muro continuar lá</h2>
+        <p>
+          Verifique por esta ordem — os três primeiros resolvem a maioria dos casos:
+        </p>
+        <ol>
+          <li>
+            <strong>A extensão está ativa no Safari.</strong> O Safari tem o seu próprio interruptor,
+            e as atualizações podem desligá-lo. A verificação de 30 segundos está
+            <a href="why-safari-ad-blocker-not-working.html">neste artigo</a>.
+          </li>
+          <li>
+            <strong>O interruptor principal está ativo.</strong> <strong>Blocking</strong> no topo do
+            separador <strong>General</strong> também tem de estar ligado; enquanto estiver desligado,
+            cada extensão carrega uma lista de regras vazia.
+          </li>
+          <li>
+            <strong>O Bypass Anti-Adblock está ativo.</strong> Se o ativou para um site e depois o
+            desligou, o muro volta em todo o lado.
+          </li>
+          <li>
+            <strong>O site não está em pausa nem com anúncios permitidos.</strong> Ambas são
+            definições por site, e ambas fazem a deteção ter sucesso de propósito.
+          </li>
+          <li>
+            <strong>Recarregue em condições, ou experimente uma janela privada.</strong> Uma página já
+            carregada mantém o resultado da verificação anterior; uma janela privada começa limpa e
+            diz-lhe se a diferença é a regra ou um estado guardado.
+          </li>
+        </ol>
+        <p>
+          Se nada disto ajudar, escreva para
+          <a href="mailto:support@mxcode.com">support@mxcode.com</a> com o endereço da página e uma
+          captura de ecrã do muro. Chega para olharmos para o teste.
+        </p>
+
+        <h2>Perguntas frequentes</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Tenho de desligar o Bypass Anti-Adblock para alguns sites?</summary>
+            <div class="answer">
+              <p>Não. Se um site se portar mal com ele ligado, as ferramentas mais estreitas são por
+              site: permita os anúncios para esse endereço em <strong>Site Overrides</strong>, ou
+              pause o bloqueio só para ele. O interruptor global pode ficar ligado.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Porque é que o muro volta num site que funcionava?</summary>
+            <div class="answer">
+              <p>Os fornecedores de deteção mudam os testes, e as regras que os contrariam vêm com as
+              atualizações do AdFence. Entre a mudança do site e a versão seguinte, as regras antigas
+              podem já não corresponder.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>O site sabe que contornei o seu muro?</summary>
+            <div class="answer">
+              <p>Consegue perceber que o elemento do muro está escondido, e alguns sites voltam a
+              desenhá-lo. É a deteção do ocultamento, não a identificação de quem é: não estão
+              envolvidos conta, nome ou histórico de navegação.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Um muro anti-adblock é o mesmo que uma paywall?</summary>
+            <div class="answer">
+              <p>Não. Uma paywall retém o artigo no servidor até subscrever, e nada no Safari consegue
+              recuperar o que o servidor não enviou. Um muro anti-adblock é desenhado na página depois
+              de o conteúdo já ter chegado.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Ativá-lo torna as páginas mais lentas?</summary>
+            <div class="answer">
+              <p>Acrescenta regras à mesma lista que o Safari já aplica, por isso não há ligação extra
+              nem processo em segundo plano. O efeito na velocidade não se nota; o interruptor existe
+              para travar o muro, não para mudar a forma como a página carrega.</p>
+            </div>
+          </details>
+        </div>
+

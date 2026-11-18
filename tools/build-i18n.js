@@ -139,6 +139,14 @@ const HOWTO_SHOTS = [
    checkPages() throws if the counts disagree. */
 const POSTS = [
   {
+    slug: 'why-websites-detect-your-ad-blocker',
+    url: 'blog/why-websites-detect-your-ad-blocker.html',
+    title: 'Why do websites ask you to turn off your ad blocker?',
+    excerpt: 'The wall is a small automated check, and there is a switch for it. What the site is ' +
+      'testing, how to get past it on one address, and where the honest limit is.',
+    date: '2026-11-18'
+  },
+  {
     slug: 'can-you-block-youtube-ads-in-safari',
     url: 'blog/can-you-block-youtube-ads-in-safari.html',
     title: 'Can you block YouTube ads in Safari?',

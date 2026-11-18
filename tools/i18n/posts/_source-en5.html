@@ -1,0 +1,205 @@
+
+
+        <p>
+          Sometimes the request is fair: a small publisher asking for the advertising that pays for
+          the article. Sometimes the wall is aggressive enough that the page becomes useless, and the
+          site is the one being unreasonable. Either way, you don’t have to switch the blocker off
+          everywhere to get through — and you don’t have to guess which kind of site you are dealing
+          with.
+        </p>
+
+        <p>
+          It helps to know how the page knows. Ad-block detection is usually one small test. The page
+          includes an element built to look like an ad — a banner with an ad-like class name, or a
+          script at an address that reads like an ad server — and then checks whether that element
+          appeared. A content blocker hides or refuses exactly those things, so the missing element is
+          the tell. Some sites go further and check the layout, or the gap where an ad should have
+          been.
+        </p>
+
+        <p>
+          That is also why the wall feels impersonal: it is. A script checked one element and drew a
+          box when it did not find it. The site has no idea who you are.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>The short version:</strong> on the <strong>General</strong> tab, switch on
+            <strong>Bypass Anti-Adblock</strong> and reload the page. If one particular site still
+            catches on, allow ads for that address only under <strong>Site Overrides</strong>. The
+            steps for both are below.
+          </p>
+        </div>
+
+        <h2>Turning on the bypass</h2>
+        <ol>
+          <li>Open AdFence and stay on the <strong>General</strong> tab.</li>
+          <li>Under <strong>Blocking List</strong>, switch on <strong>Bypass Anti-Adblock</strong>.</li>
+          <li>Return to Safari and reload the page.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence's General tab: the Blocking master switch at the top, then Block Ads, Bypass Anti-Adblock, Safe Browsing and Block Trackers under Blocking List."
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Bypass Anti-Adblock sits with the other blocking rules on the General tab.
+          </figcaption>
+        </figure>
+
+        <p>
+          The switch counters the common detection patterns and hides the wall they draw. It is a
+          single global setting, so it applies to every site at once; sites that never check for a
+          blocker will not notice any difference.
+        </p>
+
+        <p>
+          Like the filter lists, the anti-adblock rules ship with the app and update when it updates.
+          A site that changes its check will be caught up with in the next release — that lag is the
+          update schedule, not a setting you got wrong.
+        </p>
+
+<!--PROMO-->
+
+        <h2>When the wall still appears</h2>
+        <p>
+          Some sites run a check that the shipped rules do not cover yet. There are three narrower
+          options, from least to most permissive.
+        </p>
+
+        <h3>A site that still catches you</h3>
+        <p>
+          Open <strong>Site Settings</strong> for that address, and under
+          <strong>Site Overrides</strong> switch on <strong>Whitelist Ads</strong>. The site’s ad
+          requests get through, the detection stops finding a blocked element, and every other filter
+          stays on for that site. It affects only that address.
+        </p>
+
+        <h3>A site that breaks in other ways</h3>
+        <p>
+          If the page misbehaves beyond the wall — a video player that will not start, a form that
+          will not submit — use <strong>Pause Blocking</strong> for that address. Everything is off
+          there and nothing else changes. The entry stays on the list until you remove it, however
+          long ago it was added.
+        </p>
+
+        <h3>A wall you can simply hide</h3>
+        <p>
+          When the content is already on the page and only a panel sits over it, the wall is an
+          element like any other. <strong>Custom Element Blocker</strong> in
+          <strong>Site Settings</strong> lets you add that one element and hide it; the rules collect
+          on the <strong>Custom</strong> tab, ready to remove later.
+        </p>
+
+        <h2>What it can’t get past</h2>
+        <ul>
+          <li>
+            <strong>Content the server never sent.</strong> A real paywall withholds the article
+            before it reaches the browser. Nothing in Safari can make the server send it.
+          </li>
+          <li>
+            <strong>A check that is newer than the shipped rules.</strong> Detection vendors change
+            their tests; the rules catch up with app updates.
+          </li>
+          <li>
+            <strong>In-app browsers.</strong> Links opened inside Instagram, Facebook, Gmail or
+            Reddit use those apps’ own browsers, where no Safari extension runs at all.
+          </li>
+        </ul>
+
+        <h2>Is getting past it fair?</h2>
+        <p>
+          That is between you and the site. Some ask directly and offer a way to pay or subscribe;
+          others set terms that forbid blocking. The app gives you the switch; the site decides what
+          it serves. If you read a small publication regularly, pausing for that one address is a
+          reasonable trade — the rest of the web stays blocked, and their advertising keeps the page
+          you came for.
+        </p>
+
+        <h2>If the wall is still there</h2>
+        <p>
+          Check these in order — the first three solve most cases:
+        </p>
+        <ol>
+          <li>
+            <strong>The extension is on in Safari.</strong> Safari keeps its own switch, and updates
+            can turn it off. The 30-second check is
+            <a href="why-safari-ad-blocker-not-working.html">in this post</a>.
+          </li>
+          <li>
+            <strong>The master switch is on.</strong> <strong>Blocking</strong> at the top of the
+            <strong>General</strong> tab has to be on; while it is off, every extension loads an
+            empty rule list.
+          </li>
+          <li>
+            <strong>Bypass Anti-Adblock is on.</strong> If you turned it on for one site and later
+            off again, the wall returns everywhere.
+          </li>
+          <li>
+            <strong>The site is not paused or ad-whitelisted.</strong> Both are site settings, and
+            both make the detection succeed on purpose.
+          </li>
+          <li>
+            <strong>Reload properly, or try a private window.</strong> A page already loaded keeps
+            the result of the earlier check; a private window starts clean and tells you whether the
+            rule or a saved state is the difference.
+          </li>
+        </ol>
+        <p>
+          If none of that helps, email
+          <a href="mailto:support@mxcode.com">support@mxcode.com</a> with the address of the page and
+          a screenshot of the wall. That is enough for us to look at the check.
+        </p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Do I have to switch Bypass Anti-Adblock off for any site?</summary>
+            <div class="answer">
+              <p>No. If one site misbehaves with it on, the narrower tools are per-site: allow ads for
+              that address under <strong>Site Overrides</strong>, or pause blocking for it alone. The
+              global switch can stay on.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why does the wall come back on a site that used to work?</summary>
+            <div class="answer">
+              <p>Detection vendors change their checks, and the rules that counter them ship with
+              AdFence updates. Between the site’s change and the next release, the older rules may no
+              longer match.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does the site know I bypassed its wall?</summary>
+            <div class="answer">
+              <p>It can tell that the wall element is hidden, and some sites redraw it. That is
+              detection of the hiding, not identification of you: no account, name or browsing history
+              is involved.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Is an anti-adblock wall the same as a paywall?</summary>
+            <div class="answer">
+              <p>No. A paywall withholds the article on the server until you subscribe, and nothing in
+              Safari can bring back what the server did not send. An anti-adblock wall is drawn in the
+              page after the content has already arrived.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does turning it on slow pages down?</summary>
+            <div class="answer">
+              <p>It adds rules to the same rule list Safari already applies, so there is no extra
+              connection or background process. The effect on page speed is not something you would
+              notice; the switch is there to stop the wall, not to change how the page loads.</p>
+            </div>
+          </details>
+        </div>
+
+      

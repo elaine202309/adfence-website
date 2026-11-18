@@ -1,0 +1,179 @@
+        <p>
+          有时这个请求是合理的：一家小型出版方请求你允许那些为文章付费的广告。有时这道墙激进到
+          让页面完全没法用，那是站点不讲理。无论哪种，你都不必为了过去而把拦截器整体关掉 ——
+          也不需要先去猜这是哪一类网站。
+        </p>
+
+        <p>
+          了解页面是怎么知道的会有帮助。广告拦截检测通常只是一个小测试。页面里放一个伪装成广告
+          的元素 —— 一个带广告类名的横幅，或者一个地址看起来像广告服务器的脚本 —— 然后检查它
+          是否出现。内容拦截器正好隐藏或拒绝这些东西，所以元素缺席就是信号。有些站点更进一步，
+          检查布局，或者检查本该有广告的空缺。
+        </p>
+
+        <p>
+          这也是为什么这道墙显得冷冰冰：它确实冷冰冰。一个脚本检查了一个元素，没找到就画了一个
+          框。站点根本不知道你是谁。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>简单说：</strong>在 <strong>General</strong> 标签页打开
+            <strong>Bypass Anti-Adblock</strong>，然后刷新页面。如果某个站点还是能识破，只在
+            <strong>Site Overrides</strong> 里给那个地址放行广告。两步的细节都在下面。
+          </p>
+        </div>
+
+        <h2>打开绕过</h2>
+        <ol>
+          <li>打开 AdFence，留在 <strong>General</strong> 标签页。</li>
+          <li>在 <strong>Blocking List</strong> 下打开 <strong>Bypass Anti-Adblock</strong>。</li>
+          <li>回到 Safari，刷新页面。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence 的 General 标签页：顶部是 Blocking 总开关，下面 Blocking List 里有 Block Ads、Bypass Anti-Adblock、Safe Browsing 和 Block Trackers。"
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Bypass Anti-Adblock 和其余拦截规则一起放在 General 标签页。
+          </figcaption>
+        </figure>
+
+        <p>
+          这个开关针对常见的检测模式，并隐藏它们画出来的那道墙。它是全局设置，一次对所有站点
+          生效；从不检测拦截器的站点不会感觉到任何差别。
+        </p>
+
+        <p>
+          和过滤列表一样，反广告拦截规则随 App 下发，也随 App 更新。改了检测方式的站点会在下一次
+          发布时被补上 —— 这个滞后是更新节奏，不是你哪里设错了。
+        </p>
+
+<!--PROMO-->
+
+        <h2>墙还在的时候</h2>
+        <p>
+          有些站点用的检测还没被随 App 下发的规则覆盖。这里有三个更窄的选择，从最宽松到最彻底。
+        </p>
+
+        <h3>仍然被识破的站点</h3>
+        <p>
+          打开该地址的 <strong>Site Settings</strong>，在 <strong>Site Overrides</strong> 下打开
+          <strong>Whitelist Ads</strong>。该站点的广告请求得以通过，检测不再找到被拦的元素，而
+          其他所有过滤器在这个站点上照常工作。只影响那一个地址。
+        </p>
+
+        <h3>还有其他故障的站点</h3>
+        <p>
+          如果页面在墙之外还有问题 —— 视频播放器起不来、表单提交不了 —— 对这个地址使用
+          <strong>Pause Blocking</strong>。那里全部关闭，其他什么都不变。条目会留在列表里，直到
+          你删除，不管当初是什么时候加的。
+        </p>
+
+        <h3>可以直接隐藏的墙</h3>
+        <p>
+          当内容已经在页面上、只是有一个面板盖在上面时，这道墙就是一个普通元素。
+          <strong>Site Settings</strong> 里的 <strong>Custom Element Blocker</strong> 让你添加那
+          一个元素并隐藏它；规则会收集在 <strong>Custom</strong> 标签页，之后随时可以删除。
+        </p>
+
+        <h2>它绕不过的东西</h2>
+        <ul>
+          <li>
+            <strong>服务器从未发送的内容。</strong> 真正的付费墙在文章到达浏览器之前就扣住了。
+            Safari 里没有任何办法让服务器发送它。
+          </li>
+          <li>
+            <strong>比随附规则更新的检测。</strong> 检测服务商会改测试；规则随 App 更新追上来。
+          </li>
+          <li>
+            <strong>App 内浏览器。</strong> 在 Instagram、Facebook、Gmail 或 Reddit 里打开的链接
+            用的是那些 App 自己的浏览器，Safari 扩展在那里根本不运行。
+          </li>
+        </ul>
+
+        <h2>绕过它，公平吗？</h2>
+        <p>
+          这是你和站点之间的事。有些站点直接询问，并提供付费或订阅的途径；有些在条款里禁止拦截。
+          App 给你开关，站点决定它提供什么。如果你经常读一家小媒体，为那一个地址暂停是合理的
+          交换 —— 网络的其他部分继续被拦截，而他们的广告维持着你来看的那一页。
+        </p>
+
+        <h2>墙还在的话</h2>
+        <p>
+          按顺序检查 —— 前三项能解决大多数情况：
+        </p>
+        <ol>
+          <li>
+            <strong>Safari 里的扩展开着。</strong> Safari 有自己的开关，更新可能把它关掉。30 秒
+            检查写在这<a href="why-safari-ad-blocker-not-working.html">篇文章里</a>。
+          </li>
+          <li>
+            <strong>总开关开着。</strong> <strong>General</strong> 标签页顶部的
+            <strong>Blocking</strong> 必须打开；它关着时，所有扩展加载的都是空规则列表。
+          </li>
+          <li>
+            <strong>Bypass Anti-Adblock 开着。</strong> 如果你为某个站点打开后又关掉，墙会在所有
+            地方回来。
+          </li>
+          <li>
+            <strong>站点没有被暂停或放行广告。</strong> 两者都是站点设置，都会让检测故意成功。
+          </li>
+          <li>
+            <strong>好好刷新，或者用无痕窗口。</strong> 已加载的页面保留先前检查的结果；无痕
+            窗口从干净状态开始，能告诉你差别在规则还是保存的状态。
+          </li>
+        </ol>
+        <p>
+          如果都不管用，写信给 <a href="mailto:support@mxcode.com">support@mxcode.com</a>，附上
+          页面地址和那道墙的截图。这就够我们去看这个检测了。
+        </p>
+
+        <h2>常见问题</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>我需要为某些站点关掉 Bypass Anti-Adblock 吗？</summary>
+            <div class="answer">
+              <p>不需要。如果某个站点在开启时出问题，更窄的工具是按站点的：在
+              <strong>Site Overrides</strong> 里给那个地址放行广告，或者只对它暂停拦截。全局
+              开关可以一直开着。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>以前能用的站点为什么墙又回来了？</summary>
+            <div class="answer">
+              <p>检测服务商会改检查方式，而对付它们的规则随 AdFence 更新下发。在站点改动和下一次
+              发布之间，旧规则可能已经对不上。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>站点知道我绕过了它的墙吗？</summary>
+            <div class="answer">
+              <p>它能看出墙的元素被隐藏了，有些站点会重新画出来。那是对隐藏的检测，不是对你的
+              识别：不涉及账号、姓名或浏览记录。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>反广告拦截的墙和付费墙是一回事吗？</summary>
+            <div class="answer">
+              <p>不是。付费墙在服务器上扣住文章，直到你订阅，Safari 里没有任何办法找回服务器
+              没发的东西。反广告拦截的墙是在内容到达之后画在页面上的。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>打开它会让页面变慢吗？</summary>
+            <div class="answer">
+              <p>它只是给 Safari 已经在应用的同一份规则表增加规则，不会有额外的连接或后台进程。
+              对页面速度的影响你不会察觉；这个开关是为了挡住墙，而不是改变页面如何加载。</p>
+            </div>
+          </details>
+        </div>
+
