@@ -1,0 +1,205 @@
+        <p>
+          Se l’hai configurato su un iPhone, il percorso lo conosci:
+          <strong>Impostazioni → App → Safari → Estensioni</strong>. Sul Mac non c’è un passaggio
+          equivalente nell’app Impostazioni. Safari ha le proprie preferenze, e tutto ciò che riguarda
+          quali estensioni vengono eseguite si decide dentro Safari. L’app AdFence è l’altro posto, e
+          contiene gli interruttori che stabiliscono cosa viene filtrato.
+        </p>
+
+        <p>
+          È proprio questa separazione il motivo più comune per cui un Mac ha l’app installata, sembra
+          configurato correttamente e mostra comunque ogni annuncio. Safari non esegue nulla finché
+          l’estensione non è spuntata, e spuntarla non cambia cosa viene filtrato finché gli
+          interruttori dell’app non lo dicono.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>In breve:</strong> in Safari apri <strong>Safari → Impostazioni</strong> (⌘,) e
+            spunta AdFence nella scheda <strong>Estensioni</strong>. Poi apri l’app AdFence, resta su
+            <strong>General</strong> e verifica che <strong>Blocking</strong> sia attivo insieme alle
+            regole che vuoi. Ricarica la pagina.
+          </p>
+        </div>
+
+        <h2>1. Attivare l’estensione in Safari</h2>
+        <ol>
+          <li>In Safari, scegli <strong>Safari → Impostazioni</strong> dalla barra dei menu (⌘,).</li>
+          <li>Apri la scheda <strong>Estensioni</strong>.</li>
+          <li>Spunta <strong>AdFence</strong> nell’elenco a sinistra. Le otto estensioni compaiono come
+          voci separate, ciascuna con la propria casella.</li>
+          <li>Se navighi in finestre private, spunta <strong>Consenti in navigazione privata</strong>
+          per le estensioni che vuoi attive lì.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Le impostazioni Estensioni di Safari sul Mac: le otto estensioni AdFence spuntate nella barra laterale, Ad Blocking selezionata e «Consenti in navigazione privata» spuntata."
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Otto voci, una casella ciascuna — e una casella separata per le finestre private.
+          </figcaption>
+        </figure>
+
+        <p>
+          La nota nel riquadro di destra merita una lettura: un blocco dei contenuti «non ha
+          l’autorizzazione a leggere, modificare o trasmettere i contenuti di alcuna pagina web». Non
+          è un errore. L’estensione fornisce le liste di regole, Safari le applica. È così che funziona
+          questo tipo di blocco, ed è per questo che non ha bisogno della tua cronologia.
+        </p>
+
+        <h2>2. Scegliere cosa viene filtrato nell’app</h2>
+        <p>
+          Apri AdFence e resta sulla scheda <strong>General</strong>. <strong>Blocking</strong> in cima
+          è l’interruttore principale; sotto, <strong>Blocking List</strong> raccoglie le regole — Block
+          Ads, Bypass Anti-Adblock, Safe Browsing, Block Trackers — e <strong>Other Settings</strong>
+          ancora sotto quelle a livello di pagina, dagli avvisi sui cookie ai pop-up e ai commenti. Viene
+          filtrato solo ciò che è attivo.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="La scheda General di AdFence: in alto l’interruttore principale Blocking, sotto Blocking List con Block Ads, Bypass Anti-Adblock, Safe Browsing e Block Trackers, poi Other Settings."
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            L’app decide cosa viene filtrato; Safari decide se l’estensione gira.
+          </figcaption>
+        </figure>
+
+        <p>
+          L’ordine conta. L’app scrive le regole, Safari le applica: dopo aver cambiato un interruttore,
+          torna in Safari e ricarica la pagina — una pagina già caricata conserva ciò che aveva
+          scaricato prima della modifica.
+        </p>
+
+<!--PROMO-->
+
+        <h2>Controlli per sito sul Mac</h2>
+        <p>
+          Due meccanismi stanno sopra gli interruttori globali, ed è facile confonderli.
+        </p>
+        <ul>
+          <li>
+            <strong>Nell’app:</strong> <strong>Site Settings</strong> per un indirizzo, con
+            <strong>Pause Blocking</strong> per ritirarsi su quel sito e
+            <strong>Site Overrides</strong> per consentire un singolo filtro. Le voci si raccolgono
+            nella scheda <strong>Custom</strong>.
+          </li>
+          <li>
+            <strong>In Safari:</strong> una pagina può essere ricaricata senza blocchi dei contenuti
+            dal menu del pulsante di ricarica. È temporaneo e vale solo per quella scheda — la
+            ricarica successiva riporta il blocco.
+          </li>
+        </ul>
+        <p>
+          Il primo è permanente; il secondo è una via di fuga. Se ti accorgi di usare spesso il secondo
+          sullo stesso sito, il primo è lo strumento migliore.
+        </p>
+
+        <h2>Cosa cambia rispetto all’iPhone</h2>
+        <ul>
+          <li>
+            <strong>Il percorso:</strong> <strong>Safari → Impostazioni → Estensioni</strong> sul Mac,
+            non <strong>Impostazioni → App → Safari</strong>. Non c’è un passaggio nelle Impostazioni
+            di sistema.
+          </li>
+          <li>
+            <strong>Il dispositivo:</strong> le estensioni si attivano per dispositivo. Mac e iPhone
+            hanno bisogno ciascuno della propria spunta una volta; poi ognuno mantiene i propri
+            interruttori.
+          </li>
+          <li>
+            <strong>Il browser:</strong> le estensioni di Safari girano solo in Safari. Sul Mac è
+            facile controllare un sito in Chrome o Firefox e concludere che il blocco è rotto — non è
+            mai stato applicato lì.
+          </li>
+        </ul>
+
+        <h2>Se sul Mac compaiono ancora annunci</h2>
+        <p>
+          Controlla in quest’ordine — i primi due risolvono la maggior parte dei casi:
+        </p>
+        <ol>
+          <li>
+            <strong>L’estensione è spuntata.</strong> Riapri la scheda Estensioni di Safari; gli
+            aggiornamenti e le migrazioni del Mac possono togliere la spunta.
+          </li>
+          <li>
+            <strong>L’interruttore principale è attivo.</strong> <strong>Blocking</strong> nell’app
+            deve esserlo; altrimenti ogni estensione carica una lista di regole vuota.
+          </li>
+          <li>
+            <strong>Il sito non è in pausa.</strong> Guarda la scheda <strong>Custom</strong>
+            dell’app.
+          </li>
+          <li>
+            <strong>Stai guardando il browser giusto.</strong> Gli annunci in Chrome o Firefox
+            riguardano un altro programma, non un’impostazione.
+          </li>
+          <li>
+            <strong>L’annuncio è di quelli che un blocco dei contenuti non raggiunge.</strong> Gli
+            annunci dentro un video di YouTube e i link aperti nei browser integrati di altre app sono
+            i due casi tipici.
+          </li>
+        </ol>
+        <p>
+          Se invece una pagina si comporta in modo strano — un player che non parte, un modulo che non
+          si invia — gli strumenti per sito sono la risposta giusta prima di toccare le impostazioni
+          globali. E se è l’estensione stessa a sembrare in causa, il controllo da 30 secondi è
+          <a href="why-safari-ad-blocker-not-working.html">in questo articolo</a>.
+        </p>
+
+        <h2>Domande frequenti</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Serve l’app sul Mac oltre che sull’iPhone?</summary>
+            <div class="answer">
+              <p>Le estensioni si attivano per dispositivo, quindi il Mac ha bisogno dell’app installata
+              e della sua estensione spuntata una volta in Safari. Vale lo stesso per un iPad. Dopo,
+              ogni dispositivo mantiene i propri interruttori.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Blocca gli annunci in Chrome o Firefox sul mio Mac?</summary>
+            <div class="answer">
+              <p>No. Un’estensione di Safari gira solo dentro Safari, quindi AdFence non fa nulla in
+              Chrome, Firefox o qualsiasi altro browser sul Mac. Quei browser hanno bisogno di un
+              blocco proprio.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Funziona nelle finestre di navigazione privata sul Mac?</summary>
+            <div class="answer">
+              <p>Solo se l’estensione è consentita lì. Nelle impostazioni Estensioni di Safari, con
+              AdFence selezionata, spunta <strong>Consenti in navigazione privata</strong> per ogni
+              estensione che vuoi attiva nelle finestre private.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Safari dice che l’estensione non ha il permesso di leggere le pagine. È normale?</summary>
+            <div class="answer">
+              <p>Sì. Un blocco dei contenuti fornisce liste di regole che Safari applica da sé; non
+              legge, modifica o trasmette il contenuto delle pagine. Quella frase nel riquadro delle
+              estensioni descrive come funziona la tecnologia, non un errore.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Perché un sito mostra ancora annunci sul mio Mac?</summary>
+            <div class="answer">
+              <p>Controlla il sito in <strong>Site Settings</strong>: se è stato messo in pausa per
+              qualsiasi motivo, resta in pausa finché non lo rimuovi. Gli annunci dentro un flusso
+              video e quelli nei browser integrati di altre app sono casi separati che nessun blocco
+              dei contenuti di Safari può raggiungere.</p>
+            </div>
+          </details>
+        </div>
+

@@ -1,0 +1,201 @@
+        <p>
+          iPhone で設定したことがあるなら、手順はよくご存じでしょう：
+          <strong>設定 → アプリ → Safari → 機能拡張</strong>。Mac には「設定」App の中にこれに
+          相当する手順がありません。Safari は独自の環境設定を持っていて、どの機能拡張が動くかは
+          すべて Safari の中で決まります。AdFence App はもう一方の場所で、何をフィルタするかを
+          決めるスイッチが入っています。
+        </p>
+
+        <p>
+          この分かれ目が、Mac で「App は入っているし、設定も正しく見えるのに、広告が全部出る」と
+          いう最もよくある原因です。拡張機能にチェックが入るまで Safari は何も動かさず、チェックを
+          入れても、App 側のスイッチがそう言うまでフィルタされる内容は変わりません。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>結論から言うと：</strong>Safari で <strong>Safari → 設定</strong>（⌘,）を開き、
+            <strong>機能拡張</strong>タブで AdFence にチェックを入れます。次に AdFence App を開いて
+            <strong>General</strong> タブのまま、<strong>Blocking</strong> と使いたいルールが
+            オンになっているか確認します。ページを再読み込みしてください。
+          </p>
+        </div>
+
+        <h2>1. Safari で機能拡張をオンにする</h2>
+        <ol>
+          <li>Safari のメニューバーから <strong>Safari → 設定</strong>（⌘,）を選びます。</li>
+          <li><strong>機能拡張</strong>タブを開きます。</li>
+          <li>左の一覧で <strong>AdFence</strong> にチェックを入れます。8 つの機能拡張は別々の
+          項目として並び、それぞれにチェック欄があります。</li>
+          <li>プライベートブラウズで閲覧する場合は、そこで動かしたい機能拡張に
+          <strong>プライベートブラウズで許可</strong> のチェックを入れます。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Mac の Safari の機能拡張設定：サイドバーで 8 つの AdFence 機能拡張にチェックが入り、Ad Blocking が選択され、「プライベートブラウズで許可」にもチェックが入っている。"
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            8 つの項目、それぞれに 1 つのチェック —— プライベートブラウズ用には別のチェック欄。
+          </figcaption>
+        </figure>
+
+        <p>
+          右側の注記は一度読んでおく価値があります。コンテンツブロッカーは「どの Web ページの内容も
+          読み取ったり、変更したり、送信したりする権限を持ちません」。これはエラーではありません。
+          拡張機能がルールリストを提供し、Safari がそれを適用します。この種類のブロッカーはそう
+          いう仕組みで、閲覧履歴を必要としないのもそのためです。
+        </p>
+
+        <h2>2. App 側で何をフィルタするか決める</h2>
+        <p>
+          AdFence を開き、<strong>General</strong> タブのままでいます。いちばん上の
+          <strong>Blocking</strong> が総合スイッチで、その下の <strong>Blocking List</strong> に
+          ルール（Block Ads、Bypass Anti-Adblock、Safe Browsing、Block Trackers）が並び、
+          さらに下の <strong>Other Settings</strong> にページ単位のもの（Cookie 通知からポップ
+          アップ、コメントまで）が入っています。オンのものだけがフィルタされます。
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence の General タブ：上部に Blocking の総合スイッチ、その下の Blocking List に Block Ads、Bypass Anti-Adblock、Safe Browsing、Block Trackers、さらに下に Other Settings が並ぶ。"
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            何をフィルタするかは App が、動くかどうかは Safari が決めます。
+          </figcaption>
+        </figure>
+
+        <p>
+          順番が大事です。App がルールを書き、Safari が適用するので、スイッチを変えたら Safari に
+          戻ってページを再読み込みしてください —— すでに読み込まれたページは、変更前に取得した
+          内容を保持します。
+        </p>
+
+<!--PROMO-->
+
+        <h2>Mac でのサイト単位の調整</h2>
+        <p>
+          全体スイッチの上に 2 つの仕組みがあり、混同しやすいところです。
+        </p>
+        <ul>
+          <li>
+            <strong>App 側：</strong>アドレスごとの <strong>Site Settings</strong>。
+            <strong>Pause Blocking</strong> はそのサイトで全体を後退させ、
+            <strong>Site Overrides</strong> はフィルターを 1 つだけ通します。項目は
+            <strong>Custom</strong> タブにまとまります。
+          </li>
+          <li>
+            <strong>Safari 側：</strong>再読み込みボタンのメニューから、コンテンツブロッカーなしで
+            ページを再読み込みできます。これは一時的でそのタブだけ —— 次に再読み込みすると
+            ブロッカーが戻ります。
+          </li>
+        </ul>
+        <p>
+          前者は持続的で、後者は非常口です。同じサイトで後者をよく使うなら、前者のほうが適した
+          道具です。
+        </p>
+
+        <h2>iPhone との違い</h2>
+        <ul>
+          <li>
+            <strong>手順：</strong>Mac では <strong>Safari → 設定 → 機能拡張</strong> で、
+            <strong>設定 → アプリ → Safari</strong> ではありません。システムの「設定」の工程は
+            ありません。
+          </li>
+          <li>
+            <strong>デバイス：</strong>機能拡張はデバイスごとに有効にします。Mac と iPhone は
+            それぞれ 1 回チェックが必要で、その後は各デバイスが自分のスイッチを持ちます。
+          </li>
+          <li>
+            <strong>ブラウザ：</strong>Safari の機能拡張は Safari の中でしか動きません。Mac では
+            Chrome や Firefox でサイトを見て「ブロッカーが壊れている」と結論しがちですが、そこでは
+            一度も適用されていません。
+          </li>
+        </ul>
+
+        <h2>Mac で広告がまだ出る場合</h2>
+        <p>
+          次の順に確認してください —— 最初の 2 つでほとんどのケースは解決します。
+        </p>
+        <ol>
+          <li>
+            <strong>機能拡張にチェックが入っている。</strong> Safari の機能拡張タブをもう一度開いて
+            ください。アップデートや Mac の移行でチェックが外れることがあります。
+          </li>
+          <li>
+            <strong>総合スイッチがオン。</strong> App の <strong>Blocking</strong> がオンである
+            必要があります。オフの間は、どの拡張機能も空のルールリストを読み込みます。
+          </li>
+          <li>
+            <strong>サイトが一時停止されていない。</strong> App の <strong>Custom</strong> タブを
+            見てください。
+          </li>
+          <li>
+            <strong>正しいブラウザを見ている。</strong> Chrome や Firefox の広告は別のプログラムの
+            話で、設定ではありません。
+          </li>
+          <li>
+            <strong>コンテンツブロッカーが届かない広告。</strong> YouTube 動画内の広告と、ほかの
+            App の内蔵ブラウザで開いたリンクが、よくある 2 つのケースです。
+          </li>
+        </ol>
+        <p>
+          逆にページの動きがおかしい場合 —— プレーヤーが始まらない、フォームが送信できない —— は、
+          全体設定を触る前にサイト単位の道具が正解です。拡張機能自体が怪しいなら、30 秒でできる
+          確認は<a href="why-safari-ad-blocker-not-working.html">こちらの記事</a>にあります。
+        </p>
+
+        <h2>よくある質問</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>iPhone に加えて Mac にも App が必要ですか？</summary>
+            <div class="answer">
+              <p>機能拡張はデバイスごとに有効にするので、Mac には App のインストールと、Safari で
+              一度だけ機能拡張のチェックが必要です。iPad も同じです。その後は各デバイスが自分の
+              スイッチを持ちます。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac の Chrome や Firefox でもブロックされますか？</summary>
+            <div class="answer">
+              <p>いいえ。Safari の機能拡張は Safari の中でしか動かないので、AdFence は Mac の
+              Chrome、Firefox、そのほかのブラウザでは何もしません。それらのブラウザには独自の
+              ブロッカーが必要です。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac のプライベートブラウズでも動きますか？</summary>
+            <div class="answer">
+              <p>そこで許可されている場合だけです。Safari の機能拡張設定で AdFence を選び、
+              プライベートブラウズで動かしたい機能拡張ごとに
+              <strong>プライベートブラウズで許可</strong> をオンにしてください。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Safari が「Web ページを読み取る権限がない」と言うのは正常ですか？</summary>
+            <div class="answer">
+              <p>はい。コンテンツブロッカーは Safari 自身が適用するルールリストを提供するもので、
+              ページの内容を読み取ったり、変更したり、送信したりしません。機能拡張パネルのその一文は
+              技術の仕組みを説明しているのであって、エラーではありません。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac で特定のサイトだけ広告が出るのはなぜですか？</summary>
+            <div class="answer">
+              <p><strong>Site Settings</strong> でそのサイトを確認してください。何らかの理由で一時
+              停止されたサイトは、削除するまで一時停止のままです。動画ストリーム内の広告と、ほかの
+              App の内蔵ブラウザの広告は別のケースで、どの Safari コンテンツブロッカーも届き
+              ません。</p>
+            </div>
+          </details>
+        </div>
+

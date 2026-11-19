@@ -1,0 +1,186 @@
+        <p>
+          如果你在 iPhone 上設定過，路徑很熟悉：<strong>設定 → App → Safari → 擴充功能</strong>。
+          Mac 在「設定」App 裡沒有對應的步驟。Safari 有自己的一套偏好設定，哪些擴充功能會執行，
+          全都在 Safari 裡面決定。AdFence App 是另一個地方，它裝著決定過濾什麼的那組開關。
+        </p>
+
+        <p>
+          這種分工，是 Mac 上最常見的「App 裝了、看起來也沒問題、廣告卻一個不少」的原因。擴充
+          功能沒有被勾選之前，Safari 什麼都不會執行；勾選之後，App 裡自己的開關不打開，過濾內容
+          也不會有任何變化。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>簡單說：</strong>在 Safari 裡打開 <strong>Safari → 設定</strong>（⌘,），在
+            <strong>擴充功能</strong>標籤頁勾選 AdFence。然後打開 AdFence App，留在
+            <strong>General</strong> 標籤頁，確認 <strong>Blocking</strong> 和你想啟用的規則都
+            已打開。重新載入頁面。
+          </p>
+        </div>
+
+        <h2>1. 在 Safari 裡打開擴充功能</h2>
+        <ol>
+          <li>在 Safari 裡，從選單列選擇 <strong>Safari → 設定</strong>（⌘,）。</li>
+          <li>打開 <strong>擴充功能</strong>標籤頁。</li>
+          <li>在左側列表中勾選 <strong>AdFence</strong>。八個擴充功能是分開的項目，各自有獨立的
+          勾選框。</li>
+          <li>如果你用私密瀏覽視窗，為需要在那裡生效的擴充功能勾選
+          <strong>在私密瀏覽中允許</strong>。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Mac 上 Safari 的擴充功能設定視窗：側邊欄中八個 AdFence 擴充功能均已勾選，目前選中 Ad Blocking，並勾選了 Allow in Private Browsing。"
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            八個項目，各自一個勾選框 —— 私密瀏覽另有單獨的勾選框。
+          </figcaption>
+        </figure>
+
+        <p>
+          右側那行說明值得讀一遍：內容封鎖器「無權讀取、修改或傳輸任何網頁內容」。這不是錯誤。
+          擴充功能提供規則列表，由 Safari 來執行。這類封鎖器就是這樣運作的，也是它不需要你的
+          瀏覽記錄的原因。
+        </p>
+
+        <h2>2. 在 App 裡決定過濾什麼</h2>
+        <p>
+          打開 AdFence，留在 <strong>General</strong> 標籤頁。頂部的 <strong>Blocking</strong>
+          是總開關；下面的 <strong>Blocking List</strong> 裝著規則 —— Block Ads、Bypass
+          Anti-Adblock、Safe Browsing、Block Trackers —— 再往下的 <strong>Other Settings</strong>
+          裝著頁面級的那一組，從 Cookie 提示到彈窗和留言。只有打開的才會被過濾。
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence 的 General 標籤頁：頂部是 Blocking 總開關，Blocking List 下有 Block Ads、Bypass Anti-Adblock、Safe Browsing 和 Block Trackers，下面是 Other Settings。"
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            App 決定過濾什麼；Safari 決定它到底會不會執行。
+          </figcaption>
+        </figure>
+
+        <p>
+          順序很重要。App 寫規則，Safari 執行規則，所以改過開關之後，回到 Safari 重新載入頁面
+          —— 已經載入的頁面會保留改動前取得的內容。
+        </p>
+
+<!--PROMO-->
+
+        <h2>Mac 上的按網站控制</h2>
+        <p>
+          在全域開關之上還有兩套機制，它們很容易混淆。
+        </p>
+        <ul>
+          <li>
+            <strong>在 App 裡：</strong>針對某個位址的 <strong>Site Settings</strong>，用
+            <strong>Pause Blocking</strong> 對該網站整體退讓，用 <strong>Site Overrides</strong>
+            放行單一篩選器。項目會收集在 <strong>Custom</strong> 標籤頁。
+          </li>
+          <li>
+            <strong>在 Safari 裡：</strong>可以從重新載入按鈕的選單中選擇不啟用內容封鎖器來
+            重新載入頁面。這是暫時的，只對目前標籤頁有效 —— 下一次重新載入，封鎖器就回來了。
+          </li>
+        </ul>
+        <p>
+          前者是持久的；後者是應急出口。如果你發現自己經常對同一個網站用後者，前者才是更合適的
+          工具。
+        </p>
+
+        <h2>和 iPhone 有什麼不同</h2>
+        <ul>
+          <li>
+            <strong>路徑：</strong>Mac 上是 <strong>Safari → 設定 → 擴充功能</strong>，不是
+            <strong>設定 → App → Safari</strong>。沒有系統「設定」這一步。
+          </li>
+          <li>
+            <strong>裝置：</strong>擴充功能按裝置啟用。Mac 和 iPhone 各自需要勾選一次；之後各自
+            保留自己的開關。
+          </li>
+          <li>
+            <strong>瀏覽器：</strong>Safari 擴充功能只在 Safari 裡執行。在 Mac 上很容易在 Chrome
+            或 Firefox 裡看一眼就斷定封鎖器壞了 —— 它在那些瀏覽器裡從未生效過。
+          </li>
+        </ul>
+
+        <h2>Mac 上廣告還在的話</h2>
+        <p>
+          按順序檢查 —— 前兩項能解決大多數情況：
+        </p>
+        <ol>
+          <li>
+            <strong>擴充功能被勾選了。</strong> 再打開一次 Safari 的擴充功能標籤頁；更新和移轉
+            Mac 都可能讓它變成未勾選。
+          </li>
+          <li>
+            <strong>總開關是開著的。</strong> App 裡的 <strong>Blocking</strong> 必須打開；它關著
+            時，所有擴充功能載入的都是空規則列表。
+          </li>
+          <li>
+            <strong>網站沒有被暫停。</strong> 看看 App 裡的 <strong>Custom</strong> 標籤頁。
+          </li>
+          <li>
+            <strong>你看的是那個對的瀏覽器。</strong> Chrome 或 Firefox 裡的廣告是另一個程式的
+            事，不是設定問題。
+          </li>
+          <li>
+            <strong>這則廣告是內容封鎖器夠不到的。</strong> YouTube 影片內廣告，以及在別的 App
+            內建瀏覽器裡開啟的連結，是常見的兩種情況。
+          </li>
+        </ol>
+        <p>
+          如果頁面是別的地方不對勁 —— 播放器起不來、表單送不出去 —— 先考慮按網站的工具，而不是
+          動全域設定。如果擴充功能本身看起來有問題，30 秒檢查寫在這
+          <a href="why-safari-ad-blocker-not-working.html">篇文章裡</a>。
+        </p>
+
+        <h2>常見問題</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Mac 和 iPhone 上都需要裝這個 App 嗎？</summary>
+            <div class="answer">
+              <p>擴充功能按裝置啟用，所以 Mac 需要裝好 App，並在 Safari 裡勾選一次擴充功能。
+              iPad 也一樣。之後每台裝置各保留自己的開關。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac 上的 Chrome 或 Firefox 也會被封鎖嗎？</summary>
+            <div class="answer">
+              <p>不會。Safari 擴充功能只在 Safari 裡執行，所以 AdFence 在 Mac 的 Chrome、Firefox
+              或任何其他瀏覽器裡都不起作用。那些瀏覽器需要各自的封鎖器。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac 的私密瀏覽視窗裡也生效嗎？</summary>
+            <div class="answer">
+              <p>只有擴充功能被允許時才生效。在 Safari 的擴充功能設定裡選中 AdFence，為你希望
+              在私密瀏覽視窗中生效的每個擴充功能打開 <strong>在私密瀏覽中允許</strong>。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Safari 說擴充功能無權讀取網頁，這正常嗎？</summary>
+            <div class="answer">
+              <p>正常。內容封鎖器提供規則列表，由 Safari 自己執行；它不讀取、不修改、也不傳輸
+              頁面內容。擴充功能面板裡的那句話是在說明技術原理，不是錯誤。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>為什麼 Mac 上某一個網站還有廣告？</summary>
+            <div class="answer">
+              <p>在 <strong>Site Settings</strong> 裡檢查這個網站：如果它因為任何原因被暫停過，
+              就會一直暫停，直到你刪除。影片流裡的廣告和別的 App 瀏覽器裡的廣告是另外兩種情況，
+              任何 Safari 內容封鎖器都夠不到。</p>
+            </div>
+          </details>
+        </div>
+

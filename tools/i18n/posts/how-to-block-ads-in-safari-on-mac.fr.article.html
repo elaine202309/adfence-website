@@ -1,0 +1,205 @@
+        <p>
+          Si vous l’avez configuré sur un iPhone, le chemin est bien connu :
+          <strong>Réglages → Apps → Safari → Extensions</strong>. Le Mac n’a pas d’étape équivalente
+          dans l’app Réglages. Safari garde ses propres préférences, et tout ce qui concerne les
+          extensions actives se décide à l’intérieur de Safari. L’app AdFence est l’autre endroit, et
+          c’est elle qui contient les interrupteurs qui décident de ce qui est filtré.
+        </p>
+
+        <p>
+          Cette séparation est la raison la plus fréquente pour laquelle un Mac peut avoir l’app
+          installée, sembler correctement configuré, et afficher pourtant toutes les publicités. Safari
+          ne fait rien tant que l’extension n’est pas cochée, et la cocher ne change rien à ce qui est
+          filtré tant que les interrupteurs de l’app ne le disent pas.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>En bref :</strong> dans Safari, ouvrez <strong>Safari → Réglages</strong> (⌘,) et
+            cochez AdFence dans l’onglet <strong>Extensions</strong>. Ouvrez ensuite l’app AdFence,
+            restez sur <strong>General</strong> et vérifiez que <strong>Blocking</strong> est activé,
+            avec les règles que vous voulez. Rechargez la page.
+          </p>
+        </div>
+
+        <h2>1. Activer l’extension dans Safari</h2>
+        <ol>
+          <li>Dans Safari, choisissez <strong>Safari → Réglages</strong> dans la barre des menus (⌘,).</li>
+          <li>Ouvrez l’onglet <strong>Extensions</strong>.</li>
+          <li>Cochez <strong>AdFence</strong> dans la liste de gauche. Les huit extensions apparaissent
+          comme des entrées séparées, chacune avec sa propre case.</li>
+          <li>Si vous naviguez en fenêtres privées, cochez <strong>Autoriser en navigation privée</strong>
+          pour les extensions que vous voulez actives là-bas.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Les réglages Extensions de Safari sur Mac : les huit extensions AdFence cochées dans la barre latérale, Ad Blocking sélectionnée et « Autoriser en navigation privée » cochée."
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Huit entrées, une case chacune — et une case à part pour les fenêtres privées.
+          </figcaption>
+        </figure>
+
+        <p>
+          La mention du volet de droite mérite une lecture : un bloqueur de contenu « n’est pas
+          autorisé à lire, modifier ou transmettre le contenu des pages web ». Ce n’est pas une
+          erreur. L’extension fournit des listes de règles ; Safari les applique. C’est ainsi que ce
+          type de bloqueur fonctionne, et c’est pour cela qu’il n’a pas besoin de votre historique.
+        </p>
+
+        <h2>2. Choisir ce qui est filtré dans l’app</h2>
+        <p>
+          Ouvrez AdFence et restez sur l’onglet <strong>General</strong>. <strong>Blocking</strong>, en
+          haut, est l’interrupteur principal ; en dessous, <strong>Blocking List</strong> regroupe les
+          règles — Block Ads, Bypass Anti-Adblock, Safe Browsing, Block Trackers — et
+          <strong>Other Settings</strong> juste en dessous celles au niveau de la page, des bandeaux
+          de cookies aux fenêtres surgissantes et aux commentaires. Seul ce qui est activé est filtré.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="L’onglet General d’AdFence : l’interrupteur principal Blocking en haut, Blocking List avec Block Ads, Bypass Anti-Adblock, Safe Browsing et Block Trackers, puis Other Settings en dessous."
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            L’app décide de ce qui est filtré ; Safari décide si l’extension tourne.
+          </figcaption>
+        </figure>
+
+        <p>
+          L’ordre compte. L’app écrit les règles, Safari les applique : après avoir changé un
+          interrupteur, revenez dans Safari et rechargez la page — une page déjà chargée garde le
+          contenu récupéré avant le changement.
+        </p>
+
+<!--PROMO-->
+
+        <h2>Réglages par site sur le Mac</h2>
+        <p>
+          Deux mécanismes se superposent aux interrupteurs globaux, et ils sont faciles à confondre.
+        </p>
+        <ul>
+          <li>
+            <strong>Dans l’app :</strong> <strong>Site Settings</strong> pour une adresse, avec
+            <strong>Pause Blocking</strong> pour se retirer sur ce site et
+            <strong>Site Overrides</strong> pour autoriser un seul filtre. Les entrées se rassemblent
+            dans l’onglet <strong>Custom</strong>.
+          </li>
+          <li>
+            <strong>Dans Safari :</strong> une page peut être rechargée sans bloqueurs de contenu
+            depuis le menu du bouton de rechargement. C’est temporaire et limité à cet onglet — le
+            rechargement suivant ramène le bloqueur.
+          </li>
+        </ul>
+        <p>
+          Le premier est durable ; le second est une porte de sortie. Si vous utilisez souvent le
+          second sur le même site, le premier est le meilleur outil.
+        </p>
+
+        <h2>Ce qui diffère de l’iPhone</h2>
+        <ul>
+          <li>
+            <strong>Le chemin :</strong> <strong>Safari → Réglages → Extensions</strong> sur le Mac, et
+            non <strong>Réglages → Apps → Safari</strong>. Il n’y a pas d’étape dans l’app Réglages du
+            système.
+          </li>
+          <li>
+            <strong>L’appareil :</strong> les extensions s’activent appareil par appareil. Un Mac et un
+            iPhone ont chacun besoin de leur case une fois ; ensuite, chacun garde ses propres
+            interrupteurs.
+          </li>
+          <li>
+            <strong>Le navigateur :</strong> les extensions Safari ne tournent que dans Safari. Sur le
+            Mac, il est facile de vérifier un site dans Chrome ou Firefox et de conclure que le
+            bloqueur est cassé — il n’y a jamais été appliqué.
+          </li>
+        </ul>
+
+        <h2>Si des publicités apparaissent encore sur le Mac</h2>
+        <p>
+          Vérifiez dans cet ordre — les deux premières étapes règlent la plupart des cas :
+        </p>
+        <ol>
+          <li>
+            <strong>L’extension est cochée.</strong> Rouvrez l’onglet Extensions de Safari ; les mises
+            à jour et les migrations de Mac peuvent la laisser décochée.
+          </li>
+          <li>
+            <strong>L’interrupteur principal est actif.</strong> <strong>Blocking</strong> dans l’app
+            doit l’être ; sinon, chaque extension charge une liste de règles vide.
+          </li>
+          <li>
+            <strong>Le site n’est pas en pause.</strong> Regardez l’onglet <strong>Custom</strong> de
+            l’app.
+          </li>
+          <li>
+            <strong>Vous regardez le bon navigateur.</strong> Les publicités dans Chrome ou Firefox
+            concernent un autre programme, pas un réglage.
+          </li>
+          <li>
+            <strong>La publicité est de celles qu’un bloqueur de contenu ne peut pas atteindre.</strong>
+            Les annonces dans une vidéo YouTube et les liens ouverts dans le navigateur intégré
+            d’autres apps sont les deux cas habituels.
+          </li>
+        </ol>
+        <p>
+          Si en revanche une page se comporte bizarrement — un lecteur qui ne démarre pas, un
+          formulaire qui ne s’envoie pas —, les outils par site sont la bonne réponse avant tout
+          réglage global. Et si l’extension elle-même semble en cause, la vérification en 30 secondes
+          est <a href="why-safari-ad-blocker-not-working.html">dans cet article</a>.
+        </p>
+
+        <h2>Questions fréquentes</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Faut-il l’app sur le Mac en plus de l’iPhone ?</summary>
+            <div class="answer">
+              <p>Les extensions s’activent appareil par appareil : le Mac a besoin de l’app installée
+              et de son extension cochée une fois dans Safari. Un iPad aussi. Ensuite, chaque appareil
+              garde ses propres interrupteurs.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Bloque-t-il les publicités dans Chrome ou Firefox sur mon Mac ?</summary>
+            <div class="answer">
+              <p>Non. Une extension Safari ne tourne que dans Safari, donc AdFence ne fait rien dans
+              Chrome, Firefox ou tout autre navigateur du Mac. Ces navigateurs ont besoin de leur
+              propre bloqueur.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Fonctionne-t-il dans les fenêtres de navigation privée sur le Mac ?</summary>
+            <div class="answer">
+              <p>Seulement si l’extension y est autorisée. Dans les réglages Extensions de Safari,
+              avec AdFence sélectionnée, cochez <strong>Autoriser en navigation privée</strong> pour
+              chaque extension que vous voulez active dans les fenêtres privées.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Safari dit que l’extension n’a pas l’autorisation de lire les pages. Est-ce normal ?</summary>
+            <div class="answer">
+              <p>Oui. Un bloqueur de contenu fournit des listes de règles que Safari applique
+              lui-même ; il ne lit, ne modifie ni ne transmet le contenu des pages. Cette phrase dans
+              le volet Extensions décrit le fonctionnement de la technologie, pas une erreur.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Pourquoi un site affiche-t-il encore des publicités sur mon Mac ?</summary>
+            <div class="answer">
+              <p>Vérifiez ce site dans <strong>Site Settings</strong> : s’il a été mis en pause pour
+              une raison quelconque, il le reste jusqu’à sa suppression. Les publicités dans un flux
+              vidéo et celles du navigateur intégré d’autres apps sont des cas à part qu’aucun
+              bloqueur de contenu Safari ne peut atteindre.</p>
+            </div>
+          </details>
+        </div>
+

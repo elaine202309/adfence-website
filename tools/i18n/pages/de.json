@@ -267,6 +267,10 @@
     "posts": [
       {
         "tag": "Neueste",
+        "date": "19. November 2026",
+        "readTime": "5 Min. Lesezeit"
+      },
+      {
         "date": "18. November 2026",
         "readTime": "6 Min. Lesezeit"
       },

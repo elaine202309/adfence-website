@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>How to block ads in Safari on Mac — AdFence Blog</title>
+<meta name="description" content="On a Mac the blocker lives in two places: Safari decides whether to run it, the app decides what it filters. Both switches, and what differs from the iPhone.">
+<link rel="canonical" href="https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="en" href="https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://adfence.mxcode.com/zh-hans/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://adfence.mxcode.com/zh-hant/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="fr" href="https://adfence.mxcode.com/fr/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="de" href="https://adfence.mxcode.com/de/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="it" href="https://adfence.mxcode.com/it/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="ja" href="https://adfence.mxcode.com/ja/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="ko" href="https://adfence.mxcode.com/ko/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="pt-PT" href="https://adfence.mxcode.com/pt/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="es-ES" href="https://adfence.mxcode.com/es/blog/how-to-block-ads-in-safari-on-mac.html">
+<link rel="alternate" hreflang="x-default" href="https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html">
+<meta name="theme-color" content="#4b34b8">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to block ads in Safari on Mac">
+<meta property="og:description" content="On a Mac the blocker lives in two places: Safari decides whether to run it, the app decides what it filters. Both switches, and what differs from the iPhone.">
+<meta property="og:url" content="https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html">
+<meta property="og:site_name" content="AdFence">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:image" content="https://adfence.mxcode.com/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AdFence — a Safari ad blocker for iPhone, iPad and Mac">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to block ads in Safari on Mac">
+<meta name="twitter:description" content="On a Mac the blocker lives in two places: Safari decides whether to run it, the app decides what it filters. Both switches, and what differs from the iPhone.">
+<meta name="twitter:image" content="https://adfence.mxcode.com/images/og-card.png">
+<meta property="article:published_time" content="2026-11-19">
+<meta property="article:modified_time" content="2026-11-19">
+<meta property="article:section" content="Mac setup">
+
+<link rel="icon" href="../images/favicon.png" type="image/png">
+<link rel="stylesheet" href="../css/style.css?v=10">
+
+<!-- GA4 (G-3GFDY4TL3R), loaded after the visitor accepts. See js/analytics.js. -->
+<script src="../js/analytics.js" defer></script>
+
+<!-- Google Search Console — URL-prefix property for https://adfence.mxcode.com/ -->
+<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://adfence.mxcode.com/#organization",
+      "name": "AdFence",
+      "url": "https://adfence.mxcode.com/",
+      "logo": { "@type": "ImageObject", "url": "https://adfence.mxcode.com/images/logo.png", "width": 1024, "height": 1024 },
+      "disambiguatingDescription": "AdFence is a Safari ad-blocking app for iPhone, iPad and macOS, published on the Apple App Store under App ID 6825119569. In this context the name refers only to this app.",
+      "email": "support@mxcode.com",
+      "sameAs": [ "https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569" ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adfence.mxcode.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://adfence.mxcode.com/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "How to block ads in Safari on Mac", "item": "https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html" }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html#article",
+      "headline": "How to block ads in Safari on Mac",
+      "description": "On a Mac the blocker lives in two places: Safari decides whether to run it, the app decides what it filters. Both switches, and what differs from the iPhone.",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "author": { "@id": "https://adfence.mxcode.com/#organization" },
+      "publisher": { "@id": "https://adfence.mxcode.com/#organization" },
+      "image": "https://adfence.mxcode.com/images/adfence-safari-extensions-mac.png",
+      "inLanguage": "en",
+      "articleSection": "Mac setup",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need the app on the Mac as well as on my iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Extensions are enabled per device, so the Mac needs the app installed and its extension ticked in Safari once. The same is true for an iPad. After that, each device keeps its own switches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it block ads in Chrome or Firefox on my Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A Safari extension only runs inside Safari, so AdFence does nothing in Chrome, Firefox or any other browser on the Mac. Those browsers need their own blocker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work in private browsing windows on the Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if the extension is allowed there. In Safari's Extensions settings, with AdFence selected, turn on Allow in Private Browsing for each extension you want active in private windows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Safari says the extension has no permission to read webpages. Is that normal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A content blocker supplies rule lists that Safari applies itself; it does not read, alter or transmit page content. That sentence in the Extensions pane is describing how the technology works, not an error."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does one site still show ads on my Mac?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the site in Site Settings: if it was paused for any reason it stays paused until removed. Ads inside a video stream and ads in other apps' browsers are separate cases that no Safari content blocker can reach."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="../index.html">
+        <img class="brand-mark" src="../images/logo-mark.png" alt="" width="30" height="30">
+        <span class="brand-text">
+          <span class="brand-name">AdFence</span>
+          <span class="brand-desc">Ad &amp; Tracker Blocker</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="../index.html#features">Features</a>
+          <a href="../how-to-use.html">How to use</a>
+          <a href="../support.html">Support</a>
+          <a href="../blog.html" class="active">Blog</a>
+        </div>
+        <details class="lang">
+          <summary aria-label="English">EN</summary>
+          <ul>
+            <li><a href="how-to-block-ads-in-safari-on-mac.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+            <li><a href="../zh-hans/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+            <li><a href="../zh-hant/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+            <li><a href="../fr/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="fr" lang="fr">Français</a></li>
+            <li><a href="../de/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="de" lang="de">Deutsch</a></li>
+            <li><a href="../it/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="it" lang="it">Italiano</a></li>
+            <li><a href="../ja/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="ja" lang="ja">日本語</a></li>
+            <li><a href="../ko/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="ko" lang="ko">한국어</a></li>
+            <li><a href="../pt/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="pt-PT" lang="pt-PT">Português</a></li>
+            <li><a href="../es/blog/how-to-block-ads-in-safari-on-mac.html" hreflang="es-ES" lang="es-ES">Español</a></li>
+          </ul>
+        </details>
+        <a class="btn btn-primary btn-sm" href="https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ======================= HEADER ======================= -->
+  <section class="section section-tight article-intro">
+    <div class="container">
+      <div class="article-head">
+        <span class="post-meta">Mac setup · 19 November 2026 · 5 min read</span>
+        <h1>How to block ads in Safari on Mac</h1>
+        <p class="article-lede">
+          On a Mac the blocker lives in two places: Safari decides whether to run it, and the app
+          decides what it filters. Both have to be on, and they are easy to miss.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= BODY ======================= -->
+  <section class="section section-tight article-body">
+    <div class="container">
+      <article class="article">
+
+        <p>
+          If you set this up on an iPhone, the path is well known:
+          <strong>Settings → Apps → Safari → Extensions</strong>. The Mac has no equivalent step in
+          the Settings app. Safari keeps its own preferences, and everything about which extensions
+          run lives inside Safari itself. The AdFence app is the other place, and it holds the
+          switches that decide what gets filtered.
+        </p>
+
+        <p>
+          That split is the most common reason a Mac can have the app installed, look correctly
+          configured, and still show every ad. Safari runs nothing until the extension is ticked, and
+          ticking it changes nothing about what is filtered until the app’s own switches say so.
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>The short version:</strong> in Safari, open <strong>Safari → Settings</strong>
+            (⌘,) and tick AdFence in the <strong>Extensions</strong> tab. Then open the AdFence app,
+            stay on <strong>General</strong>, and make sure <strong>Blocking</strong> is on along with
+            the rules you want. Reload the page.
+          </p>
+        </div>
+
+        <h2>1. Turn the extension on in Safari</h2>
+        <ol>
+          <li>In Safari, choose <strong>Safari → Settings</strong> from the menu bar (⌘,).</li>
+          <li>Open the <strong>Extensions</strong> tab.</li>
+          <li>Tick <strong>AdFence</strong> in the list on the left. The eight extensions appear as
+          separate entries, each with its own tick.</li>
+          <li>If you browse in private windows, tick <strong>Allow in Private Browsing</strong> for
+          the extensions you want active there.</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../images/adfence-safari-extensions-mac.png"
+                 alt="Safari's Extensions settings on the Mac, with the eight AdFence extensions ticked in the sidebar, Ad Blocking selected, and Allow in Private Browsing ticked."
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            Eight entries, one tick each — and a separate box for private windows.
+          </figcaption>
+        </figure>
+
+        <p>
+          The note in the right-hand pane is worth reading once: a content blocker “does not have
+          permission to read, alter, or transmit content from any webpages”. That is not an error.
+          The extension supplies rule lists; Safari applies them. That is how this kind of blocker
+          works, and it is the reason it does not need your browsing history.
+        </p>
+
+        <h2>2. Choose what gets filtered in the app</h2>
+        <p>
+          Open AdFence and stay on the <strong>General</strong> tab. <strong>Blocking</strong> at the
+          top is the master switch; below it, the <strong>Blocking List</strong> holds the rules —
+          Block Ads, Bypass Anti-Adblock, Safe Browsing, Block Trackers — and
+          <strong>Other Settings</strong> below that holds the page-level ones, from cookie notices to
+          pop-ups and comments. Only what is on gets filtered.
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../images/adfence-general-settings.png"
+                 alt="AdFence's General tab: the Blocking master switch at the top, Blocking List with Block Ads, Bypass Anti-Adblock, Safe Browsing and Block Trackers, and Other Settings below."
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            The app decides what is filtered; Safari decides whether it runs at all.
+          </figcaption>
+        </figure>
+
+        <p>
+          The order matters. The app writes the rules, Safari applies them, so after changing a
+          switch, return to Safari and reload the page — a page already loaded keeps the content it
+          fetched before the change.
+        </p>
+
+        <!-- In-article download card, not a banner. -->
+        <aside class="article-promo">
+          <p>
+            <strong>AdFence</strong> is a Safari ad and tracker blocker for iPhone, iPad and Mac —
+            the same app on every device, set up once per device.
+          </p>
+          <a class="btn-store" href="https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569" target="_blank" rel="noopener">
+
+            <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v11m0 0 4-4m-4 4-4-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 16.5V19a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+
+            <span>Download on the App Store</span>
+
+          </a>
+        </aside>
+
+        <h2>Per-site controls on the Mac</h2>
+        <p>
+          Two mechanisms sit on top of the global switches, and they are easy to confuse.
+        </p>
+        <ul>
+          <li>
+            <strong>In the app:</strong> <strong>Site Settings</strong> for an address, with
+            <strong>Pause Blocking</strong> to stand down for that site and
+            <strong>Site Overrides</strong> to allow a single filter. The entries collect on the
+            <strong>Custom</strong> tab.
+          </li>
+          <li>
+            <strong>In Safari:</strong> a page can be reloaded without content blockers from the
+            reload button’s menu. That is temporary and only for that tab — the next reload brings
+            the blocker back.
+          </li>
+        </ul>
+        <p>
+          The first is persistent; the second is an escape hatch. If you find yourself using the
+          second one on the same site often, the first is the better tool.
+        </p>
+
+        <h2>What is different from the iPhone</h2>
+        <ul>
+          <li>
+            <strong>The path:</strong> <strong>Safari → Settings → Extensions</strong> on the Mac,
+            not <strong>Settings → Apps → Safari</strong>. There is no system Settings step.
+          </li>
+          <li>
+            <strong>The device:</strong> extensions are enabled per device. A Mac and an iPhone each
+            need the tick once; after that they keep their own switches.
+          </li>
+          <li>
+            <strong>The browser:</strong> Safari extensions only run in Safari. On the Mac it is easy
+            to check a site in Chrome or Firefox and conclude the blocker is broken — it never
+            applied there.
+          </li>
+        </ul>
+
+        <h2>If ads still appear on the Mac</h2>
+        <p>
+          Check these in order — the first two solve most cases:
+        </p>
+        <ol>
+          <li>
+            <strong>The extension is ticked.</strong> Open Safari’s Extensions tab again; updates and
+            Mac migrations can leave it off.
+          </li>
+          <li>
+            <strong>The master switch is on.</strong> <strong>Blocking</strong> in the app has to be
+            on; while it is off, every extension loads an empty rule list.
+          </li>
+          <li>
+            <strong>The site is not paused.</strong> Look in the app’s <strong>Custom</strong> tab.
+          </li>
+          <li>
+            <strong>You are looking at the right browser.</strong> Ads in Chrome or Firefox are a
+            different program, not a setting.
+          </li>
+          <li>
+            <strong>The ad is one a content blocker cannot reach.</strong> In-video YouTube ads and
+            links opened in other apps’ built-in browsers are the two usual cases.
+          </li>
+        </ol>
+        <p>
+          If a page behaves strangely instead — a player that will not start, a form that will not
+          submit — the per-site tools are the right answer before anything global. And if the
+          extension itself looks off, the 30-second check is
+          <a href="why-safari-ad-blocker-not-working.html">in this post</a>.
+        </p>
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Do I need the app on the Mac as well as on my iPhone?</summary>
+            <div class="answer">
+              <p>Extensions are enabled per device, so the Mac needs the app installed and its
+              extension ticked in Safari once. The same is true for an iPad. After that, each device
+              keeps its own switches.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does it block ads in Chrome or Firefox on my Mac?</summary>
+            <div class="answer">
+              <p>No. A Safari extension only runs inside Safari, so AdFence does nothing in Chrome,
+              Firefox or any other browser on the Mac. Those browsers need their own blocker.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Does it work in private browsing windows on the Mac?</summary>
+            <div class="answer">
+              <p>Only if the extension is allowed there. In Safari’s Extensions settings, with AdFence
+              selected, turn on <strong>Allow in Private Browsing</strong> for each extension you want
+              active in private windows.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Safari says the extension has no permission to read webpages. Is that normal?</summary>
+            <div class="answer">
+              <p>Yes. A content blocker supplies rule lists that Safari applies itself; it does not
+              read, alter or transmit page content. That sentence in the Extensions pane is describing
+              how the technology works, not an error.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why does one site still show ads on my Mac?</summary>
+            <div class="answer">
+              <p>Check the site in <strong>Site Settings</strong>: if it was paused for any reason it
+              stays paused until removed. Ads inside a video stream and ads in other apps’ browsers
+              are separate cases that no Safari content blocker can reach.</p>
+            </div>
+          </details>
+        </div>
+
+      </article>
+
+      <div class="article-foot">
+        <span>Written 19 November 2026 · AdFence</span>
+        <a href="../blog.html">← All posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <section class="section section-tight" id="get">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready when you are</h2>
+        <p>AdFence for iPhone, iPad and Mac. No account, no sign-up — enable the extension in Safari once and you're done.</p>
+        <a class="btn-store" href="https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569" target="_blank" rel="noopener">
+
+          <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v11m0 0 4-4m-4 4-4-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 16.5V19a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-2.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+
+          <span>Download on the App Store</span>
+
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <img class="brand-mark" src="../images/logo-mark.png" alt="" width="30" height="30">
+          AdFence
+        </a>
+        <p>An ad and tracker blocker for Safari on iPhone, iPad and Mac.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../how-to-use.html">How to use</a></li>
+          <li><a href="../support.html">Support</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="https://apps.apple.com/us/app/adfence-safari-ad-blocker/id6825119569" target="_blank" rel="noopener">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Use</a></li>
+          <li><button type="button" class="linklike" data-consent-reset>Cookie settings</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@mxcode.com">support@mxcode.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> AdFence. All rights reserved.</span>
+      <span>Made for Safari on iOS, iPadOS and macOS.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

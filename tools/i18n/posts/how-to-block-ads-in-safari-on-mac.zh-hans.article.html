@@ -1,0 +1,186 @@
+        <p>
+          如果你在 iPhone 上设置过，路径很熟悉：<strong>设置 → App → Safari 浏览器 → 扩展</strong>。
+          Mac 在「设置」App 里没有对应的步骤。Safari 有自己的一套偏好设置，哪些扩展运行，全都在
+          Safari 里面决定。AdFence App 是另一个地方，它装着决定过滤什么的那组开关。
+        </p>
+
+        <p>
+          这种分工，是 Mac 上最常见的「App 装了、看着也没问题、广告却一个不少」的原因。扩展没有
+          被勾选之前，Safari 什么都不会运行；勾选之后，App 里自己的开关不打开，过滤内容也不会
+          有任何变化。
+        </p>
+
+        <div class="callout callout-info">
+          <p>
+            <strong>简单说：</strong>在 Safari 里打开 <strong>Safari → 设置</strong>（⌘,），在
+            <strong>扩展</strong>标签页勾选 AdFence。然后打开 AdFence App，留在
+            <strong>General</strong> 标签页，确认 <strong>Blocking</strong> 和你想启用的规则都
+            已打开。刷新页面。
+          </p>
+        </div>
+
+        <h2>1. 在 Safari 里打开扩展</h2>
+        <ol>
+          <li>在 Safari 里，从菜单栏选择 <strong>Safari → 设置</strong>（⌘,）。</li>
+          <li>打开 <strong>扩展</strong>标签页。</li>
+          <li>在左侧列表中勾选 <strong>AdFence</strong>。八个扩展是分开的条目，各自有独立的
+          勾选框。</li>
+          <li>如果你用无痕窗口浏览，为需要在那里生效的扩展勾选
+          <strong>在无痕浏览中允许</strong>。</li>
+        </ol>
+
+        <figure class="shot howto-shot plain wide">
+          <div class="shot-screen">
+            <img src="../../images/adfence-safari-extensions-mac.png"
+                 alt="Mac 上 Safari 的扩展设置窗口：侧边栏中八个 AdFence 扩展均已勾选，当前选中 Ad Blocking，并勾选了 Allow in Private Browsing。"
+                 width="880" height="661" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            八个条目，各自一个勾选框 —— 无痕窗口另有单独的勾选框。
+          </figcaption>
+        </figure>
+
+        <p>
+          右侧那行说明值得读一遍：内容拦截器「无权读取、修改或传输任何网页内容」。这不是报错。
+          扩展提供规则列表，由 Safari 来执行。这类拦截器就是这样工作的，也是它不需要你的浏览记录
+          的原因。
+        </p>
+
+        <h2>2. 在 App 里决定过滤什么</h2>
+        <p>
+          打开 AdFence，留在 <strong>General</strong> 标签页。顶部的 <strong>Blocking</strong>
+          是总开关；下面的 <strong>Blocking List</strong> 装着规则 —— Block Ads、Bypass
+          Anti-Adblock、Safe Browsing、Block Trackers —— 再往下的 <strong>Other Settings</strong>
+          装着页面级的那一组，从 Cookie 提示到弹窗和评论。只有打开的才会被过滤。
+        </p>
+
+        <figure class="shot howto-shot plain">
+          <div class="shot-screen">
+            <img src="../../images/adfence-general-settings.png"
+                 alt="AdFence 的 General 标签页：顶部是 Blocking 总开关，Blocking List 下有 Block Ads、Bypass Anti-Adblock、Safe Browsing 和 Block Trackers，下面是 Other Settings。"
+                 width="600" height="1301" loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            App 决定过滤什么；Safari 决定它到底运不运行。
+          </figcaption>
+        </figure>
+
+        <p>
+          顺序很重要。App 写规则，Safari 执行规则，所以改过开关之后，回到 Safari 刷新页面 ——
+          已经加载的页面会保留改动前取到的内容。
+        </p>
+
+<!--PROMO-->
+
+        <h2>Mac 上的按站点控制</h2>
+        <p>
+          在全局开关之上还有两套机制，它们很容易混淆。
+        </p>
+        <ul>
+          <li>
+            <strong>在 App 里：</strong>针对某个地址的 <strong>Site Settings</strong>，用
+            <strong>Pause Blocking</strong> 对该站点整体退让，用 <strong>Site Overrides</strong>
+            放行单个过滤器。条目会收集在 <strong>Custom</strong> 标签页。
+          </li>
+          <li>
+            <strong>在 Safari 里：</strong>可以从重新加载按钮的菜单里选择不启用内容拦截器来
+            重新载入页面。这是临时的，只对当前标签页有效 —— 下一次重新加载，拦截器就回来了。
+          </li>
+        </ul>
+        <p>
+          前者是持久的；后者是应急出口。如果你发现自己经常对同一个站点用后者，前者才是更合适的
+          工具。
+        </p>
+
+        <h2>和 iPhone 有什么不同</h2>
+        <ul>
+          <li>
+            <strong>路径：</strong>Mac 上是 <strong>Safari → 设置 → 扩展</strong>，不是
+            <strong>设置 → App → Safari 浏览器</strong>。没有系统「设置」这一步。
+          </li>
+          <li>
+            <strong>设备：</strong>扩展按设备启用。Mac 和 iPhone 各自需要勾选一次；之后各自
+            保留自己的开关。
+          </li>
+          <li>
+            <strong>浏览器：</strong>Safari 扩展只在 Safari 里运行。在 Mac 上很容易在 Chrome 或
+            Firefox 里看一眼就断定拦截器坏了 —— 它在那些浏览器里从未生效过。
+          </li>
+        </ul>
+
+        <h2>Mac 上广告还在的话</h2>
+        <p>
+          按顺序检查 —— 前两项能解决大多数情况：
+        </p>
+        <ol>
+          <li>
+            <strong>扩展被勾选了。</strong> 再打开一次 Safari 的扩展标签页；更新和迁移 Mac 都可能
+            让它变成未勾选。
+          </li>
+          <li>
+            <strong>总开关是开着的。</strong> App 里的 <strong>Blocking</strong> 必须打开；它关着
+            时，所有扩展加载的都是空规则列表。
+          </li>
+          <li>
+            <strong>站点没有被暂停。</strong> 看看 App 里的 <strong>Custom</strong> 标签页。
+          </li>
+          <li>
+            <strong>你看的是那个对的浏览器。</strong> Chrome 或 Firefox 里的广告是另一个程序的
+            事，不是设置问题。
+          </li>
+          <li>
+            <strong>这条广告是内容拦截器够不到的。</strong> YouTube 视频内广告，以及在别的 App
+            内置浏览器里打开的链接，是常见的两种情况。
+          </li>
+        </ol>
+        <p>
+          如果页面是别的地方不对劲 —— 播放器起不来、表单提交不了 —— 先考虑按站点的工具，而不是
+          动全局设置。如果扩展本身看起来有问题，30 秒检查写在这
+          <a href="why-safari-ad-blocker-not-working.html">篇文章里</a>。
+        </p>
+
+        <h2>常见问题</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Mac 和 iPhone 上都需要装这个 App 吗？</summary>
+            <div class="answer">
+              <p>扩展按设备启用，所以 Mac 需要装好 App，并在 Safari 里勾选一次扩展。iPad 也一样。
+              之后每台设备各保留自己的开关。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac 上的 Chrome 或 Firefox 也会被拦截吗？</summary>
+            <div class="answer">
+              <p>不会。Safari 扩展只在 Safari 里运行，所以 AdFence 在 Mac 的 Chrome、Firefox 或
+              任何其他浏览器里都不起作用。那些浏览器需要各自的拦截器。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Mac 的无痕浏览窗口里也生效吗？</summary>
+            <div class="answer">
+              <p>只有扩展被允许时才生效。在 Safari 的扩展设置里选中 AdFence，为你希望在无痕窗口
+              中生效的每个扩展打开 <strong>在无痕浏览中允许</strong>。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Safari 说扩展无权读取网页，这正常吗？</summary>
+            <div class="answer">
+              <p>正常。内容拦截器提供规则列表，由 Safari 自己执行；它不读取、不修改、也不传输
+              页面内容。扩展面板里的那句话是在说明技术原理，不是报错。</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>为什么 Mac 上某一个网站还有广告？</summary>
+            <div class="answer">
+              <p>在 <strong>Site Settings</strong> 里检查这个网站：如果它因为任何原因被暂停过，
+              就会一直暂停，直到你删除。视频流里的广告和别的 App 浏览器里的广告是另外两种情况，
+              任何 Safari 内容拦截器都够不到。</p>
+            </div>
+          </details>
+        </div>
+

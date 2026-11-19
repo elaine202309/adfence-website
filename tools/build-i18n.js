@@ -139,6 +139,14 @@ const HOWTO_SHOTS = [
    checkPages() throws if the counts disagree. */
 const POSTS = [
   {
+    slug: 'how-to-block-ads-in-safari-on-mac',
+    url: 'blog/how-to-block-ads-in-safari-on-mac.html',
+    title: 'How to block ads in Safari on Mac',
+    excerpt: 'On a Mac the blocker lives in two places: Safari decides whether to run it, and the ' +
+      'app decides what it filters. Both switches, and what is different from the iPhone.',
+    date: '2026-11-19'
+  },
+  {
     slug: 'why-websites-detect-your-ad-blocker',
     url: 'blog/why-websites-detect-your-ad-blocker.html',
     title: 'Why do websites ask you to turn off your ad blocker?',

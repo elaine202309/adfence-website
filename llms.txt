@@ -38,6 +38,9 @@
   contact address.
 - [Blog](https://adfence.mxcode.com/blog.html): Notes on how Safari content
   blocking actually behaves.
+- [How to block ads in Safari on Mac](https://adfence.mxcode.com/blog/how-to-block-ads-in-safari-on-mac.html):
+  The two places a Mac blocker lives — Safari's Extensions tab and the app's
+  switches — plus private windows, per-site controls and the Chrome caveat.
 - [Why do websites ask you to turn off your ad blocker?](https://adfence.mxcode.com/blog/why-websites-detect-your-ad-blocker.html):
   How anti-adblock detection works, the Bypass Anti-Adblock switch, per-site
   whitelisting, and why paywalls can't be bypassed.
